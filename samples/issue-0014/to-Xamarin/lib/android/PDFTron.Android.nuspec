@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata minClientVersion="">
+    <id>PDFTron.Android</id>
+    <version>6.9.3</version>
+    <title>PDFTron SDK for Android</title>
+    <authors>PDFTron Systems Inc.</authors>
+    <owners>PDFTron Systems Inc.</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://api.pdftron.com/v2/view/NzQ4OGY5MWMtZWNhNi00ZDEwLWE5YjctY2UzNDlkMWVlZTBi</licenseUrl>
+    <projectUrl>https://www.pdftron.com/pdf-sdk/android</projectUrl>
+    <iconUrl>https://pdftron.com/brand-assets/nuget.png</iconUrl>
+    <description>[PDF Reader. PDF Control. PDF Component]
+
+PDFTron SDK is the ultimate PDF toolkit.
+
+This package is the full version of PDFTron Android SDK.
+
+With PDFNet components you can build reliable &amp; speedy applications that can view, create, print, edit, and annotate PDFs ... across operating systems.
+
+Developers use PDFNet SDK to read, write, and edit PDF documents compatible with all published versions of PDF specification (including the latest ISO32000). The extensive PDF library API supports most common use-case scenarios such as:
+*        PDF Viewing &amp; Collaboration
+*        PDF Rasterization
+*        PDF Printing
+*        PDF Form filling and flattening
+*        PDF Split &amp; Merge
+*        PDF Stamping
+*        Dynamic PDF generation (e.g. FlowDocument &amp; Xaml to PDF)
+*        PDF Text extraction and indexing
+*        PDF Packages
+*        PDF Layers (OCGs)
+*        PDF Editing
+*        PDF Encryption
+*        Manipulate PDF bookmarks, links, and annotations.
+*        PDF Optimization
+*        PDF/A Validation and Conversion
+*        PDF Redaction
+*        PDF Conversion from MS Office, various image formats etc.</description>
+    <summary>PDFTron SDK is the ultimate PDF toolkit.
+With PDFNet components you can build reliable &amp; speedy applications that can view, create, print, edit, and annotate PDFs ... across operating systems.
+Developers use PDFNet SDK to read, write, and edit PDF documents compatible with all published versions of PDF specification (including the latest ISO32000).</summary>
+    <releaseNotes></releaseNotes>
+    <copyright></copyright>
+    <language></language>
+    <tags>PDF viewer control component reader print forms split merge stamp convert optimize redact encrypt pdftron pdfviewer rasterizer pdf2image convert converter extract sign annotate docx pptx</tags>
+    <dependencies>
+      <group targetFramework="MonoAndroid8.1" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid8.1" />
+      <frameworkAssembly assemblyName="Mono.Android" targetFramework="MonoAndroid8.1" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="MonoAndroid8.1" />
+      <frameworkAssembly assemblyName="System" targetFramework="MonoAndroid8.1" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="MonoAndroid8.1" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="D:\TrunkXamarin4\PDFNetXamarin\lib\android\PDFNetAndroid.dll" target="lib\monoandroid81\PDFNetAndroid.dll" />
+    <file src="D:\TrunkXamarin4\PDFNetXamarin\lib\android\PDFNetAndroid.pdb" target="lib\monoandroid81\PDFNetAndroid.pdb" />
+  </files>
+</package>

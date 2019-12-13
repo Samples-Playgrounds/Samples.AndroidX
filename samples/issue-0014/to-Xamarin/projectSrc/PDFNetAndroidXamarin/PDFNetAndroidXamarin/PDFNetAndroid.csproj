@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF847925-0BF7-41A6-B697-789B0A735AE7}</ProjectGuid>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PDFNetAndroid</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AssemblyName>PDFNetAndroid</AssemblyName>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <AndroidTlsProvider>
+    </AndroidTlsProvider>
+    <PackageId>PDFTron.Android</PackageId>
+    <PackageVersion>6.9.3</PackageVersion>
+    <Authors>PDFTron Systems Inc.</Authors>
+    <Description>[PDF Reader. PDF Control. PDF Component]
+
+PDFTron SDK is the ultimate PDF toolkit.
+
+This package is the full version of PDFTron Android SDK.
+
+With PDFNet components you can build reliable &amp; speedy applications that can view, create, print, edit, and annotate PDFs ... across operating systems.
+
+Developers use PDFNet SDK to read, write, and edit PDF documents compatible with all published versions of PDF specification (including the latest ISO32000). The extensive PDF library API supports most common use-case scenarios such as:
+*        PDF Viewing &amp; Collaboration
+*        PDF Rasterization
+*        PDF Printing
+*        PDF Form filling and flattening
+*        PDF Split &amp; Merge
+*        PDF Stamping
+*        Dynamic PDF generation (e.g. FlowDocument &amp; Xaml to PDF)
+*        PDF Text extraction and indexing
+*        PDF Packages
+*        PDF Layers (OCGs)
+*        PDF Editing
+*        PDF Encryption
+*        Manipulate PDF bookmarks, links, and annotations.
+*        PDF Optimization
+*        PDF/A Validation and Conversion
+*        PDF Redaction
+*        PDF Conversion from MS Office, various image formats etc.</Description>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageIconUrl>https://pdftron.com/brand-assets/nuget.png</PackageIconUrl>
+    <PackageLicenseUrl>https://api.pdftron.com/v2/view/NzQ4OGY5MWMtZWNhNi00ZDEwLWE5YjctY2UzNDlkMWVlZTBi</PackageLicenseUrl>
+    <Owners>PDFTron Systems Inc.</Owners>
+    <PackageProjectUrl>https://www.pdftron.com/pdf-sdk/android</PackageProjectUrl>
+    <Summary>PDFTron SDK is the ultimate PDF toolkit.
+With PDFNet components you can build reliable &amp; speedy applications that can view, create, print, edit, and annotate PDFs ... across operating systems.
+Developers use PDFNet SDK to read, write, and edit PDF documents compatible with all published versions of PDF specification (including the latest ISO32000).</Summary>
+    <PackageTags>PDF viewer control component reader print forms split merge stamp convert optimize redact encrypt pdftron pdfviewer rasterizer pdf2image convert converter extract sign annotate docx pptx</PackageTags>
+    <Title>PDFTron SDK for Android</Title>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\lib\android</OutputPath>
+    <DefineConstants>DEBUG;__ANDROID__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\android\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+    <DefineConstants>__ANDROID__</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;__ANDROID__</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>__ANDROIDV7__</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Common\PDF\Annots\CheckBoxWidget.cs">
+      <Link>Common\PDF\Annots\CheckBoxWidget.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\ComboBoxWidget.cs">
+      <Link>Common\PDF\Annots\ComboBoxWidget.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\ListBoxWidget.cs">
+      <Link>Common\PDF\Annots\ListBoxWidget.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\PushButtonWidget.cs">
+      <Link>Common\PDF\Annots\PushButtonWidget.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\RadioButtonGroup.cs">
+      <Link>Common\PDF\Annots\RadioButtonGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\RadioButtonWidget.cs">
+      <Link>Common\PDF\Annots\RadioButtonWidget.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\SignatureWidget.cs">
+      <Link>Common\PDF\Annots\SignatureWidget.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\TextWidget.cs">
+      <Link>Common\PDF\Annots\TextWidget.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\DiffOptions.cs">
+      <Link>Common\PDF\DiffOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\DigitalSignatureField.cs">
+      <Link>Common\PDF\DigitalSignatureField.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\DigitalSignatureFieldIterator.cs">
+      <Link>Common\PDF\DigitalSignatureFieldIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Flattener.cs">
+      <Link>Common\PDF\Flattener.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\GeometryCollection.cs">
+      <Link>Common\PDF\GeometryCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\OfficeToPDFOptions.cs">
+      <Link>Common\PDF\OfficeToPDFOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Optimizer.cs">
+      <Link>Common\PDF\Optimizer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\OptionsBase.cs">
+      <Link>Common\PDF\OptionsBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\RectCollection.cs">
+      <Link>Common\PDF\RectCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Redactor.cs">
+      <Link>Common\PDF\Redactor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Stamper.cs">
+      <Link>Common\PDF\Stamper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\DocSnapshot.cs">
+      <Link>Common\SDF\DocSnapshot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\ResultSnapshot.cs">
+      <Link>Common\SDF\ResultSnapshot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\UndoManager.cs">
+      <Link>Common\SDF\UndoManager.cs</Link>
+    </Compile>
+    <Compile Include="Print.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PDFViewCtrl.cs" />
+    <Compile Include="..\..\..\Common\BasicTypes.cs">
+      <Link>Common\BasicTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Iterator.cs">
+      <Link>Common\Iterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDFNet.cs">
+      <Link>Common\PDFNet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDFNetPINVOKE.cs">
+      <Link>Common\PDFNetPINVOKE.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PlatformInfo.cs">
+      <Link>Common\PlatformInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\UString.cs">
+      <Link>Common\UString.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Common\Matrix2D.cs">
+      <Link>Common\Common\Matrix2D.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Common\PDFNetException.cs">
+      <Link>Common\Common\PDFNetException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Common\ProgressMonitor.cs">
+      <Link>Common\Common\ProgressMonitor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\FDF\FDFDoc.cs">
+      <Link>Common\FDF\FDFDoc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\FDF\FDFField.cs">
+      <Link>Common\FDF\FDFField.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\FDF\FDFFieldIterator.cs">
+      <Link>Common\FDF\FDFFieldIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Filters\Filter.cs">
+      <Link>Common\Filters\Filter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Filters\FilterReader.cs">
+      <Link>Common\Filters\FilterReader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Filters\FilterWriter.cs">
+      <Link>Common\Filters\FilterWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Filters\FlateEncode.cs">
+      <Link>Common\Filters\FlateEncode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Filters\MappedFile.cs">
+      <Link>Common\Filters\MappedFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\Filters\MemoryFilter.cs">
+      <Link>Common\Filters\MemoryFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Action.cs">
+      <Link>Common\PDF\Action.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annot.cs">
+      <Link>Common\PDF\Annot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Bookmark.cs">
+      <Link>Common\PDF\Bookmark.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\CharData.cs">
+      <Link>Common\PDF\CharData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\CharIterator.cs">
+      <Link>Common\PDF\CharIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\ColorPt.cs">
+      <Link>Common\PDF\ColorPt.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\ColorSpace.cs">
+      <Link>Common\PDF\ColorSpace.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\ContentReplacer.cs">
+      <Link>Common\PDF\ContentReplacer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Date.cs">
+      <Link>Common\PDF\Date.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Destination.cs">
+      <Link>Common\PDF\Destination.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Element.cs">
+      <Link>Common\PDF\Element.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\ElementBuilder.cs">
+      <Link>Common\PDF\ElementBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\ElementReader.cs">
+      <Link>Common\PDF\ElementReader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\ElementWriter.cs">
+      <Link>Common\PDF\ElementWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Field.cs">
+      <Link>Common\PDF\Field.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\FieldIterator.cs">
+      <Link>Common\PDF\FieldIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\FileSpec.cs">
+      <Link>Common\PDF\FileSpec.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Font.cs">
+      <Link>Common\PDF\Font.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\FontCharCodeIterator.cs">
+      <Link>Common\PDF\FontCharCodeIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Function.cs">
+      <Link>Common\PDF\Function.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\GSChangesIterator.cs">
+      <Link>Common\PDF\GSChangesIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\GState.cs">
+      <Link>Common\PDF\GState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Highlights.cs">
+      <Link>Common\PDF\Highlights.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Image.cs">
+      <Link>Common\PDF\Image.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Image2RGB.cs">
+      <Link>Common\PDF\Image2RGB.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Image2RGBA.cs">
+      <Link>Common\PDF\Image2RGBA.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Page.cs">
+      <Link>Common\PDF\Page.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\PageIterator.cs">
+      <Link>Common\PDF\PageIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\PageLabel.cs">
+      <Link>Common\PDF\PageLabel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\PageSet.cs">
+      <Link>Common\PDF\PageSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\PathData.cs">
+      <Link>Common\PDF\PathData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\PatternColor.cs">
+      <Link>Common\PDF\PatternColor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\PDFDoc.cs">
+      <Link>Common\PDF\PDFDoc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\PDFDocInfo.cs">
+      <Link>Common\PDF\PDFDocInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\PDFDocViewPrefs.cs">
+      <Link>Common\PDF\PDFDocViewPrefs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\PDFDraw.cs">
+      <Link>Common\PDF\PDFDraw.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\PDFRasterizer.cs">
+      <Link>Common\PDF\PDFRasterizer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Point.cs">
+      <Link>Common\PDF\Point.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\QuadPoint.cs">
+      <Link>Common\PDF\QuadPoint.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Rect.cs">
+      <Link>Common\PDF\Rect.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Shading.cs">
+      <Link>Common\PDF\Shading.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\TextExtractor.cs">
+      <Link>Common\PDF\TextExtractor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\TextSearch.cs">
+      <Link>Common\PDF\TextSearch.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Caret.cs">
+      <Link>Common\PDF\Annots\Caret.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Circle.cs">
+      <Link>Common\PDF\Annots\Circle.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\FileAttachment.cs">
+      <Link>Common\PDF\Annots\FileAttachment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\FreeText.cs">
+      <Link>Common\PDF\Annots\FreeText.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Highlight.cs">
+      <Link>Common\PDF\Annots\Highlight.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Ink.cs">
+      <Link>Common\PDF\Annots\Ink.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Line.cs">
+      <Link>Common\PDF\Annots\Line.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Link.cs">
+      <Link>Common\PDF\Annots\Link.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Markup.cs">
+      <Link>Common\PDF\Annots\Markup.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Movie.cs">
+      <Link>Common\PDF\Annots\Movie.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Polygon.cs">
+      <Link>Common\PDF\Annots\Polygon.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\PolyLine.cs">
+      <Link>Common\PDF\Annots\PolyLine.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Popup.cs">
+      <Link>Common\PDF\Annots\Popup.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Redaction.cs">
+      <Link>Common\PDF\Annots\Redaction.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\RubberStamp.cs">
+      <Link>Common\PDF\Annots\RubberStamp.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Screen.cs">
+      <Link>Common\PDF\Annots\Screen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Sound.cs">
+      <Link>Common\PDF\Annots\Sound.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Square.cs">
+      <Link>Common\PDF\Annots\Square.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Squiggly.cs">
+      <Link>Common\PDF\Annots\Squiggly.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\StrikeOut.cs">
+      <Link>Common\PDF\Annots\StrikeOut.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Text.cs">
+      <Link>Common\PDF\Annots\Text.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\TextMarkup.cs">
+      <Link>Common\PDF\Annots\TextMarkup.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Underline.cs">
+      <Link>Common\PDF\Annots\Underline.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Watermark.cs">
+      <Link>Common\PDF\Annots\Watermark.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Annots\Widget.cs">
+      <Link>Common\PDF\Annots\Widget.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\OCG\Config.cs">
+      <Link>Common\PDF\OCG\Config.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\OCG\Context.cs">
+      <Link>Common\PDF\OCG\Context.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\OCG\Group.cs">
+      <Link>Common\PDF\OCG\Group.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\OCG\OCMD.cs">
+      <Link>Common\PDF\OCG\OCMD.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Struct\ContentItem.cs">
+      <Link>Common\PDF\Struct\ContentItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Struct\SElement.cs">
+      <Link>Common\PDF\Struct\SElement.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Struct\STree.cs">
+      <Link>Common\PDF\Struct\STree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\DictIterator.cs">
+      <Link>Common\SDF\DictIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\NameTree.cs">
+      <Link>Common\SDF\NameTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\NameTreeIterator.cs">
+      <Link>Common\SDF\NameTreeIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\NumberTree.cs">
+      <Link>Common\SDF\NumberTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\NumberTreeIterator.cs">
+      <Link>Common\SDF\NumberTreeIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\Obj.cs">
+      <Link>Common\SDF\Obj.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\ObjSet.cs">
+      <Link>Common\SDF\ObjSet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\SDFDoc.cs">
+      <Link>Common\SDF\SDFDoc.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\SecurityHandler.cs">
+      <Link>Common\SDF\SecurityHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\SDF\SignatureHandler.cs">
+      <Link>Common\SDF\SignatureHandler.cs</Link>
+    </Compile>
+    <Compile Include="TypeConvertHelper.cs" />
+    <Compile Include="..\..\..\Common\PDF\PDFA\PDFACompliance.cs">
+      <Link>Common\PDF\PDFA\PDFACompliance.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\DocumentConversion.cs">
+      <Link>Common\PDF\DocumentConversion.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\PDFNetInternalTools.cs">
+      <Link>Common\PDF\PDFNetInternalTools.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\WebFontDownloader.cs">
+      <Link>Common\PDF\WebFontDownloader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\Convert.cs">
+      <Link>Common\PDF\Convert.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\ConversionOptions.cs">
+      <Link>Common\PDF\ConversionOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\WordToPDFOptions.cs">
+      <Link>Common\PDF\WordToPDFOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\PDFDocGenerator.cs">
+      <Link>Common\PDF\PDFDocGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\ViewChangeCollection.cs">
+      <Link>Common\PDF\ViewChangeCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Common\PDF\ActionParameter.cs">
+      <Link>Common\PDF\ActionParameter.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <LibraryProjectZip Include="..\..\..\lib\android\Native\pdftron.aar">
+      <Link>Jars\pdftron.aar</Link>
+    </LibraryProjectZip>
+    <None Include="Additions\AboutAdditions.txt" />
+    <None Include="api\index.md" />
+    <None Include="articles\intro.md" />
+    <None Include="articles\toc.md" />
+    <None Include="docfx.json" />
+    <None Include="index.md" />
+    <None Include="Jars\AboutJars.txt" />
+    <None Include="packages.config" />
+    <None Include="toc.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Transforms\EnumFields.xml">
+      <SubType>Designer</SubType>
+    </TransformFile>
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+    <TransformFile Include="Transforms\Metadata.xml">
+      <SubType>Designer</SubType>
+    </TransformFile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.targets')" />
+  <Import Project="..\packages\docfx.console.2.36.1\build\docfx.console.targets" Condition="Exists('..\packages\docfx.console.2.36.1\build\docfx.console.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\docfx.console.2.36.1\build\docfx.console.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\docfx.console.2.36.1\build\docfx.console.targets'))" />
+  </Target>
+</Project>

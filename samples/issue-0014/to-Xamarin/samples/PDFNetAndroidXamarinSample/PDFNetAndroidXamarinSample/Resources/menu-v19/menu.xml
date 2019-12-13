@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="@string/action_search"
+        app:showAsAction="always" />
+  <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings_white_24dp"
+        android:title="@string/demo_menu_settings"
+        app:showAsAction="always" />
+  <item
+        android:id="@+id/annotation_toolbar"
+        android:icon="@drawable/ic_mode_edit_white"
+        android:title="@string/demo_menu_annotation_toolbar"
+        app:showAsAction="always" />
+  <item android:id="@+id/open_file" android:title="@string/demo_menu_open" />
+  <item android:id="@+id/open_url" android:title="@string/demo_menu_openurl" />
+  <item android:id="@+id/save_file" android:title="@string/demo_menu_save" />
+  <item android:id="@+id/gotopage" android:title="@string/demo_menu_gotopage" />
+  <item android:id="@+id/form_toolbar" android:title="@string/demo_form_toolbar" />
+  <item android:id="@+id/annotation_dialog" android:title="@string/demo_menu_annotations" />
+  <item android:id="@+id/outline_dialog" android:title="@string/demo_menu_outline" />
+  <item android:id="@+id/user_bookmark_dialog" android:title="@string/demo_user_menu_bookmarks" />
+  <item android:id="@+id/rotate_dialog" android:title="@string/demo_menu_rotate" />
+  <item android:id="@+id/crop_dialog" android:title="@string/demo_menu_crop" />
+  <item android:id="@+id/add_page_dialog" android:title="@string/demo_add_page" />
+  <item android:id="@+id/create_pdf_dialog" android:title="@string/demo_create_pdf" />
+  <item android:id="@+id/print" android:title="@string/demo_menu_print" />
+</menu>

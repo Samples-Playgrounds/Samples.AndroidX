@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata minClientVersion="">
+    <id>PDFTron.Android.Tools</id>
+    <version>6.9.3</version>
+    <title>PDFTron SDK for Android</title>
+    <authors>PDFTron Systems Inc.</authors>
+    <owners>PDFTron Systems Inc.</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://api.pdftron.com/v2/view/NzQ4OGY5MWMtZWNhNi00ZDEwLWE5YjctY2UzNDlkMWVlZTBi</licenseUrl>
+    <projectUrl>https://www.pdftron.com/pdf-sdk/android</projectUrl>
+    <iconUrl>https://pdftron.com/brand-assets/nuget.png</iconUrl>
+    <description>[PDF Reader. PDF Control. PDF Component]
+
+PDFTron SDK is the ultimate PDF toolkit.
+
+With PDFNet components you can build reliable &amp; speedy applications that can view, create, print, edit, and annotate PDFs ... across operating systems.
+
+Developers use PDFNet SDK to read, write, and edit PDF documents compatible with all published versions of PDF specification (including the latest ISO32000). The extensive PDF library API supports most common use-case scenarios such as:
+*        PDF Viewing &amp; Collaboration
+*        PDF Rasterization
+*        PDF Printing
+*        PDF Form filling and flattening
+*        PDF Split &amp; Merge
+*        PDF Stamping
+*        Dynamic PDF generation (e.g. FlowDocument &amp; Xaml to PDF)
+*        PDF Text extraction and indexing
+*        PDF Packages
+*        PDF Layers (OCGs)
+*        PDF Editing
+*        PDF Encryption
+*        Manipulate PDF bookmarks, links, and annotations.
+*        PDF Optimization
+*        PDF/A Validation and Conversion
+*        PDF Redaction
+*        PDF Conversion from MS Office, various image formats etc.</description>
+    <summary>PDFTron SDK is the ultimate PDF toolkit.
+With PDFNet components you can build reliable &amp; speedy applications that can view, create, print, edit, and annotate PDFs ... across operating systems.
+Developers use PDFNet SDK to read, write, and edit PDF documents compatible with all published versions of PDF specification (including the latest ISO32000).</summary>
+    <releaseNotes></releaseNotes>
+    <copyright></copyright>
+    <language></language>
+    <tags>PDF viewer control component reader print forms split merge stamp convert optimize redact encrypt pdftron pdfviewer rasterizer pdf2image convert converter extract sign annotate docx pptx</tags>
+    <dependencies>
+      <group targetFramework="MonoAndroid9.0">
+        <dependency id="GoogleGson" version="2.8.1" />
+        <dependency id="Square.OkHttp" version="2.4.0" />
+        <dependency id="Square.OkIO" version="1.5.0" />
+        <dependency id="Square.Picasso" version="2.5.2.2" />
+        <dependency id="Xamarin.Android.Arch.Core.Common" version="1.1.1" />
+        <dependency id="Xamarin.Android.Arch.Core.Runtime" version="1.1.1" />
+        <dependency id="Xamarin.Android.Arch.Lifecycle.Common" version="1.1.1" />
+        <dependency id="Xamarin.Android.Arch.Lifecycle.Extensions" version="1.1.1" />
+        <dependency id="Xamarin.Android.Arch.Lifecycle.LiveData" version="1.1.1" />
+        <dependency id="Xamarin.Android.Arch.Lifecycle.LiveData.Core" version="1.1.1" />
+        <dependency id="Xamarin.Android.Arch.Lifecycle.Runtime" version="1.1.1" />
+        <dependency id="Xamarin.Android.Arch.Lifecycle.ViewModel" version="1.1.1" />
+        <dependency id="Xamarin.Android.ReactiveStreams" version="1.0.2" />
+        <dependency id="Xamarin.Android.ReactiveX.RxAndroid" version="2.1.1" />
+        <dependency id="Xamarin.Android.ReactiveX.RxJava" version="2.2.7" />
+        <dependency id="Xamarin.Android.Support.Animated.Vector.Drawable" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Annotations" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.AsyncLayoutInflater" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Collections" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Compat" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Constraint.Layout" version="1.1.2" />
+        <dependency id="Xamarin.Android.Support.Constraint.Layout.Solver" version="1.1.2" />
+        <dependency id="Xamarin.Android.Support.CoordinaterLayout" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Core.UI" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Core.Utils" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.CursorAdapter" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.CustomView" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Design" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.DocumentFile" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.DrawerLayout" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Fragment" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Interpolator" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Loader" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.LocalBroadcastManager" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Media.Compat" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Print" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.SlidingPaneLayout" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.SwipeRefreshLayout" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Transition" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.v4" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.v7.AppCompat" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.v7.CardView" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.v7.RecyclerView" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.Vector.Drawable" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.VersionedParcelable" version="28.0.0" />
+        <dependency id="Xamarin.Android.Support.ViewPager" version="28.0.0" />
+        <dependency id="Xamarin.AndroidX.Annotation" version="1.0.2-preview02" />
+        <dependency id="Xamarin.AndroidX.AppCompat" version="1.0.2-preview02" />
+        <dependency id="Xamarin.AndroidX.Arch.Core.Common" version="2.0.1-preview02" />
+        <dependency id="Xamarin.AndroidX.Arch.Core.Runtime" version="2.0.1-preview02" />
+        <dependency id="Xamarin.AndroidX.AsyncLayoutInflater" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.CardView" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Collection" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.ConstraintLayout" version="1.1.3-preview02" />
+        <dependency id="Xamarin.AndroidX.ConstraintLayout.Solver" version="1.1.3-preview02" />
+        <dependency id="Xamarin.AndroidX.CoordinatorLayout" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Core" version="1.0.1-preview02" />
+        <dependency id="Xamarin.AndroidX.CursorAdapter" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.CustomView" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.DocumentFile" version="1.0.1-preview02" />
+        <dependency id="Xamarin.AndroidX.DrawerLayout" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Fragment" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Interpolator" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Legacy.Support.Core.UI" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Legacy.Support.Core.Utils" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.Common" version="2.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.Extensions" version="2.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.LiveData" version="2.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.LiveData.Core" version="2.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.Process" version="2.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.Runtime" version="2.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.Service" version="2.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.ViewModel" version="2.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Loader" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.LocalBroadcastManager" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Migration" version="1.0.0-preview05" />
+        <dependency id="Xamarin.AndroidX.MultiDex" version="2.0.1-preview02" />
+        <dependency id="Xamarin.AndroidX.Print" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.RecyclerView" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.SlidingPaneLayout" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.SwipeRefreshLayout" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.Transition" version="1.0.1-preview02" />
+        <dependency id="Xamarin.AndroidX.VectorDrawable" version="1.0.1-preview02" />
+        <dependency id="Xamarin.AndroidX.VectorDrawable.Animated" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.VersionedParcelable" version="1.0.0-preview02" />
+        <dependency id="Xamarin.AndroidX.ViewPager" version="1.0.0-preview02" />
+        <dependency id="Xamarin.Build.Download" version="0.4.7" />
+        <dependency id="Xamarin.Google.Android.Material" version="1.0.0-preview02" />
+        <dependency id="PDFTron.Android" version="6.9.3" />
+        <dependency id="PDFTron.Android.FAB" version="1.0.0" />
+        <dependency id="PDFTron.Android.PageCropper" version="1.0.0" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="Mono.Android" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System" targetFramework="MonoAndroid9.0" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="MonoAndroid9.0" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="D:\TrunkXamarin4\PDFNetXamarin\lib\android\Tools.dll" target="lib\monoandroid90\Tools.dll" />
+    <file src="D:\TrunkXamarin4\PDFNetXamarin\lib\android\Tools.pdb" target="lib\monoandroid90\Tools.pdb" />
+  </files>
+</package>

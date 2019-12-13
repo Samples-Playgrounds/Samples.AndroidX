@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiscellaneousSamples", "AndroidMiscellaneousSamples\MiscellaneousSamples.csproj", "{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = AndroidMiscellaneousSamples\MiscellaneousSamples.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

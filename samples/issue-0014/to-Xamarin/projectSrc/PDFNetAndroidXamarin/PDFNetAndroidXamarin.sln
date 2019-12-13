@@ -1,0 +1,130 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFNetAndroid", "PDFNetAndroidXamarin\PDFNetAndroid.csproj", "{CF847925-0BF7-41A6-B697-789B0A735AE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFNetAndroidXamarinSample", "..\..\samples\PDFNetAndroidXamarinSample\PDFNetAndroidXamarinSample\PDFNetAndroidXamarinSample.csproj", "{8B6DBE6D-7039-4668-8516-6A2EBB715F12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiscellaneousSamples", "..\..\samples\AndroidMiscellaneousSamples\AndroidMiscellaneousSamples\MiscellaneousSamples.csproj", "{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFViewCtrlTools", "..\..\lib\android\Native\Tools\binding\PDFViewCtrlTools.csproj", "{7FFB3160-C6AD-4132-81A8-1A41C4E9EB5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingActionButton", "..\..\lib\android\Native\Tools\FloatingActionButton\FloatingActionButton.csproj", "{97EFBDDA-652B-4C76-B4D6-584D308869C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageCropper", "..\..\lib\android\Native\Tools\PageCropper\PageCropper.csproj", "{E9AA6E33-9CA1-4C7F-8155-2F651A90A887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pdfnet-demo-utils", "..\..\lib\android\Native\Tools\pdfnet-demo-utils\pdfnet-demo-utils.csproj", "{255651B6-9A94-4A64-9B44-56AFF5C6502E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompleteReaderAndroid", "..\..\samples\CompleteReaderAndroid\CompleteReaderAndroid.csproj", "{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pdftron-collab", "..\..\lib\android\Native\Tools\pdftron-collab\pdftron-collab.csproj", "{84952FD6-2D96-459E-8FA5-635A9D52017F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pdftron-collab-wvs", "..\..\lib\android\Native\Tools\pdftron-collab-wvs\pdftron-collab-wvs.csproj", "{EF660CEF-25B1-4BAE-AB91-443948E448DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF847925-0BF7-41A6-B697-789B0A735AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF847925-0BF7-41A6-B697-789B0A735AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF847925-0BF7-41A6-B697-789B0A735AE7}.Debug|x64.ActiveCfg = Debug|x64
+		{CF847925-0BF7-41A6-B697-789B0A735AE7}.Debug|x64.Build.0 = Debug|x64
+		{CF847925-0BF7-41A6-B697-789B0A735AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF847925-0BF7-41A6-B697-789B0A735AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF847925-0BF7-41A6-B697-789B0A735AE7}.Release|x64.ActiveCfg = Release|x64
+		{CF847925-0BF7-41A6-B697-789B0A735AE7}.Release|x64.Build.0 = Release|x64
+		{8B6DBE6D-7039-4668-8516-6A2EBB715F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B6DBE6D-7039-4668-8516-6A2EBB715F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B6DBE6D-7039-4668-8516-6A2EBB715F12}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8B6DBE6D-7039-4668-8516-6A2EBB715F12}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8B6DBE6D-7039-4668-8516-6A2EBB715F12}.Debug|x64.Build.0 = Debug|Any CPU
+		{8B6DBE6D-7039-4668-8516-6A2EBB715F12}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{8B6DBE6D-7039-4668-8516-6A2EBB715F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B6DBE6D-7039-4668-8516-6A2EBB715F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B6DBE6D-7039-4668-8516-6A2EBB715F12}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8B6DBE6D-7039-4668-8516-6A2EBB715F12}.Release|x64.ActiveCfg = Release|Any CPU
+		{8B6DBE6D-7039-4668-8516-6A2EBB715F12}.Release|x64.Build.0 = Release|Any CPU
+		{8B6DBE6D-7039-4668-8516-6A2EBB715F12}.Release|x64.Deploy.0 = Release|Any CPU
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}.Release|x64.ActiveCfg = Release|Any CPU
+		{7FFB3160-C6AD-4132-81A8-1A41C4E9EB5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FFB3160-C6AD-4132-81A8-1A41C4E9EB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FFB3160-C6AD-4132-81A8-1A41C4E9EB5B}.Debug|x64.ActiveCfg = Debug|x64
+		{7FFB3160-C6AD-4132-81A8-1A41C4E9EB5B}.Debug|x64.Build.0 = Debug|x64
+		{7FFB3160-C6AD-4132-81A8-1A41C4E9EB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FFB3160-C6AD-4132-81A8-1A41C4E9EB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FFB3160-C6AD-4132-81A8-1A41C4E9EB5B}.Release|x64.ActiveCfg = Release|x64
+		{7FFB3160-C6AD-4132-81A8-1A41C4E9EB5B}.Release|x64.Build.0 = Release|x64
+		{97EFBDDA-652B-4C76-B4D6-584D308869C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97EFBDDA-652B-4C76-B4D6-584D308869C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97EFBDDA-652B-4C76-B4D6-584D308869C2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{97EFBDDA-652B-4C76-B4D6-584D308869C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97EFBDDA-652B-4C76-B4D6-584D308869C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97EFBDDA-652B-4C76-B4D6-584D308869C2}.Release|x64.ActiveCfg = Release|Any CPU
+		{E9AA6E33-9CA1-4C7F-8155-2F651A90A887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9AA6E33-9CA1-4C7F-8155-2F651A90A887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9AA6E33-9CA1-4C7F-8155-2F651A90A887}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E9AA6E33-9CA1-4C7F-8155-2F651A90A887}.Debug|x64.Build.0 = Debug|Any CPU
+		{E9AA6E33-9CA1-4C7F-8155-2F651A90A887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9AA6E33-9CA1-4C7F-8155-2F651A90A887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9AA6E33-9CA1-4C7F-8155-2F651A90A887}.Release|x64.ActiveCfg = Release|Any CPU
+		{E9AA6E33-9CA1-4C7F-8155-2F651A90A887}.Release|x64.Build.0 = Release|Any CPU
+		{255651B6-9A94-4A64-9B44-56AFF5C6502E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{255651B6-9A94-4A64-9B44-56AFF5C6502E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{255651B6-9A94-4A64-9B44-56AFF5C6502E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{255651B6-9A94-4A64-9B44-56AFF5C6502E}.Debug|x64.Build.0 = Debug|Any CPU
+		{255651B6-9A94-4A64-9B44-56AFF5C6502E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{255651B6-9A94-4A64-9B44-56AFF5C6502E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{255651B6-9A94-4A64-9B44-56AFF5C6502E}.Release|x64.ActiveCfg = Release|Any CPU
+		{255651B6-9A94-4A64-9B44-56AFF5C6502E}.Release|x64.Build.0 = Release|Any CPU
+		{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}.Debug|x64.Build.0 = Debug|Any CPU
+		{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}.Release|x64.ActiveCfg = Release|Any CPU
+		{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}.Release|x64.Build.0 = Release|Any CPU
+		{3B3A7A80-0048-4EE1-A6F8-9DC6974DA6C2}.Release|x64.Deploy.0 = Release|Any CPU
+		{84952FD6-2D96-459E-8FA5-635A9D52017F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84952FD6-2D96-459E-8FA5-635A9D52017F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84952FD6-2D96-459E-8FA5-635A9D52017F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{84952FD6-2D96-459E-8FA5-635A9D52017F}.Debug|x64.Build.0 = Debug|Any CPU
+		{84952FD6-2D96-459E-8FA5-635A9D52017F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84952FD6-2D96-459E-8FA5-635A9D52017F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84952FD6-2D96-459E-8FA5-635A9D52017F}.Release|x64.ActiveCfg = Release|Any CPU
+		{84952FD6-2D96-459E-8FA5-635A9D52017F}.Release|x64.Build.0 = Release|Any CPU
+		{EF660CEF-25B1-4BAE-AB91-443948E448DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF660CEF-25B1-4BAE-AB91-443948E448DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF660CEF-25B1-4BAE-AB91-443948E448DB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EF660CEF-25B1-4BAE-AB91-443948E448DB}.Debug|x64.Build.0 = Debug|Any CPU
+		{EF660CEF-25B1-4BAE-AB91-443948E448DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF660CEF-25B1-4BAE-AB91-443948E448DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF660CEF-25B1-4BAE-AB91-443948E448DB}.Release|x64.ActiveCfg = Release|Any CPU
+		{EF660CEF-25B1-4BAE-AB91-443948E448DB}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2DE1962-99BC-47B2-8615-95956CB55B4A}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ..\..\samples\PDFNetAndroidXamarinSample\PDFNetAndroidXamarinSample\PDFNetAndroidXamarinSample.csproj
+	EndGlobalSection
+EndGlobal
