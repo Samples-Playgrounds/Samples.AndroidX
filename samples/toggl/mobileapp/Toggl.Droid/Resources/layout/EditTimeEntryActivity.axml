@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/EditTimeEntryView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:importantForAutofill="noExcludeDescendants"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/DescriptionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/expandedToolbarHeight"
+            android:elevation="@dimen/toolbarElevation"
+            android:paddingBottom="16dp"
+            android:background="@color/background"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/Toolbar"
+                style="@style/ToolbarStyle"
+                android:layout_height="match_parent" />
+            
+            <EditText
+                android:id="@+id/DescriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginRight="16dp"
+                android:elevation="@dimen/toolbarElevation"
+                android:background="@null"
+                android:gravity="bottom"
+                tools:hint="What are you working on?"
+                android:inputType="textMultiLine"
+                android:letterSpacing="-0.01"
+                android:lineSpacingExtra="5sp"
+                android:maxLines="4"
+                android:minLines="1"
+                android:scrollHorizontally="true"
+                android:textColor="@color/primaryText"
+                android:textColorHint="@color/placeholderText"
+                android:textCursorDrawable="@drawable/EditTextCursor"
+                android:textSize="19sp" />
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="top"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/SingleTimeEntryModeViews"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:constraint_referenced_ids="GroupCount,GroupDuration,TimeMiddleGuide,TimeIcon,StartTimeButton,StartTime,StartDate,StartTimeLabel,StopTimeButton,StopTime,StopDate,StopTimeButton,EditStopTimeLabel,TimeBottomBorder,DurationButton,Duration,DurationLabel,DurationBottomBorder" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/TimeEntriesGroupModeViews"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:constraint_referenced_ids="GroupCount,GroupDuration" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/BillableRelatedViews"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:constraint_referenced_ids="BillableIcon,ToggleBillableButton,BillableLabel,BillableSwitch,BillableBottomBorder" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/StoppedTimeEntryStopTimeElements"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:constraint_referenced_ids="StopTime,StopDate" />
+
+            <!-- ERROR MESSAGE -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ErrorContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp">
+
+                    <ImageView
+                        android:id="@+id/ErrorIcon"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="center"
+                        android:src="@drawable/error_baddata"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/ErrorTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="center_vertical"
+                        tools:text="Oops!"
+                        android:textAllCaps="true"
+                        android:textColor="@color/errorText"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/ErrorIcon"
+                        app:layout_constraintLeft_toRightOf="@+id/ErrorIcon"
+                        app:layout_constraintTop_toTopOf="@id/ErrorIcon" />
+
+                    <TextView
+                        android:id="@+id/ErrorText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:minLines="1"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@id/ErrorTitle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ErrorTitle"
+                        tools:text="This time entry cant be saved and is rather large. Definitely multilined at best. This should really be big." />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/GroupCount"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_vertical"
+                android:textAllCaps="true"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ErrorContainer"
+                tools:text="Editing 2 time entries" />
+
+            <TextView
+                android:id="@+id/GroupDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_vertical"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ErrorContainer"
+                tools:text="1:30:00" />
+
+            <View
+                android:id="@+id/GroupSummaryBottomBorder"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/separator"
+                app:layout_constraintTop_toBottomOf="@id/GroupCount" />
+
+            <!-- PROJECT/TASK/CLIENT -->
+
+            <ImageView
+                android:id="@+id/ProjectIcon"
+                android:layout_width="56dp"
+                android:layout_height="48dp"
+                android:scaleType="center"
+                android:src="@drawable/project"
+                app:layout_constraintTop_toBottomOf="@id/GroupCount"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <View
+                android:id="@+id/SelectProjectButton"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintLeft_toLeftOf="@id/ProjectIcon"
+                app:layout_constraintTop_toTopOf="@id/ProjectIcon"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <TextView
+                android:id="@+id/ProjectPlaceholderLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center_vertical|left"
+                android:textColor="@color/placeholderText"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/ProjectIcon"
+                app:layout_constraintTop_toTopOf="@+id/ProjectIcon"
+                tools:text="Add project..." />
+
+            <TextView
+                android:id="@+id/ProjectTaskClient"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="16dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_vertical|left"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:textColor="@color/primaryText"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/ProjectIcon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ProjectIcon"
+                tools:text="Superday" />
+
+            <View
+                android:id="@+id/ProjectBottomBorder"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="56dp"
+                android:background="@color/separator"
+                app:layout_constraintTop_toBottomOf="@id/ProjectIcon" />
+
+            <!-- TAGS -->
+
+            <ImageView
+                android:id="@+id/TagsIcon"
+                android:layout_width="56dp"
+                android:layout_height="48dp"
+                android:scaleType="center"
+                android:src="@drawable/tag"
+                app:layout_constraintTop_toBottomOf="@id/ProjectBottomBorder"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <View
+                android:id="@+id/SelectTagsButton"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintLeft_toLeftOf="@id/TagsIcon"
+                app:layout_constraintTop_toTopOf="@id/TagsIcon"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <TextView
+                android:id="@+id/TagsPlaceholderLabel"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/placeholderText"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/TagsIcon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/TagsIcon"
+                tools:text="Add tags" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/TagsRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                app:layout_constraintLeft_toRightOf="@id/TagsIcon"
+                app:layout_constraintTop_toTopOf="@+id/TagsIcon"
+                app:layout_constraintBottom_toBottomOf="@+id/TagsIcon" />
+
+            <View
+                android:id="@+id/TagsBottomBorder"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="56dp"
+                android:background="@color/separator"
+                app:layout_constraintTop_toBottomOf="@id/TagsIcon" />
+
+            <!-- BILLABLE -->
+
+            <ImageView
+                android:id="@+id/BillableIcon"
+                android:layout_width="56dp"
+                android:layout_height="48dp"
+                android:scaleType="center"
+                android:src="@drawable/billable"
+                app:layout_constraintTop_toBottomOf="@id/TagsBottomBorder"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <View
+                android:id="@+id/ToggleBillableButton"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintLeft_toLeftOf="@id/BillableIcon"
+                app:layout_constraintTop_toTopOf="@id/BillableIcon"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <TextView
+                android:id="@+id/BillableLabel"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                tools:text="Billable"
+                android:textColor="@color/primaryText"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/BillableIcon"
+                app:layout_constraintTop_toTopOf="@+id/BillableIcon" />
+
+            <Switch
+                android:id="@+id/BillableSwitch"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:paddingRight="18dp"
+                android:paddingLeft="8dp"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TagsBottomBorder" />
+
+            <View
+                android:id="@+id/BillableBottomBorder"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="56dp"
+                android:background="@color/separator"
+                app:layout_constraintTop_toBottomOf="@id/BillableIcon" />
+
+            <!-- TIME -->
+
+            <View
+                android:id="@+id/TimeMiddleGuide"
+                android:layout_width="0.5dp"
+                android:layout_height="72dp"
+                android:background="@color/separator"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/BillableBottomBorder" />
+
+            <ImageView
+                android:id="@+id/TimeIcon"
+                android:layout_width="56dp"
+                android:layout_height="48dp"
+                android:scaleType="center"
+                android:src="@drawable/timer_dark"
+                app:layout_constraintTop_toBottomOf="@id/BillableBottomBorder"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <View
+                android:id="@+id/StartTimeButton"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/TimeMiddleGuide"
+                app:layout_constraintTop_toBottomOf="@id/BillableBottomBorder"
+                app:layout_constraintBottom_toTopOf="@+id/TimeBottomBorder"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/StartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryText"
+                android:textSize="15sp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintLeft_toRightOf="@id/TimeIcon"
+                app:layout_constraintTop_toTopOf="@id/TimeIcon"
+                tools:text="11:25 AM" />
+
+            <TextView
+                android:id="@+id/StartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/primaryText"
+                android:textSize="15sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/StartTime"
+                app:layout_constraintLeft_toRightOf="@id/StartTime"
+                tools:text="06.05." />
+
+            <TextView
+                android:id="@+id/StartTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="Start time"
+                android:textColor="@color/secondaryText"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toRightOf="@id/TimeIcon"
+                app:layout_constraintTop_toBottomOf="@id/StartTime"
+                app:layout_constraintLeft_toLeftOf="@id/StartTime" />
+
+            <View
+                android:id="@+id/StopTimeButton"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintLeft_toLeftOf="@id/TimeMiddleGuide"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/TimeIcon"
+                app:layout_constraintBottom_toTopOf="@id/TimeBottomBorder"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/StopTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:textColor="@color/primaryText"
+                android:textSize="15sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/StartTime"
+                app:layout_constraintLeft_toRightOf="@id/TimeMiddleGuide"
+                tools:text="11:48 AM" />
+
+            <TextView
+                android:id="@+id/StopDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/primaryText"
+                android:textSize="15sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/StopTime"
+                app:layout_constraintLeft_toRightOf="@id/StopTime"
+                tools:text="06.05." />
+
+            <TextView
+                android:id="@+id/StopTimeEntryButtonLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Stop"
+                android:textColor="@color/flatButtonText"
+                android:layout_marginLeft="16dp"
+                android:textSize="15sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/StartTime"
+                app:layout_constraintLeft_toRightOf="@id/TimeMiddleGuide" />
+
+            <TextView
+                android:id="@+id/EditStopTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="16dp"
+                tools:text="End time"
+                android:textColor="@color/secondaryText"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/StartTime"
+                app:layout_constraintLeft_toRightOf="@id/TimeMiddleGuide" />
+
+            <View
+                android:id="@+id/TimeBottomBorder"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="56dp"
+                android:background="@color/separator"
+                app:layout_constraintTop_toBottomOf="@id/TimeMiddleGuide" />
+
+            <!-- DURATION -->
+
+            <View
+                android:id="@+id/DurationButton"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintLeft_toLeftOf="@id/TimeIcon"
+                app:layout_constraintTop_toBottomOf="@id/TimeBottomBorder"
+                app:layout_constraintBottom_toTopOf="@+id/DurationBottomBorder"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/Duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                android:textColor="@color/primaryText"
+                android:textSize="15sp"
+                tools:text="0:11:25"
+                app:layout_constraintTop_toBottomOf="@id/TimeBottomBorder"
+                app:layout_constraintLeft_toRightOf="@id/TimeIcon" />
+
+            <TextView
+                android:id="@+id/DurationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="Duration"
+                android:textColor="@color/secondaryText"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/Duration"
+                app:layout_constraintLeft_toLeftOf="@id/Duration" />
+
+            <View
+                android:id="@+id/DurationBottomBorder"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/separator"
+                app:layout_constraintTop_toBottomOf="@id/DurationLabel" />
+
+            <!-- DELETE -->
+
+            <ImageView
+                android:id="@+id/DeleteIcon"
+                android:layout_width="56dp"
+                android:layout_height="48dp"
+                android:scaleType="center"
+                android:src="@drawable/delete"
+                app:layout_constraintTop_toBottomOf="@id/DurationBottomBorder"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <View
+                android:id="@+id/DeleteButton"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toTopOf="@id/DeleteIcon"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <TextView
+                android:id="@+id/DeleteLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                tools:text="Delete this entry"
+                android:textColor="@color/errorText"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/DeleteIcon"
+                app:layout_constraintTop_toBottomOf="@id/DurationBottomBorder" />
+
+            <View
+                android:id="@+id/DeleteBottomBorder"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="56dp"
+                android:background="@color/separator"
+                app:layout_constraintTop_toBottomOf="@id/DeleteLabel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

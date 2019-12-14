@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{0C219958-CAD1-4B1B-BBCB-D12CC6E11F49}</ProjectGuid>
+    <ProjectTypeGuids>{EE2C853D-36AF-4FDB-B1AD-8E90477E2198};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Toggl.iOS.TimerWidgetExtension</RootNamespace>
+    <AssemblyName>Toggl.iOS.TimerWidgetExtension</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>23481</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>19148</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release.AdHoc|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Release.AdHoc</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: Toggl OU (B227VTMZ94)</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>Daneel AdHoc Widget Extension</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release.AppStore|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Release.AppStore</OutputPath>
+    <DefineConstants>USE_PRODUCTION_API</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: Toggl OU (B227VTMZ94)</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>Daneel AppStore Widget Extension</CodesignProvision>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchLink>Full</MtouchLink>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />    
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Reactive">
+      <HintPath>..\packages\System.Reactive.4.2.0\lib\netstandard2.0\System.Reactive.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\Images.xcassets\icStop.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icStart.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icContinue.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MainInterface.storyboard" />
+    <InterfaceDefinition Include="SuggestionTableViewCell.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TodayViewController.cs" />
+    <Compile Include="TodayViewController.designer.cs">
+      <DependentUpon>TodayViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkingHandler.cs" />
+    <Compile Include="SuggestionTableViewCell.cs" />
+    <Compile Include="SuggestionTableViewCell.designer.cs">
+      <DependentUpon>SuggestionTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuggestionsDataSource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toggl.iOS.Shared\Toggl.iOS.Shared.csproj">
+      <Project>{aca2821e-0ff9-4036-bff6-e775bb4e6732}</Project>
+      <Name>Toggl.iOS.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.Shared\Toggl.Shared.csproj">
+      <Project>{6AF7BE5E-AF9D-4EA7-AF7F-28D07B8DEF24}</Project>
+      <Name>Toggl.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.Networking\Toggl.Networking.csproj">
+      <Project>{5ACEB155-9DD4-4309-BCC9-997A09950393}</Project>
+      <Name>Toggl.Networking</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\icStop.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\icStart.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\icStart.imageset\play%402x-1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icStart.imageset\play.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icStart.imageset\play%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icStop.imageset\stop.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icStop.imageset\stop%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icStop.imageset\stop%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icContinue.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\icContinue.imageset\continue.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icContinue.imageset\continue%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icContinue.imageset\continue%403x.png" />
+    <ImageAsset Include="Resources\Colors.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Spider.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text4.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\TableBackground.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CellBackground.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Background.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text2.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text3.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray6.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Separator.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray2.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray3.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\InverseText.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray5.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray4.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\OpaqueSeparator.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text1.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text.colorset\Contents.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.AppExtension.CSharp.targets" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+</Project>

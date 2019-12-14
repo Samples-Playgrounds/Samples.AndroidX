@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$(SolutionDir)Toggl.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toggl.Core.UI\Toggl.Core.UI.csproj" />
+    <ProjectReference Include="..\Toggl.Core.Tests\Toggl.Core.Tests.csproj" />
+    <ProjectReference Include="..\Toggl.Core\Toggl.Core.csproj" />
+    <ProjectReference Include="..\Toggl.Shared.Tests\Toggl.Shared.Tests.csproj" />
+    <ProjectReference Include="..\Toggl.Shared\Toggl.Shared.csproj" />
+    <ProjectReference Include="..\Toggl.Storage.Realm\Toggl.Storage.Realm.csproj" />
+    <ProjectReference Include="..\Toggl.Storage\Toggl.Storage.csproj" />
+    <ProjectReference Include="..\Toggl.Networking.Tests.Integration\Toggl.Networking.Tests.Integration.csproj" />
+    <ProjectReference Include="..\Toggl.Networking\Toggl.Networking.csproj" />
+  </ItemGroup>
+</Project>

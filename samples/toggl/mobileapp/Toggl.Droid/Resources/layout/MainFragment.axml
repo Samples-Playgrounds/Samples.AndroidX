@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MainCoordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ViewStub
+        android:id="@+id/EmptyStateViewStub"
+        android:layout="@layout/MainLogEmptyView"
+        android:inflatedId="@+id/EmptyStateEmptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize" />
+    <ViewStub
+        android:id="@+id/WelcomeBackViewStub"
+        android:inflatedId="@+id/WelcomeBackView"
+        android:layout="@layout/WelcomeBackPlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/MainSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/MainRecyclerView"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.google.android.material.circularreveal.CircularRevealFrameLayout
+      android:id="@+id/MainRunningTimeEntrySheet"
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:visibility="invisible"    
+      android:clickable="true"
+      android:focusable="true"
+      android:elevation="8dp"
+      android:layout_gravity="bottom|center_horizontal"
+      android:background="@color/cardBackground"
+      android:foreground="?android:attr/selectableItemBackground"
+      app:layout_behavior="toggl.droid.presentation.RunningTimeEntrySheetBehavior">
+        <include layout="@layout/MainRunningTimeEntry" />
+    </com.google.android.material.circularreveal.CircularRevealFrameLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/MainPlayButton"
+        app:elevation="4dp"
+        android:src="@drawable/play_white"
+        app:backgroundTint="@color/startTimeEntryButtonBackground"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="bottom|right" />
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarLayout"
+        android:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/Toolbar"
+            style="@style/ToolbarStyle"
+            app:layout_scrollFlags="scroll|enterAlways">
+            <ImageView 
+              android:src="@drawable/ic_toggl_logo"
+              android:layout_gravity="start"
+              android:layout_height="24dp"
+              android:layout_width="80dp"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

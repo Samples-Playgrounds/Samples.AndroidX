@@ -1,0 +1,162 @@
+"0DhbDI" = "Continue last time entry";
+
+"0vfpVe" = "Time-tracking started.";
+
+"1L6L4u" = "with no parameters";
+
+"2VrJyI-EagY8C" = "for This Week in ${workspace}";
+
+"2VrJyI-LRmygz" = "for Yesterday in ${workspace}";
+
+"2VrJyI-NE16G9" = "for Last Month in ${workspace}";
+
+"2VrJyI-RX4ANU" = "for Today in ${workspace}";
+
+"2VrJyI-Uzo1j2" = "for This Year in ${workspace}";
+
+"2VrJyI-VKFJlX" = "for This Month in ${workspace}";
+
+"2VrJyI-XDraDt" = "for Last Year in ${workspace}";
+
+"2VrJyI-g5ag4g" = "for Last Week in ${workspace}";
+
+"3JuKf9" = "Start timer";
+
+"3fSmL9" = "Start time tracking from clipboard";
+
+"3gmF02" = "Start timer from clipboard";
+
+"5xqJdx" = "${entryDescription}";
+
+"6vfiCX" = "Here is the report.";
+
+"7JD33K" = "Show report ";
+
+"A6lrEf" = "in ${workspace}";
+
+"ArvZvi" = "Start timer";
+
+"C2Ujo0" = "Log in to use this shortcut.";
+
+"C84CvN" = "Log in to use this shortcut.";
+
+"DcWrhF" = "Continue tracking";
+
+"DxHT4S" = "App data is outdated.";
+
+"E8rYzi" = "Start timer from clipboard";
+
+"EA0ujz" = "Stops the currently running timer";
+
+"Emkvsq-EagY8C" = "Here is the report for This Week.";
+
+"Emkvsq-LRmygz" = "Here is the report for Yesterday.";
+
+"Emkvsq-NE16G9" = "Here is the report for Last Month.";
+
+"Emkvsq-RX4ANU" = "Here is the report for Today.";
+
+"Emkvsq-Uzo1j2" = "Here is the report for This Year.";
+
+"Emkvsq-VKFJlX" = "Here is the report for This Month.";
+
+"Emkvsq-XDraDt" = "Here is the report for Last Year.";
+
+"Emkvsq-g5ag4g" = "Here is the report for Last Week.";
+
+"HVyNMs" = "App data is outdated.";
+
+"IUEfYE" = "Start timer";
+
+"JErccw" = "Start timer from clipboard";
+
+"JuvQpB" = "There's no timer running. ";
+
+"KKrxVY" = "${entryDescription}";
+
+"KPcGYj" = "Opens the reports section";
+
+"Mr6glC" = "${entryDescription}";
+
+"Np6x0m" = "Time-tracking started.";
+
+"Q15AN4" = "in ${workspace}";
+
+"Q7oQLD" = "Start timer from clipboard";
+
+"QmBKnK" = "Stop a running timer";
+
+"Rv6kvt" = "Start a new time tracking from clipboard";
+
+"T5OmeC" = "Start timer from clipboard";
+
+"UHcyyr" = "Stop a running timer";
+
+"VbS2we" = "Start timer";
+
+"WSMrGS" = "Stopped. You've tracked time for ${entryDurationString}.";
+
+"XDhgAw" = "for ${projectId} in ${workspace}";
+
+"akQb1h" = "Stopped. You've tracked ${entryDescription} for ${entryDurationString}.";
+
+"bCeUiv" = "in ${workspace}";
+
+"bHlXe3" = "${entryDescription}";
+
+"cAT3Em" = "with no parameters";
+
+"ciMjmD" = "in ${workspace}";
+
+"dZOAcx" = "Start timer";
+
+"ftAUTw" = "Start timer from clipboard";
+
+"hxXp2c" = "Show report for a period";
+
+"ieGUw3" = "Start time tracking";
+
+"jxPCY7" = "Show Report With Period";
+
+"kSGACm" = "Start a new time tracking";
+
+"m5JJnW" = "Tracking ${entryDescription}.";
+
+"m9jvM4-EagY8C" = "for This Week";
+
+"m9jvM4-LRmygz" = "for Yesterday";
+
+"m9jvM4-NE16G9" = "for Last Month";
+
+"m9jvM4-RX4ANU" = "for Today";
+
+"m9jvM4-Uzo1j2" = "for This Year";
+
+"m9jvM4-VKFJlX" = "for This Month";
+
+"m9jvM4-XDraDt" = "for Last Year";
+
+"m9jvM4-g5ag4g" = "for Last Week";
+
+"msGSif" = "${entryDescription}";
+
+"rWNsdx" = "Continue tracking";
+
+"sC56D6" = "Log in to use this shortcut.";
+
+"tjn3qS" = "Start timer";
+
+"ttEh92" = "Log in to use this shortcut.";
+
+"uAAbQw" = "Show report ";
+
+"vtK4O7" = "for ${projectId} in ${workspace}";
+
+"vvtqdG" = "Show report";
+
+"xGukxu" = "Start timer";
+
+"yhKeN0" = "App data is outdated.";
+
+"z4KrEF" = "Continues the last timer";
+

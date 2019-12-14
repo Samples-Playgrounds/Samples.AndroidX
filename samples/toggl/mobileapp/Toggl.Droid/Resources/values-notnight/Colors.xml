@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+  <color name="cardBackground">#FFFFFFFF</color>
+  <color name="background">#FFFAFBFC</color>
+  <color name="transparentCard">#00FFFFFF</color>
+  <color name="transparentBackground">#00FAFBFC</color>
+  <color name="primaryText">#FF000000</color>
+  <color name="secondaryText">#FF959595</color>
+  <color name="timerPageDurationText">#FF5E5B5B</color>
+  <color name="navigationBar">#FFFFFFFF</color>
+  <color name="errorText">#FFE20505</color>
+  <color name="separator">#FFE5E5E5</color>
+  <color name="stopTimeEntryButtonBackground">#FFE20505</color>
+  <color name="startTimeEntryButtonBackground">#FF1AD180</color>
+  <color name="licensesBorder">#1E000000</color>
+  <color name="licensesBackground">#FFF3F3F3</color>
+  <color name="tagToken">#FF000000</color>
+  <color name="darkBackground">#303030</color>
+  <color name="primaryTextOnDarkBackground">#DDFFFFFF</color>
+  <color name="weekStripeDisabledDayColor">#BDBDBD</color>
+</resources>

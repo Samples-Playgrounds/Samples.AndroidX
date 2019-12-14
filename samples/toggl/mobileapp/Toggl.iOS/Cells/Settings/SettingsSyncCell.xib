@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="cxk-wN-pdQ" customClass="SettingsSyncCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSx-Ey-7T7">
+                        <rect key="frame" x="119.33333333333334" y="18" width="81.333333333333343" height="17.666666666666671"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiP-fE-nUu">
+                                <rect key="frame" x="0.0" y="1.6666666666666687" width="61.333333333333336" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.56470588239999997" green="0.57254901960000004" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="icDoneSmall" translatesAutoresizingMaskIntoConstraints="NO" id="HD8-cB-EVv" userLabel="SyncedIcon">
+                                <rect key="frame" x="69.333333333333329" y="4.3333333333333321" width="12" height="9"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="9" id="1dZ-am-uuz"/>
+                                    <constraint firstAttribute="width" constant="12" id="2N8-R9-Ev2"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="icLoader" translatesAutoresizingMaskIntoConstraints="NO" id="8wV-X9-xgt" userLabel="LoadingIcon">
+                                <rect key="frame" x="63.333333333333329" y="-3" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="0fJ-od-agE"/>
+                                    <constraint firstAttribute="width" constant="24" id="Uok-zq-tlb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="uiP-fE-nUu" firstAttribute="leading" secondItem="jSx-Ey-7T7" secondAttribute="leading" id="5yy-d7-ckk"/>
+                            <constraint firstItem="8wV-X9-xgt" firstAttribute="centerY" secondItem="HD8-cB-EVv" secondAttribute="centerY" id="HPx-4c-coA"/>
+                            <constraint firstItem="8wV-X9-xgt" firstAttribute="centerX" secondItem="HD8-cB-EVv" secondAttribute="centerX" id="HjD-xm-SlD"/>
+                            <constraint firstItem="uiP-fE-nUu" firstAttribute="centerY" secondItem="jSx-Ey-7T7" secondAttribute="centerY" id="JwT-CI-tnv"/>
+                            <constraint firstItem="HD8-cB-EVv" firstAttribute="centerY" secondItem="uiP-fE-nUu" secondAttribute="centerY" id="KnR-tK-CMz"/>
+                            <constraint firstAttribute="height" constant="17.666666666666671" id="gwP-CF-bkb"/>
+                            <constraint firstAttribute="trailing" secondItem="HD8-cB-EVv" secondAttribute="trailing" id="p1x-o2-XDo"/>
+                            <constraint firstItem="HD8-cB-EVv" firstAttribute="leading" secondItem="uiP-fE-nUu" secondAttribute="trailing" constant="8" id="yBl-Pc-1hT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jSx-Ey-7T7" firstAttribute="centerX" secondItem="YTl-1W-gDM" secondAttribute="centerX" id="8Sp-t8-rO0"/>
+                    <constraint firstItem="jSx-Ey-7T7" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="18" id="9BN-Hp-3eE"/>
+                    <constraint firstAttribute="bottom" secondItem="jSx-Ey-7T7" secondAttribute="bottom" constant="8" id="Xgg-CT-JIC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="LoadingIcon" destination="8wV-X9-xgt" id="3L6-7J-8KQ"/>
+                <outlet property="StatusLabel" destination="uiP-fE-nUu" id="dHV-Sj-xe0"/>
+                <outlet property="SyncedIcon" destination="HD8-cB-EVv" id="5r2-eK-v4b"/>
+            </connections>
+            <point key="canvasLocation" x="40" y="37.684729064039409"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icDoneSmall" width="12" height="9"/>
+        <image name="icLoader" width="24" height="24"/>
+    </resources>
+</document>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SiriShortcutsViewController">
+            <connections>
+                <outlet property="DescriptionLabel" destination="f8s-rn-2No" id="DFJ-ZC-llg"/>
+                <outlet property="HeaderView" destination="E5t-6V-5b4" id="ehG-Cy-a3o"/>
+                <outlet property="TableView" destination="AMX-JN-UD4" id="mN0-Y5-hLI"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AMX-JN-UD4">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                    <color key="backgroundColor" name="TableBackground"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5t-6V-5b4">
+                    <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8s-rn-2No">
+                            <rect key="frame" x="24" y="38" width="327" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="Text"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="TableBackground"/>
+                    <constraints>
+                        <constraint firstItem="f8s-rn-2No" firstAttribute="centerY" secondItem="E5t-6V-5b4" secondAttribute="centerY" id="LRT-Gl-HHw"/>
+                        <constraint firstAttribute="trailing" secondItem="f8s-rn-2No" secondAttribute="trailing" constant="24" id="UTi-Ju-L0m"/>
+                        <constraint firstAttribute="height" constant="96" id="ePM-kl-SBw"/>
+                        <constraint firstItem="f8s-rn-2No" firstAttribute="leading" secondItem="E5t-6V-5b4" secondAttribute="leading" constant="24" id="sbE-VJ-v4P"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="AMX-JN-UD4" firstAttribute="top" secondItem="2" secondAttribute="top" id="HUz-xY-iYF"/>
+                <constraint firstAttribute="trailing" secondItem="E5t-6V-5b4" secondAttribute="trailing" id="SEy-hP-ctY"/>
+                <constraint firstItem="E5t-6V-5b4" firstAttribute="top" secondItem="2" secondAttribute="top" constant="44" id="TGY-YY-jWG"/>
+                <constraint firstItem="AMX-JN-UD4" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="aaP-nh-bgM"/>
+                <constraint firstAttribute="bottom" secondItem="AMX-JN-UD4" secondAttribute="bottom" id="nVe-7K-iwU"/>
+                <constraint firstAttribute="trailing" secondItem="AMX-JN-UD4" secondAttribute="trailing" id="xnX-7F-MXj"/>
+                <constraint firstItem="E5t-6V-5b4" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="yR8-F5-9XT"/>
+            </constraints>
+            <point key="canvasLocation" x="39.200000000000003" y="37.684729064039409"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TableBackground">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

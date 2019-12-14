@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cZE-iV-UFb" customClass="CalendarWeeklyViewDayCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="53" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="53" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8z-Zp-xUX">
+                        <rect key="frame" x="10.5" y="6" width="32" height="32"/>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="4ju-o2-9gg"/>
+                            <constraint firstAttribute="height" constant="32" id="htL-9x-idG"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbE-Fv-RLk">
+                        <rect key="frame" x="0.0" y="0.0" width="53" height="44"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qbE-Fv-RLk" secondAttribute="trailing" id="QDG-AY-euE"/>
+                <constraint firstItem="m8z-Zp-xUX" firstAttribute="centerY" secondItem="qbE-Fv-RLk" secondAttribute="centerY" id="Txv-k4-GVX"/>
+                <constraint firstItem="qbE-Fv-RLk" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" id="bsC-VT-4ap"/>
+                <constraint firstAttribute="bottom" secondItem="qbE-Fv-RLk" secondAttribute="bottom" id="rX9-n3-j4I"/>
+                <constraint firstItem="m8z-Zp-xUX" firstAttribute="centerX" secondItem="qbE-Fv-RLk" secondAttribute="centerX" id="tP2-xB-M9F"/>
+                <constraint firstItem="qbE-Fv-RLk" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" id="wli-1X-5yx"/>
+            </constraints>
+            <connections>
+                <outlet property="DayOfMonthLabel" destination="qbE-Fv-RLk" id="FzG-B0-Rrg"/>
+                <outlet property="IsSelectedDayBackgroundView" destination="m8z-Zp-xUX" id="4pr-84-SDX"/>
+            </connections>
+            <point key="canvasLocation" x="48.550724637681164" y="35.491071428571423"/>
+        </collectionViewCell>
+    </objects>
+</document>

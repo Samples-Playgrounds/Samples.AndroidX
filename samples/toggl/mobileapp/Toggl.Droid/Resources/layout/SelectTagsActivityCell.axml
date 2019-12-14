@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/cardBackground"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_height="48dp"
+    android:layout_width="match_parent">
+    <TextView
+        android:id="@+id/NameTextView"
+        android:maxLines="1"
+        android:gravity="left"
+        android:textSize="15sp"
+        android:textColor="@color/primaryText"
+        tools:text="This is a ridiculously big tag name for testing someth other stuff and"
+        android:layout_marginLeft="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|left" />
+    <View
+        android:background="@drawable/TransparentToCardColorGradient"
+        android:layout_width="48dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="0.0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|right" />
+    <View
+        android:background="@color/cardBackground"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|right" />
+    <ImageView
+        android:id="@+id/SelectedImageView"
+        android:src="@drawable/check"
+        android:layout_marginRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right" />
+    <View
+        android:foregroundTint="#328fff"
+        android:background="@color/separator"
+        android:layout_height="0.5dp"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent" />
+</FrameLayout>

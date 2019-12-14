@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cZE-iV-UFb" customClass="ReportsCalendarQuickSelectViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="95" height="32"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="95" height="32"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="xlk-jp-QIF">
+                        <rect key="frame" x="0.0" y="0.0" width="95" height="32"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Last week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmZ-s7-IVe">
+                                <rect key="frame" x="10" y="0.0" width="75" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <color key="textColor" name="CustomGray6"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SmZ-s7-IVe" firstAttribute="leading" secondItem="xlk-jp-QIF" secondAttribute="leading" constant="10" id="9Qp-Z7-c2D"/>
+                            <constraint firstAttribute="trailing" secondItem="SmZ-s7-IVe" secondAttribute="trailing" constant="10" id="aEh-RK-xow"/>
+                            <constraint firstAttribute="bottom" secondItem="SmZ-s7-IVe" secondAttribute="bottom" id="jsb-p0-nYo"/>
+                            <constraint firstItem="SmZ-s7-IVe" firstAttribute="top" secondItem="xlk-jp-QIF" secondAttribute="top" id="kKA-c5-k5n"/>
+                            <constraint firstAttribute="height" constant="32" id="zF9-ni-3aY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xlk-jp-QIF" secondAttribute="bottom" id="15l-H4-xQH"/>
+                <constraint firstItem="xlk-jp-QIF" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" id="Jb1-ba-zDL"/>
+                <constraint firstItem="xlk-jp-QIF" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" id="QLC-rE-HUF"/>
+                <constraint firstAttribute="trailing" secondItem="xlk-jp-QIF" secondAttribute="trailing" id="tT9-lt-qXu"/>
+            </constraints>
+            <size key="customSize" width="95" height="32"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="TitleLabel" destination="SmZ-s7-IVe" id="haV-4F-XDM"/>
+            </connections>
+            <point key="canvasLocation" x="42.5" y="54"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="CustomGray6">
+            <color red="0.070588238537311554" green="0.070588238537311554" blue="0.078431375324726105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

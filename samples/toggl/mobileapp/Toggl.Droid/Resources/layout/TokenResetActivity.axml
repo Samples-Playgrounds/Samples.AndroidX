@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+    android:animateLayoutChanges="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar"
+        style="@style/ToolbarStyle" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TokenResetPasswordLayout"
+        tools:hint="Password"
+        app:hintEnabled="false"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TokenResetPassword"
+            android:lines="1"
+            android:maxLines="1"
+            tools:hint="Password"
+            android:textSize="24sp"
+            android:focusable="true"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:focusableInTouchMode="true"
+            android:textColor="@color/primaryText"
+            android:textColorHint="@color/placeholderText"
+            android:background="@android:color/transparent"
+            android:layout_height="30dp"
+            android:layout_width="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <ProgressBar
+        android:id="@+id/TokenResetProgressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/TokenResetPasswordLayout" />
+    <TextView
+        android:id="@+id/TokenResetMessageWarning"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:paddingLeft="16dp"
+        android:textColor="@color/primaryText"
+        tools:text="Your API token has been reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TokenResetPasswordLayout" />
+    <TextView
+        android:id="@+id/TokenResetMessageEnterPasswordLabel"
+        android:textSize="12sp"
+        android:paddingLeft="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/primaryText"
+        tools:text="Enter your password to log back in to your account:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TokenResetMessageWarning" />
+    <TextView
+        android:id="@+id/TokenResetEmailLabel"
+        android:textSize="12sp"
+        tools:text="something@toggl.com"
+        android:paddingLeft="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/primaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TokenResetMessageEnterPasswordLabel" />
+    <TextView
+        android:id="@+id/TokenResetSignOutLabel"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:gravity="bottom"
+        android:textAllCaps="true"
+        android:textStyle="normal"
+        tools:text="Or sign out"
+        android:lineSpacingExtra="6sp"
+        android:textColor="@color/secondaryText"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/TokenResetDoneButton"
+        app:elevation="4dp"
+        app:borderWidth="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/next_light"
+        android:backgroundTint="@color/startTimeEntryButtonBackground"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;netcoreapp3.0</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$(SolutionDir)Toggl.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toggl.Shared\Toggl.Shared.csproj" />
+    <ProjectReference Include="..\Toggl.Storage\Toggl.Storage.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Realm" Version="3.0.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Models\RealmConstructors.tt" />
+    <None Include="Models\RealmConstructors.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RealmConstructors.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Models\RealmConstructors.cs">
+      <DependentUpon>RealmConstructors.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

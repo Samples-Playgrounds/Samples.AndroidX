@@ -1,0 +1,2241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{8CE4E64C-5719-4660-96AC-CF2ABA3A335E}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Toggl.iOS</RootNamespace>
+    <AssemblyName>Toggl.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Toggl.ruleset</CodeAnalysisRuleSet>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>18450</IOSDebuggerPort>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <MtouchExtraArgs>--linkskip Toggl.iOS --linkskip=Toggl.Storage.Realm --registrar:static</MtouchExtraArgs>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Toggl.ruleset</CodeAnalysisRuleSet>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchExtraArgs>--linkskip Toggl.iOS --linkskip=Toggl.Storage.Realm --registrar:static</MtouchExtraArgs>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release.AppStore|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release.AppStore</OutputPath>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;USE_PRODUCTION_API;USE_ANALYTICS;USE_APPCENTER</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchExtraArgs>--linkskip=Toggl.Storage.Realm --registrar:static</MtouchExtraArgs>
+    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <MtouchArch>ARM64</MtouchArch>
+    <OutputPath>..\bin\Release</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release.AdHoc|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release.AdHoc</OutputPath>
+    <DefineConstants>USE_APPCENTER;ADHOC</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignProvision>Daneel AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution: Toggl OU (B227VTMZ94)</CodesignKey>
+    <MtouchExtraArgs>--linkskip Toggl.iOS --linkskip=Toggl.Storage.Realm --registrar:static</MtouchExtraArgs>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Accord.3.8.0\lib\netstandard2.0\Accord.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.MachineLearning, Version=3.8.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Accord.MachineLearning.3.8.0\lib\netstandard2.0\Accord.MachineLearning.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.8.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Accord.Math.3.8.0\lib\netstandard2.0\Accord.Math.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.Math.Core, Version=3.8.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Accord.Math.3.8.0\lib\netstandard2.0\Accord.Math.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.Statistics, Version=3.8.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Accord.Statistics.3.8.0\lib\netstandard2.0\Accord.Statistics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AppCenter.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AppCenter.2.6.1\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Firebase.Iid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Xamarin.Firebase.Iid.60.1142.1\lib\MonoAndroid80\Xamarin.Firebase.Iid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Core">
+      <HintPath>..\packages\Xamarin.Google.iOS.Core.3.1.0\lib\Xamarin.iOS10\Google.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.SignIn">
+      <HintPath>..\packages\Xamarin.Google.iOS.SignIn.5.0.1\lib\xamarinios10\Google.SignIn.dll</HintPath>
+    </Reference>
+    <Reference Include="Realm.DataBinding">
+      <HintPath>..\packages\Realm.DataBinding.1.2.0\lib\Xamarin.iOS10\Realm.DataBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq">
+      <HintPath>..\packages\Remotion.Linq.2.1.2\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Realm">
+      <HintPath>..\packages\Realm.Database.3.0.0\lib\netstandard1.4\Realm.dll</HintPath>
+    </Reference>
+    <Reference Include="Realm.Sync">
+      <HintPath>..\packages\Realm.3.0.0\lib\netstandard1.4\Realm.Sync.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Core">
+      <HintPath>..\packages\Xamarin.Google.iOS.Core.3.1.0.1\lib\Xamarin.iOS10\Google.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\System.Reactive.Core.4.2.0\lib\netstandard2.0\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Core">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.Core.6.1.0\lib\xamarinios10\Firebase.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.InstanceID">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.InstanceID.4.2.1\lib\xamarinios10\Firebase.InstanceID.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Analytics">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.Analytics.6.0.4\lib\xamarinios10\Firebase.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.RemoteConfig">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.RemoteConfig.4.2.1\lib\xamarinios10\Firebase.RemoteConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.6.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.PerformanceMonitoring">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.PerformanceMonitoring.2.1.2\lib\Xamarin.iOS10\Firebase.PerformanceMonitoring.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>..\packages\Xamarin.Essentials.1.3.1\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="AdjustSdk.Xamarin.iOS">
+      <HintPath>..\packages\AdjustSdk.Xamarin.iOS.4.18.0\lib\xamarinios10\AdjustSdk.Xamarin.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.CloudMessaging">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.CloudMessaging.4.1.1.1\lib\xamarinios10\Firebase.CloudMessaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.ABTesting">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.ABTesting.3.0.0\lib\xamarinios10\Firebase.ABTesting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive">
+      <HintPath>..\packages\System.Reactive.4.2.0\lib\netstandard2.0\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\System.Reactive.Interfaces.4.2.0\lib\netstandard2.0\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\System.Reactive.Linq.4.2.0\lib\netstandard2.0\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK-1.0" />
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\packages\System.Reactive.PlatformServices.4.2.0\lib\netstandard2.0\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icArrowUp.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBillable.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icClose.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icContinue.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDatetime.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDone.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDownS.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icProjects.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icRefresh.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icReports.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icSettings.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icSyncerror.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icTags.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icUpS.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\playIcon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\stopIcon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icArrowUp.imageset\icArrowUp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icArrowUp.imageset\icArrowUp%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icArrowUp.imageset\icArrowUp%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBillable.imageset\icBillable.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBillable.imageset\icBillable%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBillable.imageset\icBillable%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icClose.imageset\icClose.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icClose.imageset\icClose%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icClose.imageset\icClose%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icContinue.imageset\icContinue.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icContinue.imageset\icContinue%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icContinue.imageset\icContinue%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDatetime.imageset\icDatetime.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDatetime.imageset\icDatetime%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDatetime.imageset\icDatetime%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDone.imageset\icDone.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDone.imageset\icDone%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDone.imageset\icDone%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDownS.imageset\icDownS.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDownS.imageset\icDownS%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDownS.imageset\icDownS%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icProjects.imageset\icProjects.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icProjects.imageset\icProjects%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icProjects.imageset\icProjects%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icRefresh.imageset\icRefresh.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icRefresh.imageset\icRefresh%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icRefresh.imageset\icRefresh%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icReports.imageset\icReports.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icReports.imageset\icReports%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icReports.imageset\icReports%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icSettings.imageset\icSettings.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icSettings.imageset\icSettings%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icSettings.imageset\icSettings%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icSyncerror.imageset\icSyncerror.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icSyncerror.imageset\icSyncerror%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icSyncerror.imageset\icSyncerror%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icTags.imageset\icTags.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icTags.imageset\icTags%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icTags.imageset\icTags%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icUpS.imageset\icUpS.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icUpS.imageset\icUpS%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icUpS.imageset\icUpS%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\stopIcon.imageset\stopIcon.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\stopIcon.imageset\stopIcon%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\stopIcon.imageset\stopIcon%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoWhite.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoWhite.imageset\togglLogoWhite.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoWhite.imageset\togglLogoWhite%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoWhite.imageset\togglLogoWhite%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notebook.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notebook.imageset\illustration1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notebook.imageset\illustration1%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notebook.imageset\illustration1%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglCronometer.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglCronometer.imageset\illustration2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglCronometer.imageset\illustration2%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglCronometer.imageset\illustration2%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icPassword.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icPassword.imageset\icPassword.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icPassword.imageset\icPassword%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icPassword.imageset\icPassword%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglLogo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglLogo.imageset\togglLogo%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\line.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\line.imageset\line.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\line.imageset\line%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\line.imageset\line%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icLoader.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icLoader.imageset\ic-spinner.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icLoader.imageset\ic-spinner%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icLoader.imageset\ic-spinner%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-80x80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-120x120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-58x58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-87x87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-114x114.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-180x180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icAdd.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icAdd.imageset\icAddS.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icAdd.imageset\icAddS%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icAdd.imageset\icAddS%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icProjectDot.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icProjectDot.imageset\icProjectDot.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icProjectDot.imageset\icProjectDot%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icProjectDot.imageset\icProjectDot%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\duration.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\duration.imageset\duration.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\duration.imageset\duration%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\duration.imageset\duration%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationSpider.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationSpider.imageset\icIllustrationSpider.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationSpider.imageset\icIllustrationSpider%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationSpider.imageset\icIllustrationSpider%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDoneSmall.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDoneSmall.imageset\icDone.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDoneSmall.imageset\icDone%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icDoneSmall.imageset\icDone%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icSearch.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icSearch.imageset\search.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icSearch.imageset\search%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icSearch.imageset\search%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCheckBoxChecked.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCheckBoxChecked.imageset\checkboxChecked.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCheckBoxChecked.imageset\checkboxChecked%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCheckBoxChecked.imageset\checkboxChecked%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCheckBoxUnchecked.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCheckBoxUnchecked.imageset\icCheckboxUnchecked.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCheckBoxUnchecked.imageset\icCheckboxUnchecked%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCheckBoxUnchecked.imageset\icCheckboxUnchecked%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icUnsynced.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icUnsynced.imageset\icUnsynced.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icUnsynced.imageset\icUnsynced%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icUnsynced.imageset\icUnsynced%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\toggl-app-icon-1024x1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\search.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\search.imageset\search.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\search.imageset\search%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\search.imageset\search%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationTags.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationTags.imageset\icIllustrationTags.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationTags.imageset\icIllustrationTags%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationTags.imageset\icIllustrationTags%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationProject.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationProject.imageset\icIllustrationProjects.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationProject.imageset\icIllustrationProjects%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationProject.imageset\icIllustrationProjects%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icArrowRight.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icArrowRight.imageset\icArrowRight.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icArrowRight.imageset\icArrowRight%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icArrowRight.imageset\icArrowRight%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icGoogle.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icGoogle.imageset\icGoogle.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icGoogle.imageset\icGoogle%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icGoogle.imageset\icGoogle%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icErrorSmall.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icErrorSmall.imageset\icErrorSmall.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icErrorSmall.imageset\icErrorSmall%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icErrorSmall.imageset\icErrorSmall%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationReports.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationReports.imageset\icIllustrationReports.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationReports.imageset\icIllustrationReports%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationReports.imageset\icIllustrationReports%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icChartEmpty.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icChartEmpty.imageset\icChartEmpty.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icChartEmpty.imageset\icChartEmpty%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icChartEmpty.imageset\icChartEmpty%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationTagsSmall.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationTagsSmall.imageset\icIllustrationTagsS.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationTagsSmall.imageset\icIllustrationTagsS%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationTagsSmall.imageset\icIllustrationTagsS%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icJustSpider.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icJustSpider.imageset\icJustSpider.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icJustSpider.imageset\icJustSpider%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icJustSpider.imageset\icJustSpider%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationProjectsSmall.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationProjectsSmall.imageset\icIllustrationProjectsS.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationProjectsSmall.imageset\icIllustrationProjectsS%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationProjectsSmall.imageset\icIllustrationProjectsS%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\manualIcon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\manualIcon.imageset\manualIcon.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\manualIcon.imageset\manualIcon%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\manualIcon.imageset\manualIcon%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBack.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBack.imageset\icBack.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBack.imageset\icBack%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBack.imageset\icBack%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icStartLabel.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icStartLabel.imageset\icStartLabel.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icStartLabel.imageset\icStartLabel%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icStartLabel.imageset\icStartLabel%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icEndLabel.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icEndLabel.imageset\icEndLabel.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icEndLabel.imageset\icEndLabel%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icEndLabel.imageset\icEndLabel%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\date.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\date.imageset\date.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\date.imageset\date%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\date.imageset\date%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icErrorEdit.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icErrorEdit.imageset\icErrorEdit.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icErrorEdit.imageset\icErrorEdit%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icErrorEdit.imageset\icErrorEdit%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\playIcon.imageset\play.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\playIcon.imageset\play%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\playIcon.imageset\play%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\doneGreen.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\doneGreen.imageset\doneGreen.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\doneGreen.imageset\doneGreen%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\doneGreen.imageset\doneGreen%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\emojiRaisedHands.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\emojiRaisedHands.imageset\emoji1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\emojiRaisedHands.imageset\emoji1%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\emojiRaisedHands.imageset\emoji1%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCheckGrey.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCheckGrey.imageset\icCheckGrey.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCheckGrey.imageset\icCheckGrey%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCheckGrey.imageset\icCheckGrey%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\bike.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\bike.imageset\bike.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\bike.imageset\bike%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\bike.imageset\bike%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoBig.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoBig.imageset\logo.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoBig.imageset\logo%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoBig.imageset\logo%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icGoogleColored.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icGoogleColored.imageset\google.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icGoogleColored.imageset\google%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icGoogleColored.imageset\google%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\thumbsup.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\thumbsup.imageset\thumbsup.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\thumbsup.imageset\thumbsup%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\thumbsup.imageset\thumbsup%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\thumbsdown.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\thumbsdown.imageset\thumbsdown.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\thumbsdown.imageset\thumbsdown%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\thumbsdown.imageset\thumbsdown%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\confirmation.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\confirmation.imageset\confirmation.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\confirmation.imageset\confirmation%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\confirmation.imageset\confirmation%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBackNoPadding.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBackNoPadding.imageset\icBack.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBackNoPadding.imageset\icBack%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBackNoPadding.imageset\icBack%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\paws.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\paws.imageset\paws.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\paws.imageset\paws%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\paws.imageset\paws%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBackNoPadding.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBackNoPadding.imageset\icBack.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBackNoPadding.imageset\icBack%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icBackNoPadding.imageset\icBack%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icWarning.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icWarning.imageset\icWarning.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icWarning.imageset\icWarning%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icWarning.imageset\icWarning%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCalendar.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCalendar.imageset\icCalendar.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCalendar.imageset\icCalendar%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCalendar.imageset\icCalendar%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationCalendar.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationCalendar.imageset\icIllustrationCalendar.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationCalendar.imageset\icIllustrationCalendar%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationCalendar.imageset\icIllustrationCalendar%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorSpider.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorSpider.imageset\icIllustrationErrorSpider.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorSpider.imageset\icIllustrationErrorSpider%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorSpider.imageset\icIllustrationErrorSpider%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icTime.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icTime.imageset\icTime.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icTime.imageset\icTime%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icTime.imageset\icTime%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icWorkspace.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icWorkspace.imageset\icWorkspace.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icWorkspace.imageset\icWorkspace%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icWorkspace.imageset\icWorkspace%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorWorkspace.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorWorkspace.imageset\icIllustrationErrorWorkspace.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorWorkspace.imageset\icIllustrationErrorWorkspace%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorWorkspace.imageset\icIllustrationErrorWorkspace%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCalendarSmall.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCalendarSmall.imageset\icCalendarSmall.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCalendarSmall.imageset\icCalendarSmall%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icCalendarSmall.imageset\icCalendarSmall%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoWithoutTextRed.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoWithoutTextRed.imageset\togglLogoRed.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\stripes.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\stripes.imageset\stripes.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\stripes.imageset\stripes%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\stripes.imageset\stripes%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pasteFromClipboard.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pasteFromClipboard.imageset\pasteFromClipboard.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\clipboardInstruction.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\clipboardInstruction.imageset\clipboardInstruction.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pasteFromClipboardEnabled.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pasteFromClipboardEnabled.imageset\pasteFromClipboardEnabled.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icStop.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-152x152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-167x167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icTimer.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icTimer.imageset\timer.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icTimer.imageset\timer%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icTimer.imageset\timer%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icMic.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icMic.imageset\microphone.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icMic.imageset\microphone%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icMic.imageset\microphone%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icMagnifier.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icMagnifier.imageset\search.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icMagnifier.imageset\search%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icMagnifier.imageset\search%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icStop.imageset\circled_stop.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icStop.imageset\circled_stop%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\icStop.imageset\circled_stop%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_20pt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_20pt%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_29pt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_29pt%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_40pt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_40pt%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_60pt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_60pt%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_20pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_29pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_40pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_76pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_76pt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_83.5%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-debug.appiconset\icon_1024pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_20pt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_20pt%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_29pt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_29pt%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_40pt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_40pt%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_60pt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_60pt%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_20pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_29pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_40pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_76pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_76pt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_83.5%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon-adhoc.appiconset\icon_1024pt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\x.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\x.imageset\x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\x.imageset\x%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\x.imageset\x%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\pinata.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\pinata.imageset\pinata.png" />
+    <ImageAsset Include="Resources\Images.xcassets\pinata.imageset\pinata%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\pinata.imageset\pinata%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\stop.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\stop.imageset\stop.png" />
+    <ImageAsset Include="Resources\Images.xcassets\stop.imageset\stop%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\stop.imageset\stop%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\continue.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\continue.imageset\continue.png" />
+    <ImageAsset Include="Resources\Images.xcassets\continue.imageset\continue%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\continue.imageset\continue%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\discard.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\discard.imageset\discard.png" />
+    <ImageAsset Include="Resources\Images.xcassets\discard.imageset\discard%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\discard.imageset\discard%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\copy.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\copy.imageset\copy.png" />
+    <ImageAsset Include="Resources\Images.xcassets\copy.imageset\copy%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\copy.imageset\copy%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\save.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\save.imageset\save.png" />
+    <ImageAsset Include="Resources\Images.xcassets\save.imageset\save%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\save.imageset\save%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\edit.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\edit.imageset\edit%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\edit.imageset\edit%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\edit.imageset\edit.png" />
+    <ImageAsset Include="Resources\Images.xcassets\delete.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\delete.imageset\delete.png" />
+    <ImageAsset Include="Resources\Images.xcassets\delete.imageset\delete%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\delete.imageset\delete%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\delete.imageset\delete%403x-1.png" />
+    <ImageAsset Include="Resources\Colors.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Background.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text2.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Separator.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\OpaqueSeparator.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\TableBackground.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CellBackground.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text3.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text4.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray2.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray3.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray4.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray5.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray6.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\togglLogo.imageset\togglLogo.png" />
+    <ImageAsset Include="Resources\Images.xcassets\togglLogo.imageset\togglLogo%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icJustSpider.imageset\icJustSpiderDark.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icJustSpider.imageset\icJustSpiderDark%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icJustSpider.imageset\icJustSpiderDark%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationSpider.imageset\icIllustrationSpiderDark.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationSpider.imageset\icIllustrationSpiderDark%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationSpider.imageset\icIllustrationSpiderDark%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorSpider.imageset\icIllustrationErrorSpiderDark.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorSpider.imageset\icIllustrationErrorSpiderDark%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorSpider.imageset\icIllustrationErrorSpiderDark%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\togglLogo.imageset\togglLogoDark-1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\togglLogo.imageset\togglLogoDark%402x-1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\togglLogo.imageset\togglLogoDark%403x-1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoBig.imageset\logoBigDark-1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoBig.imageset\logoBigDark%402x-1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\togglLogoBig.imageset\logoBigDark%403x-1.png" />
+    <ImageAsset Include="Resources\Images.xcassets\bike.imageset\bikeDark.png" />
+    <ImageAsset Include="Resources\Images.xcassets\bike.imageset\bikeDark%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\bike.imageset\bikeDark%403x.png" />
+    <ImageAsset Include="Resources\Colors.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Spider.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text4.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\TableBackground.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CellBackground.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Background.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text2.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text3.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray6.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Separator.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray2.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray3.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\InverseText.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray5.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CustomGray4.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\OpaqueSeparator.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text1.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\Text.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\ErrorText.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\ErrorBackground.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\pasteFromClipboard.imageset\pasteFromClipboard_Dark.pdf" />
+    <ImageAsset Include="Resources\Images.xcassets\pasteFromClipboardEnabled.imageset\pasteFromClipboardEnabled_Dark.pdf" />
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationProject.imageset\icIllustrationProjects_Dark.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationProject.imageset\icIllustrationProjects_Dark%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationProject.imageset\icIllustrationProjects_Dark%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorWorkspace.imageset\icIllustrationProjects_Dark.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorWorkspace.imageset\icIllustrationProjects_Dark%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\icIllustrationErrorWorkspace.imageset\icIllustrationProjects_Dark%403x.png" />
+    <ImageAsset Include="Resources\Colors.xcassets\CalendarDeleteAction.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CalendarEditAction.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CalendarSaveAction.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CalendarContinueAction.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CalendarDiscardAction.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CalendarStopAction.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CalendarCopyAction.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CalendarStartAction.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CalendarSelectedTodayBackground.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CalendarUnavailableDayText.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CalendarUnselectedTodayText.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Colors.xcassets\CalendarHeaderLabel.colorset\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="ViewControllers\MainViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\EditTimeEntryViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Settings\Siri\SiriShortcutsSelectReportPeriodViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Settings\Siri\SiriShortcutsViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\StartTimeEntryViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\EditDurationViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\SelectProjectViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\SelectDateTimeViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\SelectTagsViewController.xib" />
+    <InterfaceDefinition Include="Views\Client\ClientViewCell.xib" />
+    <InterfaceDefinition Include="Views\Client\CreateClientViewCell.xib" />
+    <InterfaceDefinition Include="Views\Onboarding\TrackPage.xib" />
+    <InterfaceDefinition Include="Views\Onboarding\MostUsedPage.xib" />
+    <InterfaceDefinition Include="Views\Onboarding\ReportsPage.xib" />
+    <InterfaceDefinition Include="ViewControllers\EditProjectViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\SelectColorViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\SelectClientViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\OutdatedAppViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\TokenResetViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\ReportsViewController.xib" />
+    <InterfaceDefinition Include="Views\Color\ColorSelectionViewCell.xib" />
+    <InterfaceDefinition Include="Views\StartTimeEntry\ProjectSuggestionViewCell.xib" />
+    <InterfaceDefinition Include="Views\StartTimeEntry\StartTimeEntryEmptyViewCell.xib" />
+    <InterfaceDefinition Include="Views\StartTimeEntry\StartTimeEntryViewCell.xib" />
+    <InterfaceDefinition Include="Views\StartTimeEntry\TagSuggestionViewCell.xib" />
+    <InterfaceDefinition Include="Views\StartTimeEntry\TaskSuggestionViewCell.xib" />
+    <InterfaceDefinition Include="Views\StartTimeEntry\WorkspaceHeaderViewCell.xib" />
+    <InterfaceDefinition Include="Views\Suggestions\SuggestionsEmptyViewCell.xib" />
+    <InterfaceDefinition Include="Views\EntityCreation\WorkspaceViewCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\ReportsCalendarViewController.xib" />
+    <InterfaceDefinition Include="Views\Reports\ReportsCalendarViewCell.xib" />
+    <InterfaceDefinition Include="Views\Reports\ReportsCalendarQuickSelectViewCell.xib" />
+    <InterfaceDefinition Include="Views\Reports\ReportsLegendViewCell.xib" />
+    <InterfaceDefinition Include="Views\Reports\ReportsHeaderView.xib" />
+    <InterfaceDefinition Include="Views\StartTimeEntry\NoEntityInfoViewCell.xib" />
+    <InterfaceDefinition Include="Views\Suggestions\SuggestionView.xib" />
+    <InterfaceDefinition Include="ViewControllers\Settings\SettingsViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Settings\AboutViewController.xib" />
+    <InterfaceDefinition Include="Views\Log\TimeEntriesEmptyLogView.xib" />
+    <InterfaceDefinition Include="Views\Log\TimeEntryMockView.xib" />
+    <InterfaceDefinition Include="Views\Rating\RatingView.xib" />
+    <InterfaceDefinition Include="ViewControllers\SelectCountryViewController.xib" />
+    <InterfaceDefinition Include="Views\CountrySelection\CountryViewCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\ForgotPasswordViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\SignupViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\TermsOfServiceViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Login.storyboard" />
+    <InterfaceDefinition Include="Cells\SyncFailures\SyncFailureCell.xib" />
+    <InterfaceDefinition Include="Cells\Settings\LicensesHeaderViewCell.xib" />
+    <InterfaceDefinition Include="Cells\Settings\LicensesViewCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\NoWorkspaceViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Settings\SendFeedbackViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Calendar\CalendarDayViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Calendar\CalendarPermissionDeniedViewController.xib" />
+    <InterfaceDefinition Include="Cells\Calendar\CalendarItemView.xib" />
+    <InterfaceDefinition Include="Cells\Calendar\CurrentTimeSupplementaryView.xib" />
+    <InterfaceDefinition Include="Cells\Calendar\HourSupplementaryView.xib" />
+    <InterfaceDefinition Include="Views\SnackBar.xib" />
+    <InterfaceDefinition Include="Cells\Calendar\SelectableUserCalendarViewCell.xib" />
+    <InterfaceDefinition Include="Cells\Calendar\UserCalendarListHeaderViewCell.xib" />
+    <InterfaceDefinition Include="Views\Settings\CalendarSettingsTableViewHeader.xib" />
+    <InterfaceDefinition Include="ViewControllers\Settings\CalendarSettingsViewController.xib" />
+    <InterfaceDefinition Include="Cells\Calendar\EditingHourSupplementaryView.xib" />
+    <InterfaceDefinition Include="ViewControllers\Settings\NotificationSettingsViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Settings\UpcomingEventsNotificationSettingsViewController.xib" />
+    <InterfaceDefinition Include="Cells\Settings\UpcomingEventsOptionCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\SelectDefaultWorkspaceViewController.xib" />
+    <InterfaceDefinition Include="Cells\SelectDefaultWorkspaceTableViewCell.xib" />
+    <InterfaceDefinition Include="Views\Tag\CreateTagViewCell.xib" />
+    <InterfaceDefinition Include="Views\Tag\NewTagViewCell.xib" />
+    <InterfaceDefinition Include="Views\StartTimeEntry\ReactiveProjectSuggestionViewCell.xib" />
+    <InterfaceDefinition Include="Views\StartTimeEntry\ReactiveWorkspaceHeaderViewCell.xib" />
+    <InterfaceDefinition Include="Views\StartTimeEntry\ReactiveTaskSuggestionViewCell.xib" />
+    <InterfaceDefinition Include="Cells\TimeEntriesLog\TimeEntriesLogHeaderView.xib" />
+    <InterfaceDefinition Include="Cells\TimeEntriesLog\TimeEntriesLogViewCell.xib" />
+    <InterfaceDefinition Include="Views\Reports\ReportsOverviewCardView.xib" />
+    <InterfaceDefinition Include="Views\Reports\ReportsBarChartCardView.xib" />
+    <InterfaceDefinition Include="Views\EntityCreation\CreateEntityViewCell.xib" />
+    <InterfaceDefinition Include="Views\Settings\SiriShortcutCell.xib" />
+    <InterfaceDefinition Include="Views\Settings\CustomSiriShortcutCell.xib" />
+    <InterfaceDefinition Include="Views\Settings\SiriShortcutTableViewHeader.xib" />
+    <InterfaceDefinition Include="Views\Settings\SiriShortcutReportPeriodCell.xib" />
+    <InterfaceDefinition Include="Views\Settings\SiriWorkflowCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\Settings\Siri\SiriShortcutsCustomTimeEntryViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Settings\Siri\PasteFromClipboardViewController.xib" />
+    <InterfaceDefinition Include="ViewControllers\Settings\Siri\SiriWorkflowsViewController.xib" />
+    <InterfaceDefinition Include="Cells\Settings\SettingCell.xib" />
+    <InterfaceDefinition Include="Cells\Settings\SettingsSectionHeader.xib" />
+    <InterfaceDefinition Include="Cells\Settings\SettingsSyncCell.xib" />
+    <InterfaceDefinition Include="Cells\Settings\SettingsAnnotationCell.xib" />
+    <InterfaceDefinition Include="Cells\Settings\SettingsButtonCell.xib" />
+    <InterfaceDefinition Include="Cells\Common\SelectorCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\Calendar\CalendarViewController.xib" />
+    <InterfaceDefinition Include="Cells\Calendar\CalendarWeeklyViewDayCollectionViewCell.xib" />
+    <InterfaceDefinition Include="ViewControllers\January2020CampaignViewController.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+    <None Include="FodyWeavers.xml" />
+    <BundleResource Include="RemoteConfigDefaults.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analytics\SiriIntentErrorTrackingEvent.cs" />
+    <Compile Include="Analytics\SiriTrackingEventExtensions.cs" />
+    <Compile Include="Cells\BaseCollectionViewCell.cs" />
+    <Compile Include="Extensions\ButtonExtensions.cs" />
+    <Compile Include="Extensions\ColorAssets.cs" />
+    <Compile Include="Extensions\ImageViewExtensions.cs" />
+    <Compile Include="Extensions\IntentPeriod.cs" />
+    <Compile Include="Extensions\Reactive\DurationFieldExtensions.cs" />
+    <Compile Include="Extensions\Reactive\HueSaturationPickerViewExtensions.cs" />
+    <Compile Include="Extensions\Reactive\BaseTableViewSourceExtensions.cs" />
+    <Compile Include="Extensions\Reactive\UIScrollViewExtensions.cs" />
+    <Compile Include="Extensions\Reactive\UISliderExtensions.cs" />
+    <Compile Include="Extensions\Reactive\WheelForegroundViewExtensions.cs" />
+    <Compile Include="Extensions\SectionedIndexExtensions.cs" />
+    <Compile Include="Extensions\TimeEntryDisplayInfoExtensions.cs" />
+    <Compile Include="Extensions\SuggestionExtensions.cs" />
+    <Compile Include="Extensions\ViewControllerExtensions.cs" />
+    <Compile Include="Helper\PermissionsHelper.cs" />
+    <Compile Include="Presentation\IosPresenter.cs" />
+    <Compile Include="Presentation\NavigationPresenter.cs" />
+    <Compile Include="Presentation\ModalDialogPresenter.cs" />
+    <Compile Include="Presentation\ModalCardPresenter.cs" />
+    <Compile Include="Presentation\RootPresenter.cs" />
+    <Compile Include="Presentation\ViewControllerLocator.cs" />
+    <Compile Include="Services\PermissionsCheckerIos.cs" />
+    <Compile Include="Models\SiriShortcut.cs" />
+    <Compile Include="Models\SiriShortcutType.cs" />
+    <Compile Include="Services\CalendarServiceIos.cs" />
+    <Compile Include="Extensions\Reactive\NSConstraintExtensions.cs" />
+    <Compile Include="Extensions\Reactive\UIApplicationExtensions.cs" />
+    <Compile Include="Extensions\Reactive\UIButtonExtensions.cs" />
+    <Compile Include="Extensions\Reactive\UIDatePickerExtensions.cs" />
+    <Compile Include="Extensions\Reactive\UILabelExtensions.cs" />
+    <Compile Include="Extensions\Reactive\UISwitchExtensions.cs" />
+    <Compile Include="Extensions\Reactive\UITableViewExtensions.cs" />
+    <Compile Include="Extensions\Reactive\UITextViewExtensions.cs" />
+    <Compile Include="Extensions\Reactive\UIViewExtensions.cs" />
+    <Compile Include="Services\PushNotificationsTokenServiceIos.cs" />
+    <Compile Include="Services\IntentDonationService.cs" />
+    <Compile Include="Services\FetchRemoteConfigServiceIos.cs" />
+    <Compile Include="Services\WidgetsServiceIos.cs" />
+    <Compile Include="Services\UserDefaultsStorageIos.cs" />
+    <Compile Include="Services\WatchService.cs" />
+    <Compile Include="Startup\AppDelegate.Deeplink.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\AppDelegate.PushNotifications.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\IosDependencyContainer.cs" />
+    <Compile Include="Startup\IOSSchedulerProvider.cs" />
+    <Compile Include="Extensions\AnimationExtensions.cs" />
+    <Compile Include="Transformations\ProjectTaskClientToAttributedString.cs" />
+    <Compile Include="ViewControllers\Common\SelectorViewController.cs" />
+    <Compile Include="ViewControllers\Reactive\ReactiveTableViewController.cs" />
+    <Compile Include="ViewControllers\Reactive\ReactiveTableViewController.DialogProvider.cs">
+      <DependentUpon>ReactiveTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Reactive\ReactiveTableViewController.PermissionsHandler.cs">
+      <DependentUpon>ReactiveTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Reactive\ReactiveViewController.cs" />
+    <Compile Include="ViewControllers\Reactive\ReactiveViewController.DialogProvider.cs">
+      <DependentUpon>ReactiveViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Reactive\ReactiveViewController.GoogleTokenProvider.cs">
+      <DependentUpon>ReactiveViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Reactive\ReactiveViewController.PermissionsHandler.cs">
+      <DependentUpon>ReactiveViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Settings\Models\AnnotationRow.cs" />
+    <Compile Include="ViewControllers\Settings\Models\ButtonRow.cs" />
+    <Compile Include="ViewControllers\Settings\Models\CustomRow.cs" />
+    <Compile Include="ViewControllers\Settings\Models\InfoRow.cs" />
+    <Compile Include="ViewControllers\Settings\Models\ISettingRow.cs" />
+    <Compile Include="ViewControllers\Settings\Models\NavigationRow.cs" />
+    <Compile Include="ViewControllers\Settings\Models\ToggleRow.cs" />
+    <Compile Include="ViewControllers\Settings\Siri\SiriShortcutsSelectReportPeriodViewController.cs" />
+    <Compile Include="ViewControllers\Settings\Siri\SiriShortcutsSelectReportPeriodViewController.designer.cs">
+      <DependentUpon>SiriShortcutsSelectReportPeriodViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Settings\Siri\SiriShortcutsViewController.cs" />
+    <Compile Include="ViewControllers\Settings\Siri\SiriShortcutsViewController.designer.cs">
+      <DependentUpon>SiriShortcutsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Settings\Siri\SiriShortcutViewModel.cs" />
+    <Compile Include="ViewControllers\SyncFailuresViewController.cs" />
+    <Compile Include="ViewSources\CalendarWeeklyViewDayCollectionViewSource.cs" />
+    <Compile Include="ViewSources\Generic\CollectionView\ReloadCollectionViewSource.cs" />
+    <Compile Include="ViewSources\Generic\TableView\BaseTableViewSource.cs" />
+    <Compile Include="ViewSources\SettingsTableViewSource.cs" />
+    <Compile Include="ViewSources\SiriShortcutsTableViewSource.cs" />
+    <Compile Include="ViewSources\TimeEntriesLogViewSource.cs" />
+    <Compile Include="ViewControllers\MainViewController.cs" />
+    <Compile Include="ViewControllers\MainViewController.designer.cs">
+      <DependentUpon>MainViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\StartTimeEntryViewController.cs" />
+    <Compile Include="ViewControllers\StartTimeEntryViewController.designer.cs">
+      <DependentUpon>StartTimeEntryViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ActivityIndicatorView.cs" />
+    <Compile Include="Presentation\Transition\FromBottomTransition.cs" />
+    <Compile Include="Presentation\Transition\FromBottomTransitionDelegate.cs" />
+    <Compile Include="Presentation\Transition\ModalPresentationController.cs" />
+    <Compile Include="ViewControllers\EditTimeEntryViewController.cs" />
+    <Compile Include="ViewControllers\EditTimeEntryViewController.designer.cs">
+      <DependentUpon>EditTimeEntryViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\FontExtensions.cs" />
+    <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="ViewSources\StartTimeEntryTableViewSource.cs" />
+    <Compile Include="Presentation\Transition\ModalDialogPresentationController.cs" />
+    <Compile Include="Presentation\Transition\ModalDialogTransitionDelegate.cs" />
+    <Compile Include="ViewControllers\EditDurationViewController.cs" />
+    <Compile Include="ViewControllers\EditDurationViewController.designer.cs">
+      <DependentUpon>EditDurationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SelectDateTimeViewController.cs" />
+    <Compile Include="ViewControllers\SelectDateTimeViewController.designer.cs">
+      <DependentUpon>SelectDateTimeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\TextExtensions.cs" />
+    <Compile Include="ViewControllers\SelectProjectViewController.cs" />
+    <Compile Include="ViewControllers\SelectProjectViewController.designer.cs">
+      <DependentUpon>SelectProjectViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\DateExtensions.cs" />
+    <Compile Include="ViewControllers\SelectTagsViewController.cs" />
+    <Compile Include="ViewControllers\SelectTagsViewController.designer.cs">
+      <DependentUpon>SelectTagsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSources\SelectTagsTableViewSource.cs" />
+    <Compile Include="Views\Calendar\CalendarCollectionViewContextualMenuDismissHelper.cs" />
+    <Compile Include="Views\Calendar\CalendarCollectionViewLayout.cs" />
+    <Compile Include="Views\Calendar\CalendarContextualMenuActionView.cs" />
+    <Compile Include="Views\Client\ClientViewCell.cs" />
+    <Compile Include="Views\Client\ClientViewCell.designer.cs">
+      <DependentUpon>ClientViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\CreateClientViewCell.cs" />
+    <Compile Include="Views\Client\CreateEntityViewCell.designer.cs">
+      <DependentUpon>CreateClientViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditDuration\DurationFieldTextFormatter.cs" />
+    <Compile Include="Views\EditDuration\Shapes\Arc.cs" />
+    <Compile Include="Views\EditDuration\Shapes\Caps\Cap.cs" />
+    <Compile Include="Views\EditDuration\Shapes\Caps\EndCap.cs" />
+    <Compile Include="Views\EditDuration\Shapes\Caps\StartCap.cs" />
+    <Compile Include="Views\EditDuration\Shapes\Wheel.cs" />
+    <Compile Include="Views\Log\RefreshControl.cs" />
+    <Compile Include="Views\Log\TimeEntriesLogTableView.cs" />
+    <Compile Include="Views\MarqueeView.cs" />
+    <Compile Include="Views\Onboarding\TrackPage.cs" />
+    <Compile Include="Views\Onboarding\TrackPage.designer.cs">
+      <DependentUpon>TrackPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Onboarding\MostUsedPage.cs" />
+    <Compile Include="Views\Onboarding\MostUsedPage.designer.cs">
+      <DependentUpon>MostUsedPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Onboarding\ReportsPage.cs" />
+    <Compile Include="Views\Onboarding\ReportsPage.designer.cs">
+      <DependentUpon>ReportsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FadeView.cs" />
+    <Compile Include="Views\Interfaces\IHeaderViewCellWithHideableTopSeparator.cs" />
+    <Compile Include="ViewControllers\EditProjectViewController.cs" />
+    <Compile Include="ViewControllers\EditProjectViewController.designer.cs">
+      <DependentUpon>EditProjectViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ViewExtensions.cs" />
+    <Compile Include="Extensions\TableViewExtensions.cs" />
+    <Compile Include="ViewControllers\SelectColorViewController.cs" />
+    <Compile Include="ViewControllers\SelectColorViewController.designer.cs">
+      <DependentUpon>SelectColorViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSources\ColorSelectionCollectionViewSource.cs" />
+    <Compile Include="ViewSources\ClientTableViewSource.cs" />
+    <Compile Include="ViewControllers\SelectClientViewController.cs" />
+    <Compile Include="ViewControllers\SelectClientViewController.designer.cs">
+      <DependentUpon>SelectClientViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\ReportsCalendarCollectionViewLayout.cs" />
+    <Compile Include="Views\TextViewWithPlaceholder.cs" />
+    <Compile Include="Startup\AppDelegate.cs" />
+    <Compile Include="Startup\AppDelegate.Analytics.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\AppDelegate.Siri.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\AppDelegate.Notification.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\AppDelegate.Background.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\AppDelegate.Shortcuts.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\Main.cs" />
+    <Compile Include="ViewControllers\OutdatedAppViewController.cs" />
+    <Compile Include="ViewControllers\OutdatedAppViewController.designer.cs">
+      <DependentUpon>OutdatedAppViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\TokenResetViewController.cs" />
+    <Compile Include="ViewControllers\TokenResetViewController.designer.cs">
+      <DependentUpon>TokenResetViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\LayoutConstraintExtensions.cs" />
+    <Compile Include="ViewControllers\LoginViewController.cs" />
+    <Compile Include="ViewControllers\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ReportsViewController.cs" />
+    <Compile Include="ViewControllers\ReportsViewController.designer.cs">
+      <DependentUpon>ReportsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Color\ColorSelectionViewCell.cs" />
+    <Compile Include="Views\Color\ColorSelectionViewCell.designer.cs">
+      <DependentUpon>ColorSelectionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Color\HueSaturationPickerView.cs" />
+    <Compile Include="Views\StartTimeEntry\ProjectSuggestionViewCell.cs" />
+    <Compile Include="Views\StartTimeEntry\ProjectSuggestionViewCell.designer.cs">
+      <DependentUpon>ProjectSuggestionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartTimeEntry\StartTimeEntryEmptyViewCell.cs" />
+    <Compile Include="Views\StartTimeEntry\StartTimeEntryEmptyViewCell.designer.cs">
+      <DependentUpon>StartTimeEntryEmptyViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartTimeEntry\StartTimeEntryViewCell.cs" />
+    <Compile Include="Views\StartTimeEntry\StartTimeEntryViewCell.designer.cs">
+      <DependentUpon>StartTimeEntryViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartTimeEntry\TagSuggestionViewCell.cs" />
+    <Compile Include="Views\StartTimeEntry\TagSuggestionViewCell.designer.cs">
+      <DependentUpon>TagSuggestionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartTimeEntry\TaskSuggestionViewCell.cs" />
+    <Compile Include="Views\StartTimeEntry\TaskSuggestionViewCell.designer.cs">
+      <DependentUpon>TaskSuggestionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartTimeEntry\WorkspaceHeaderViewCell.cs" />
+    <Compile Include="Views\StartTimeEntry\WorkspaceHeaderViewCell.designer.cs">
+      <DependentUpon>WorkspaceHeaderViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Suggestions\SuggestionsEmptyViewCell.cs" />
+    <Compile Include="Views\Suggestions\SuggestionsEmptyViewCell.designer.cs">
+      <DependentUpon>SuggestionsEmptyViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Color\ValueSliderView.cs" />
+    <Compile Include="Views\EntityCreation\WorkspaceViewCell.cs" />
+    <Compile Include="Views\EntityCreation\WorkspaceViewCell.designer.cs">
+      <DependentUpon>WorkspaceViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\KeyboardAwareViewController.cs" />
+    <Compile Include="ViewControllers\ReportsCalendarViewController.cs" />
+    <Compile Include="ViewControllers\ReportsCalendarViewController.designer.cs">
+      <DependentUpon>ReportsCalendarViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSources\ReportsCalendarCollectionViewSource.cs" />
+    <Compile Include="Views\Reports\ReportsCalendarViewCell.cs" />
+    <Compile Include="Views\Reports\ReportsCalendarViewCell.designer.cs">
+      <DependentUpon>ReportsCalendarViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSources\ReportsCalendarQuickSelectCollectionViewSource.cs" />
+    <Compile Include="Views\Reports\ReportsCalendarQuickSelectViewCell.cs" />
+    <Compile Include="Views\Reports\ReportsCalendarQuickSelectViewCell.designer.cs">
+      <DependentUpon>ReportsCalendarQuickSelectViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoundedView.cs" />
+    <Compile Include="Views\Reports\PieChartView.cs" />
+    <Compile Include="Views\Reports\PercentageView.cs" />
+    <Compile Include="Views\Reports\ReportsLegendViewCell.cs" />
+    <Compile Include="Views\Reports\ReportsLegendViewCell.designer.cs">
+      <DependentUpon>ReportsLegendViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\ReportsHeaderView.cs" />
+    <Compile Include="Views\Reports\ReportsHeaderView.designer.cs">
+      <DependentUpon>ReportsHeaderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSources\ReportsTableViewSource.cs" />
+    <Compile Include="Views\StartTimeEntry\NoEntityInfoViewCell.cs" />
+    <Compile Include="Views\StartTimeEntry\NoEntityInfoViewCell.designer.cs">
+      <DependentUpon>NoEntityInfoViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditDuration\WheelBackgroundView.cs" />
+    <Compile Include="Views\EditDuration\BaseWheelView.cs" />
+    <Compile Include="Views\EditDuration\WheelForegroundView.cs" />
+    <Compile Include="Views\Reports\LoadingPieChartView.cs" />
+    <Compile Include="Views\SpiderOnARopeView.cs" />
+    <Compile Include="ApplicationShortcutCreator.cs" />
+    <Compile Include="Extensions\PointExtensions.cs" />
+    <Compile Include="Autocomplete\TokenTextAttachment.cs" />
+    <Compile Include="Autocomplete\AutocompleteExtensions.cs" />
+    <Compile Include="Services\AnalyticsServiceIos.cs" />
+    <Compile Include="Views\AutocompleteTextViewPlaceholder.cs" />
+    <Compile Include="Views\EditDuration\DurationField.cs" />
+    <Compile Include="Views\EditDuration\NumberKeyPressedEventArgs.cs" />
+    <Compile Include="Views\Suggestions\SuggestionsView.cs" />
+    <Compile Include="Views\Suggestions\SuggestionView.cs" />
+    <Compile Include="Views\Suggestions\SuggestionView.designer.cs">
+      <DependentUpon>SuggestionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\LicenseProviderIos.cs" />
+    <Compile Include="Views\Log\TimeEntriesEmptyLogView.cs" />
+    <Compile Include="Views\Log\TimeEntriesEmptyLogView.designer.cs">
+      <DependentUpon>TimeEntriesEmptyLogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Log\TimeEntryMockView.cs" />
+    <Compile Include="Views\Log\TimeEntryMockView.designer.cs">
+      <DependentUpon>TimeEntryMockView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\OnboardingExtensions.cs" />
+    <Compile Include="Extensions\LabelExtensions.cs" />
+    <Compile Include="ViewControllers\Settings\LicensesViewController.cs" />
+    <Compile Include="ViewControllers\Settings\SettingsViewController.cs" />
+    <Compile Include="ViewControllers\Settings\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Settings\AboutViewController.cs" />
+    <Compile Include="ViewControllers\Settings\AboutViewController.designer.cs">
+      <DependentUpon>AboutViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SelectCountryViewController.cs" />
+    <Compile Include="ViewControllers\SelectCountryViewController.designer.cs">
+      <DependentUpon>SelectCountryViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CountrySelection\CountryViewCell.cs" />
+    <Compile Include="Views\CountrySelection\CountryViewCell.designer.cs">
+      <DependentUpon>CountryViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginTextField.cs" />
+    <Compile Include="Views\Rating\RatingView.cs" />
+    <Compile Include="Views\Rating\RatingView.designer.cs">
+      <DependentUpon>RatingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ForgotPasswordViewController.cs" />
+    <Compile Include="ViewControllers\ForgotPasswordViewController.designer.cs">
+      <DependentUpon>ForgotPasswordViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SignupViewController.cs" />
+    <Compile Include="ViewControllers\SignupViewController.designer.cs">
+      <DependentUpon>SignupViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\LoginSignupViewExtensions.cs" />
+    <Compile Include="ViewControllers\TermsOfServiceViewController.cs" />
+    <Compile Include="ViewControllers\TermsOfServiceViewController.designer.cs">
+      <DependentUpon>TermsOfServiceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\RangeExtensions.cs" />
+    <Compile Include="Extensions\ImageExtension.cs" />
+    <Compile Include="Services\RatingServiceIos.cs" />
+    <Compile Include="Cells\BaseTableViewCell.cs" />
+    <Compile Include="Cells\BaseTableHeaderFooterView.cs" />
+    <Compile Include="Cells\SyncFailures\SyncFailureCell.cs" />
+    <Compile Include="Cells\SyncFailures\SyncFailureCell.designer.cs">
+      <DependentUpon>SyncFailureCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autocomplete\Constants.cs" />
+    <Compile Include="Cells\Settings\LicensesHeaderViewCell.cs" />
+    <Compile Include="Cells\Settings\LicensesHeaderViewCell.designer.cs">
+      <DependentUpon>LicensesHeaderViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Settings\LicensesViewCell.cs" />
+    <Compile Include="Cells\Settings\LicensesViewCell.designer.cs">
+      <DependentUpon>LicensesViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autocomplete\ProjectTextAttachment.cs" />
+    <Compile Include="Autocomplete\TagTextAttachment.cs" />
+    <Compile Include="Autocomplete\EmptyInputDelegate.cs" />
+    <Compile Include="Extensions\Reactive\UITextFieldExtensions.cs" />
+    <Compile Include="ViewControllers\Settings\SendFeedbackViewController.cs" />
+    <Compile Include="ViewControllers\Settings\SendFeedbackViewController.designer.cs">
+      <DependentUpon>SendFeedbackViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReactiveCollectionViewCell.cs" />
+    <Compile Include="ViewControllers\Calendar\CalendarDayViewController.cs" />
+    <Compile Include="ViewControllers\Calendar\CalendarDayViewController.designer.cs">
+      <DependentUpon>CalendarDayViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Calendar\CalendarPermissionDeniedViewController.cs" />
+    <Compile Include="ViewControllers\Calendar\CalendarPermissionDeniedViewController.designer.cs">
+      <DependentUpon>CalendarPermissionDeniedViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Calendar\ICalendarCollectionViewLayoutDataSource.cs" />
+    <Compile Include="Cells\Calendar\CalendarItemView.cs" />
+    <Compile Include="Cells\Calendar\CalendarItemView.designer.cs">
+      <DependentUpon>CalendarItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Calendar\CurrentTimeSupplementaryView.cs" />
+    <Compile Include="Cells\Calendar\CurrentTimeSupplementaryView.designer.cs">
+      <DependentUpon>CurrentTimeSupplementaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Calendar\HourSupplementaryView.cs" />
+    <Compile Include="Cells\Calendar\HourSupplementaryView.designer.cs">
+      <DependentUpon>HourSupplementaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\MainTabBarController.cs" />
+    <Compile Include="Startup\NSRunLoopScheduler.cs" />
+    <Compile Include="Views\SnackBar.cs" />
+    <Compile Include="Views\SnackBar.designer.cs">
+      <DependentUpon>SnackBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\NoWorkspaceViewController.cs" />
+    <Compile Include="ViewControllers\NoWorkspaceViewController.designer.cs">
+      <DependentUpon>NoWorkspaceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSources\SelectUserCalendarsTableViewSource.cs" />
+    <Compile Include="Cells\Calendar\SelectableUserCalendarViewCell.cs" />
+    <Compile Include="Cells\Calendar\SelectableUserCalendarViewCell.designer.cs">
+      <DependentUpon>SelectableUserCalendarViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Calendar\UserCalendarListHeaderViewCell.cs" />
+    <Compile Include="Cells\Calendar\UserCalendarListHeaderViewCell.designer.cs">
+      <DependentUpon>UserCalendarListHeaderViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSources\CalendarCollectionViewSource.cs" />
+    <Compile Include="Extensions\ColorExtensions.cs" />
+    <Compile Include="Views\Settings\CalendarSettingsTableViewHeader.cs" />
+    <Compile Include="Views\Settings\CalendarSettingsTableViewHeader.designer.cs">
+      <DependentUpon>CalendarSettingsTableViewHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Settings\CalendarSettingsViewController.cs" />
+    <Compile Include="ViewControllers\Settings\CalendarSettingsViewController.designer.cs">
+      <DependentUpon>CalendarSettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Calendar\CalendarCollectionViewCreateFromSpanHelper.cs" />
+    <Compile Include="Views\Calendar\CalendarCollectionViewEditItemHelper.cs" />
+    <Compile Include="Cells\Calendar\EditingHourSupplementaryView.cs" />
+    <Compile Include="Cells\Calendar\EditingHourSupplementaryView.designer.cs">
+      <DependentUpon>EditingHourSupplementaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\NotificationServiceIos.cs" />
+    <Compile Include="Extensions\NotificationExtensions.cs" />
+    <Compile Include="ViewControllers\Settings\NotificationSettingsViewController.cs" />
+    <Compile Include="ViewControllers\Settings\NotificationSettingsViewController.designer.cs">
+      <DependentUpon>NotificationSettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Settings\UpcomingEventsNotificationSettingsViewController.cs" />
+    <Compile Include="ViewControllers\Settings\UpcomingEventsNotificationSettingsViewController.designer.cs">
+      <DependentUpon>UpcomingEventsNotificationSettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Settings\UpcomingEventsOptionCell.cs" />
+    <Compile Include="Cells\Settings\UpcomingEventsOptionCell.designer.cs">
+      <DependentUpon>UpcomingEventsOptionCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ScrollViewExtensions.cs" />
+    <Compile Include="Views\Calendar\CalendarCollectionViewAutoScrollHelper.cs" />
+    <Compile Include="Extensions\Reactive\UIControlExtensions.cs" />
+    <Compile Include="Services\PrivateSharedStorageServiceIos.cs" />
+    <Compile Include="Extensions\Reactive\FadeViewExtensions.cs" />
+    <Compile Include="Extensions\Reactive\NSObjectExtensions.cs" />
+    <Compile Include="Extensions\Reactive\UIStackViewExtensions.cs" />
+    <Compile Include="Views\Reports\BarSegmentView.cs" />
+    <Compile Include="Views\Reports\BarView.cs" />
+    <Compile Include="Views\Reports\BarLegendLabel.cs" />
+    <Compile Include="Views\Reports\EmptyBarView.cs" />
+    <Compile Include="Extensions\Reactive\UIBarButtonItemExtensions.cs" />
+    <Compile Include="ViewControllers\SelectDefaultWorkspaceViewController.cs" />
+    <Compile Include="ViewControllers\SelectDefaultWorkspaceViewController.designer.cs">
+      <DependentUpon>SelectDefaultWorkspaceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\SelectDefaultWorkspaceTableViewCell.cs" />
+    <Compile Include="Cells\SelectDefaultWorkspaceTableViewCell.designer.cs">
+      <DependentUpon>SelectDefaultWorkspaceTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\IThreadSafeTimeEntryExtensions.cs" />
+    <Compile Include="PlatformInfoIos.cs" />
+    <Compile Include="Services\BackgroundSyncServiceIos.cs" />
+    <Compile Include="Views\Tag\CreateTagViewCell.cs" />
+    <Compile Include="Views\Tag\CreateTagViewCell.designer.cs">
+      <DependentUpon>CreateTagViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tag\NewTagViewCell.cs" />
+    <Compile Include="Views\Tag\NewTagViewCell.designer.cs">
+      <DependentUpon>NewTagViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartTimeEntry\ReactiveProjectSuggestionViewCell.cs" />
+    <Compile Include="Views\StartTimeEntry\ReactiveProjectSuggestionViewCell.designer.cs">
+      <DependentUpon>ReactiveProjectSuggestionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSources\SelectProjectTableViewSource.cs" />
+    <Compile Include="Views\StartTimeEntry\ReactiveWorkspaceHeaderViewCell.cs" />
+    <Compile Include="Views\StartTimeEntry\ReactiveWorkspaceHeaderViewCell.designer.cs">
+      <DependentUpon>ReactiveWorkspaceHeaderViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartTimeEntry\ReactiveTaskSuggestionViewCell.cs" />
+    <Compile Include="Views\StartTimeEntry\ReactiveTaskSuggestionViewCell.designer.cs">
+      <DependentUpon>ReactiveTaskSuggestionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Calendar\CalendarCollectionViewZoomHelper.cs" />
+    <Compile Include="ViewSources\Generic\TableView\CustomTableViewSource.cs" />
+    <Compile Include="Cells\TimeEntriesLog\TimeEntriesLogHeaderView.cs" />
+    <Compile Include="Cells\TimeEntriesLog\TimeEntriesLogHeaderView.designer.cs">
+      <DependentUpon>TimeEntriesLogHeaderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\TimeEntriesLog\TimeEntriesLogViewCell.cs" />
+    <Compile Include="Cells\TimeEntriesLog\TimeEntriesLogViewCell.designer.cs">
+      <DependentUpon>TimeEntriesLogViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Reactive\UIViewControllerExtensions.cs" />
+    <Compile Include="Transformations\TagsListToAttributedString.cs" />
+    <Compile Include="Views\EntityCreation\CreateEntityViewCell.cs" />
+    <Compile Include="Views\EntityCreation\CreateEntityViewCell.designer.cs">
+      <DependentUpon>CreateEntityViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\ReportsOverviewCardView.cs" />
+    <Compile Include="Views\Reports\ReportsOverviewCardView.designer.cs">
+      <DependentUpon>ReportsOverviewCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\BaseReportsCardView.cs" />
+    <Compile Include="Views\Reports\ReportsBarChartCardView.cs" />
+    <Compile Include="Views\Reports\ReportsBarChartCardView.designer.cs">
+      <DependentUpon>ReportsBarChartCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\IScrollableToTop.cs" />
+    <Compile Include="Views\Settings\SiriShortcutCell.cs" />
+    <Compile Include="Views\Settings\SiriShortcutCell.designer.cs">
+      <DependentUpon>SiriShortcutCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\CustomSiriShortcutCell.cs" />
+    <Compile Include="Views\Settings\CustomSiriShortcutCell.designer.cs">
+      <DependentUpon>CustomSiriShortcutCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SiriShortcutTableViewHeader.cs" />
+    <Compile Include="Views\Settings\SiriShortcutTableViewHeader.designer.cs">
+      <DependentUpon>SiriShortcutTableViewHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SiriShortcutReportPeriodCell.cs" />
+    <Compile Include="Views\Settings\SiriShortcutReportPeriodCell.designer.cs">
+      <DependentUpon>SiriShortcutReportPeriodCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SiriWorkflowCell.cs" />
+    <Compile Include="Views\Settings\SiriWorkflowCell.designer.cs">
+      <DependentUpon>SiriWorkflowCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Settings\Siri\SiriShortcutsCustomTimeEntryViewController.cs" />
+    <Compile Include="ViewControllers\Settings\Siri\SiriShortcutsCustomTimeEntryViewController.designer.cs">
+      <DependentUpon>SiriShortcutsCustomTimeEntryViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Settings\Siri\PasteFromClipboardViewController.cs" />
+    <Compile Include="ViewControllers\Settings\Siri\PasteFromClipboardViewController.designer.cs">
+      <DependentUpon>PasteFromClipboardViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmailTextField.cs" />
+    <Compile Include="ViewControllers\Settings\Siri\SiriWorkflowsViewController.cs" />
+    <Compile Include="ViewControllers\Settings\Siri\SiriWorkflowsViewController.designer.cs">
+      <DependentUpon>SiriWorkflowsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\Reactive\IReactiveViewController.cs" />
+    <Compile Include="ViewControllers\Reactive\ReactiveNavigationController.cs" />
+    <Compile Include="DebugHelpers\ErrorTriggeringViewController.cs" />
+    <Compile Include="Extensions\Reactive\UIActivityIndicatorViewExtensions.cs" />
+    <Compile Include="Views\AccessibilityAwareView.cs" />
+    <Compile Include="Services\AccessibilityServiceIos.cs" />
+    <Compile Include="Cells\Settings\SettingCell.cs" />
+    <Compile Include="Cells\Settings\SettingCell.designer.cs">
+      <DependentUpon>SettingCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Settings\SettingsSectionHeader.cs" />
+    <Compile Include="Cells\Settings\SettingsSectionHeader.designer.cs">
+      <DependentUpon>SettingsSectionHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Settings\SettingsSyncCell.cs" />
+    <Compile Include="Cells\Settings\SettingsSyncCell.designer.cs">
+      <DependentUpon>SettingsSyncCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Settings\SettingsAnnotationCell.cs" />
+    <Compile Include="Cells\Settings\SettingsAnnotationCell.designer.cs">
+      <DependentUpon>SettingsAnnotationCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Settings\SettingsButtonCell.cs" />
+    <Compile Include="Cells\Settings\SettingsButtonCell.designer.cs">
+      <DependentUpon>SettingsButtonCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PageSheetPresenter.cs" />
+    <Compile Include="Cells\Common\SelectorCell.cs" />
+    <Compile Include="Cells\Common\SelectorCell.designer.cs">
+      <DependentUpon>SelectorCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSources\Generic\Common\SelectorTableViewSource.cs" />
+    <Compile Include="Helper\Handoff.cs" />
+    <Compile Include="ViewControllers\Calendar\CalendarViewController.cs" />
+    <Compile Include="ViewControllers\Calendar\CalendarViewController.designer.cs">
+      <DependentUpon>CalendarViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\Calendar\CalendarWeeklyViewDayCollectionViewCell.cs" />
+    <Compile Include="Cells\Calendar\CalendarWeeklyViewDayCollectionViewCell.designer.cs">
+      <DependentUpon>CalendarWeeklyViewDayCollectionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\TextViewExtensions.cs" />
+    <Compile Include="Analytics\WidgetTrackingEventExtensions.cs" />
+    <Compile Include="Analytics\WidgetErrorTrackingEvent.cs" />
+    <Compile Include="ViewControllers\January2020CampaignViewController.cs" />
+    <Compile Include="ViewControllers\January2020CampaignViewController.designer.cs">
+      <DependentUpon>January2020CampaignViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toggl.Core.UI\Toggl.Core.UI.csproj">
+      <Project>{CB2B0786-217F-455A-9349-0FC69468D3B6}</Project>
+      <Name>Toggl.Core.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.Core\Toggl.Core.csproj">
+      <Project>{09D75C0B-3367-4678-97EF-6EADE64AF09C}</Project>
+      <Name>Toggl.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.iOS.Shared\Toggl.iOS.Shared.csproj">
+      <Project>{aca2821e-0ff9-4036-bff6-e775bb4e6732}</Project>
+      <Name>Toggl.iOS.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.Storage\Toggl.Storage.csproj">
+      <Project>{3A603451-31B2-4975-9366-3212BEA78F57}</Project>
+      <Name>Toggl.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.Networking\Toggl.Networking.csproj">
+      <Project>{5ACEB155-9DD4-4309-BCC9-997A09950393}</Project>
+      <Name>Toggl.Networking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.Storage.Realm\Toggl.Storage.Realm.csproj">
+      <Project>{7716BCE9-A3D4-4359-A02E-94380BDF83C7}</Project>
+      <Name>Toggl.Storage.Realm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.Shared\Toggl.Shared.csproj">
+      <Project>{6AF7BE5E-AF9D-4EA7-AF7F-28D07B8DEF24}</Project>
+      <Name>Toggl.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.iOS.IntentBinding\Toggl.iOS.IntentBinding.csproj">
+      <Project>{A1BBF640-E712-4E35-8E3F-AE07C7C7EDB0}</Project>
+      <Name>Toggl.iOS.IntentBinding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.iOS.SiriExtension\Toggl.iOS.SiriExtension.csproj">
+      <IsAppExtension>true</IsAppExtension>
+      <Project>{48C970FE-E13F-4664-A2FD-4EBFD2DD131E}</Project>
+      <Name>Toggl.iOS.SiriExtension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.iOS.SiriExtension.UI\Toggl.iOS.SiriExtension.UI.csproj">
+      <IsAppExtension>true</IsAppExtension>
+      <Project>{BC329A24-95D6-4D02-95B5-2AA699D8873A}</Project>
+      <Name>Toggl.iOS.SiriExtension.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.iOS.TimerWidgetExtension\Toggl.iOS.TimerWidgetExtension.csproj">
+      <IsAppExtension>true</IsAppExtension>
+      <Project>{0C219958-CAD1-4B1B-BBCB-D12CC6E11F49}</Project>
+      <Name>Toggl.iOS.TimerWidgetExtension</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Images.xcassets\bike.imageset\" />
+    <Folder Include="Resources\Images.xcassets\confirmation.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icAdd.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icBackNoPadding.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icCalendar.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icCalendarSmall.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icChartEmpty.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icCheckBoxChecked.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icCheckBoxUnchecked.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icErrorSmall.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icGoogleColored.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icIllustrationCalendar.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icIllustrationErrorSpider.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icIllustrationErrorWorkspace.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icIllustrationProject.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icIllustrationProjectsSmall.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icIllustrationReports.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icIllustrationTags.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icIllustrationTagsSmall.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icLoader.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icProjectDot.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icRoundStop.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icSearch.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icTime.imageset\" />
+    <Folder Include="Resources\Images.xcassets\icWarning.imageset\" />
+    <Folder Include="Resources\Images.xcassets\line.imageset\" />
+    <Folder Include="Resources\Images.xcassets\paws.imageset\" />
+    <Folder Include="Resources\Images.xcassets\search.imageset\" />
+    <Folder Include="Resources\Images.xcassets\stripes.imageset\" />
+    <Folder Include="Resources\Images.xcassets\thumbsdown.imageset\" />
+    <Folder Include="Resources\Images.xcassets\thumbsup.imageset\" />
+    <Folder Include="Resources\Images.xcassets\togglLogoBig.imageset\" />
+    <Folder Include="Resources\Images.xcassets\x.imageset\" />
+    <Folder Include="Resources\Images.xcassets\stop.imageset\" />
+    <Folder Include="Resources\Images.xcassets\continue.imageset\" />
+    <Folder Include="Resources\Images.xcassets\discard.imageset\" />
+    <Folder Include="Resources\Images.xcassets\copy.imageset\" />
+    <Folder Include="Resources\Images.xcassets\save.imageset\" />
+    <Folder Include="Resources\Images.xcassets\edit.imageset\" />
+    <Folder Include="Resources\Images.xcassets\delete.imageset\" />
+    <Folder Include="Resources\Colors.xcassets\Background.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\Text.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\Text2.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\Separator.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\NavigationBarShadow.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\OpaqueSeparator.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\TableBackground.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CellBackground.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\Text3.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\Text4.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CustomGray.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CustomGray2.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CustomGray3.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CustomGray4.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CustomGray5.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CustomGray6.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\InverseText.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\InverseBackground.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\Text1.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\Spider.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\ErrorText.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\ErrorBackground.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CalendarDeleteAction.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CalendarEditAction.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CalendarSaveAction.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CalendarContinueAction.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CalendarDiscardAction.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CalendarStopAction.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CalendarCopyAction.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CalendarStartAction.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CalendarSelectedTodayBackground.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CalendarUnavailableDayText.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CalendarUnselectedTodayText.colorset\" />
+    <Folder Include="Resources\Colors.xcassets\CalendarHeaderLabel.colorset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="GoogleService-Info.plist" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Fody.2.4.6\build\Fody.targets" Condition="Exists('..\packages\Fody.2.4.6\build\Fody.targets')" />
+  <Import Project="..\packages\Realm.Database.3.0.0\build\Realm.Database.targets" Condition="Exists('..\packages\Realm.Database.3.0.0\build\Realm.Database.targets')" />
+  <Import Project="..\packages\Realm.3.0.0\build\Realm.targets" Condition="Exists('..\packages\Realm.3.0.0\build\Realm.targets')" />
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\packages\Xamarin.Google.iOS.Core.3.1.0.1\build\Xamarin.Google.iOS.Core.targets" Condition="Exists('..\packages\Xamarin.Google.iOS.Core.3.1.0.1\build\Xamarin.Google.iOS.Core.targets')" />
+  <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.8.0\build\Accord.targets'))" />
+  </Target>
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.Core.6.1.0\build\Xamarin.Firebase.iOS.Core.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Core.6.1.0\build\Xamarin.Firebase.iOS.Core.targets')" />
+  <Import Project="..\packages\Xamarin.Google.iOS.SignIn.5.0.1\build\Xamarin.Google.iOS.SignIn.targets" Condition="Exists('..\packages\Xamarin.Google.iOS.SignIn.5.0.1\build\Xamarin.Google.iOS.SignIn.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.ABTesting.3.0.0\build\Xamarin.Firebase.iOS.ABTesting.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.ABTesting.3.0.0\build\Xamarin.Firebase.iOS.ABTesting.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.Analytics.6.0.4\build\Xamarin.Firebase.iOS.Analytics.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Analytics.6.0.4\build\Xamarin.Firebase.iOS.Analytics.targets')" />
+  <Import Project="..\packages\Xamarin.Firebase.iOS.RemoteConfig.4.2.1\build\Xamarin.Firebase.iOS.RemoteConfig.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.RemoteConfig.4.2.1\build\Xamarin.Firebase.iOS.RemoteConfig.targets')" />
+</Project>

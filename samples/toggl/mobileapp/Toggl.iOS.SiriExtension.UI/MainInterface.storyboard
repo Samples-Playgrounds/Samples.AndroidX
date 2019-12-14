@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intent View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="IntentViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fgo-dk-dQB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="5YS-Ge-XNl"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="60"/>
+                    <connections>
+                        <outlet property="confirmationView" destination="Y5z-vL-asa" id="iRr-4u-Eec"/>
+                        <outlet property="entryInfoView" destination="zMn-AG-sqS" id="RiM-bp-gzc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="zMn-AG-sqS" customClass="EntryInfoView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lj9-zW-6PO">
+                            <rect key="frame" x="16" y="12" width="39" height="36"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99:99:99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dE5-hs-Ydw">
+                            <rect key="frame" x="164" y="12" width="140" height="38.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="F46-ha-ajJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="AxQ-Wb-Gww" firstAttribute="bottom" secondItem="lj9-zW-6PO" secondAttribute="bottom" constant="12" id="GBa-Jv-JHL"/>
+                        <constraint firstItem="AxQ-Wb-Gww" firstAttribute="trailing" secondItem="dE5-hs-Ydw" secondAttribute="trailing" constant="16" id="ZNC-2X-85Y"/>
+                        <constraint firstItem="lj9-zW-6PO" firstAttribute="leading" secondItem="AxQ-Wb-Gww" secondAttribute="leading" constant="16" id="aYo-Nl-IgO"/>
+                        <constraint firstItem="dE5-hs-Ydw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lj9-zW-6PO" secondAttribute="trailing" constant="10" id="egX-OP-hJZ"/>
+                        <constraint firstItem="dE5-hs-Ydw" firstAttribute="top" secondItem="AxQ-Wb-Gww" secondAttribute="top" constant="12" id="m90-FO-Ulf"/>
+                        <constraint firstItem="lj9-zW-6PO" firstAttribute="top" secondItem="AxQ-Wb-Gww" secondAttribute="top" constant="12" id="uxE-jJ-pM2"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="AxQ-Wb-Gww"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="lj9-zW-6PO" id="8RG-7B-3yp"/>
+                        <outlet property="timeLabel" destination="dE5-hs-Ydw" id="ms4-O7-7xL"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" id="Y5z-vL-asa" customClass="ConfirmationView">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUZ-8L-EOc">
+                            <rect key="frame" x="16" y="12" width="39" height="36"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="hd9-Of-x8g" firstAttribute="bottom" secondItem="vUZ-8L-EOc" secondAttribute="bottom" constant="12" id="7Oz-6e-6yJ"/>
+                        <constraint firstItem="vUZ-8L-EOc" firstAttribute="leading" secondItem="hd9-Of-x8g" secondAttribute="leading" constant="16" id="Y7B-N9-QDc"/>
+                        <constraint firstItem="vUZ-8L-EOc" firstAttribute="top" secondItem="hd9-Of-x8g" secondAttribute="top" constant="12" id="jgO-L5-q7T"/>
+                        <constraint firstItem="vUZ-8L-EOc" firstAttribute="centerY" secondItem="Y5z-vL-asa" secondAttribute="centerY" id="ySj-FG-pdL"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="hd9-Of-x8g"/>
+                    <connections>
+                        <outlet property="confirmationLabel" destination="vUZ-8L-EOc" id="fs0-nS-4Vq"/>
+                    </connections>
+                </view>
+            </objects>
+        </scene>
+    </scenes>
+</document>

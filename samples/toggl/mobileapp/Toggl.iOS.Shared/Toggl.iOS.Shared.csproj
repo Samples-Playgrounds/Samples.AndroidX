@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACA2821E-0FF9-4036-BFF6-E775BB4E6732}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Toggl.iOS.Shared</RootNamespace>
+    <AssemblyName>Toggl.iOS.Shared</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>10976</IOSDebuggerPort>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
+    <MtouchLink>
+    </MtouchLink>
+    <MtouchHttpClientHandler>
+    </MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;USE_PRODUCTION_API</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchVerbosity>
+    </MtouchVerbosity>
+    <MtouchHttpClientHandler>
+    </MtouchHttpClientHandler>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Reactive.Core, Version=3.0.6000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263">
+      <HintPath>..\packages\System.Reactive.Core.4.1.2\lib\netstandard2.0\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analytics\SiriTrackingEvent.cs" />
+    <Compile Include="Exceptions\NoRunningEntryException.cs" />
+    <Compile Include="Extensions\DateExtensions.cs" />
+    <Compile Include="Extensions\NSDictionaryExtensions.cs" />
+    <Compile Include="Helper\APIHelper.cs" />
+    <Compile Include="Models\Suggestion.cs" />
+    <Compile Include="Models\TimeEntry.cs" />
+    <Compile Include="Models\TimeEntryViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharedStorage.cs" />
+    <Compile Include="Extensions\UserActivityExtensions.cs" />
+    <Compile Include="SharedStorage.Suggestions.cs">
+      <DependentUpon>SharedStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SharedStorage.TimeEntries.cs">
+      <DependentUpon>SharedStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ColorExtensions.cs" />
+    <Compile Include="Analytics\WidgetTrackingEvent.cs" />
+    <Compile Include="Extensions\UILabelExtensions.cs" />
+    <Compile Include="Extensions\ImageViewExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Toggl.iOS.IntentCodeGen\Toggl.iOS.IntentCodeGen\en.lproj\Intents.strings">
+      <Link>en.lproj\Intents.strings</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Toggl.iOS.IntentCodeGen\Toggl.iOS.IntentCodeGen\Base.lproj\Intents.intentdefinition">
+      <Link>Base.lproj\Intents.intentdefinition</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toggl.Networking\Toggl.Networking.csproj">
+      <Project>{5aceb155-9dd4-4309-bcc9-997a09950393}</Project>
+      <Name>Toggl.Networking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toggl.Shared\Toggl.Shared.csproj">
+      <Project>{6AF7BE5E-AF9D-4EA7-AF7F-28D07B8DEF24}</Project>
+      <Name>Toggl.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

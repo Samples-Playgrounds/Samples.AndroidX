@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/cardBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/SetSmartRemindersTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="@color/primaryText"
+        android:lineSpacingExtra="8sp"
+        tools:text="Set smart reminders"/>
+    <TextView
+        android:id="@+id/SetSmartRemindersMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textColor="@color/primaryText"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="8sp"
+        tools:text="Get an actionable reminder to start tracking time for your event"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/placeholderText"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/CalendarsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

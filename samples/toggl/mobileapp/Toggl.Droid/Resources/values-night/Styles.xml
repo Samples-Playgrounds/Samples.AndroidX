@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+  <style name="AppBarPopupTheme" parent="ThemeOverlay.AppCompat.Dark">
+  </style>
+
+  <style name="AppBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="android:actionMenuTextColor">@color/ToolbarButtonTextColor</item>
+    <item name="actionMenuTextColor">@color/ToolbarButtonTextColor</item>
+    <item name="android:colorControlNormal">@color/primaryText</item>
+    <item name="colorControlNormal">@color/primaryText</item>
+  </style>
+
+  <style name="WheelDialogStyle" parent="android:Theme.Material.Dialog">
+    <item name="android:colorAccent">@color/accent</item>
+    <item name="android:headerTimeTextAppearance">@style/TextAppearance.AppCompat</item>
+    <item name="android:headerDayOfMonthTextAppearance">@style/TextAppearance.AppCompat</item>
+    <item name="android:headerAmPmTextAppearance">@style/TextAppearance.AppCompat</item>
+    <item name="android:headerMonthTextAppearance">@style/TextAppearance.AppCompat</item>
+    <item name="android:headerYearTextAppearance">@style/TextAppearance.AppCompat</item>
+    <item name="android:timePickerStyle">@style/WheelTimePicker</item>
+    <item name="android:datePickerStyle">@style/WheelDatePicker</item>
+  </style>
+
+  <style name="WheelDatePicker" parent="@android:style/Widget.Material.DatePicker">
+    <item name="android:headerBackground">@drawable/picker_header_background</item>
+  </style>
+
+  <style name="WheelTimePicker" parent="@android:style/Widget.Material.TimePicker">
+    <item name="android:headerBackground">@drawable/picker_header_background</item>
+    <item name="android:numbersSelectorColor">@color/accent</item>
+  </style>
+</resources>

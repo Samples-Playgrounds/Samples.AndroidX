@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Dictate time entry",
+    "description": "Tell Siri to start a time entry with a custom description you can dictate.",
+    "fileName": "dictate.shortcut",
+    "color": "#06AAF5",
+    "icon": "icMic"
+  },
+  {
+    "title": "Done for the day",
+    "description": "Stop the running timer and view a custom Summary Report.",
+    "fileName": "done.shortcut",
+    "color": "#06C04B",
+    "icon": "icStop"
+  },
+  {
+    "title": "Start a Pomodoro",
+    "description": "Start a Time Entry and set an alarm for 25 minutes.",
+    "fileName": "pomodoro.shortcut",
+    "color": "#EA468D",
+    "icon": "icTimer"
+  },
+  {
+    "title": "Focus mode",
+    "description": "Start a Time Entry, select a music playlist and turn on do not disturb.",
+    "fileName": "focus.shortcut",
+    "color": "#C56BFF",
+    "icon": "icMagnifier"
+  }
+]

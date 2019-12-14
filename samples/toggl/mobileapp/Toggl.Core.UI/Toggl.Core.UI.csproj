@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+  </PropertyGroup>
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$(SolutionDir)Toggl.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toggl.Core\Toggl.Core.csproj" />
+    <ProjectReference Include="..\Toggl.Shared\Toggl.Shared.csproj" />
+    <ProjectReference Include="..\Toggl.Storage\Toggl.Storage.csproj" />
+    <ProjectReference Include="..\Toggl.Networking\Toggl.Networking.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Parameters\DeeplinkParameters.TimeEntry.cs">
+      <DependentUpon>DeeplinkParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Parameters\DeeplinkParameters.Reports.cs">
+      <DependentUpon>DeeplinkParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Parameters\DeeplinkParameters.Calendar.cs">
+      <DependentUpon>DeeplinkParameters.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="January2020CampaignViewController">
+            <connections>
+                <outlet property="BlueRopeView" destination="2d2-WS-Dzo" id="3G8-dM-AiC"/>
+                <outlet property="DismissButton" destination="VjO-H9-7fo" id="zKR-ao-t4M"/>
+                <outlet property="LearnMoreButton" destination="IwF-I5-Fh3" id="Xja-IN-4JN"/>
+                <outlet property="TextLabel" destination="bw1-lS-sWJ" id="ycH-IS-i1G"/>
+                <outlet property="TitleLabel" destination="o11-7O-qwe" id="RyT-Fg-WK0"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="410"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="pinata" translatesAutoresizingMaskIntoConstraints="NO" id="JT0-bg-Ppo">
+                    <rect key="frame" x="45" y="34" width="198" height="121"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2d2-WS-Dzo" userLabel="BlueRope">
+                    <rect key="frame" x="143" y="0.0" width="2" height="74"/>
+                    <color key="backgroundColor" red="0.46666666666666667" green="0.66274509803921566" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="2" id="Kzq-nh-c6l"/>
+                        <constraint firstAttribute="height" constant="74" id="ou7-dB-VJN"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Save 20% on Annual Plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o11-7O-qwe">
+                    <rect key="frame" x="35" y="189" width="218" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw1-lS-sWJ">
+                    <rect key="frame" x="32" y="222" width="224" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="mGM-T1-9Bf"/>
+                    </constraints>
+                    <string key="text">Psst... we've got an early gift for
+you! Sign up for any annual plan between now and January 17th
+and get 20% off.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwF-I5-Fh3">
+                    <rect key="frame" x="16" y="322" width="256" height="40"/>
+                    <color key="backgroundColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="1VG-DW-cTY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <state key="normal" title="Learn more"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjO-H9-7fo">
+                    <rect key="frame" x="118" y="376" width="52" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="P03-hf-UWe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <state key="normal" title="Dismiss">
+                        <color key="titleColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="IwF-I5-Fh3" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="0rt-iq-b8Q"/>
+                <constraint firstItem="IwF-I5-Fh3" firstAttribute="top" secondItem="bw1-lS-sWJ" secondAttribute="bottom" constant="20" id="1wl-1h-2xH"/>
+                <constraint firstAttribute="bottom" secondItem="VjO-H9-7fo" secondAttribute="bottom" constant="14" id="FFe-Hd-LBs"/>
+                <constraint firstAttribute="trailing" secondItem="IwF-I5-Fh3" secondAttribute="trailing" constant="16" id="FOL-eI-bAJ"/>
+                <constraint firstItem="2d2-WS-Dzo" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="H35-us-b41"/>
+                <constraint firstItem="VjO-H9-7fo" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="O0t-aO-XPK"/>
+                <constraint firstItem="bw1-lS-sWJ" firstAttribute="top" secondItem="o11-7O-qwe" secondAttribute="bottom" constant="12" id="Puc-Jg-fTZ"/>
+                <constraint firstItem="bw1-lS-sWJ" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="32" id="UfQ-iW-S8i"/>
+                <constraint firstItem="2d2-WS-Dzo" firstAttribute="top" secondItem="2" secondAttribute="top" id="WIM-Yy-e1Q"/>
+                <constraint firstItem="JT0-bg-Ppo" firstAttribute="top" secondItem="2" secondAttribute="top" constant="34" id="c6I-E9-tE4"/>
+                <constraint firstItem="VjO-H9-7fo" firstAttribute="top" secondItem="IwF-I5-Fh3" secondAttribute="bottom" constant="14" id="hcA-yC-b54"/>
+                <constraint firstItem="JT0-bg-Ppo" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="jKI-5W-tu4"/>
+                <constraint firstItem="o11-7O-qwe" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="rKg-6e-sKL"/>
+                <constraint firstItem="IwF-I5-Fh3" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="16" id="wiL-3G-bgi"/>
+                <constraint firstItem="o11-7O-qwe" firstAttribute="top" secondItem="JT0-bg-Ppo" secondAttribute="bottom" constant="34" id="xwA-LV-lvG"/>
+                <constraint firstItem="bw1-lS-sWJ" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="zV3-qx-DkC"/>
+                <constraint firstAttribute="trailing" secondItem="bw1-lS-sWJ" secondAttribute="trailing" constant="32" id="zdY-as-6H2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="24.637681159420293" y="51.5625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pinata" width="99" height="120"/>
+        <namedColor name="Background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

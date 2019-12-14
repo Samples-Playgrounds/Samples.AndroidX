@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C9ADB8F232B95C000345E8A /* ShowReportPeriodIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9ADB87232B95C000345E8A /* ShowReportPeriodIntent.m */; };
+		8C9ADB90232B95C000345E8A /* ShowReportIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9ADB88232B95C000345E8A /* ShowReportIntent.m */; };
+		8C9ADB91232B95C000345E8A /* ContinueTimerIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9ADB89232B95C000345E8A /* ContinueTimerIntent.m */; };
+		8C9ADB92232B95C000345E8A /* StartTimerFromClipboardIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9ADB8A232B95C000345E8A /* StartTimerFromClipboardIntent.m */; };
+		8C9ADB93232B95C000345E8A /* StartTimerIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9ADB8C232B95C000345E8A /* StartTimerIntent.m */; };
+		8C9ADB94232B95C000345E8A /* StopTimerIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9ADB8E232B95C000345E8A /* StopTimerIntent.m */; };
+		D62EA1B7212F172800350CA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62EA1B6212F172800350CA9 /* Foundation.framework */; };
+		D62EA1B9212F172B00350CA9 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62EA1B8212F172B00350CA9 /* Intents.framework */; };
+		D62EA1BB212FAD4900350CA9 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = D62EA1BA212FAD4900350CA9 /* Makefile */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D62EA1A4212F145200350CA9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8C9ADB83232B95BF00345E8A /* ContinueTimerIntent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContinueTimerIntent.h; sourceTree = "<group>"; };
+		8C9ADB84232B95BF00345E8A /* StartTimerIntent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartTimerIntent.h; sourceTree = "<group>"; };
+		8C9ADB85232B95BF00345E8A /* ShowReportIntent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowReportIntent.h; sourceTree = "<group>"; };
+		8C9ADB86232B95BF00345E8A /* StartTimerFromClipboardIntent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartTimerFromClipboardIntent.h; sourceTree = "<group>"; };
+		8C9ADB87232B95C000345E8A /* ShowReportPeriodIntent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowReportPeriodIntent.m; sourceTree = "<group>"; };
+		8C9ADB88232B95C000345E8A /* ShowReportIntent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowReportIntent.m; sourceTree = "<group>"; };
+		8C9ADB89232B95C000345E8A /* ContinueTimerIntent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContinueTimerIntent.m; sourceTree = "<group>"; };
+		8C9ADB8A232B95C000345E8A /* StartTimerFromClipboardIntent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartTimerFromClipboardIntent.m; sourceTree = "<group>"; };
+		8C9ADB8B232B95C000345E8A /* ShowReportPeriodIntent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowReportPeriodIntent.h; sourceTree = "<group>"; };
+		8C9ADB8C232B95C000345E8A /* StartTimerIntent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartTimerIntent.m; sourceTree = "<group>"; };
+		8C9ADB8D232B95C000345E8A /* StopTimerIntent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopTimerIntent.h; sourceTree = "<group>"; };
+		8C9ADB8E232B95C000345E8A /* StopTimerIntent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopTimerIntent.m; sourceTree = "<group>"; };
+		D62EA1A6212F145200350CA9 /* libToggl.iOS.IntentStaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libToggl.iOS.IntentStaticLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D62EA1B6212F172800350CA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D62EA1B8212F172B00350CA9 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		D62EA1BA212FAD4900350CA9 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D62EA1A3212F145200350CA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D62EA1B9212F172B00350CA9 /* Intents.framework in Frameworks */,
+				D62EA1B7212F172800350CA9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D62EA19D212F145200350CA9 = {
+			isa = PBXGroup;
+			children = (
+				D62EA1BA212FAD4900350CA9 /* Makefile */,
+				D62EA1A8212F145200350CA9 /* Toggl.iOS.IntentStaticLib */,
+				D62EA1A7212F145200350CA9 /* Products */,
+				D62EA1B5212F172800350CA9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D62EA1A7212F145200350CA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D62EA1A6212F145200350CA9 /* libToggl.iOS.IntentStaticLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D62EA1A8212F145200350CA9 /* Toggl.iOS.IntentStaticLib */ = {
+			isa = PBXGroup;
+			children = (
+				8C9ADB83232B95BF00345E8A /* ContinueTimerIntent.h */,
+				8C9ADB89232B95C000345E8A /* ContinueTimerIntent.m */,
+				8C9ADB85232B95BF00345E8A /* ShowReportIntent.h */,
+				8C9ADB88232B95C000345E8A /* ShowReportIntent.m */,
+				8C9ADB8B232B95C000345E8A /* ShowReportPeriodIntent.h */,
+				8C9ADB87232B95C000345E8A /* ShowReportPeriodIntent.m */,
+				8C9ADB86232B95BF00345E8A /* StartTimerFromClipboardIntent.h */,
+				8C9ADB8A232B95C000345E8A /* StartTimerFromClipboardIntent.m */,
+				8C9ADB84232B95BF00345E8A /* StartTimerIntent.h */,
+				8C9ADB8C232B95C000345E8A /* StartTimerIntent.m */,
+				8C9ADB8D232B95C000345E8A /* StopTimerIntent.h */,
+				8C9ADB8E232B95C000345E8A /* StopTimerIntent.m */,
+			);
+			path = Toggl.iOS.IntentStaticLib;
+			sourceTree = "<group>";
+		};
+		D62EA1B5212F172800350CA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D62EA1B8212F172B00350CA9 /* Intents.framework */,
+				D62EA1B6212F172800350CA9 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D62EA1A5212F145200350CA9 /* Toggl.iOS.IntentStaticLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D62EA1AF212F145200350CA9 /* Build configuration list for PBXNativeTarget "Toggl.iOS.IntentStaticLib" */;
+			buildPhases = (
+				D62EA1A2212F145200350CA9 /* Sources */,
+				D62EA1A3212F145200350CA9 /* Frameworks */,
+				D62EA1A4212F145200350CA9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Toggl.iOS.IntentStaticLib;
+			productName = Toggl.Daneel.IntentStaticLib;
+			productReference = D62EA1A6212F145200350CA9 /* libToggl.iOS.IntentStaticLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D62EA19E212F145200350CA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = Toggl;
+				TargetAttributes = {
+					D62EA1A5212F145200350CA9 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = D62EA1A1212F145200350CA9 /* Build configuration list for PBXProject "Toggl.iOS.IntentStaticLib" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D62EA19D212F145200350CA9;
+			productRefGroup = D62EA1A7212F145200350CA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D62EA1A5212F145200350CA9 /* Toggl.iOS.IntentStaticLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D62EA1A2212F145200350CA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C9ADB93232B95C000345E8A /* StartTimerIntent.m in Sources */,
+				8C9ADB94232B95C000345E8A /* StopTimerIntent.m in Sources */,
+				8C9ADB92232B95C000345E8A /* StartTimerFromClipboardIntent.m in Sources */,
+				8C9ADB91232B95C000345E8A /* ContinueTimerIntent.m in Sources */,
+				D62EA1BB212FAD4900350CA9 /* Makefile in Sources */,
+				8C9ADB8F232B95C000345E8A /* ShowReportPeriodIntent.m in Sources */,
+				8C9ADB90232B95C000345E8A /* ShowReportIntent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D62EA1AD212F145200350CA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D62EA1AE212F145200350CA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D62EA1B0212F145200350CA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D62EA1B1212F145200350CA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D62EA1A1212F145200350CA9 /* Build configuration list for PBXProject "Toggl.iOS.IntentStaticLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D62EA1AD212F145200350CA9 /* Debug */,
+				D62EA1AE212F145200350CA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D62EA1AF212F145200350CA9 /* Build configuration list for PBXNativeTarget "Toggl.iOS.IntentStaticLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D62EA1B0212F145200350CA9 /* Debug */,
+				D62EA1B1212F145200350CA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D62EA19E212F145200350CA9 /* Project object */;
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="cZE-iV-UFb" customClass="CalendarItemView">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="38"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="381" height="38"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dp3-Ip-39O">
+                        <rect key="frame" x="0.0" y="36" width="381" height="2"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="MzS-6j-lmV"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="icCalendarSmall" translatesAutoresizingMaskIntoConstraints="NO" id="BRg-DN-wNT">
+                        <rect key="frame" x="5" y="3.5" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="5iW-EI-Uvb"/>
+                            <constraint firstAttribute="width" constant="14" id="lLv-rp-Uuy"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EdB-CQ-dXu">
+                        <rect key="frame" x="365" y="-4" width="8" height="8"/>
+                        <color key="backgroundColor" name="CellBackground"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="7yT-A1-fec"/>
+                            <constraint firstAttribute="height" constant="8" id="g8c-Bn-0wC"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftH-hb-JkM">
+                        <rect key="frame" x="8" y="34" width="8" height="8"/>
+                        <color key="backgroundColor" name="CellBackground"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="8" id="iJj-Ha-Wcv"/>
+                            <constraint firstAttribute="width" constant="8" id="jas-2I-uo6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly meeting" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sob-Bq-eUc">
+                        <rect key="frame" x="24" y="6" width="351" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14.5" id="2KH-Ig-Uff"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" name="CellBackground"/>
+            <constraints>
+                <constraint firstItem="BRg-DN-wNT" firstAttribute="baseline" secondItem="sob-Bq-eUc" secondAttribute="firstBaseline" id="20g-ZE-uFH"/>
+                <constraint firstItem="sob-Bq-eUc" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" constant="24" id="5hY-Qw-D80"/>
+                <constraint firstAttribute="trailing" secondItem="EdB-CQ-dXu" secondAttribute="trailing" constant="8" id="BdH-Gs-onQ"/>
+                <constraint firstItem="ftH-hb-JkM" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" constant="8" id="Bxu-MG-OxF"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sob-Bq-eUc" secondAttribute="bottom" constant="6" id="Cbs-P9-Q2X"/>
+                <constraint firstItem="Dp3-Ip-39O" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" id="NcS-09-n0f"/>
+                <constraint firstAttribute="bottom" secondItem="ftH-hb-JkM" secondAttribute="top" constant="4" id="QGa-uA-Ast"/>
+                <constraint firstAttribute="bottom" secondItem="Dp3-Ip-39O" secondAttribute="bottom" id="RQu-Hc-Ufz"/>
+                <constraint firstAttribute="trailing" secondItem="Dp3-Ip-39O" secondAttribute="trailing" id="Zuu-yo-a3m"/>
+                <constraint firstAttribute="trailing" secondItem="sob-Bq-eUc" secondAttribute="trailing" constant="6" id="a5G-aI-edH"/>
+                <constraint firstAttribute="top" secondItem="EdB-CQ-dXu" secondAttribute="bottom" constant="-4" id="apn-Rs-dhc"/>
+                <constraint firstItem="BRg-DN-wNT" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" constant="5" id="fNB-5f-4hR"/>
+                <constraint firstItem="sob-Bq-eUc" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" constant="6" id="oL7-XU-f2d"/>
+                <constraint firstItem="BRg-DN-wNT" firstAttribute="centerY" secondItem="cZE-iV-UFb" secondAttribute="centerY" id="y9Z-2d-x6z"/>
+            </constraints>
+            <size key="customSize" width="381" height="38"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="2"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="y9Z-2d-x6z"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="BottomDragIndicator" destination="ftH-hb-JkM" id="qab-cG-Hu5"/>
+                <outlet property="BottomLine" destination="Dp3-Ip-39O" id="8ff-Da-xef"/>
+                <outlet property="CalendarIconBaselineConstraint" destination="20g-ZE-uFH" id="o5h-5z-VYe"/>
+                <outlet property="CalendarIconCenterVerticallyConstraint" destination="y9Z-2d-x6z" id="dki-E5-yRN"/>
+                <outlet property="CalendarIconHeightConstrarint" destination="5iW-EI-Uvb" id="Wpr-Cp-VKp"/>
+                <outlet property="CalendarIconImageView" destination="BRg-DN-wNT" id="UGi-Sp-7ge"/>
+                <outlet property="CalendarIconLeadingConstraint" destination="fNB-5f-4hR" id="e1M-Qy-OLa"/>
+                <outlet property="CalendarIconWidthConstrarint" destination="lLv-rp-Uuy" id="Fu7-Rk-hSe"/>
+                <outlet property="DescriptionLabel" destination="sob-Bq-eUc" id="rqZ-Gq-87D"/>
+                <outlet property="DescriptionLabelBottomConstraint" destination="Cbs-P9-Q2X" id="gAp-Dl-6EU"/>
+                <outlet property="DescriptionLabelLeadingConstraint" destination="5hY-Qw-D80" id="313-ic-3JE"/>
+                <outlet property="DescriptionLabelTopConstraint" destination="oL7-XU-f2d" id="1m5-dl-otz"/>
+                <outlet property="TopDragIndicator" destination="EdB-CQ-dXu" id="TwD-B0-2Ok"/>
+            </connections>
+            <point key="canvasLocation" x="407.19999999999999" y="49.475262368815599"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icCalendarSmall" width="10" height="11"/>
+        <namedColor name="CellBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

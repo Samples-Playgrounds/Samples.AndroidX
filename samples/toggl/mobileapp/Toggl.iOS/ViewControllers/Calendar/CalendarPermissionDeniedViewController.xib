@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarPermissionDeniedViewController">
+            <connections>
+                <outlet property="ContinueWithoutAccessButton" destination="Nsa-c7-QiH" id="ts6-Xo-fkd"/>
+                <outlet property="EnableAccessButton" destination="uoD-l4-QrO" id="zAJ-Q1-KNn"/>
+                <outlet property="HeadingLabel" destination="i20-VZ-U8l" id="Fem-vw-H2K"/>
+                <outlet property="MessageLabel" destination="qmt-mR-L2r" id="rqY-yG-aGQ"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="342"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icIllustrationErrorSpider" translatesAutoresizingMaskIntoConstraints="NO" id="jZN-hV-wEW">
+                    <rect key="frame" x="116.5" y="0.0" width="55" height="100"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No worries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i20-VZ-U8l">
+                    <rect key="frame" x="16" y="124" width="89.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <color key="textColor" name="Text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can enable access later from the Settings. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmt-mR-L2r">
+                    <rect key="frame" x="16" y="157" width="256" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" name="Text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsa-c7-QiH">
+                    <rect key="frame" x="16" y="217" width="256" height="40"/>
+                    <color key="backgroundColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="46n-FE-ykF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <state key="normal" title="Continue without the access">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uoD-l4-QrO">
+                    <rect key="frame" x="16" y="273" width="256" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="9Uu-5b-kg2"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="or ">
+                                <attributes>
+                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" metaFont="system" size="14"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                            <fragment content="enable access to see events">
+                                <attributes>
+                                    <color key="NSColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" metaFont="system" size="14"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="jZN-hV-wEW" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="0GQ-k6-bAc"/>
+                <constraint firstItem="qmt-mR-L2r" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="16" id="7Q0-om-5xs"/>
+                <constraint firstAttribute="trailing" secondItem="qmt-mR-L2r" secondAttribute="trailing" constant="16" id="PHP-MG-muT"/>
+                <constraint firstItem="Nsa-c7-QiH" firstAttribute="top" secondItem="qmt-mR-L2r" secondAttribute="bottom" constant="24" id="Q9F-mz-fkb"/>
+                <constraint firstAttribute="trailing" secondItem="uoD-l4-QrO" secondAttribute="trailing" constant="16" id="Qsi-bJ-RfS"/>
+                <constraint firstItem="qmt-mR-L2r" firstAttribute="top" secondItem="i20-VZ-U8l" secondAttribute="bottom" constant="12" id="Wvp-yW-ZZM"/>
+                <constraint firstAttribute="trailing" secondItem="Nsa-c7-QiH" secondAttribute="trailing" constant="16" id="YGL-sH-WPv"/>
+                <constraint firstItem="jZN-hV-wEW" firstAttribute="top" secondItem="2" secondAttribute="top" id="dM8-l9-QLu"/>
+                <constraint firstItem="Nsa-c7-QiH" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="16" id="df1-C9-y7G"/>
+                <constraint firstItem="i20-VZ-U8l" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="16" id="p9a-Eg-4cD"/>
+                <constraint firstItem="uoD-l4-QrO" firstAttribute="top" secondItem="Nsa-c7-QiH" secondAttribute="bottom" constant="16" id="pPZ-Gh-A9D"/>
+                <constraint firstItem="uoD-l4-QrO" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="16" id="rO2-ug-Ued"/>
+                <constraint firstItem="i20-VZ-U8l" firstAttribute="top" secondItem="2" secondAttribute="top" constant="124" id="sX3-Yq-WbU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="133" y="155"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icIllustrationErrorSpider" width="55" height="100"/>
+        <namedColor name="Background">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

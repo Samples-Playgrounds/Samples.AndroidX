@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="cxk-wN-pdQ" customClass="SelectableUserCalendarViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="288" height="48"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HEz-hN-CjK" customClass="FadeView">
+                        <rect key="frame" x="10" y="15" width="203" height="18"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Work" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2i-0A-7ji">
+                                <rect key="frame" x="0.0" y="0.0" width="203" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="b2i-0A-7ji" firstAttribute="centerY" secondItem="HEz-hN-CjK" secondAttribute="centerY" id="1wu-SS-EFj"/>
+                            <constraint firstItem="b2i-0A-7ji" firstAttribute="top" secondItem="HEz-hN-CjK" secondAttribute="top" id="Lz0-9V-eDr"/>
+                            <constraint firstAttribute="trailing" secondItem="b2i-0A-7ji" secondAttribute="trailing" id="SR2-yV-CdM"/>
+                            <constraint firstItem="b2i-0A-7ji" firstAttribute="leading" secondItem="HEz-hN-CjK" secondAttribute="leading" id="U2Z-iZ-ujh"/>
+                            <constraint firstAttribute="bottom" secondItem="b2i-0A-7ji" secondAttribute="bottom" id="dDI-XL-5RR"/>
+                        </constraints>
+                    </view>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xWp-Sq-DKj">
+                        <rect key="frame" x="223" y="8.5" width="51" height="31"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xWp-Sq-DKj" firstAttribute="leading" secondItem="HEz-hN-CjK" secondAttribute="trailing" constant="10" id="1Wx-i6-LOL"/>
+                    <constraint firstItem="xWp-Sq-DKj" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="ED6-A7-7wi"/>
+                    <constraint firstItem="HEz-hN-CjK" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="10" id="Vui-3t-jZi"/>
+                    <constraint firstAttribute="trailing" secondItem="xWp-Sq-DKj" secondAttribute="trailing" constant="16" id="uAX-7S-dts"/>
+                    <constraint firstItem="HEz-hN-CjK" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="ugy-2Q-ML0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="CellBackground"/>
+            <connections>
+                <outlet property="CalendarNameLabel" destination="b2i-0A-7ji" id="bwY-xI-9bb"/>
+                <outlet property="FadeView" destination="HEz-hN-CjK" id="JQx-Q6-8xw"/>
+                <outlet property="IsSelectedSwitch" destination="xWp-Sq-DKj" id="AaU-pc-yjA"/>
+            </connections>
+            <point key="canvasLocation" x="133" y="155"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="CellBackground">
+            <color red="0.10980392247438431" green="0.10980392247438431" blue="0.11764705926179886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

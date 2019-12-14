@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="cxk-wN-pdQ" customClass="SuggestionsEmptyViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7j1-3I-t0p">
+                        <rect key="frame" x="16" y="31" width="110" height="6"/>
+                        <color key="backgroundColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="110" id="LAU-x7-KMM"/>
+                            <constraint firstAttribute="height" constant="6" id="mMJ-mP-SzZ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdx-or-b7g">
+                        <rect key="frame" x="16" y="27" width="71" height="6"/>
+                        <color key="backgroundColor" red="0.023529411764705882" green="0.66666666666666663" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="71" id="8Q9-gR-bTi"/>
+                            <constraint firstAttribute="height" constant="6" id="Vrf-kE-BPB"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gp8-Zk-cNm">
+                        <rect key="frame" x="95" y="27" width="71" height="6"/>
+                        <color key="backgroundColor" red="0.70980392156862748" green="0.73725490196078436" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="6" id="2oA-0Z-cen"/>
+                            <constraint firstAttribute="width" constant="71" id="KmJ-Kq-bWG"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Kt-rk-3kC">
+                        <rect key="frame" x="0.0" y="63" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="MQd-YC-bxY"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icContinue" translatesAutoresizingMaskIntoConstraints="NO" id="MF3-bP-8V4">
+                        <rect key="frame" x="288" y="26.5" width="10" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="9Uw-Ie-ulN"/>
+                            <constraint firstAttribute="height" constant="11" id="yjp-z9-JYx"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MF3-bP-8V4" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="3nu-Rr-axF"/>
+                    <constraint firstItem="7j1-3I-t0p" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="topMargin" constant="20" id="Sq3-hX-2lq"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qdx-or-b7g" secondAttribute="bottom" constant="20" id="V4g-ml-vWw"/>
+                    <constraint firstItem="qdx-or-b7g" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" id="ZWB-hx-jXo"/>
+                    <constraint firstItem="gp8-Zk-cNm" firstAttribute="leading" secondItem="qdx-or-b7g" secondAttribute="trailing" constant="8" id="cLi-b1-uEQ"/>
+                    <constraint firstItem="gp8-Zk-cNm" firstAttribute="centerY" secondItem="qdx-or-b7g" secondAttribute="centerY" id="f8r-Yx-Cme"/>
+                    <constraint firstItem="7j1-3I-t0p" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leadingMargin" id="nhK-L2-lau"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="MF3-bP-8V4" secondAttribute="trailing" constant="6" id="sYq-OP-PDw"/>
+                </constraints>
+                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8Kt-rk-3kC" secondAttribute="trailing" id="11B-lB-eR3"/>
+                <constraint firstItem="8Kt-rk-3kC" firstAttribute="leading" secondItem="cxk-wN-pdQ" secondAttribute="leading" id="FM7-Dm-HiE"/>
+                <constraint firstAttribute="bottom" secondItem="8Kt-rk-3kC" secondAttribute="bottom" id="bMl-qd-J55"/>
+            </constraints>
+            <connections>
+                <outlet property="DescriptionWidth" destination="LAU-x7-KMM" id="name-outlet-LAU-x7-KMM"/>
+                <outlet property="ProjectView" destination="qdx-or-b7g" id="name-outlet-qdx-or-b7g"/>
+                <outlet property="ProjectWidth" destination="8Q9-gR-bTi" id="name-outlet-8Q9-gR-bTi"/>
+                <outlet property="TaskWidth" destination="KmJ-Kq-bWG" id="name-outlet-KmJ-Kq-bWG"/>
+            </connections>
+            <point key="canvasLocation" x="70" y="59"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icContinue" width="10" height="11"/>
+    </resources>
+</document>

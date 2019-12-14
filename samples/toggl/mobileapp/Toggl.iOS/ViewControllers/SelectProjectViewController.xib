@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectProjectViewController">
+            <connections>
+                <outlet property="BottomConstraint" destination="lmR-W4-yFV" id="Lh5-bt-ze4"/>
+                <outlet property="CloseButton" destination="52a-eA-uvh" id="b7I-P1-rvN"/>
+                <outlet property="EmptyStateImage" destination="N4r-0Y-VVU" id="laS-dG-J3I"/>
+                <outlet property="EmptyStateLabel" destination="y7h-xi-13f" id="gg7-fK-8XK"/>
+                <outlet property="ProjectsTableView" destination="Ebm-06-qhS" id="eT2-5d-DQ8"/>
+                <outlet property="SearchView" destination="jNd-7h-Bgo" id="ImO-0M-yZi"/>
+                <outlet property="TextField" destination="q0w-Zp-Y5Q" id="Onc-5f-hj8"/>
+                <outlet property="TitleLabel" destination="LAW-Wn-H2j" id="8sk-Wn-7kM"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52a-eA-uvh">
+                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="5NF-cY-Byt"/>
+                        <constraint firstAttribute="height" constant="44" id="UMr-V4-sYF"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2" maxY="2"/>
+                    <state key="normal" image="icClose"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Projects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAW-Wn-H2j">
+                    <rect key="frame" x="133" y="13.5" width="54.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <color key="textColor" name="Text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="48" sectionHeaderHeight="40" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ebm-06-qhS">
+                    <rect key="frame" x="0.0" y="100" width="320" height="448"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" name="Background"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNd-7h-Bgo">
+                    <rect key="frame" x="0.0" y="52" width="320" height="49"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icSearch" translatesAutoresizingMaskIntoConstraints="NO" id="ecR-WI-plE">
+                            <rect key="frame" x="16" y="19.5" width="10" height="10"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="10" id="KvS-LT-Xg2"/>
+                                <constraint firstAttribute="width" constant="10" id="jCI-Zd-NB6"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add/filter projects" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q0w-Zp-Y5Q">
+                            <rect key="frame" x="36" y="16" width="268" height="17"/>
+                            <color key="tintColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                            <accessibility key="accessibilityConfiguration" label="ProjectNameTextField"/>
+                            <color key="textColor" name="Text"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" name="Background"/>
+                    <constraints>
+                        <constraint firstItem="q0w-Zp-Y5Q" firstAttribute="centerY" secondItem="ecR-WI-plE" secondAttribute="centerY" id="0Hr-lA-V5c"/>
+                        <constraint firstItem="ecR-WI-plE" firstAttribute="leading" secondItem="jNd-7h-Bgo" secondAttribute="leading" constant="16" id="4Vp-xC-ltd"/>
+                        <constraint firstAttribute="height" constant="49" id="B3H-oa-Ngr"/>
+                        <constraint firstAttribute="trailing" secondItem="q0w-Zp-Y5Q" secondAttribute="trailing" constant="16" id="chG-1W-pjX"/>
+                        <constraint firstItem="q0w-Zp-Y5Q" firstAttribute="leading" secondItem="ecR-WI-plE" secondAttribute="trailing" constant="10" id="iho-EY-6ax"/>
+                        <constraint firstItem="ecR-WI-plE" firstAttribute="centerY" secondItem="jNd-7h-Bgo" secondAttribute="centerY" id="kcv-uW-pWE"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7h-xi-13f" userLabel="NoProjectLabel">
+                    <rect key="frame" x="50.5" y="243" width="219" height="33.5"/>
+                    <string key="text">Your projects will show up here.
+Use them to categorize your time.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" name="Text2"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icIllustrationProject" translatesAutoresizingMaskIntoConstraints="NO" id="N4r-0Y-VVU" userLabel="EmptyStateImage">
+                    <rect key="frame" x="126.5" y="160" width="77" height="77"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="77" id="1hN-zB-zfq"/>
+                        <constraint firstAttribute="width" constant="77" id="Qtk-a3-KvP"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="LAW-Wn-H2j" firstAttribute="centerY" secondItem="52a-eA-uvh" secondAttribute="centerY" id="2XV-zy-GTi"/>
+                <constraint firstItem="Ebm-06-qhS" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="BKL-rz-bmY"/>
+                <constraint firstAttribute="trailing" secondItem="Ebm-06-qhS" secondAttribute="trailing" id="IuS-jM-4YT"/>
+                <constraint firstItem="52a-eA-uvh" firstAttribute="top" secondItem="2" secondAttribute="top" id="IzG-Xm-T17"/>
+                <constraint firstAttribute="trailing" secondItem="jNd-7h-Bgo" secondAttribute="trailing" id="JYm-Lw-Wfl"/>
+                <constraint firstItem="jNd-7h-Bgo" firstAttribute="top" secondItem="2" secondAttribute="top" constant="52" id="PD2-8r-A0O"/>
+                <constraint firstItem="LAW-Wn-H2j" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="Sad-oa-z3z"/>
+                <constraint firstItem="N4r-0Y-VVU" firstAttribute="centerX" secondItem="y7h-xi-13f" secondAttribute="centerX" constant="5" id="SwT-SA-aWo"/>
+                <constraint firstItem="jNd-7h-Bgo" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="T6K-Rs-I4W"/>
+                <constraint firstItem="y7h-xi-13f" firstAttribute="top" secondItem="N4r-0Y-VVU" secondAttribute="bottom" constant="6" id="UP7-sf-pDm"/>
+                <constraint firstItem="y7h-xi-13f" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="VbA-Yd-ASM"/>
+                <constraint firstItem="52a-eA-uvh" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="X8m-gg-KoE"/>
+                <constraint firstItem="Ebm-06-qhS" firstAttribute="top" secondItem="jNd-7h-Bgo" secondAttribute="bottom" constant="-1" id="Yo2-hg-huu"/>
+                <constraint firstItem="N4r-0Y-VVU" firstAttribute="top" secondItem="2" secondAttribute="top" constant="160" id="jnE-Ks-K6F"/>
+                <constraint firstAttribute="bottom" secondItem="Ebm-06-qhS" secondAttribute="bottom" id="lmR-W4-yFV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.59999999999999" y="153.82308845577214"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icClose" width="10" height="10"/>
+        <image name="icIllustrationProject" width="60" height="63"/>
+        <image name="icSearch" width="13" height="12"/>
+        <namedColor name="Background">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text2">
+            <color red="0.92156862745098034" green="0.92156862745098034" blue="0.96078431372549022" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

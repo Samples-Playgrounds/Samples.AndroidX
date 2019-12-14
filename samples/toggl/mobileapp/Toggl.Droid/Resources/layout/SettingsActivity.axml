@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/YourProfileLabel"
+                android:textSize="12sp"
+                android:paddingLeft="16dp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.04"
+                android:gravity="center_vertical"
+                tools:text="Your Profile"
+                android:textColor="@color/secondaryText"
+                android:fontFamily="sans-serif-medium"
+                android:layout_height="48dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:clickable="true"
+                android:layout_height="56dp"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/SettingsNameTextView"
+                    tools:text="heidi@toggl.com"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="5sp"
+                    android:textColor="@color/primaryText"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:background="@color/separator"
+                    android:layout_height="0.5dp"
+                    android:layout_width="match_parent" />
+                <TextView
+                    android:id="@+id/UsernameLabel"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="4sp"
+                    android:textColor="@color/secondaryText"
+                    tools:text="Username"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:clickable="true"
+                android:layout_height="56dp"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/SettingsEmailTextView"
+                    tools:text="Heidi"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="5sp"
+                    android:textColor="@color/primaryText"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/EmailLabel"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="4sp"
+                    tools:text="Email"
+                    android:textColor="@color/secondaryText"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:id="@+id/DefaultWorkspaceView"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="56dp"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/DefaultWorkspaceName"
+                    tools:text="MM/DD/YYYY"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="5sp"
+                    android:textColor="@color/primaryText"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/DefaultWorkspaceLabel"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="4sp"
+                    tools:text="Default Workspace"
+                    android:textColor="@color/secondaryText"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@drawable/dropdown"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical" />
+            </FrameLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <TextView
+                android:id="@+id/DisplayLabel"
+                android:textSize="12sp"
+                android:paddingLeft="16dp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.04"
+                android:gravity="center_vertical"
+                tools:text="Display"
+                android:textColor="@color/secondaryText"
+                android:fontFamily="sans-serif-medium"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent" />
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:id="@+id/SettingsDateFormatView"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="56dp"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/SettingsDateFormatTextView"
+                    tools:text="MM/DD/YYYY"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="5sp"
+                    android:textColor="@color/primaryText"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/DateFormatLabel"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="4sp"
+                    tools:text="Date format"
+                    android:textColor="@color/secondaryText"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@drawable/dropdown"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical" />
+            </FrameLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:id="@+id/SettingsSelectBeginningOfWeekView"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="56dp"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/SettingsBeginningOfWeekTextView"
+                    tools:text="Monday"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="5sp"
+                    android:textColor="@color/primaryText"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/BeginningOfWeekLabel"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="4sp"
+                    tools:text="First day of the week"
+                    android:textColor="@color/secondaryText"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@drawable/dropdown"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical" />
+            </FrameLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:id="@+id/SettingsDurationFormatView"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="56dp"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/SettingsDurationFormatTextView"
+                    tools:text="Monday"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="5sp"
+                    android:textColor="@color/primaryText"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/DurationFormatLabel"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="4sp"
+                    tools:text="Duration display format"
+                    android:textColor="@color/secondaryText"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:src="@drawable/dropdown"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical" />
+            </FrameLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:id="@+id/SettingsIs24HourModeView"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="48dp"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/Use24HourClockLabel"
+                    android:textSize="15sp"
+                    android:textAllCaps="false"
+                    android:paddingLeft="16dp"
+                    android:gravity="center_vertical"
+                    tools:text="Use 24-hour clock"
+                    android:textColor="@color/primaryText"
+                    android:layout_gravity="start"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content" />
+                <Switch
+                    android:id="@+id/SettingsIs24HourModeSwitch"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="18dp"
+                    android:paddingLeft="8dp"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:id="@+id/GroupTimeEntriesView"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="48dp"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/GroupedTimeEntriesLabel"
+                    android:textSize="15sp"
+                    android:textAllCaps="false"
+                    android:paddingLeft="16dp"
+                    android:gravity="center_vertical"
+                    tools:text="Group similar time entries"
+                    android:textColor="@color/primaryText"
+                    android:layout_gravity="start"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content" />
+                <Switch
+                    android:id="@+id/GroupTimeEntriesSwitch"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="18dp"
+                    android:paddingLeft="8dp"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:id="@+id/SettingsToggleSwipeActionsView"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="48dp"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/SettingsToggleSwipeActionsLabel"
+                    android:textSize="15sp"
+                    android:textAllCaps="false"
+                    android:paddingLeft="16dp"
+                    android:gravity="center_vertical"
+                    tools:text="Cell Swipe Actions"
+                    android:textColor="@color/primaryText"
+                    android:layout_gravity="start"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content" />
+                <Switch
+                    android:id="@+id/SettingsAreSwipeActionsEnabledSwitch"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="18dp"
+                    android:paddingLeft="8dp"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/SettingsToggleManualModeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:id="@+id/SettingsToggleManualModeLabel"
+                    tools:text="Manual Mode"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primaryText"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="5sp"
+                    android:lines="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/SettingsIsManualModeEnabledSwitch"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <Switch
+                    android:id="@+id/SettingsIsManualModeEnabledSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:paddingRight="18dp"
+                    android:paddingLeft="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    app:layout_constraintBottom_toBottomOf="@+id/SettingsToggleManualModeView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/SettingsToggleManualModeView" />
+                <TextView
+                    android:id="@+id/SettingsToggleManualModeExplanation"
+                    tools:text="This option sets the default behavior for the start button. Regardless of the current option, long pressing the button will always activate the alternative mode."
+                    android:textColor="@color/secondaryText"
+                    android:textSize="12sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/SettingsIsManualModeEnabledSwitch"
+                    app:layout_constraintStart_toStartOf="@+id/SettingsToggleManualModeLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/SettingsToggleManualModeLabel" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="24dp"/>
+            <TextView
+                android:id="@+id/CalendarSettingsView"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:textSize="15dp"
+                android:textColor="@color/primaryText"
+                tools:text="Calendar Settings"/>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:id="@+id/SmartRemindersView"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground">
+                <TextView
+                    android:id="@+id/SmartRemindersTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:lineSpacingExtra="5sp"
+                    android:textColor="@color/primaryText"
+                    tools:text="5 minutes before the event"/>
+                <TextView
+                    android:id="@+id/SmartRemindersLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/secondaryText"
+                    tools:text="Smart reminders"/>
+                <ImageView
+                    android:src="@drawable/dropdown"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical" />
+            </FrameLayout>
+            <View
+                android:id="@+id/SmartRemindersViewSeparator"
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <TextView
+                android:id="@+id/NotificationsLabel"
+                android:textSize="12sp"
+                android:paddingLeft="16dp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.04"
+                android:gravity="center_vertical"
+                tools:text="Notifications"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/secondaryText"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent" />
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:id="@+id/SettingsRunningTimerNotificationsView"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="48dp"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/NotificationsRunningTimerLabel"
+                    android:textSize="15sp"
+                    android:paddingLeft="16dp"
+                    android:textAllCaps="false"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/primaryText"
+                    tools:text="Running timer"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <Switch
+                    android:id="@+id/SettingsAreRunningTimerNotificationsEnabledSwitch"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="18dp"
+                    android:paddingLeft="8dp"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:id="@+id/SettingsStoppedTimerNotificationsView"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="48dp"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/NotificationsStoppedTimerLabel"
+                    android:textSize="15sp"
+                    android:textAllCaps="false"
+                    android:lineSpacingExtra="5sp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/primaryText"
+                    tools:text="Stopped timer"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <Switch
+                    android:id="@+id/SettingsAreStoppedTimerNotificationsEnabledSwitch"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_gravity="right"
+                    android:paddingRight="18dp"
+                    android:paddingLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <TextView
+                android:id="@+id/GeneralLabel"
+                android:textSize="12sp"
+                android:paddingLeft="16dp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.04"
+                tools:text="General"
+                android:gravity="center_vertical"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/secondaryText"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent" />
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <TextView
+                android:id="@+id/SettingsSubmitFeedbackButton"
+                android:textSize="15sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="16dp"
+                android:gravity="center_vertical"
+                tools:text="Submit feedback"
+                android:textColor="@color/primaryText"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="48dp"
+                android:layout_width="match_parent" />
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <TextView
+                android:id="@+id/SettingsHelpButton"
+                android:textSize="15sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="16dp"
+                tools:text="Help"
+                android:gravity="center_vertical"
+                android:textColor="@color/primaryText"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="48dp"
+                android:layout_width="match_parent" />
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <FrameLayout
+                android:id="@+id/SettingsAboutContainer"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="48dp"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/AboutLabel"
+                    android:textSize="15sp"
+                    android:paddingLeft="16dp"
+                    tools:text="About"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/primaryText"
+                    android:layout_gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/SettingsAppVersionTextView"
+                    android:textSize="15sp"
+                    android:paddingRight="16dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/secondaryText"
+                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+            <View
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent" />
+            <LinearLayout
+                android:id="@+id/SettingsLogoutButton"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/TxtSettingsLogout"
+                    android:textSize="15sp"
+                    tools:text="Sign out of Toggl"
+                    android:gravity="bottom"
+                    android:textColor="@color/errorText"
+                    android:layout_height="32dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="2dp"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="2dp"
+                    android:id="@+id/SyncStateSyncedHolder"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/TxtStateSynced"
+                        android:textSize="11sp"
+                        tools:text="Synced"
+                        android:textColor="@color/syncStateSyncedText"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        />
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="2dp"
+                    android:id="@+id/SyncStateInProgressHolder"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/TxtStateInProgress"
+                        android:textSize="11sp"
+                        tools:text="Syncing..."
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        />
+                    <ProgressBar
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="4dp"
+                        android:indeterminate="true"
+                        style="?android:attr/progressBarStyleSmall"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/FinalSeparator"
+                android:background="@color/separator"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="24dp"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarLayout"
+        android:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/Toolbar"
+            style="@style/ToolbarStyle"
+            app:layout_scrollFlags="scroll|enterAlways" />
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

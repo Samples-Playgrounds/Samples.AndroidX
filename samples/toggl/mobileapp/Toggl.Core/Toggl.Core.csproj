@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$(SolutionDir)Toggl.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toggl.Shared\Toggl.Shared.csproj" />
+    <ProjectReference Include="..\Toggl.Storage\Toggl.Storage.csproj" />
+    <ProjectReference Include="..\Toggl.Networking\Toggl.Networking.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Collections.Immutable" Version="1.6.0" />
+    <PackageReference Include="Accord.MachineLearning" Version="3.8.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+  </ItemGroup>
+</Project>
