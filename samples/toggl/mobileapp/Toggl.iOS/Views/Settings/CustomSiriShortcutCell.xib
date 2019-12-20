@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomSiriShortcutCell" rowHeight="64" id="cxk-wN-pdQ" customClass="CustomSiriShortcutCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YV5-fP-ct7">
+                        <rect key="frame" x="16" y="0.0" width="288" height="64"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WPf-7Y-DXQ">
+                                <rect key="frame" x="0.0" y="12" width="288" height="18"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7u-oz-uHc">
+                                        <rect key="frame" x="0.0" y="0.0" width="230.66666666666666" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TP5-rV-3HG">
+                                        <rect key="frame" x="250.66666666666671" y="0.0" width="37.333333333333343" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="250" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="17j-Jk-PjJ">
+                                <rect key="frame" x="0.0" y="30" width="288" height="22"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8M-Ts-KRT">
+                                        <rect key="frame" x="0.0" y="0.0" width="37.333333333333336" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="icTags" translatesAutoresizingMaskIntoConstraints="NO" id="C08-20-Prz">
+                                        <rect key="frame" x="47.333333333333336" y="0.0" width="14" height="22"/>
+                                        <color key="tintColor" name="Text2"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="icBillable" translatesAutoresizingMaskIntoConstraints="NO" id="3Xc-C7-IMY">
+                                        <rect key="frame" x="71.333333333333329" y="0.0" width="8" height="22"/>
+                                        <color key="tintColor" name="Text2"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5n-Qu-Zg1">
+                                        <rect key="frame" x="89.333333333333329" y="0.0" width="198.66666666666669" height="22"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <edgeInsets key="layoutMargins" top="12" left="0.0" bottom="12" right="0.0"/>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" name="CellBackground"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="YV5-fP-ct7" secondAttribute="bottom" id="CNQ-gE-A2H"/>
+                    <constraint firstItem="YV5-fP-ct7" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="16" id="OOW-ZP-Wvd"/>
+                    <constraint firstItem="YV5-fP-ct7" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" id="YbB-Op-MPF"/>
+                    <constraint firstAttribute="trailing" secondItem="YV5-fP-ct7" secondAttribute="trailing" constant="16" id="juL-Km-B7I"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="BillableIcon" destination="3Xc-C7-IMY" id="AY2-7T-41D"/>
+                <outlet property="DetailsLabel" destination="q8M-Ts-KRT" id="ymp-J0-y7O"/>
+                <outlet property="InvocationLabel" destination="TP5-rV-3HG" id="mpl-3m-KGX"/>
+                <outlet property="TagsIcon" destination="C08-20-Prz" id="qiE-NG-o5A"/>
+                <outlet property="TitleLabel" destination="G7u-oz-uHc" id="cyZ-I9-YBI"/>
+            </connections>
+            <point key="canvasLocation" x="24" y="59.11330049261084"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icBillable" width="8" height="16"/>
+        <image name="icTags" width="14" height="13"/>
+        <namedColor name="CellBackground">
+            <color red="0.10980392247438431" green="0.10980392247438431" blue="0.11764705926179886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text2">
+            <color red="0.92156863212585449" green="0.92156863212585449" blue="0.96078431606292725" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

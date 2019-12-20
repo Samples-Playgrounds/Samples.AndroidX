@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <style name="Theme.Splash" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/Splash</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/background</item>
+    </style>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:actionBarSize">56dp</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="android:statusBarColor">@color/fallbackStatusBar</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
+
+    <style name="AppTheme" parent="@style/BaseAppTheme">
+    </style>
+
+    <style name="AppTheme.OutdatedAppStatusBarColor">
+        <item name="android:statusBarColor">@color/outdatedStatusBar</item>
+        <item name="android:windowBackground">@color/outdatedStatusBar</item>
+        <item name="android:navigationBarColor">@color/outdatedStatusBar</item>
+    </style>
+
+    <style name="ToolbarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?android:actionBarSize</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:elevation">@dimen/toolbarElevation</item>
+        <item name="popupTheme">@style/AppBarPopupTheme</item>
+        <item name="android:theme">@style/AppBarTheme</item>
+        <item name="android:background">@color/background</item>
+        <item name="contentInsetStartWithNavigation">2dp</item>
+    </style>
+
+
+    <style name="TextInputLayoutErrorAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/errorText</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+  
+    <style name="TextInputLayoutRegularTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/secondaryText</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    
+    <style name="CalendarWeekStripeDayTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">20dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/secondaryText</item>
+    </style>
+
+    <style name="CalendarWeekStripeLabelTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">20dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/secondaryText</item>
+    </style>
+</resources>

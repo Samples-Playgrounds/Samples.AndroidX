@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+    <ImageButton
+            android:id="@+id/StopButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="17dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:src="@drawable/stop_white"
+            android:background="@drawable/WidgetStopButton"/>
+    <ImageButton
+            android:id="@+id/StartButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingTop="17dp"
+            android:paddingBottom="17dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="16dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:src="@drawable/play_white"
+            android:background="@drawable/WidgetStartButton"/>
+</FrameLayout>

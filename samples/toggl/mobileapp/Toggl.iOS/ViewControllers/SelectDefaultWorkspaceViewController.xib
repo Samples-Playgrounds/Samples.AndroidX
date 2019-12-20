@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectDefaultWorkspaceViewController">
+            <connections>
+                <outlet property="DescriptionLabel" destination="MFx-bu-6Ay" id="Ki9-hz-BuH"/>
+                <outlet property="HeadingLabel" destination="5ZD-I5-VTZ" id="yl2-jn-Tot"/>
+                <outlet property="WorkspacesTableView" destination="VNe-LG-jTA" id="NR2-gg-Rpt"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="302"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set default workspace" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZD-I5-VTZ">
+                    <rect key="frame" x="16" y="24" width="184.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your time will be automatically tracked under this workspace. You can change it later from the Settings." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFx-bu-6Ay">
+                    <rect key="frame" x="16" y="57" width="256" height="54"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VNe-LG-jTA">
+                    <rect key="frame" x="0.0" y="127" width="288" height="175"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MFx-bu-6Ay" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="16" id="2z1-7K-X6v"/>
+                <constraint firstAttribute="trailing" secondItem="MFx-bu-6Ay" secondAttribute="trailing" constant="16" id="3JZ-Pb-osF"/>
+                <constraint firstItem="VNe-LG-jTA" firstAttribute="top" secondItem="MFx-bu-6Ay" secondAttribute="bottom" constant="16" id="Km9-gN-fiB"/>
+                <constraint firstAttribute="trailing" secondItem="VNe-LG-jTA" secondAttribute="trailing" id="kIP-Bm-b6Z"/>
+                <constraint firstAttribute="bottom" secondItem="VNe-LG-jTA" secondAttribute="bottom" id="oeg-lP-w1k"/>
+                <constraint firstItem="5ZD-I5-VTZ" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="16" id="rGq-Oo-EVp"/>
+                <constraint firstItem="5ZD-I5-VTZ" firstAttribute="top" secondItem="2" secondAttribute="top" constant="24" id="sDb-Gs-Kyd"/>
+                <constraint firstItem="MFx-bu-6Ay" firstAttribute="top" secondItem="5ZD-I5-VTZ" secondAttribute="bottom" constant="12" id="xHB-AQ-y7H"/>
+                <constraint firstItem="VNe-LG-jTA" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="zsa-oV-vuP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.59999999999999" y="154.72263868065968"/>
+        </view>
+    </objects>
+</document>

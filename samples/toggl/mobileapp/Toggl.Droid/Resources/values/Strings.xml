@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="AppName">Toggl</string>
+    <string name="Reports">Reports</string>
+    <string name="NewTimeEntry">New time entry</string>
+</resources>

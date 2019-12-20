@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SiriShortcutsSelectReportPeriodViewController">
+            <connections>
+                <outlet property="AddToSiriWrapperView" destination="q6Q-4s-yjB" id="RIX-X7-7hK"/>
+                <outlet property="SelectWorkspaceCellLabel" destination="iMf-dm-ydz" id="8js-yv-xgW"/>
+                <outlet property="SelectWorkspaceNameLabel" destination="7FJ-A5-OMS" id="xgI-Ur-Zq1"/>
+                <outlet property="SelectWorkspaceView" destination="7sZ-d0-LvZ" id="n5J-CM-4zH"/>
+                <outlet property="TableFooterView" destination="gxO-bt-Dtj" id="qfK-R0-kap"/>
+                <outlet property="TableView" destination="xm0-Xq-yQC" id="YxE-S1-6P3"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xm0-Xq-yQC">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" name="TableBackground"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="ySv-yC-Ke9" firstAttribute="bottom" secondItem="xm0-Xq-yQC" secondAttribute="bottom" id="1yM-TP-YmX"/>
+                <constraint firstItem="xm0-Xq-yQC" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="FVK-Qw-efg"/>
+                <constraint firstAttribute="trailing" secondItem="xm0-Xq-yQC" secondAttribute="trailing" id="c67-nF-vmg"/>
+                <constraint firstItem="xm0-Xq-yQC" firstAttribute="top" secondItem="ySv-yC-Ke9" secondAttribute="top" id="yFC-Ln-Yki"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ySv-yC-Ke9"/>
+            <point key="canvasLocation" x="130.40000000000001" y="152.47376311844079"/>
+        </view>
+        <view contentMode="scaleToFill" id="gxO-bt-Dtj">
+            <rect key="frame" x="0.0" y="0.0" width="359" height="235"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6Q-4s-yjB">
+                    <rect key="frame" x="0.0" y="85" width="359" height="150"/>
+                    <color key="backgroundColor" name="TableBackground"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="zMa-cN-V1X"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sZ-d0-LvZ" userLabel="SelectWorkspaceView">
+                    <rect key="frame" x="0.0" y="16" width="359" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workspace" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMf-dm-ydz">
+                            <rect key="frame" x="16" y="13" width="76.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" name="Text"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icArrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="5be-NS-BCl">
+                            <rect key="frame" x="338" y="17" width="5" height="10"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="10" id="ArE-p8-CxM"/>
+                                <constraint firstAttribute="width" constant="5" id="a5u-zy-b9F"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Will's Workspace" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7FJ-A5-OMS">
+                            <rect key="frame" x="102.5" y="13" width="223.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" name="Text2"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="CellBackground"/>
+                    <constraints>
+                        <constraint firstItem="5be-NS-BCl" firstAttribute="leading" secondItem="7FJ-A5-OMS" secondAttribute="trailing" constant="12" id="7o1-lY-iTs"/>
+                        <constraint firstAttribute="height" constant="44" id="ATZ-JK-Zam"/>
+                        <constraint firstItem="5be-NS-BCl" firstAttribute="centerY" secondItem="7sZ-d0-LvZ" secondAttribute="centerY" id="FAP-d5-dEB"/>
+                        <constraint firstItem="iMf-dm-ydz" firstAttribute="leading" secondItem="7sZ-d0-LvZ" secondAttribute="leading" constant="16" id="Fqd-aa-nDO"/>
+                        <constraint firstItem="7FJ-A5-OMS" firstAttribute="leading" secondItem="iMf-dm-ydz" secondAttribute="trailing" constant="10" id="HzL-An-s4l"/>
+                        <constraint firstAttribute="trailing" secondItem="5be-NS-BCl" secondAttribute="trailing" constant="16" id="N6q-ks-29t"/>
+                        <constraint firstItem="7FJ-A5-OMS" firstAttribute="centerY" secondItem="5be-NS-BCl" secondAttribute="centerY" id="b3r-zz-mfJ"/>
+                        <constraint firstItem="iMf-dm-ydz" firstAttribute="centerY" secondItem="7sZ-d0-LvZ" secondAttribute="centerY" id="xLP-n8-eeJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="TableBackground"/>
+            <constraints>
+                <constraint firstItem="7sZ-d0-LvZ" firstAttribute="top" secondItem="gxO-bt-Dtj" secondAttribute="top" constant="16" id="7YA-50-xW2"/>
+                <constraint firstItem="7sZ-d0-LvZ" firstAttribute="leading" secondItem="sfX-PF-X6H" secondAttribute="leading" id="DIn-5K-hTW"/>
+                <constraint firstItem="q6Q-4s-yjB" firstAttribute="leading" secondItem="sfX-PF-X6H" secondAttribute="leading" id="K8l-Xs-Wk6"/>
+                <constraint firstItem="7sZ-d0-LvZ" firstAttribute="trailing" secondItem="sfX-PF-X6H" secondAttribute="trailing" id="RUQ-4e-4P6"/>
+                <constraint firstItem="q6Q-4s-yjB" firstAttribute="top" secondItem="7sZ-d0-LvZ" secondAttribute="bottom" constant="25" id="RmG-6C-8fo"/>
+                <constraint firstItem="q6Q-4s-yjB" firstAttribute="trailing" secondItem="sfX-PF-X6H" secondAttribute="trailing" id="f2X-sd-vZT"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="sfX-PF-X6H"/>
+            <point key="canvasLocation" x="-109.59999999999999" y="983.65817091454278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icArrowRight" width="7" height="12"/>
+        <namedColor name="Background">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CellBackground">
+            <color red="0.10980392247438431" green="0.10980392247438431" blue="0.11764705926179886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TableBackground">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text2">
+            <color red="0.92156863212585449" green="0.92156863212585449" blue="0.96078431606292725" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

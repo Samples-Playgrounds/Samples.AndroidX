@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController">
+            <connections>
+                <outlet property="FeedbackToastTextLabel" destination="Xjj-dL-R3z" id="twg-Fq-OTg"/>
+                <outlet property="FeedbackToastTitleLabel" destination="5Oo-uJ-3bC" id="2rX-vC-CVf"/>
+                <outlet property="SendFeedbackSuccessView" destination="lLQ-ez-Mpw" id="Jgk-yb-5Eq"/>
+                <outlet property="tableView" destination="WXX-ES-rQ0" id="ii4-bl-HRj"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1296"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WXX-ES-rQ0">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="1296"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lLQ-ez-Mpw">
+                    <rect key="frame" x="95" y="1203" width="834" height="69"/>
+                    <subviews>
+                        <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ph-2N-Kz0">
+                            <rect key="frame" x="0.0" y="0.0" width="834" height="69"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Umr-DA-Rdg">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="69"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                            <color key="backgroundColor" red="0.83137254900000002" green="0.94509803920000002" blue="0.99607843139999996" alpha="0.82999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                            <blurEffect style="light"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </visualEffectView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="confirmation" translatesAutoresizingMaskIntoConstraints="NO" id="zRo-AL-EKX">
+                            <rect key="frame" x="14" y="14" width="16" height="16"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DONE!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oo-uJ-3bC">
+                            <rect key="frame" x="42" y="13" width="45" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <color key="textColor" red="0.070588235294117646" green="0.53725490196078429" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for the feedback. If you had any questions, we’ll get back to you soon." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xjj-dL-R3z">
+                            <rect key="frame" x="42" y="36" width="780" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.070588235294117646" green="0.53725490196078429" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="zRo-AL-EKX" firstAttribute="top" secondItem="lLQ-ez-Mpw" secondAttribute="top" constant="14" id="44v-hz-oWv"/>
+                        <constraint firstAttribute="trailing" secondItem="Xjj-dL-R3z" secondAttribute="trailing" constant="12" id="6c8-A1-gBe"/>
+                        <constraint firstAttribute="bottom" secondItem="Xjj-dL-R3z" secondAttribute="bottom" constant="16" id="ACE-os-snP"/>
+                        <constraint firstAttribute="bottom" secondItem="3Ph-2N-Kz0" secondAttribute="bottom" id="EdX-Rd-yCD"/>
+                        <constraint firstItem="zRo-AL-EKX" firstAttribute="leading" secondItem="lLQ-ez-Mpw" secondAttribute="leading" constant="14" id="K51-oE-A4Z"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="834" id="MQk-n3-FoT"/>
+                        <constraint firstItem="5Oo-uJ-3bC" firstAttribute="leading" secondItem="lLQ-ez-Mpw" secondAttribute="leading" constant="42" id="X2M-Pm-dmH"/>
+                        <constraint firstItem="3Ph-2N-Kz0" firstAttribute="top" secondItem="lLQ-ez-Mpw" secondAttribute="top" id="lFp-Zc-OaC"/>
+                        <constraint firstItem="Xjj-dL-R3z" firstAttribute="leading" secondItem="lLQ-ez-Mpw" secondAttribute="leading" constant="42" id="lRF-LI-58P"/>
+                        <constraint firstItem="3Ph-2N-Kz0" firstAttribute="leading" secondItem="lLQ-ez-Mpw" secondAttribute="leading" id="lTm-Uq-yN0"/>
+                        <constraint firstItem="Xjj-dL-R3z" firstAttribute="top" secondItem="5Oo-uJ-3bC" secondAttribute="bottom" constant="6" id="n0C-3S-LBe"/>
+                        <constraint firstItem="5Oo-uJ-3bC" firstAttribute="top" secondItem="lLQ-ez-Mpw" secondAttribute="top" constant="13" id="sq9-DH-poW"/>
+                        <constraint firstAttribute="trailing" secondItem="3Ph-2N-Kz0" secondAttribute="trailing" id="xCU-4J-Eut"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="zSK-oz-LmT" firstAttribute="trailing" secondItem="WXX-ES-rQ0" secondAttribute="trailing" id="6mX-3o-2MY"/>
+                <constraint firstItem="WXX-ES-rQ0" firstAttribute="top" secondItem="zSK-oz-LmT" secondAttribute="top" id="9ON-Hp-ZMv"/>
+                <constraint firstItem="zSK-oz-LmT" firstAttribute="bottom" secondItem="WXX-ES-rQ0" secondAttribute="bottom" id="Icg-2o-Gn9"/>
+                <constraint firstItem="lLQ-ez-Mpw" firstAttribute="leading" secondItem="zSK-oz-LmT" secondAttribute="leading" priority="750" constant="8" id="Mo9-Yw-81o"/>
+                <constraint firstItem="WXX-ES-rQ0" firstAttribute="leading" secondItem="zSK-oz-LmT" secondAttribute="leading" id="MrE-uY-uut"/>
+                <constraint firstItem="lLQ-ez-Mpw" firstAttribute="centerX" secondItem="zSK-oz-LmT" secondAttribute="centerX" id="PyB-fl-QYS"/>
+                <constraint firstItem="zSK-oz-LmT" firstAttribute="trailing" secondItem="lLQ-ez-Mpw" secondAttribute="trailing" priority="750" id="aIA-CT-vJe"/>
+                <constraint firstItem="zSK-oz-LmT" firstAttribute="bottom" secondItem="lLQ-ez-Mpw" secondAttribute="bottom" constant="24" id="rVJ-BP-vFF"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="zSK-oz-LmT"/>
+            <point key="canvasLocation" x="31.640624999999996" y="133.96778916544656"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="confirmation" width="16" height="16"/>
+    </resources>
+</document>

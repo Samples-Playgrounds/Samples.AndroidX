@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <dimen name="expandedToolbarHeight">95dp</dimen>
+    <dimen name="toolbarElevation">4dp</dimen>
+</resources>

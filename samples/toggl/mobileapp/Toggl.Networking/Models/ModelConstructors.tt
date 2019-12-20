@@ -1,0 +1,73 @@
+﻿<#@ template language="C#" hostspecific="True"
+#><#@ assembly name="System.Core"
+#><#@ import namespace="System.IO"
+#><#@ import namespace="System.Linq"
+#>using Toggl.Shared;
+using Toggl.Shared.Models;
+
+namespace Toggl.Networking.Models
+{
+<#
+    var filePath = Path.GetDirectoryName(Host.TemplateFile);
+    var solutionDirectory = Path.Combine(filePath, "../../Toggl.Shared/Models/" );
+    var modelsToGenerate = Directory.GetFiles(solutionDirectory, "*.cs");
+    var isFirst = true;
+    foreach(var modelFile in modelsToGenerate)
+    {
+        var interfaceName = Path.GetFileName(modelFile).Replace(".cs", "");
+        if (interfaceName == "IIdentifiable"
+            || interfaceName == "IDeletable"
+            || interfaceName == "ILastChangedDatable")
+            continue;
+
+        var className = interfaceName.Substring(1, interfaceName.Length - 1);
+
+        var implementsIDeletable = File.ReadAllLines(modelFile).Any(l => l.Contains("IDeletable"));
+
+        var implementsILastChangedDatabale = File.ReadAllLines(modelFile).Any(l => l.Contains("ILastChangedDatable"));
+
+        if (!isFirst)
+            WriteLine("");
+
+        WriteLine($"    [Preserve(AllMembers = true)]");
+        WriteLine($"    internal sealed partial class {className}");
+        WriteLine( "    {");
+        WriteLine($"        public {className}() {{ }}\n");
+        WriteLine($"        public {className}({interfaceName} entity)");
+        WriteLine( "        {");
+
+        foreach(var line in File.ReadAllLines(modelFile))
+        {
+            var extendsIIdentifiable = line.Contains(": IIdentifiable");
+            if (extendsIIdentifiable)
+            {
+                WriteLine("            Id = entity.Id;");
+                continue;
+            }
+        
+            var isProperty = line.Contains("get;");
+            if (!isProperty) continue;
+
+            var trimmedLine = line.Trim();
+            var indexOfPropName = trimmedLine.IndexOf(" ") + 1;
+            var propName = trimmedLine.Substring(indexOfPropName, trimmedLine.Length - 9 - indexOfPropName);
+
+            WriteLine($"            {propName} = entity.{propName};");
+        }
+
+        if (implementsILastChangedDatabale)
+        {
+            WriteLine("            At = entity.At;");
+        }
+
+        if (implementsIDeletable)
+        {
+            WriteLine("            ServerDeletedAt = entity.ServerDeletedAt;");
+        }
+
+        WriteLine("        }");
+        WriteLine("    }");
+
+        isFirst = false;
+    }
+#>}

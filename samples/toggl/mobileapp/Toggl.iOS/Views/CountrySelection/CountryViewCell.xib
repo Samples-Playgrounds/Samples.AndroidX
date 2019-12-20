@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="cxk-wN-pdQ" customClass="CountryViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toggl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQZ-Qw-UMW">
+                        <rect key="frame" x="16" y="14" width="33.5" height="16"/>
+                        <accessibility key="accessibilityConfiguration" identifier="CountryLabel"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" name="Text"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCheckBoxChecked" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-1c-BnW">
+                        <rect key="frame" x="290" y="14.5" width="14" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="2UY-1c-BnW" secondAttribute="height" multiplier="10:11" id="E39-RC-o1B"/>
+                            <constraint firstAttribute="width" constant="14" id="LdM-Fx-CiG"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" name="Background"/>
+                <constraints>
+                    <constraint firstItem="IQZ-Qw-UMW" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="16" id="KPd-S3-hBl"/>
+                    <constraint firstAttribute="trailing" secondItem="2UY-1c-BnW" secondAttribute="trailing" constant="16" id="X4O-Nr-wHW"/>
+                    <constraint firstItem="IQZ-Qw-UMW" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="Zc5-5J-kgR"/>
+                    <constraint firstItem="2UY-1c-BnW" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="fgP-6J-zQ3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="CheckBoxImageView" destination="2UY-1c-BnW" id="w83-QM-dy4"/>
+                <outlet property="NameLabel" destination="IQZ-Qw-UMW" id="533-9y-paO"/>
+            </connections>
+            <point key="canvasLocation" x="131" y="154"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icCheckBoxChecked" width="14" height="14"/>
+        <namedColor name="Background">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

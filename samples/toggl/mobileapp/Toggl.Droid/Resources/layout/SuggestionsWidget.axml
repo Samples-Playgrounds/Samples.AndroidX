@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/TimerWidgetBackground">
+    <LinearLayout
+        android:id="@+id/HeaderLabel"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="12dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/logo_splash" />
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"
+            tools:text="Working on these?"
+            android:textSize="12sp"
+            android:textAllCaps="true"
+            android:textStyle="normal"
+            android:textColor="@color/secondaryText"
+            />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/HeaderSeparator"
+        android:layout_below="@id/HeaderLabel"
+        android:background="@color/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <ListView
+        android:visibility="gone"
+        android:divider="@null"
+        android:id="@+id/SuggestionsList"
+        android:layout_below="@id/HeaderLabel"
+        android:layout_above="@+id/ShowAllTimeEntriesLabel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/NoData"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_vertical"
+        android:layout_below="@id/HeaderLabel"
+        tools:text="No data..."
+        android:textSize="12sp"
+        android:textAllCaps="true"
+        android:textStyle="normal"
+        android:textColor="@color/secondaryText" />
+    <TextView
+        android:id="@+id/ShowAllTimeEntriesLabel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingStart="16dp"
+        android:gravity="center_vertical"
+        tools:text="Show all time entries..."
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="12sp"
+        android:textAllCaps="true"
+        android:textStyle="normal"
+        android:textColor="@color/secondaryText"
+        android:layout_alignParentBottom="true" />
+    <ImageView
+        android:id="@+id/BottomSeparator"
+        android:layout_above="@id/ShowAllTimeEntriesLabel"
+        android:background="@color/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</RelativeLayout>

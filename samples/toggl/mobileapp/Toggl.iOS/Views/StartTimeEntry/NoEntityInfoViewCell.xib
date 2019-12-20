@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="84" id="cxk-wN-pdQ" customClass="NoEntityInfoViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DP-7B-fCY">
+                        <rect key="frame" x="65.5" y="50.5" width="189" height="33.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="189" id="rc1-je-xSM"/>
+                        </constraints>
+                        <string key="text">Create a project and
+categorize your tracked time.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="Text3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" name="Background"/>
+                <constraints>
+                    <constraint firstItem="6DP-7B-fCY" firstAttribute="centerX" secondItem="YTl-1W-gDM" secondAttribute="centerX" id="3cu-DW-Lvr"/>
+                    <constraint firstAttribute="bottom" secondItem="6DP-7B-fCY" secondAttribute="bottom" id="SEz-q6-4Cp"/>
+                </constraints>
+                <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="8" right="8"/>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="Label" destination="6DP-7B-fCY" id="IMM-AM-SFm"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="154"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text3">
+            <color red="0.92156863212585449" green="0.92156863212585449" blue="0.96078431606292725" alpha="0.30196079611778259" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

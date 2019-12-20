@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <TextView
+        android:id="@+id/SelectCalendarsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="@color/primaryText"
+        android:lineSpacingExtra="8sp"
+        tools:text="Select calendars"/>
+    <TextView
+        android:id="@+id/SelectCalendarsMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textColor="@color/primaryText"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="8sp"
+        tools:text="Choose the calendars containing events you\u{2019}d like to log in Toggl"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/separator"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/CalendarsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

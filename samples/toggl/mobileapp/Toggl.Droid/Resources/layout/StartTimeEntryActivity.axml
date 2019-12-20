@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:importantForAutofill="noExcludeDescendants">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/SuggestionsRecyclerView"
+        tools:visibility="gone"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/expandedToolbarHeight" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/DurationCard"
+        android:background="@color/cardBackground"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/DurationText"
+            tools:text="999:00:00"
+            android:textSize="20sp"
+            android:textColor="#328fff"
+            android:paddingStart="16dp"
+            android:lineSpacingExtra="4sp"
+            android:gravity="center_vertical"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/ButtonsHolder"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ButtonsHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/DurationText">
+
+            <ImageView
+                android:id="@+id/ToolbarProjectButton"
+                android:paddingTop="16dp"
+                android:scaleType="center"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="16dp"
+                android:src="@drawable/project"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/ToolbarTagButton"
+                android:paddingTop="16dp"
+                android:scaleType="center"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:src="@drawable/tag"
+                android:paddingBottom="16dp"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/ToolbarBillableButton"
+                android:paddingTop="16dp"
+                android:scaleType="center"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="16dp"
+                android:src="@drawable/billable"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/expandedToolbarHeight"
+        android:elevation="@dimen/toolbarElevation">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/Toolbar"
+            style="@style/ToolbarStyle"
+            android:layout_height="match_parent" />
+
+        <toggl.droid.views.AutocompleteEditText
+            android:id="@+id/DescriptionTextField"
+            android:maxLines="1"
+            android:gravity="left"
+            android:elevation="@dimen/toolbarElevation"
+            android:layout_gravity="bottom"
+            android:textSize="19sp"
+            android:singleLine="true"
+            android:letterSpacing="-0.01"
+            android:lineSpacingExtra="5sp"
+            android:scrollHorizontally="true"
+            android:textColor="@color/primaryText"
+            android:background="@null"
+            android:textCursorDrawable="@drawable/EditTextCursor"
+            android:textColorHint="@color/placeholderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="6dp" />
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

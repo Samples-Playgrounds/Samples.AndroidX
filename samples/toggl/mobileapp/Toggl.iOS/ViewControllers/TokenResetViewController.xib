@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TokenResetView">
+            <connections>
+                <outlet property="ActivityIndicatorView" destination="l7S-as-iux" id="Ha1-7d-q9H"/>
+                <outlet property="BottomConstraint" destination="kx6-14-c06" id="jVg-4h-tGz"/>
+                <outlet property="EmailLabel" destination="lyk-cD-col" id="q7O-V4-EZA"/>
+                <outlet property="ErrorLabel" destination="Z7h-iN-bA7" id="SJR-ec-Gyy"/>
+                <outlet property="InstructionLabel" destination="3Dj-pA-An9" id="TAr-Eq-Uq8"/>
+                <outlet property="LoginButton" destination="WEr-kl-tk3" id="WEr-kl-tk3-outlet"/>
+                <outlet property="PasswordTextField" destination="965-7g-Gu6" id="Pld-fS-6Qb"/>
+                <outlet property="ResetSuccessLabel" destination="ZKi-c4-YaU" id="amZ-ig-c1x"/>
+                <outlet property="ShowPasswordButton" destination="IEZ-w2-ebJ" id="H1t-2C-dfH"/>
+                <outlet property="SignOutButton" destination="8lc-P8-x4K" id="IvJ-XR-tpo"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your API token has been reset." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKi-c4-YaU">
+                    <rect key="frame" x="36" y="142" width="248" height="14"/>
+                    <accessibility key="accessibilityConfiguration" label="LoginError"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <color key="textColor" red="0.36862745099999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your password to log back in to your account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dj-pA-An9">
+                    <rect key="frame" x="36" y="159" width="248" height="14"/>
+                    <accessibility key="accessibilityConfiguration" label="LoginError"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.36862745099999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mail@toggl.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyk-cD-col">
+                    <rect key="frame" x="36" y="174" width="248" height="14"/>
+                    <accessibility key="accessibilityConfiguration" label="LoginError"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="BAO-0I-5dz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.36862745099999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="965-7g-Gu6" customClass="LoginTextField">
+                    <rect key="frame" x="36" y="221" width="248" height="56"/>
+                    <accessibility key="accessibilityConfiguration" label="LoginPassword"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="343" id="Md0-4m-kVM"/>
+                        <constraint firstAttribute="height" constant="56" id="Ye3-JL-RsE"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEZ-w2-ebJ" userLabel="Show Password Button">
+                    <rect key="frame" x="244" y="233" width="40" height="40"/>
+                    <accessibility key="accessibilityConfiguration" label="LoginShowPassword"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="IEZ-w2-ebJ" secondAttribute="height" multiplier="1:1" id="1eG-fg-HgB"/>
+                    </constraints>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect password. Please try again." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7h-iN-bA7">
+                    <rect key="frame" x="36" y="283" width="248" height="14.5"/>
+                    <accessibility key="accessibilityConfiguration" label="LoginError"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                    <color key="textColor" red="0.96862745100000003" green="0.25098039220000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEr-kl-tk3">
+                    <rect key="frame" x="36" y="317" width="248" height="40"/>
+                    <color key="backgroundColor" red="0.023529411760000001" green="0.66666666669999997" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" label="LoginButton"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="EiS-PR-wWO"/>
+                    </constraints>
+                    <state key="normal" title="Log in">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7S-as-iux" customClass="ActivityIndicatorView">
+                    <rect key="frame" x="148" y="325" width="24" height="24"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="gbJ-eb-h0d"/>
+                        <constraint firstAttribute="width" constant="24" id="x6X-gs-0ki"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lc-P8-x4K">
+                    <rect key="frame" x="16" y="396" width="64" height="44"/>
+                    <accessibility key="accessibilityConfiguration" label="LoginForgotPassword"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="09t-PI-D2R"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                    <state key="normal" title="or Sign out"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="965-7g-Gu6" firstAttribute="top" secondItem="lyk-cD-col" secondAttribute="bottom" constant="33" id="0fc-8Q-RgX"/>
+                <constraint firstItem="WEr-kl-tk3" firstAttribute="width" secondItem="965-7g-Gu6" secondAttribute="width" id="32b-Vc-j2e"/>
+                <constraint firstItem="l7S-as-iux" firstAttribute="centerX" secondItem="WEr-kl-tk3" secondAttribute="centerX" id="3Tu-tb-1CY"/>
+                <constraint firstItem="l7S-as-iux" firstAttribute="centerY" secondItem="WEr-kl-tk3" secondAttribute="centerY" id="5ib-uJ-PD3"/>
+                <constraint firstItem="3Dj-pA-An9" firstAttribute="top" secondItem="ZKi-c4-YaU" secondAttribute="top" constant="17" id="8r5-hB-HAV"/>
+                <constraint firstItem="lyk-cD-col" firstAttribute="centerX" secondItem="Jck-rd-Qoe" secondAttribute="centerX" id="8t2-Ip-qFx"/>
+                <constraint firstItem="lyk-cD-col" firstAttribute="leading" secondItem="965-7g-Gu6" secondAttribute="leading" id="AXT-Yz-ZEC"/>
+                <constraint firstItem="lyk-cD-col" firstAttribute="leading" secondItem="3Dj-pA-An9" secondAttribute="leading" id="D61-Du-Aka"/>
+                <constraint firstItem="lyk-cD-col" firstAttribute="width" secondItem="3Dj-pA-An9" secondAttribute="width" id="Grg-wI-kKR"/>
+                <constraint firstItem="ZKi-c4-YaU" firstAttribute="top" secondItem="Jck-rd-Qoe" secondAttribute="top" constant="122" id="Jq9-Nb-NnL"/>
+                <constraint firstItem="Z7h-iN-bA7" firstAttribute="width" secondItem="965-7g-Gu6" secondAttribute="width" id="M2F-a2-Wjg"/>
+                <constraint firstItem="IEZ-w2-ebJ" firstAttribute="top" secondItem="965-7g-Gu6" secondAttribute="top" constant="12" id="Ss7-8t-1Xh"/>
+                <constraint firstItem="WEr-kl-tk3" firstAttribute="leading" secondItem="Z7h-iN-bA7" secondAttribute="leading" id="TXo-wa-Kj7"/>
+                <constraint firstItem="965-7g-Gu6" firstAttribute="bottom" secondItem="IEZ-w2-ebJ" secondAttribute="bottom" constant="4" id="TvR-NH-Egm"/>
+                <constraint firstItem="ZKi-c4-YaU" firstAttribute="centerX" secondItem="Jck-rd-Qoe" secondAttribute="centerX" id="W2e-mr-Es7"/>
+                <constraint firstItem="965-7g-Gu6" firstAttribute="centerX" secondItem="Jck-rd-Qoe" secondAttribute="centerX" id="WBO-cr-q1k"/>
+                <constraint firstItem="WEr-kl-tk3" firstAttribute="top" secondItem="965-7g-Gu6" secondAttribute="bottom" constant="40" id="WTH-EI-0vM"/>
+                <constraint firstItem="965-7g-Gu6" firstAttribute="width" secondItem="Jck-rd-Qoe" secondAttribute="width" priority="750" constant="-36" id="Xca-8m-8kU"/>
+                <constraint firstItem="ZKi-c4-YaU" firstAttribute="width" secondItem="965-7g-Gu6" secondAttribute="width" id="Xjh-6c-dfU"/>
+                <constraint firstItem="3Dj-pA-An9" firstAttribute="width" secondItem="ZKi-c4-YaU" secondAttribute="width" id="axE-29-VMn"/>
+                <constraint firstItem="965-7g-Gu6" firstAttribute="trailing" secondItem="IEZ-w2-ebJ" secondAttribute="trailing" id="cWz-Pq-sWS"/>
+                <constraint firstItem="lyk-cD-col" firstAttribute="top" secondItem="3Dj-pA-An9" secondAttribute="top" constant="15" id="g0F-pf-wNS"/>
+                <constraint firstItem="3Dj-pA-An9" firstAttribute="top" secondItem="ZKi-c4-YaU" secondAttribute="bottom" constant="3" id="hfQ-y9-nMx"/>
+                <constraint firstItem="WEr-kl-tk3" firstAttribute="leading" secondItem="Jck-rd-Qoe" secondAttribute="leading" constant="36" id="iC0-vi-p4n"/>
+                <constraint firstItem="lyk-cD-col" firstAttribute="top" secondItem="3Dj-pA-An9" secondAttribute="bottom" constant="1" id="iWA-8u-ys9"/>
+                <constraint firstAttribute="bottom" secondItem="8lc-P8-x4K" secondAttribute="bottom" constant="40" id="kx6-14-c06"/>
+                <constraint firstItem="3Dj-pA-An9" firstAttribute="centerX" secondItem="Jck-rd-Qoe" secondAttribute="centerX" id="lR3-hN-8Zk"/>
+                <constraint firstItem="Z7h-iN-bA7" firstAttribute="leading" secondItem="965-7g-Gu6" secondAttribute="leading" id="n6C-DS-mMW"/>
+                <constraint firstItem="Z7h-iN-bA7" firstAttribute="top" secondItem="965-7g-Gu6" secondAttribute="bottom" constant="6" id="nu8-fQ-uWW"/>
+                <constraint firstItem="8lc-P8-x4K" firstAttribute="leading" secondItem="Jck-rd-Qoe" secondAttribute="leading" constant="16" id="tva-G0-URA"/>
+                <constraint firstItem="ZKi-c4-YaU" firstAttribute="leading" secondItem="3Dj-pA-An9" secondAttribute="leading" id="y9N-oR-QGc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Jck-rd-Qoe"/>
+            <point key="canvasLocation" x="-16.800000000000001" y="43.628185907046479"/>
+        </view>
+    </objects>
+</document>

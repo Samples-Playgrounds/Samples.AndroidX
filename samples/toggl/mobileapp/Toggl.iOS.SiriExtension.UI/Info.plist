@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>Toggl.Daneel.SiriExtension.UI</string>
+	<key>CFBundleName</key>
+	<string>Toggl.Daneel.SiriExtension.UI</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.toggl.daneel.debug.SiriUIExtension</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>XPC!</string>
+	<key>CFBundleVersion</key>
+	<string>IOS_BUNDLE_VERSION</string>
+	<key>MinimumOSVersion</key>
+	<string>12.0</string>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionAttributes</key>
+		<dict>
+			<key>IntentsSupported</key>
+			<array>
+				<string>StopTimerIntent</string>
+				<string>StartTimerIntent</string>
+				<string>StartTimerFromClipboardIntent</string>
+				<string>ContinueTimerIntent</string>
+			</array>
+		</dict>
+		<key>NSExtensionMainStoryboard</key>
+		<string>MainInterface</string>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.intents-ui-service</string>
+	</dict>
+	<key>CFBundleShortVersionString</key>
+	<string>2.7</string>
+</dict>
+</plist>

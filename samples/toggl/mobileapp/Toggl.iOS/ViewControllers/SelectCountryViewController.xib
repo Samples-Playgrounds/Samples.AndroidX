@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectCountryViewController">
+            <connections>
+                <outlet property="BottomConstraint" destination="UV4-34-yij" id="8g7-Hr-ubf"/>
+                <outlet property="CloseButton" destination="Xqq-Su-CQu" id="mFv-VG-Xhn"/>
+                <outlet property="CountriesTableView" destination="Zjh-Mc-VHX" id="WPy-QM-aoK"/>
+                <outlet property="SearchTextField" destination="3Mb-dF-ikC" id="1wO-xK-jb3"/>
+                <outlet property="SearchView" destination="V7i-as-Bh8" id="54D-w2-F7x"/>
+                <outlet property="TitleLabel" destination="qqg-LD-i5w" id="6L7-61-hXw"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqq-Su-CQu">
+                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                    <accessibility key="accessibilityConfiguration" identifier="Close"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="0ZU-Gi-Aaf"/>
+                        <constraint firstAttribute="height" constant="44" id="Q7J-ge-HRq"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2" maxY="2"/>
+                    <state key="normal" image="icClose"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country of Residence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqg-LD-i5w">
+                    <rect key="frame" x="116" y="12" width="143" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <color key="textColor" name="Text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7i-as-Bh8">
+                    <rect key="frame" x="0.0" y="53" width="375" height="48"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="kke-s7-adV">
+                            <rect key="frame" x="16" y="18" width="12" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="12" id="Gj5-EZ-5Hy"/>
+                                <constraint firstAttribute="height" constant="12" id="UlS-nW-c1Q"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Mb-dF-ikC">
+                            <rect key="frame" x="38" y="0.0" width="321" height="48"/>
+                            <color key="tintColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <accessibility key="accessibilityConfiguration" identifier="SelectCountrySearchField"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="JOJ-9v-ODt"/>
+                            </constraints>
+                            <color key="textColor" name="Text"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartQuotesType="no"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" name="Background"/>
+                    <constraints>
+                        <constraint firstItem="kke-s7-adV" firstAttribute="leading" secondItem="V7i-as-Bh8" secondAttribute="leading" constant="16" id="DkY-2Z-G7m"/>
+                        <constraint firstAttribute="trailing" secondItem="3Mb-dF-ikC" secondAttribute="trailing" constant="16" id="L7i-wz-DVx"/>
+                        <constraint firstAttribute="height" constant="48" id="RlP-V2-Osa"/>
+                        <constraint firstItem="3Mb-dF-ikC" firstAttribute="centerY" secondItem="V7i-as-Bh8" secondAttribute="centerY" id="dBU-j1-SL1"/>
+                        <constraint firstItem="kke-s7-adV" firstAttribute="centerY" secondItem="V7i-as-Bh8" secondAttribute="centerY" id="fZ7-3s-RVg"/>
+                        <constraint firstItem="3Mb-dF-ikC" firstAttribute="leading" secondItem="kke-s7-adV" secondAttribute="trailing" constant="10" id="lGn-ca-IxH"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zjh-Mc-VHX">
+                    <rect key="frame" x="0.0" y="101" width="375" height="566"/>
+                    <color key="backgroundColor" name="TableBackground"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="qqg-LD-i5w" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="8HA-QO-xvp"/>
+                <constraint firstAttribute="trailing" secondItem="Zjh-Mc-VHX" secondAttribute="trailing" id="98b-sS-Jaa"/>
+                <constraint firstItem="Xqq-Su-CQu" firstAttribute="top" secondItem="2" secondAttribute="top" id="Hps-Mg-x8u"/>
+                <constraint firstAttribute="trailing" secondItem="V7i-as-Bh8" secondAttribute="trailing" id="K0I-73-zhn"/>
+                <constraint firstItem="V7i-as-Bh8" firstAttribute="top" secondItem="2" secondAttribute="top" constant="53" id="Tnq-7a-fVa"/>
+                <constraint firstAttribute="bottom" secondItem="Zjh-Mc-VHX" secondAttribute="bottom" id="UV4-34-yij"/>
+                <constraint firstItem="V7i-as-Bh8" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="Zdy-sQ-DRM"/>
+                <constraint firstItem="qqg-LD-i5w" firstAttribute="top" secondItem="2" secondAttribute="top" constant="12" id="gnT-1u-ocf"/>
+                <constraint firstItem="Xqq-Su-CQu" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="oE8-kY-xa4"/>
+                <constraint firstItem="Zjh-Mc-VHX" firstAttribute="top" secondItem="V7i-as-Bh8" secondAttribute="bottom" id="pDt-Kl-262"/>
+                <constraint firstItem="Zjh-Mc-VHX" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="tMl-TI-MaS"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="152.47376311844079"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icClose" width="10" height="10"/>
+        <image name="search" width="13" height="12"/>
+        <namedColor name="Background">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TableBackground">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

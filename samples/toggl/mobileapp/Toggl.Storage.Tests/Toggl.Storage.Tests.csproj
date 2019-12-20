@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$(SolutionDir)Toggl.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toggl.Core\Toggl.Core.csproj" />
+    <ProjectReference Include="..\Toggl.Shared.Tests\Toggl.Shared.Tests.csproj" />
+    <ProjectReference Include="..\Toggl.Shared\Toggl.Shared.csproj" />
+    <ProjectReference Include="..\Toggl.Storage.Realm\Toggl.Storage.Realm.csproj" />
+    <ProjectReference Include="..\Toggl.Storage\Toggl.Storage.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.4.0-beta.1.build3958" />
+    <PackageReference Include="Microsoft.Reactive.Testing" Version="4.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Onboarding\" />
+  </ItemGroup>
+</Project>

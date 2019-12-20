@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$(SolutionDir)Toggl.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>../../bin/Debug/</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NSubstitute" Version="4.2.1" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Tools\SyncDiagramGenerator\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Tools\SyncDiagramGenerator\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Tools\SyncDiagramGenerator\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Tools\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Tools\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Tools\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Toggl.Core.Tests\Toggl.Core.Tests.csproj" />
+    <ProjectReference Include="..\..\Toggl.Core\Toggl.Core.csproj" />
+  </ItemGroup>
+</Project>

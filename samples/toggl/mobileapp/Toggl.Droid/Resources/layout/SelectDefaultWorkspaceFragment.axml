@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/cardBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/TxtSetDefaultWorkspace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Set default workspace"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/primaryText"
+        android:textSize="20sp"
+        android:letterSpacing="0"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="24dp"/>
+    <TextView
+        android:id="@+id/TxtTimeWillBeTrackedAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Your time will be tracked automatically from this workspace. You can cange this later from the Settings."
+        android:textColor="@color/primaryText"
+        android:textSize="16sp"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="8sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/SelectDefaultWorkspaceRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8sp"/>
+</LinearLayout>

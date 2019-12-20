@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MainRunningTimeEntryFrame"
+    android:layout_height="80dp"
+    android:layout_gravity="bottom"
+    android:layout_width="match_parent">
+    <TextView
+        android:id="@+id/MainRunningTimeEntryTimerLabel"
+        tools:text="1:14:03"
+        android:textSize="20sp"
+        android:textColor="@color/runningEntryTimer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/LeadingTextView"
+        android:layout_marginLeft="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@id/LeadingTextView"
+        tools:text=""
+        android:textSize="15sp"
+        android:singleLine="true"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/primaryText"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="@id/MainRunningTimeEntryTimerLabel"
+        app:layout_constraintTop_toBottomOf="@id/MainRunningTimeEntryTimerLabel"
+        app:layout_constraintRight_toLeftOf="@+id/MainRunningTimeEntryDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/MainRunningTimeEntryDescription"
+        android:textSize="15sp"
+        tools:text="A nice description"
+        android:singleLine="true"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/primaryText"
+        app:layout_constraintLeft_toRightOf="@id/LeadingTextView"
+        app:layout_constraintBaseline_toBaselineOf="@id/LeadingTextView"
+        app:layout_constraintRight_toLeftOf="@+id/MainRunningTimeEntryAddDescriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/MainRunningTimeEntryAddDescriptionLabel"
+        android:textSize="15sp"
+        android:singleLine="true"
+        android:fontFamily="sans-serif"
+        tools:text="Add description"
+        android:textColor="@color/secondaryText"
+        app:layout_constraintBaseline_toBaselineOf="@id/LeadingTextView"
+        app:layout_constraintLeft_toRightOf="@id/MainRunningTimeEntryDescription"
+        app:layout_constraintRight_toLeftOf="@+id/MainRunningTimeEntryProjectDotContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@+id/MainRunningTimeEntryProjectDotContainer"
+        app:layout_constraintLeft_toRightOf="@id/MainRunningTimeEntryAddDescriptionLabel"
+        app:layout_constraintTop_toTopOf="@+id/MainRunningTimeEntryProjectClientTaskLabel"
+        app:layout_constraintRight_toLeftOf="@id/MainRunningTimeEntryProjectClientTaskLabel"
+        app:layout_constraintBottom_toBottomOf="@id/MainRunningTimeEntryProjectClientTaskLabel"
+        android:layout_marginLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/MainRunningTimeEntryProjectDotView"
+            android:background="@drawable/SmallDot"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+    <TextView
+        android:id="@+id/MainRunningTimeEntryProjectClientTaskLabel"
+        tools:text="Design"
+        tools:textColor="#c56bff"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="15sp"
+        android:singleLine="true"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="left"
+        app:layout_constraintRight_toLeftOf="@+id/MainStopButton"
+        app:layout_constraintBaseline_toBaselineOf="@id/LeadingTextView"
+        app:layout_constraintLeft_toRightOf="@id/MainRunningTimeEntryProjectDotContainer"
+        android:layout_width="0dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content" />
+    <View
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/TransparentToCardColorGradient"
+        android:layout_height="0dp"
+        android:layout_width="144dp" />
+    <View
+        android:background="@color/separator"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/MainStopButton"
+        app:elevation="4dp"
+        android:src="@drawable/stop_white"
+        app:backgroundTint="@color/stopTimeEntryButtonBackground"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

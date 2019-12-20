@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/Toolbar"
+            style="@style/ToolbarStyle"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/CenterGuideline"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/StartIcon"
+            android:src="@drawable/ic_play"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/StartLabel"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintRight_toLeftOf="@+id/StartLabel"
+            app:layout_constraintBottom_toBottomOf="@+id/StartLabel"
+            android:layout_width="16dp"
+            android:layout_height="16dp" />
+        <TextView
+            android:id="@+id/StartLabel"
+            tools:text="Start"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/primaryText"
+            app:layout_constraintTop_toBottomOf="@id/Toolbar"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@id/StartIcon"
+            app:layout_constraintBottom_toTopOf="@+id/StartDateText"
+            app:layout_constraintRight_toLeftOf="@id/CenterGuideline"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/StartTimeText"
+            tools:text="12:00 PM"
+            android:textSize="15sp"
+            android:paddingTop="12dp"
+            android:textStyle="normal"
+            android:textColor="#328fff"
+            android:paddingBottom="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintRight_toLeftOf="@+id/StartDotSeparator"
+            app:layout_constraintBaseline_toBaselineOf="@+id/StartDateText"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/StartDotSeparator"
+            android:src="@drawable/ic_separator_dot"
+            app:layout_constraintTop_toTopOf="@id/StartTimeText"
+            app:layout_constraintLeft_toRightOf="@id/StartTimeText"
+            app:layout_constraintRight_toLeftOf="@+id/StartDateText"
+            app:layout_constraintBottom_toBottomOf="@id/StartTimeText"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" />
+        <TextView
+            android:id="@+id/StartDateText"
+            tools:text="01/26"
+            android:paddingTop="12dp"
+            android:textStyle="normal"
+            android:textColor="#2196f3"
+            android:paddingBottom="12dp"
+            android:fontFamily="sans-serif"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toTopOf="@+id/Wheel"
+            app:layout_constraintTop_toBottomOf="@id/StartLabel"
+            app:layout_constraintRight_toLeftOf="@id/CenterGuideline"
+            app:layout_constraintLeft_toRightOf="@id/StartDotSeparator"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/StopIcon"
+            android:src="@drawable/ic_stop"
+            app:layout_constraintTop_toTopOf="@+id/StopLabel"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintRight_toLeftOf="@+id/StopLabel"
+            app:layout_constraintBottom_toBottomOf="@+id/StopLabel"
+            app:layout_constraintLeft_toRightOf="@id/CenterGuideline"
+            android:layout_width="16dp"
+            android:layout_height="16dp" />
+        <TextView
+            android:id="@+id/StopLabel"
+            tools:text="Stop"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/primaryText"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/StopIcon"
+            app:layout_constraintBaseline_toBaselineOf="@id/StartLabel"
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/StopTimerLabel"
+            android:textSize="15sp"
+            tools:text="Stop timer"
+            android:paddingTop="12dp"
+            android:textStyle="normal"
+            android:textColor="#328fff"
+            android:paddingBottom="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/CenterGuideline"
+            app:layout_constraintBaseline_toBaselineOf="@id/StartTimeText"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/StopTimeText"
+            tools:text="12:00 PM"
+            android:textSize="15sp"
+            android:paddingTop="12dp"
+            android:textStyle="normal"
+            android:textColor="#328fff"
+            android:paddingBottom="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintBaseline_toBaselineOf="@id/StartTimeText"
+            app:layout_constraintLeft_toLeftOf="@id/CenterGuideline"
+            app:layout_constraintRight_toLeftOf="@+id/StopDotSeparator"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/StopDotSeparator"
+            android:src="@drawable/ic_separator_dot"
+            app:layout_constraintTop_toTopOf="@id/StopTimeText"
+            app:layout_constraintLeft_toRightOf="@id/StopTimeText"
+            app:layout_constraintRight_toLeftOf="@+id/StopDateText"
+            app:layout_constraintBottom_toBottomOf="@id/StopTimeText"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" />
+        <TextView
+            android:id="@+id/StopDateText"
+            tools:text="01/26"
+            android:paddingTop="12dp"
+            android:textStyle="normal"
+            android:textColor="#2196f3"
+            android:paddingBottom="12dp"
+            android:fontFamily="sans-serif"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/StopTimeText"
+            app:layout_constraintLeft_toRightOf="@id/StopDotSeparator"
+            android:layout_marginRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:id="@+id/Wheel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/StartTimeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <toggl.droid.views.WheelBackgroundView
+                android:id="@+id/WheelBackground"
+                android:layout_width="296dp"
+                android:layout_height="296dp"
+                android:layout_gravity="center" />
+            <toggl.droid.views.WheelForegroundView
+                android:id="@+id/WheelForeground"
+                android:layout_width="296dp"
+                android:layout_height="296dp"
+                android:layout_gravity="center" />
+            <toggl.droid.views.WheelDurationInput
+                android:id="@+id/WheelDurationInput"
+                android:textSize="28dp"
+                android:background="@null"
+                android:textColor="#328fff"
+                app:fadedTextColor="#cecece"
+                android:inputType="numberPassword"
+                android:fontFamily="sans-serif-light"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/DurationLabel"
+                tools:text="Duration"
+                android:textSize="12dp"
+                android:textStyle="normal"
+                android:textColor="#959595"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

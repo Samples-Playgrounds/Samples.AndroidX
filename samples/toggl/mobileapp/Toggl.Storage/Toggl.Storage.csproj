@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;netcoreapp3.0</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$(SolutionDir)Toggl.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toggl.Shared\Toggl.Shared.csproj" />
+  </ItemGroup>
+</Project>

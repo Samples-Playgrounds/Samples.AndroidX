@@ -1,0 +1,85 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CalendarDayPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <toggl.droid.views.CalendarDayView
+        android:id="@+id/CalendarDayView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ContextualMenu"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout 
+        android:id="@+id/ContextualMenu"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/CalendarDayView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="148dp"
+        android:background="@color/cardBackground"
+        android:elevation="8dp">
+
+        <ImageView
+            android:id="@+id/DismissButton"
+            android:src="@drawable/close"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="12dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/PeriodText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/secondaryText"
+            android:textSize="12dp"
+            android:textStyle="normal"
+            app:layout_constraintLeft_toRightOf="@id/DismissButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="11:00 AM - now" />
+
+        <TextView
+            android:id="@+id/TimeEntryDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="5sp"
+            android:textSize="15dp"
+            android:layout_marginRight="16dp"
+            android:textStyle="normal"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/primaryText"
+            app:layout_constraintLeft_toLeftOf="@+id/PeriodText"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PeriodText"
+            tools:text="Pamphlet design - Design" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ActionsRecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="84dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TimeEntryDetails" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

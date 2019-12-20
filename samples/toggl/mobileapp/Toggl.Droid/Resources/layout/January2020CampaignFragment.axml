@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    
+    <ImageView
+        android:id="@+id/CampaignImage"
+        android:layout_width="80dp"
+        android:layout_height="126dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/pinata" />
+
+    <TextView
+        android:id="@+id/CampaignTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/primaryText"
+        android:textSize="18sp"
+        tools:text="Save 20% on Annual Plans" />
+
+    <TextView
+        android:id="@+id/CampaignMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:maxWidth="230dp"
+        android:textColor="@color/primaryText"
+        android:textSize="16sp"
+        tools:text="Upgrade to any annual plan and pocket some extra cash just in time for the holiday season!" />
+
+    <Button
+        android:id="@+id/MainActionButton"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/RaisedButton"
+        android:foreground="?attr/selectableItemBackground"
+        android:fontFamily="sans-serif-medium"
+        android:minWidth="230dp"
+        android:minHeight="36dp"
+        android:textColor="@color/RaisedButtonTextColor"
+        tools:text="Learn More" />
+
+    <Button
+        android:id="@+id/DismissButton"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-medium"
+        android:minWidth="230dp"
+        android:minHeight="36dp"
+        android:textColor="@color/FlatButtonTextColor"
+        tools:text="Dismiss" />
+
+</LinearLayout>

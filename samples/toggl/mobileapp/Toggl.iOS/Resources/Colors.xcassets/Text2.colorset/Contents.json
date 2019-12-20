@@ -1,0 +1,56 @@
+{
+  "colors": [
+    {
+      "idiom": "universal",
+      "color": {
+        "color-space": "srgb",
+        "components": {
+          "red": 0.235294119,
+          "green": 0.235294119,
+          "blue": 0.2627451,
+          "alpha": 0.6
+        }
+      }
+    },
+    {
+      "idiom": "universal",
+      "color": {
+        "color-space": "srgb",
+        "components": {
+          "red": 0.921568632,
+          "green": 0.921568632,
+          "blue": 0.9607843,
+          "alpha": 0.6
+        }
+      },
+      "appearances": [
+        {
+          "appearance": "luminosity",
+          "value": "dark"
+        }
+      ]
+    },
+    {
+      "idiom": "universal",
+      "color": {
+        "color-space": "srgb",
+        "components": {
+          "red": 0.235294119,
+          "green": 0.235294119,
+          "blue": 0.2627451,
+          "alpha": 0.6
+        }
+      },
+      "appearances": [
+        {
+          "appearance": "luminosity",
+          "value": "light"
+        }
+      ]
+    }
+  ],
+  "info": {
+    "version": 1,
+    "author": "xcode"
+  }
+}

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="987654321" android:versionName="2.7.1" package="com.toggl.giskard.debug" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.READ_CALENDAR" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<application android:allowBackup="false" android:icon="@mipmap/ic_launcher" android:label="Toggl for Devs">
+		<receiver android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" android:exported="false" />
+		<receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+				<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+				<category android:name="${applicationId}" />
+			</intent-filter>
+		</receiver>
+	</application>
+</manifest>

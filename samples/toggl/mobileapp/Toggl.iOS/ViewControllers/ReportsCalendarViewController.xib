@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportsCalendarViewController">
+            <connections>
+                <outlet property="CalendarCollectionView" destination="Btd-Jn-XOm" id="SsE-No-P8p"/>
+                <outlet property="CurrentMonthLabel" destination="yuU-AX-i2k" id="OZC-Z9-uKf"/>
+                <outlet property="DayHeader0" destination="btF-zj-slk" id="ZYL-1X-xFq"/>
+                <outlet property="DayHeader1" destination="GwA-Km-GjT" id="8fw-xy-22I"/>
+                <outlet property="DayHeader2" destination="03c-o6-QKN" id="5MQ-da-ydN"/>
+                <outlet property="DayHeader3" destination="OWQ-5X-vQr" id="yFe-0g-yY0"/>
+                <outlet property="DayHeader4" destination="BfB-xL-3Y9" id="cQ5-NX-yQS"/>
+                <outlet property="DayHeader5" destination="lTt-YN-ySt" id="e6R-8i-IUV"/>
+                <outlet property="DayHeader6" destination="4Jf-jb-Dxp" id="9Jq-9Q-OAP"/>
+                <outlet property="QuickSelectCollectionView" destination="T1C-Ey-wjY" id="n92-T6-7Ja"/>
+                <outlet property="QuickSelectCollectionViewLayout" destination="aht-yH-mh5" id="fAZ-tA-9TO"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="355"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuU-AX-i2k">
+                    <rect key="frame" x="130.5" y="16" width="59" height="14.5"/>
+                    <attributedString key="attributedText">
+                        <fragment content="June ">
+                            <attributes>
+                                <font key="NSFont" metaFont="cellTitle"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="2019">
+                            <attributes>
+                                <color key="NSColor" red="0.70980392156862748" green="0.73725490196078436" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" metaFont="cellTitle"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="i6E-PC-G3r" userLabel="Days View">
+                    <rect key="frame" x="30" y="41.5" width="260" height="14.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btF-zj-slk">
+                            <rect key="frame" x="0.0" y="0.0" width="10.5" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.70980392156862748" green="0.73725490196078436" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwA-Km-GjT">
+                            <rect key="frame" x="43" y="0.0" width="8" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.70980392156862748" green="0.73725490196078436" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03c-o6-QKN">
+                            <rect key="frame" x="83" y="0.0" width="12" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.70980392156862748" green="0.73725490196078436" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWQ-5X-vQr">
+                            <rect key="frame" x="126.5" y="0.0" width="8" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.70980392156862748" green="0.73725490196078436" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfB-xL-3Y9">
+                            <rect key="frame" x="169" y="0.0" width="7" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.70980392156862748" green="0.73725490196078436" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTt-YN-ySt">
+                            <rect key="frame" x="210" y="0.0" width="8" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.70980392156862748" green="0.73725490196078436" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jf-jb-Dxp">
+                            <rect key="frame" x="252" y="0.0" width="8" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.70980392156862748" green="0.73725490196078436" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Btd-Jn-XOm">
+                    <rect key="frame" x="13" y="72" width="294" height="211"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ELl-5g-ez9">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="T1C-Ey-wjY">
+                    <rect key="frame" x="0.0" y="307" width="320" height="32"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="D1U-1Y-ogc"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="12" minimumInteritemSpacing="12" id="aht-yH-mh5">
+                        <size key="itemSize" width="50" height="32"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="13" minY="0.0" maxX="13" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" name="TableBackground"/>
+            <constraints>
+                <constraint firstItem="Btd-Jn-XOm" firstAttribute="top" secondItem="i6E-PC-G3r" secondAttribute="bottom" constant="16" id="39G-DK-Sci"/>
+                <constraint firstAttribute="bottom" secondItem="T1C-Ey-wjY" secondAttribute="bottom" constant="16" id="D5f-fW-Aob"/>
+                <constraint firstItem="yuU-AX-i2k" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="ENy-us-Vju"/>
+                <constraint firstItem="T1C-Ey-wjY" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="M6l-O4-Pxt"/>
+                <constraint firstItem="T1C-Ey-wjY" firstAttribute="top" secondItem="Btd-Jn-XOm" secondAttribute="bottom" constant="24" id="OsD-NN-E6v"/>
+                <constraint firstAttribute="trailing" secondItem="T1C-Ey-wjY" secondAttribute="trailing" id="W7V-sj-aE4"/>
+                <constraint firstItem="Btd-Jn-XOm" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="13" id="jQN-ds-u9g"/>
+                <constraint firstItem="yuU-AX-i2k" firstAttribute="bottom" secondItem="i6E-PC-G3r" secondAttribute="top" constant="-11" id="p8r-Gq-1YG"/>
+                <constraint firstItem="yuU-AX-i2k" firstAttribute="top" secondItem="2" secondAttribute="top" constant="16" id="tJz-aP-2pA"/>
+                <constraint firstAttribute="trailing" secondItem="Btd-Jn-XOm" secondAttribute="trailing" constant="13" id="y1H-Nl-vSH"/>
+                <constraint firstAttribute="trailing" secondItem="i6E-PC-G3r" secondAttribute="trailing" constant="30" id="yxj-EV-qwR"/>
+                <constraint firstItem="i6E-PC-G3r" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="30" id="zTG-lQ-vpw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="93.525179856115116" y="129.22661870503597"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="TableBackground">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
