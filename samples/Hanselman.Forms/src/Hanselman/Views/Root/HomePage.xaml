@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="Hanselman.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:effects="clr-namespace:Hanselman.Effects"
+    xmlns:pages="clr-namespace:Hanselman.Views"
+    xmlns:controls="clr-namespace:Hanselman.Controls"
+    BarBackgroundColor="{OnPlatform Android=White}">
+
+    <controls:HanselmanNavigationPage Title="About">
+        <controls:HanselmanNavigationPage.IconImageSource>
+            <FontImageSource
+                    Glyph="{StaticResource IconAbout}"
+                    FontFamily="{StaticResource MaterialFontFamily}" />
+        </controls:HanselmanNavigationPage.IconImageSource>
+        <x:Arguments>
+            <pages:AboutPage />
+        </x:Arguments>
+    </controls:HanselmanNavigationPage>
+    
+    <controls:HanselmanNavigationPage Title="Blog">
+        <controls:HanselmanNavigationPage.IconImageSource>
+            <FontImageSource
+                    Glyph="{StaticResource IconBlog}"
+                    FontFamily="{StaticResource MaterialFontFamily}" />
+        </controls:HanselmanNavigationPage.IconImageSource>
+        <x:Arguments>
+            <pages:BlogCollectionPage />
+        </x:Arguments>
+    </controls:HanselmanNavigationPage>
+
+    <controls:HanselmanNavigationPage Title="Twitter">
+        <controls:HanselmanNavigationPage.IconImageSource>
+            <FontImageSource
+                    Glyph="{StaticResource IconTwitter}"
+                    FontFamily="{StaticResource MaterialFontFamily}" />
+        </controls:HanselmanNavigationPage.IconImageSource>
+
+        <x:Arguments>
+            <pages:TwitterPage />
+        </x:Arguments>
+    </controls:HanselmanNavigationPage>
+
+
+    <controls:HanselmanNavigationPage Title="Media">
+        <controls:HanselmanNavigationPage.IconImageSource>
+            <FontImageSource
+                    Glyph="{StaticResource IconMedia}"
+                    FontFamily="{StaticResource MaterialFontFamily}" />
+        </controls:HanselmanNavigationPage.IconImageSource>
+
+        <x:Arguments>
+            <pages:MediaDirectoryPage />
+        </x:Arguments>
+    </controls:HanselmanNavigationPage>
+</TabbedPage>

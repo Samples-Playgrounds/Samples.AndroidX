@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Hanselman.Views.TwitterPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:modelsShared="clr-namespace:Hanselman.Models;assembly=Hanselman.Shared"
+    xmlns:viewmodels="clr-namespace:Hanselman.ViewModels"
+    xmlns:twitter="clr-namespace:Hanselman.Views.Twitter"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:NavigationPage.PrefersLargeTitles="True"
+    ios:Page.LargeTitleDisplay="Always"
+    Title="{Binding Title}"
+    BackgroundColor="{DynamicResource WindowBackgroundColor}"
+    Icon="{Binding Icon}"
+    IsBusy="{Binding IsBusy}"
+    mc:Ignorable="d"
+    x:DataType="viewmodels:TwitterViewModel">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="TweetTemplate">
+                <twitter:TweetCell />
+            </DataTemplate>
+            <DataTemplate x:Key="TweetWithMediaTemplate">
+                <twitter:TweetWithMediaCell />
+            </DataTemplate>
+            <twitter:TweetDataTemplateSelector
+                x:Key="TweetDataTemplateSelector"
+                TweetTemplate="{StaticResource TweetTemplate}"
+                TweetWithMediaTemplate="{StaticResource TweetWithMediaTemplate}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ListView
+            x:Name="listView"
+            BackgroundColor="Transparent"
+            d:ItemTemplate="{StaticResource TweetTemplate}"
+            CachingStrategy="RecycleElement"
+            HasUnevenRows="True"
+            IsPullToRefreshEnabled="True"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            ItemTemplate="{StaticResource TweetDataTemplateSelector}"
+            ItemsSource="{Binding Tweets}"
+            RefreshCommand="{Binding RefreshCommand}"
+            SeparatorColor="Transparent">
+            <d:ListView.ItemsSource>
+                <x:Array Type="{x:Type modelsShared:Tweet}">
+                    <modelsShared:Tweet
+                        Image="scott.png"
+                        MediaUrl="scott.png"
+                        ScreenName="scotthanselman"
+                        Text="Hello world this is a tweet, james is pretty awesome, and this app is amazing!!!!" />
+                    <modelsShared:Tweet
+                        Image="scott.png"
+                        ScreenName="scotthanselman"
+                        Text="Hello world this is a tweet, james is pretty awesome, and this app is amazing!!!!" />
+                </x:Array>
+            </d:ListView.ItemsSource>
+        </ListView>
+        <Frame
+            Padding="12"
+            d:IsVisible="true"
+            BackgroundColor="{StaticResource LoadingBackgroundColor}"
+            BorderColor="{DynamicResource FrameBorderColor}"
+            CornerRadius="10"
+            HasShadow="False"
+            HorizontalOptions="Center"
+            IsVisible="{Binding IsBusy}"
+            VerticalOptions="Center"
+            Visual="Material">
+            <StackLayout>
+                <ActivityIndicator
+                    d:IsRunning="true"
+                    IsRunning="{Binding IsBusy}"
+                    Visual="Material"
+                    Color="{StaticResource LoadingTextColor}" />
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Loading tweets..."
+                    TextColor="{StaticResource LoadingTextColor}" />
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>
