@@ -1,0 +1,64 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45;Xamarin.Mac20;Xamarin.iOS10;Xamarin.TVOS10;Xamarin.WatchOS10;MonoAndroid9;uap10.0.16299;Tizen40;</TargetFrameworks>
+    <LangVersion>8</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+
+    <Title>Fingerprint / Face ID / Biometric Plugin for Xamarin</Title>
+    <AssemblyName>Plugin.Fingerprint</AssemblyName>
+    <RootNamespace>Plugin.Fingerprint</RootNamespace>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Abstractions\*.cs" />
+    <Compile Include="*.cs" />
+    <None Include="readme.txt" pack="true" PackagePath="." />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
+    <Compile Include="netstandard\*.cs" />
+  </ItemGroup>
+
+  <!-- iOS -->
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+    <Compile Include="Platforms\Apple\**\*.cs" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+    <DefineConstants>$(DefineConstants);IOS;</DefineConstants>
+  </PropertyGroup>
+
+  <!-- macOS -->
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.Mac')) ">
+    <Compile Include="Platforms\Apple\**\*.cs" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" $(TargetFramework.StartsWith('Xamarin.Mac')) ">
+    <DefineConstants>$(DefineConstants);MACOS;</DefineConstants>
+  </PropertyGroup>
+
+  <!-- Android -->
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+    <Compile Include="Platforms\Android\**\*.cs" />
+    <PackageReference Include="Xamarin.AndroidX.Biometric" Version="1.0.0-preview06" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+    <DefineConstants>$(DefineConstants);ANDROID;</DefineConstants>
+  </PropertyGroup>
+
+  <!-- UWP -->
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
+    <Compile Include="Platforms\UWP\**\*.cs" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
+    <!--<TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>-->
+    <DefineConstants>$(DefineConstants);WINDOWS_UWP;</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('net4')) OR $(TargetFramework.StartsWith('Xamarin.TVOS')) OR $(TargetFramework.StartsWith('Xamarin.WatchOS')) OR $(TargetFramework.StartsWith('Tizen')) ">
+    <Compile Include="Platforms\NotImplemented\**\*.cs" />
+  </ItemGroup>
+</Project>
