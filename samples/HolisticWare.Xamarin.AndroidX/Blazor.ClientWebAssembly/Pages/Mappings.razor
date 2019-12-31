@@ -1,0 +1,74 @@
+﻿@page "/mappings"
+@inject HttpClient Http
+
+<h1>AndroidX Mappings</h1>
+
+
+
+@if (mappings_google == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Android.Support Class (Fully Qualified</th>
+                <th>AndroidX Class (Fully Qualified</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (MappingsGoogle mg in mappings_google)
+            {
+                <tr>
+                    <td>@mg.ClassAndroidSupport</td>
+                    <td>@mg.ClassAndroidX</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code 
+{
+    HttpClient client = new HttpClient();
+
+    private string url_mappings_google = $"https://raw.githubusercontent.com/xamarin/AndroidX/master/mappings/androidx-class-mapping.csv";
+    private string url_mappings_xamarin = $"https://raw.githubusercontent.com/xamarin/AndroidX/master/mappings/androidx-mapping.csv";
+
+    private string string_mappings_google;
+    private string string_mappings_xamarin;
+
+    private IEnumerable<MappingsGoogle> mappings_google;
+    private IEnumerable<MappingsXamarin> mappings_xamarin;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        Task<string> result_google = await client.GetStringAsync(url_mappings_google);
+        Task<string> result_xamarin = await client.GetStringAsync(url_mappings_xamarin);
+
+
+        string_mappings_google = result_google;
+        Console.WriteLine($"Mappings = {result_google}");
+
+
+        //Console.WriteLine($"Mappings = {result_xamarin}");
+
+        return;
+    }
+
+
+    public class MappingsGoogle
+    {
+        public string ClassAndroidSupport { get; set; }
+
+        public string ClassAndroidX { get; set; }
+    }
+
+    public class MappingsXamarin
+    {
+
+    }
+}
