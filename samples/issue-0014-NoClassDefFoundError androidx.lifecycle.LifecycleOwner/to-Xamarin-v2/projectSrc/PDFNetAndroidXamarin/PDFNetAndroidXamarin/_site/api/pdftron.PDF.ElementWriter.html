@@ -1,0 +1,1127 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ElementWriter
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ElementWriter
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.ElementWriter">
+  
+  
+  <h1 id="pdftron_PDF_ElementWriter" data-uid="pdftron.PDF.ElementWriter" class="text-break">Class ElementWriter
+  </h1>
+  <div class="markdown level0 summary"><p>ElementWriter can be used to assemble and write new content to a page, Form XObject, 
+Type3 Glyph stream, pattern stream, or any other content stream. </p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ElementWriter</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_ElementWriter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ElementWriter : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter__ctor.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L66">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter__ctor_" data-uid="pdftron.PDF.ElementWriter.#ctor*"></a>
+  <h4 id="pdftron_PDF_ElementWriter__ctor" data-uid="pdftron.PDF.ElementWriter.#ctor">ElementWriter()</h4>
+  <div class="markdown level1 summary"><p>Instantiates a new element writer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ElementWriter()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Begin_pdftron_PDF_Page_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Begin(pdftron.PDF.Page)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L81">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Begin_" data-uid="pdftron.PDF.ElementWriter.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Begin_pdftron_PDF_Page_" data-uid="pdftron.PDF.ElementWriter.Begin(pdftron.PDF.Page)">Begin(Page)</h4>
+  <div class="markdown level1 summary"><p>Begin writing to the given page.</p>
+<p>By default, new content will be appended to the page, as foreground graphics.
+It is possible to add new page content as background graphics by setting the
+second parameter in begin method to &apos;true&apos; (e.g. writer.Begin(page, true)).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Page page)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>The page to write content.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Begin_pdftron_PDF_Page_pdftron_PDF_ElementWriter_WriteMode_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Begin(pdftron.PDF.Page%2Cpdftron.PDF.ElementWriter.WriteMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L97">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Begin_" data-uid="pdftron.PDF.ElementWriter.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Begin_pdftron_PDF_Page_pdftron_PDF_ElementWriter_WriteMode_" data-uid="pdftron.PDF.ElementWriter.Begin(pdftron.PDF.Page,pdftron.PDF.ElementWriter.WriteMode)">Begin(Page, ElementWriter.WriteMode)</h4>
+  <div class="markdown level1 summary"><p>Begin writing to the given page.
+By default, new content will be appended to the page, as foreground graphics.
+It is possible to add new page content as background graphics by setting the
+second parameter in begin method to &apos;true&apos; (e.g. writer.Begin(page, true)).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Page page, ElementWriter.WriteMode placement)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>The page to write content. </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ElementWriter.WriteMode.html">ElementWriter.WriteMode</a></td>
+        <td><span class="parametername">placement</span></td>
+        <td><p>An optional flag indicating whether the new content should 
+be added as a foreground or background layer to the existing page. By default, the new
+content will appear on top of the existing graphics. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Begin_pdftron_PDF_Page_pdftron_PDF_ElementWriter_WriteMode_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Begin(pdftron.PDF.Page%2Cpdftron.PDF.ElementWriter.WriteMode%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L149">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Begin_" data-uid="pdftron.PDF.ElementWriter.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Begin_pdftron_PDF_Page_pdftron_PDF_ElementWriter_WriteMode_Boolean_" data-uid="pdftron.PDF.ElementWriter.Begin(pdftron.PDF.Page,pdftron.PDF.ElementWriter.WriteMode,Boolean)">Begin(Page, ElementWriter.WriteMode, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Begin writing to the given page.
+By default, new content will be appended to the page, as foreground graphics.
+It is possible to add new page content as background graphics by setting the
+second parameter in begin method to &apos;true&apos; (e.g. writer.Begin(page, true)).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Page page, ElementWriter.WriteMode placement, Boolean page_coord_sys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>The page to write content. </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ElementWriter.WriteMode.html">ElementWriter.WriteMode</a></td>
+        <td><span class="parametername">placement</span></td>
+        <td><p>An optional flag indicating whether the new content should 
+be added as a foreground or background layer to the existing page. By default, the new
+content will appear on top of the existing graphics. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">page_coord_sys</span></td>
+        <td><p>An optional flag used to select the target coordinate system.
+ If true (default), the coordinates are relative to the lower-left corner of the page,
+ otherwise the coordinates are defined in PDF user coordinate system (which may, 
+ or may not coincide with the page coordinates).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Begin_pdftron_PDF_Page_pdftron_PDF_ElementWriter_WriteMode_Boolean_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Begin(pdftron.PDF.Page%2Cpdftron.PDF.ElementWriter.WriteMode%2CBoolean%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L123">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Begin_" data-uid="pdftron.PDF.ElementWriter.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Begin_pdftron_PDF_Page_pdftron_PDF_ElementWriter_WriteMode_Boolean_Boolean_" data-uid="pdftron.PDF.ElementWriter.Begin(pdftron.PDF.Page,pdftron.PDF.ElementWriter.WriteMode,Boolean,Boolean)">Begin(Page, ElementWriter.WriteMode, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Begin writing to the given page.
+By default, new content will be appended to the page, as foreground graphics. 
+It is possible to add new page content as background graphics by setting the 
+second parameter in begin method to &apos;true&apos; (e.g. writer.Begin(page, true)).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Page page, ElementWriter.WriteMode placement, Boolean page_coord_sys, Boolean compress)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>The page to write content. </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ElementWriter.WriteMode.html">ElementWriter.WriteMode</a></td>
+        <td><span class="parametername">placement</span></td>
+        <td><p>An optional flag indicating whether the new content should 
+be added as a foreground or background layer to the existing page. By default, the new
+content will appear on top of the existing graphics. </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">page_coord_sys</span></td>
+        <td><p>An optional flag used to select the target coordinate system.
+ If true (default), the coordinates are relative to the lower-left corner of the page,
+ otherwise the coordinates are defined in PDF user coordinate system (which may, 
+ or may not coincide with the page coordinates).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">compress</span></td>
+        <td><p>An optional flag indicating whether the page content stream 
+should be compressed. This may be useful for debugging content streams. Also 
+some applications need to do a clear text search on strings in the PDF files.
+By default, all content streams are compressed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Begin_pdftron_PDF_Page_pdftron_PDF_ElementWriter_WriteMode_Boolean_Boolean_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Begin(pdftron.PDF.Page%2Cpdftron.PDF.ElementWriter.WriteMode%2CBoolean%2CBoolean%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L127">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Begin_" data-uid="pdftron.PDF.ElementWriter.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Begin_pdftron_PDF_Page_pdftron_PDF_ElementWriter_WriteMode_Boolean_Boolean_pdftron_SDF_Obj_" data-uid="pdftron.PDF.ElementWriter.Begin(pdftron.PDF.Page,pdftron.PDF.ElementWriter.WriteMode,Boolean,Boolean,pdftron.SDF.Obj)">Begin(Page, ElementWriter.WriteMode, Boolean, Boolean, Obj)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Page page, ElementWriter.WriteMode placement, Boolean page_coord_sys, Boolean compress, Obj resources)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ElementWriter.WriteMode.html">ElementWriter.WriteMode</a></td>
+        <td><span class="parametername">placement</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">page_coord_sys</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">compress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">resources</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Begin_pdftron_SDF_Obj_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Begin(pdftron.SDF.Obj%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L194">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Begin_" data-uid="pdftron.PDF.ElementWriter.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Begin_pdftron_SDF_Obj_System_Boolean_" data-uid="pdftron.PDF.ElementWriter.Begin(pdftron.SDF.Obj,System.Boolean)">Begin(Obj, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Begin writing an Element sequence to a stream. Use this function to write 
+Elements to a content stream which will replace an existing content stream in an
+object passed as a parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Obj stream_to_modify, bool compress)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">stream_to_modify</span></td>
+        <td><p>the streamobj_to_update</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">compress</span></td>
+        <td><p>the compress</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Begin_pdftron_SDF_Obj_System_Boolean_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Begin(pdftron.SDF.Obj%2CSystem.Boolean%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L209">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Begin_" data-uid="pdftron.PDF.ElementWriter.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Begin_pdftron_SDF_Obj_System_Boolean_pdftron_SDF_Obj_" data-uid="pdftron.PDF.ElementWriter.Begin(pdftron.SDF.Obj,System.Boolean,pdftron.SDF.Obj)">Begin(Obj, Boolean, Obj)</h4>
+  <div class="markdown level1 summary"><p>Begin writing an Element sequence to a stream. Use this function to write 
+Elements to a content stream which will replace an existing content stream in an
+object passed as a parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Obj stream_to_modify, bool compress, Obj resources)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">stream_to_modify</span></td>
+        <td><p>the streamobj_to_update</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">compress</span></td>
+        <td><p>the compress</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">resources</span></td>
+        <td><p>the resource dictionary in which to store resources for the final page. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Begin_pdftron_SDF_SDFDoc_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Begin(pdftron.SDF.SDFDoc)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L166">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Begin_" data-uid="pdftron.PDF.ElementWriter.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Begin_pdftron_SDF_SDFDoc_" data-uid="pdftron.PDF.ElementWriter.Begin(pdftron.SDF.SDFDoc)">Begin(SDFDoc)</h4>
+  <div class="markdown level1 summary"><p>Begin writing an Element sequence to a new stream. Use this function to write
+Elements to a content stream other than the page. For example, you can create
+Form XObjects (See Section &apos;4.9 Form XObjects&apos; in PDF Reference for more details)
+pattern streams, Type3 font glyph streams, etc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(SDFDoc doc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>A low-level SDF/Cos document that will contain the new stream. You can
+access low-level document using PDFDoc.GetSDFDoc() or Obj.GetDoc() methods.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementWriter_Begin_pdftron_SDF_SDFDoc__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>the newly created content stream object is returned when writing operations 
+are completed (i.e. after the call to ElementWriter.End()).</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Begin_pdftron_SDF_SDFDoc_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Begin(pdftron.SDF.SDFDoc%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L180">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Begin_" data-uid="pdftron.PDF.ElementWriter.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Begin_pdftron_SDF_SDFDoc_Boolean_" data-uid="pdftron.PDF.ElementWriter.Begin(pdftron.SDF.SDFDoc,Boolean)">Begin(SDFDoc, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Begin writing an Element sequence to a new stream. Use this function to write 
+Elements to a content stream other than the page. For example, you can create
+Form XObjects (See Section &apos;4.9 Form XObjects&apos; in PDF Reference for more details) 
+pattern streams, Type3 font glyph streams, etc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(SDFDoc doc, Boolean compress)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">compress</span></td>
+        <td><p>the compress</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L53">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Destroy_" data-uid="pdftron.PDF.ElementWriter.Destroy*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Destroy" data-uid="pdftron.PDF.ElementWriter.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L31">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Dispose_" data-uid="pdftron.PDF.ElementWriter.Dispose*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Dispose" data-uid="pdftron.PDF.ElementWriter.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L36">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Dispose_" data-uid="pdftron.PDF.ElementWriter.Dispose*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Dispose_System_Boolean_" data-uid="pdftron.PDF.ElementWriter.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_End.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.End%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L220">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_End_" data-uid="pdftron.PDF.ElementWriter.End*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_End" data-uid="pdftron.PDF.ElementWriter.End">End()</h4>
+  <div class="markdown level1 summary"><p>Finish writing to a page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj End()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>A low-level stream object that was used to store Elements.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L26">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Finalize_" data-uid="pdftron.PDF.ElementWriter.Finalize*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Finalize" data-uid="pdftron.PDF.ElementWriter.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the ElementWriter </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_Flush.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.Flush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L296">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_Flush_" data-uid="pdftron.PDF.ElementWriter.Flush*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_Flush" data-uid="pdftron.PDF.ElementWriter.Flush">Flush()</h4>
+  <div class="markdown level1 summary"><p>The Flush method flushes all pending Element writing operations.
+This method is typically only required to be called when intermixing
+direct content writing (i.e. WriteBuffer/WriteString) with Element writing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Flush()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_SetDefaultGState_pdftron_PDF_ElementReader_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.SetDefaultGState(pdftron.PDF.ElementReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L253">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_SetDefaultGState_" data-uid="pdftron.PDF.ElementWriter.SetDefaultGState*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_SetDefaultGState_pdftron_PDF_ElementReader_" data-uid="pdftron.PDF.ElementWriter.SetDefaultGState(pdftron.PDF.ElementReader)">SetDefaultGState(ElementReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDefaultGState(ElementReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ElementReader.html">ElementReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_WriteBuffer_System_Byte___.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.WriteBuffer(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L235">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_WriteBuffer_" data-uid="pdftron.PDF.ElementWriter.WriteBuffer*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_WriteBuffer_System_Byte___" data-uid="pdftron.PDF.ElementWriter.WriteBuffer(System.Byte[])">WriteBuffer(Byte[])</h4>
+  <div class="markdown level1 summary"><p>Writes an arbitrary buffer to the content stream.
+This function can be used to insert comments, inline-image data, and
+chunks of arbitrary content to the output stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteBuffer(byte[] buf)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buf</span></td>
+        <td><p>the data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_WriteElement_pdftron_PDF_Element_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.WriteElement(pdftron.PDF.Element)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L264">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_WriteElement_" data-uid="pdftron.PDF.ElementWriter.WriteElement*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_WriteElement_pdftron_PDF_Element_" data-uid="pdftron.PDF.ElementWriter.WriteElement(pdftron.PDF.Element)">WriteElement(Element)</h4>
+  <div class="markdown level1 summary"><p>Writes the Element to the content stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteElement(Element element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>the element</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_WritePlacedElement_pdftron_PDF_Element_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.WritePlacedElement(pdftron.PDF.Element)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L285">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_WritePlacedElement_" data-uid="pdftron.PDF.ElementWriter.WritePlacedElement*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_WritePlacedElement_pdftron_PDF_Element_" data-uid="pdftron.PDF.ElementWriter.WritePlacedElement(pdftron.PDF.Element)">WritePlacedElement(Element)</h4>
+  <div class="markdown level1 summary"><p>A utility function that surrounds the given Element with a graphics state
+Save/Restore Element (i.e. in PDF content stream represented as &apos;q element Q&apos;).</p>
+<p>The function is equivalent to calling WriteElement three times:
+WriteElement(eSave);
+WriteElement(element);
+WriteElement(eRestore);</p>
+<p>where eSave is &apos;e_group_begin&apos; and eRestore is &apos;e_group_end&apos; Element</p>
+<p>The function is useful when XObjects such as Images and Forms are drawn on
+the page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WritePlacedElement(Element element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Element.html">Element</a></td>
+        <td><span class="parametername">element</span></td>
+        <td><p>the element</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter_WriteString_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter.WriteString(String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L248">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementWriter_WriteString_" data-uid="pdftron.PDF.ElementWriter.WriteString*"></a>
+  <h4 id="pdftron_PDF_ElementWriter_WriteString_String_" data-uid="pdftron.PDF.ElementWriter.WriteString(String)">WriteString(String)</h4>
+  <div class="markdown level1 summary"><p>Writes an arbitrary string to the content stream.
+Serves the same purpose as WriteBuffer().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteString(String data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>the str</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementWriter.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementWriter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementWriter.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

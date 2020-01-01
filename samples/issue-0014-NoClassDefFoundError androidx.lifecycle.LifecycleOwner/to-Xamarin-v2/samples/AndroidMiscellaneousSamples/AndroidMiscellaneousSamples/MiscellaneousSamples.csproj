@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40D0405E-9B1E-467A-AE9B-7C401D94EC2D}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MiscellaneousSamples</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AssemblyName>MiscellaneousSamples</AssemblyName>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
+    <MandroidI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
+    <JavaMaximumHeapSize>
+    </JavaMaximumHeapSize>
+    <JavaOptions>
+    </JavaOptions>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Android.NUnitLite" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Common\AddImageTest.cs">
+      <Link>AddImageTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\BookmarkTest.cs">
+      <Link>BookmarkTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\ContentReplacerTest.cs">
+      <Link>ContentReplacerTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\DigitalSignaturesTest.cs">
+      <Link>DigitalSignaturesTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\ElementBuilderTest.cs">
+      <Link>ElementBuilderTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\ElementEditTest.cs">
+      <Link>ElementEditTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\ElementReaderAdvTest.cs">
+      <Link>ElementReaderAdvTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\ElementReaderTest.cs">
+      <Link>ElementReaderTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\EncTest.cs">
+      <Link>EncTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FDFTest.cs">
+      <Link>FDFTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\ImageExtractTest.cs">
+      <Link>ImageExtractTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\ImpositionTest.cs">
+      <Link>ImpositionTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\InteractiveFormsTest.cs">
+      <Link>InteractiveFormsTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\JBIG2Test.cs">
+      <Link>JBIG2Test.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\Key.cs">
+      <Link>Key.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\LogicalStructureTest.cs">
+      <Link>LogicalStructureTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\OptimizerTest.cs">
+      <Link>OptimizerTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\PageLabelsTest.cs">
+      <Link>PageLabelsTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\PatternTest.cs">
+      <Link>PatternTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\PDFDocMemoryTest.cs">
+      <Link>PDFDocMemoryTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\PDFDrawTest.cs">
+      <Link>PDFDrawTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\PDFLayersTest.cs">
+      <Link>PDFLayersTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\PDFPackageTest.cs">
+      <Link>PDFPackageTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\PDFPageTest.cs">
+      <Link>PDFPageTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\PDFRedactTest.cs">
+      <Link>PDFRedactTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\RectTest.cs">
+      <Link>RectTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\SDFTest.cs">
+      <Link>SDFTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\StamperTest.cs">
+      <Link>StamperTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\TextExtractTest.cs">
+      <Link>TextExtractTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\TextSearchTest.cs">
+      <Link>TextSearchTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\U3DTest.cs">
+      <Link>U3DTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\UndoRedoTest.cs">
+      <Link>UndoRedoTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\UnicodeWriteTest.cs">
+      <Link>UnicodeWriteTest.cs</Link>
+    </Compile>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="TestsSample.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\..\Common\AnnotationTest.cs">
+      <Link>AnnotationTest.cs</Link>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="..\..\Common\PDFATest.cs">
+      <Link>PDFATest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\OfficeToPDFTest.cs">
+      <Link>OfficeToPDFTest.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\..\TestFiles\TigerText.pdf">
+      <Link>Assets\TestFiles\TigerText.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\imagemask.dat">
+      <Link>Assets\TestFiles\imagemask.dat</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\lorem_ipsum.pdf">
+      <Link>Assets\TestFiles\lorem_ipsum.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\op_blend_test.pdf">
+      <Link>Assets\TestFiles\op_blend_test.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\tiger_withApprovalField.pdf">
+      <Link>Assets\TestFiles\tiger_withApprovalField.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\tiger_withApprovalField_certified.pdf">
+      <Link>Assets\TestFiles\tiger_withApprovalField_certified.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\tiger_withApprovalField_certified_approved.pdf">
+      <Link>Assets\TestFiles\tiger_withApprovalField_certified_approved.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\pdftron_layout_resources.plugin">
+      <Link>Assets\TestFiles\pdftron_layout_resources.plugin</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\pdftron_smart_substitution.plugin">
+      <Link>Assets\TestFiles\pdftron_smart_substitution.plugin</Link>
+    </AndroidAsset>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <AndroidAsset Include="..\..\TestFiles\the_rime_of_the_ancient_mariner.docx">
+      <Link>Assets\TestFiles\the_rime_of_the_ancient_mariner.docx</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\wrap_poly_demo.docx">
+      <Link>Assets\TestFiles\wrap_poly_demo.docx</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\simple-word_2007.docx">
+      <Link>Assets\TestFiles\simple-word_2007.docx</Link>
+    </AndroidAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\raw\pdfnet.res" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup />
+  <ItemGroup>
+    <AndroidAsset Include="..\..\TestFiles\BusinessCardTemplate.pdf">
+      <Link>Assets\TestFiles\BusinessCardTemplate.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\butterfly.png">
+      <Link>Assets\TestFiles\butterfly.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\credit card numbers.pdf">
+      <Link>Assets\TestFiles\credit card numbers.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\dice.jpg">
+      <Link>Assets\TestFiles\dice.jpg</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\dice.u3d">
+      <Link>Assets\TestFiles\dice.u3d</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\doc_to_sign.pdf">
+      <Link>Assets\TestFiles\doc_to_sign.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\fish.pdf">
+      <Link>Assets\TestFiles\fish.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\font.ttf">
+      <Link>Assets\TestFiles\font.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\form1_annots.xfdf">
+      <Link>Assets\TestFiles\form1_annots.xfdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\form1_data.fdf">
+      <Link>Assets\TestFiles\form1_data.fdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\form1_data.xfdf">
+      <Link>Assets\TestFiles\form1_data.xfdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\form1.pdf">
+      <Link>Assets\TestFiles\form1.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\grayscale.tif">
+      <Link>Assets\TestFiles\grayscale.tif</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\Misc-Fixed.pfa">
+      <Link>Assets\TestFiles\Misc-Fixed.pfa</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\multipage.tif">
+      <Link>Assets\TestFiles\multipage.tif</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\my_stream.txt">
+      <Link>Assets\TestFiles\my_stream.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\newsletter.pdf">
+      <Link>Assets\TestFiles\newsletter.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\numbered.pdf">
+      <Link>Assets\TestFiles\numbered.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\palm.jp2">
+      <Link>Assets\TestFiles\palm.jp2</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\pdfnet.gif">
+      <Link>Assets\TestFiles\pdfnet.gif</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\pdftron.bmp">
+      <Link>Assets\TestFiles\pdftron.bmp</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\pdftron.pfx">
+      <Link>Assets\TestFiles\pdftron.pfx</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\peppers.jpg">
+      <Link>Assets\TestFiles\peppers.jpg</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\signature.jpg">
+      <Link>Assets\TestFiles\signature.jpg</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\tagged.pdf">
+      <Link>Assets\TestFiles\tagged.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\tiger.pdf">
+      <Link>Assets\TestFiles\tiger.pdf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\TestFiles\US061222892-a.pdf">
+      <Link>Assets\TestFiles\US061222892-a.pdf</Link>
+    </AndroidAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\projectSrc\PDFNetAndroidXamarin\PDFNetAndroidXamarin\PDFNetAndroid.csproj">
+      <Project>{CF847925-0BF7-41A6-B697-789B0A735AE7}</Project>
+      <Name>PDFNetAndroid</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

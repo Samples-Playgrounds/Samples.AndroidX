@@ -1,0 +1,4429 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Font
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Font
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.Font">
+  
+  
+  <h1 id="pdftron_PDF_Font" data-uid="pdftron.PDF.Font" class="text-break">Class Font
+  </h1>
+  <div class="markdown level0 summary"><p>A font that is used to draw text on a page. It corresponds to a Font Resource 
+in a PDF file. More than one page may reference the same Font object.
+A Font has a number of attributes, including an array of widths, the character 
+encoding, and the font’s resource name.</p>
+<p>PDF document can contain several different types of fonts and Font class 
+represents a single, flat interface around all PDF font types.</p>
+<p>There are two main classes of fonts in PDF: simple and composite fonts.</p>
+<p>Simple fonts are Type1, TrueType, and Type3 fonts. All simple fonts have the 
+following properties:
+<ul><li>
+Glyphs in the font are selected by single-byte character codes 
+obtained from a string that is shown by the text-showing operators. 
+Logically, these codes index into a table of 256 glyphs; the mapping 
+from codes to glyphs is called the font’s encoding. Each font program 
+has a built-in encoding. Under some circumstances, the encoding can 
+be altered by means described in Section 5.5.5 &quot;Character Encoding&quot; in 
+PDF Reference Manual.
+</li><li>
+Each glyph has a single set of metrics. Therefore simple fonts support 
+only horizontal writing mode.
+</li></ul>
+A composite font is one whose glyphs are obtained from a font like object 
+called a CIDFont (e.g. CIDType0Font and CIDType0Font). A composite font is 
+represented by a font dictionary whose Subtype value is Type0. The Type 0 font 
+is known as the root font, while its associated CIDFont is called its descendant.
+CID-keyed fonts provide a convenient and efficient method for defining
+multiple-byte character encodings and fonts with a large number of glyphs. 
+These capabilities provide great flexibility for representing text in writing 
+systems for languages with large character sets, such as Chinese, Japanese, 
+and Korean (CJK).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Font</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_Font_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Font : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font__ctor_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.%23ctor(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L568">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font__ctor_" data-uid="pdftron.PDF.Font.#ctor*"></a>
+  <h4 id="pdftron_PDF_Font__ctor_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Font.#ctor(pdftron.SDF.Obj)">Font(Obj)</h4>
+  <div class="markdown level1 summary"><p>Instantiates a new font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Font(Obj fnt_dict)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">fnt_dict</span></td>
+        <td><p>the font_dict</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Create_pdftron_PDF_PDFDoc_pdftron_PDF_Font_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Create(pdftron.PDF.PDFDoc%2Cpdftron.PDF.Font%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L191">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Create_" data-uid="pdftron.PDF.Font.Create*"></a>
+  <h4 id="pdftron_PDF_Font_Create_pdftron_PDF_PDFDoc_pdftron_PDF_Font_String_" data-uid="pdftron.PDF.Font.Create(pdftron.PDF.PDFDoc,pdftron.PDF.Font,String)">Create(PDFDoc, Font, String)</h4>
+  <div class="markdown level1 summary"><p>Create a new Unicode font based on the description of an existing PDF font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font Create(PDFDoc doc, Font from, String char_set)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>PDF document</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>existing PDF font</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">char_set</span></td>
+        <td><p>the character set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the created font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Create_pdftron_PDF_PDFDoc_pdftron_PDF_Font_StandardType1Font_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Create(pdftron.PDF.PDFDoc%2Cpdftron.PDF.Font.StandardType1Font)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L118">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Create_" data-uid="pdftron.PDF.Font.Create*"></a>
+  <h4 id="pdftron_PDF_Font_Create_pdftron_PDF_PDFDoc_pdftron_PDF_Font_StandardType1Font_" data-uid="pdftron.PDF.Font.Create(pdftron.PDF.PDFDoc,pdftron.PDF.Font.StandardType1Font)">Create(PDFDoc, Font.StandardType1Font)</h4>
+  <div class="markdown level1 summary"><p>Create a PDF.Font object for the given standard (also known as base 14 font).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font Create(PDFDoc doc, Font.StandardType1Font type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>PDF document</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.StandardType1Font.html">Font.StandardType1Font</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>font type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>newly created font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Create_pdftron_PDF_PDFDoc_pdftron_PDF_Font_StandardType1Font_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Create(pdftron.PDF.PDFDoc%2Cpdftron.PDF.Font.StandardType1Font%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L148">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Create_" data-uid="pdftron.PDF.Font.Create*"></a>
+  <h4 id="pdftron_PDF_Font_Create_pdftron_PDF_PDFDoc_pdftron_PDF_Font_StandardType1Font_Boolean_" data-uid="pdftron.PDF.Font.Create(pdftron.PDF.PDFDoc,pdftron.PDF.Font.StandardType1Font,Boolean)">Create(PDFDoc, Font.StandardType1Font, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Create a PDF.Font object for the given standard (also known as base 14 font).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font Create(PDFDoc doc, Font.StandardType1Font type, Boolean embed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>PDF document</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.StandardType1Font.html">Font.StandardType1Font</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>font type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>if it is embeded font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the created font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Create_pdftron_PDF_PDFDoc_String_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Create(pdftron.PDF.PDFDoc%2CString%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L227">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Create_" data-uid="pdftron.PDF.Font.Create*"></a>
+  <h4 id="pdftron_PDF_Font_Create_pdftron_PDF_PDFDoc_String_String_" data-uid="pdftron.PDF.Font.Create(pdftron.PDF.PDFDoc,String,String)">Create(PDFDoc, String, String)</h4>
+  <div class="markdown level1 summary"><p>Create a new Unicode font based on the description of an existing PDF font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font Create(PDFDoc doc, String name, String char_set)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>PDF document</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>name of existing PDF font</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">char_set</span></td>
+        <td><p>the character set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the created font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Create_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Create(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L101">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Create_" data-uid="pdftron.PDF.Font.Create*"></a>
+  <h4 id="pdftron_PDF_Font_Create_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Font.Create(pdftron.SDF.Obj)">Create(Obj)</h4>
+  <div class="markdown level1 summary"><p>Create a PDF.Font object </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font Create(Obj font_dict)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">font_dict</span></td>
+        <td><p>font dictionary object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>newly created font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Create_pdftron_SDF_SDFDoc_pdftron_PDF_Font_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Create(pdftron.SDF.SDFDoc%2Cpdftron.PDF.Font%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L207">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Create_" data-uid="pdftron.PDF.Font.Create*"></a>
+  <h4 id="pdftron_PDF_Font_Create_pdftron_SDF_SDFDoc_pdftron_PDF_Font_String_" data-uid="pdftron.PDF.Font.Create(pdftron.SDF.SDFDoc,pdftron.PDF.Font,String)">Create(SDFDoc, Font, String)</h4>
+  <div class="markdown level1 summary"><p>Create a new Unicode font based on the description of an existing PDF font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font Create(SDFDoc doc, Font from, String char_set)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>PDF document</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>existing PDF font</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">char_set</span></td>
+        <td><p>the character set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the created font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Create_pdftron_SDF_SDFDoc_pdftron_PDF_Font_StandardType1Font_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Create(pdftron.SDF.SDFDoc%2Cpdftron.PDF.Font.StandardType1Font)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L132">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Create_" data-uid="pdftron.PDF.Font.Create*"></a>
+  <h4 id="pdftron_PDF_Font_Create_pdftron_SDF_SDFDoc_pdftron_PDF_Font_StandardType1Font_" data-uid="pdftron.PDF.Font.Create(pdftron.SDF.SDFDoc,pdftron.PDF.Font.StandardType1Font)">Create(SDFDoc, Font.StandardType1Font)</h4>
+  <div class="markdown level1 summary"><p>Create a PDF.Font object for the given standard (also known as base 14 font).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font Create(SDFDoc doc, Font.StandardType1Font type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>PDF document</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.StandardType1Font.html">Font.StandardType1Font</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>font type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>newly created font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Create_pdftron_SDF_SDFDoc_pdftron_PDF_Font_StandardType1Font_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Create(pdftron.SDF.SDFDoc%2Cpdftron.PDF.Font.StandardType1Font%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L164">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Create_" data-uid="pdftron.PDF.Font.Create*"></a>
+  <h4 id="pdftron_PDF_Font_Create_pdftron_SDF_SDFDoc_pdftron_PDF_Font_StandardType1Font_Boolean_" data-uid="pdftron.PDF.Font.Create(pdftron.SDF.SDFDoc,pdftron.PDF.Font.StandardType1Font,Boolean)">Create(SDFDoc, Font.StandardType1Font, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Create a PDF.Font object for the given standard (also known as base 14 font).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font Create(SDFDoc doc, Font.StandardType1Font type, Boolean embed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>PDF document</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.StandardType1Font.html">Font.StandardType1Font</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>font type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>if it is embeded font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the created font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Create_pdftron_SDF_SDFDoc_String_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Create(pdftron.SDF.SDFDoc%2CString%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L243">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Create_" data-uid="pdftron.PDF.Font.Create*"></a>
+  <h4 id="pdftron_PDF_Font_Create_pdftron_SDF_SDFDoc_String_String_" data-uid="pdftron.PDF.Font.Create(pdftron.SDF.SDFDoc,String,String)">Create(SDFDoc, String, String)</h4>
+  <div class="markdown level1 summary"><p>Create a new Unicode font based on the description of an existing PDF font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font Create(SDFDoc doc, String name, String char_set)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>PDF document</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>name of existing PDF font</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">char_set</span></td>
+        <td><p>the character set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the created font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_PDF_PDFDoc_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.PDF.PDFDoc%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L414">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateCIDTrueTypeFont_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont*"></a>
+  <h4 id="pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_PDF_PDFDoc_String_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.PDF.PDFDoc,String)">CreateCIDTrueTypeFont(PDFDoc, String)</h4>
+  <div class="markdown level1 summary"><p>Embed an external TrueType font in the document as a CID font.
+By default the function selects &quot;Identity-H&quot; encoding that maps 2-byte
+character codes ranging from 0 to 65,535 to the same Unicode value.
+Other predefined encodings are listed in Table 5.15 &apos;Predefined CMap names&apos;
+in PDF Reference Manual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateCIDTrueTypeFont(PDFDoc doc, String font_path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>document in which the external font should be embedded.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><ul>
+<li>path to the external font file.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_PDF_PDFDoc_String_Boolean_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.PDF.PDFDoc%2CString%2CBoolean%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L450">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateCIDTrueTypeFont_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont*"></a>
+  <h4 id="pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_PDF_PDFDoc_String_Boolean_Boolean_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.PDF.PDFDoc,String,Boolean,Boolean)">CreateCIDTrueTypeFont(PDFDoc, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates the cid true type font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateCIDTrueTypeFont(PDFDoc doc, String font_path, Boolean embed, Boolean subset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><p>the font_path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>the embed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">subset</span></td>
+        <td><p>the subset</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_PDF_PDFDoc_String_Boolean_Boolean_pdftron_PDF_Font_Encoding_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.PDF.PDFDoc%2CString%2CBoolean%2CBoolean%2Cpdftron.PDF.Font.Encoding)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L488">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateCIDTrueTypeFont_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont*"></a>
+  <h4 id="pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_PDF_PDFDoc_String_Boolean_Boolean_pdftron_PDF_Font_Encoding_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.PDF.PDFDoc,String,Boolean,Boolean,pdftron.PDF.Font.Encoding)">CreateCIDTrueTypeFont(PDFDoc, String, Boolean, Boolean, Font.Encoding)</h4>
+  <div class="markdown level1 summary"><p>Creates the cid true type font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateCIDTrueTypeFont(PDFDoc doc, String font_path, Boolean embed, Boolean subset, Font.Encoding encoding)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><p>the font_path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>the embed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">subset</span></td>
+        <td><p>the subset</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.Encoding.html">Font.Encoding</a></td>
+        <td><span class="parametername">encoding</span></td>
+        <td><p>the encoding</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_PDF_PDFDoc_String_Boolean_Boolean_pdftron_PDF_Font_Encoding_System_UInt32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.PDF.PDFDoc%2CString%2CBoolean%2CBoolean%2Cpdftron.PDF.Font.Encoding%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L533">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateCIDTrueTypeFont_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont*"></a>
+  <h4 id="pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_PDF_PDFDoc_String_Boolean_Boolean_pdftron_PDF_Font_Encoding_System_UInt32_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.PDF.PDFDoc,String,Boolean,Boolean,pdftron.PDF.Font.Encoding,System.UInt32)">CreateCIDTrueTypeFont(PDFDoc, String, Boolean, Boolean, Font.Encoding, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Creates the cid true type font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateCIDTrueTypeFont(PDFDoc doc, String font_path, Boolean embed, Boolean subset, Font.Encoding encoding, uint ttc_font_index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><p>the font_path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>the embed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">subset</span></td>
+        <td><p>the subset</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.Encoding.html">Font.Encoding</a></td>
+        <td><span class="parametername">encoding</span></td>
+        <td><p>the encoding</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">ttc_font_index</span></td>
+        <td><p>for TTC fonts the index of the actual font to use</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_SDF_SDFDoc_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.SDF.SDFDoc%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L432">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateCIDTrueTypeFont_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont*"></a>
+  <h4 id="pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_SDF_SDFDoc_String_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.SDF.SDFDoc,String)">CreateCIDTrueTypeFont(SDFDoc, String)</h4>
+  <div class="markdown level1 summary"><p>Embed an external TrueType font in the document as a CID font.
+By default the function selects &quot;Identity-H&quot; encoding that maps 2-byte
+character codes ranging from 0 to 65,535 to the same Unicode value.
+Other predefined encodings are listed in Table 5.15 &apos;Predefined CMap names&apos;
+in PDF Reference Manual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateCIDTrueTypeFont(SDFDoc doc, String font_path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>document in which the external font should be embedded.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><ul>
+<li>path to the external font file.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_SDF_SDFDoc_String_Boolean_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.SDF.SDFDoc%2CString%2CBoolean%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L468">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateCIDTrueTypeFont_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont*"></a>
+  <h4 id="pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_SDF_SDFDoc_String_Boolean_Boolean_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.SDF.SDFDoc,String,Boolean,Boolean)">CreateCIDTrueTypeFont(SDFDoc, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates the cid true type font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateCIDTrueTypeFont(SDFDoc doc, String font_path, Boolean embed, Boolean subset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><p>the font_path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>the embed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">subset</span></td>
+        <td><p>the subset</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_SDF_SDFDoc_String_Boolean_Boolean_pdftron_PDF_Font_Encoding_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.SDF.SDFDoc%2CString%2CBoolean%2CBoolean%2Cpdftron.PDF.Font.Encoding)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L508">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateCIDTrueTypeFont_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont*"></a>
+  <h4 id="pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_SDF_SDFDoc_String_Boolean_Boolean_pdftron_PDF_Font_Encoding_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.SDF.SDFDoc,String,Boolean,Boolean,pdftron.PDF.Font.Encoding)">CreateCIDTrueTypeFont(SDFDoc, String, Boolean, Boolean, Font.Encoding)</h4>
+  <div class="markdown level1 summary"><p>Creates the cid true type font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateCIDTrueTypeFont(SDFDoc doc, String font_path, Boolean embed, Boolean subset, Font.Encoding encoding)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><p>the font_path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>the embed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">subset</span></td>
+        <td><p>the subset</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.Encoding.html">Font.Encoding</a></td>
+        <td><span class="parametername">encoding</span></td>
+        <td><p>the encoding</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_SDF_SDFDoc_String_Boolean_Boolean_pdftron_PDF_Font_Encoding_System_UInt32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.SDF.SDFDoc%2CString%2CBoolean%2CBoolean%2Cpdftron.PDF.Font.Encoding%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L555">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateCIDTrueTypeFont_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont*"></a>
+  <h4 id="pdftron_PDF_Font_CreateCIDTrueTypeFont_pdftron_SDF_SDFDoc_String_Boolean_Boolean_pdftron_PDF_Font_Encoding_System_UInt32_" data-uid="pdftron.PDF.Font.CreateCIDTrueTypeFont(pdftron.SDF.SDFDoc,String,Boolean,Boolean,pdftron.PDF.Font.Encoding,System.UInt32)">CreateCIDTrueTypeFont(SDFDoc, String, Boolean, Boolean, Font.Encoding, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Creates the cid true type font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateCIDTrueTypeFont(SDFDoc doc, String font_path, Boolean embed, Boolean subset, Font.Encoding encoding, uint ttc_font_index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><p>the font_path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>the embed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">subset</span></td>
+        <td><p>the subset</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.Encoding.html">Font.Encoding</a></td>
+        <td><span class="parametername">encoding</span></td>
+        <td><p>the encoding</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">ttc_font_index</span></td>
+        <td><p>for TTC fonts the index of the actual font to use</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateTrueTypeFont_pdftron_PDF_PDFDoc_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateTrueTypeFont(pdftron.PDF.PDFDoc%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L265">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateTrueTypeFont_" data-uid="pdftron.PDF.Font.CreateTrueTypeFont*"></a>
+  <h4 id="pdftron_PDF_Font_CreateTrueTypeFont_pdftron_PDF_PDFDoc_String_" data-uid="pdftron.PDF.Font.CreateTrueTypeFont(pdftron.PDF.PDFDoc,String)">CreateTrueTypeFont(PDFDoc, String)</h4>
+  <div class="markdown level1 summary"><p>Embed an external TrueType font in the document as a Simple font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateTrueTypeFont(PDFDoc doc, String font_path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>Document in which the external font should be embedded.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><p>Path to the external font file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_CreateTrueTypeFont_pdftron_PDF_PDFDoc_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>glyphs in the Simple font are selected by single-byte character codes.
+If you want to work with multi-byte character codes (e.g. UTF16) you need to
+create a CID font.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateTrueTypeFont_pdftron_PDF_PDFDoc_String_Boolean_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateTrueTypeFont(pdftron.PDF.PDFDoc%2CString%2CBoolean%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L302">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateTrueTypeFont_" data-uid="pdftron.PDF.Font.CreateTrueTypeFont*"></a>
+  <h4 id="pdftron_PDF_Font_CreateTrueTypeFont_pdftron_PDF_PDFDoc_String_Boolean_Boolean_" data-uid="pdftron.PDF.Font.CreateTrueTypeFont(pdftron.PDF.PDFDoc,String,Boolean,Boolean)">CreateTrueTypeFont(PDFDoc, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates the true type font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateTrueTypeFont(PDFDoc doc, String font_path, Boolean embed, Boolean subset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>PDF Document</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><p>Path to the external font file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>if font is embeded</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">subset</span></td>
+        <td><p>if font is subset</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateTrueTypeFont_pdftron_SDF_SDFDoc_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateTrueTypeFont(pdftron.SDF.SDFDoc%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L283">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateTrueTypeFont_" data-uid="pdftron.PDF.Font.CreateTrueTypeFont*"></a>
+  <h4 id="pdftron_PDF_Font_CreateTrueTypeFont_pdftron_SDF_SDFDoc_String_" data-uid="pdftron.PDF.Font.CreateTrueTypeFont(pdftron.SDF.SDFDoc,String)">CreateTrueTypeFont(SDFDoc, String)</h4>
+  <div class="markdown level1 summary"><p>Embed an external TrueType font in the document as a Simple font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateTrueTypeFont(SDFDoc doc, String font_path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>Document in which the external font should be embedded.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><p>Path to the external font file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_CreateTrueTypeFont_pdftron_SDF_SDFDoc_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>glyphs in the Simple font are selected by single-byte character codes.
+If you want to work with multi-byte character codes (e.g. UTF16) you need to
+create a CID font.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateTrueTypeFont_pdftron_SDF_SDFDoc_String_Boolean_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateTrueTypeFont(pdftron.SDF.SDFDoc%2CString%2CBoolean%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L320">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateTrueTypeFont_" data-uid="pdftron.PDF.Font.CreateTrueTypeFont*"></a>
+  <h4 id="pdftron_PDF_Font_CreateTrueTypeFont_pdftron_SDF_SDFDoc_String_Boolean_Boolean_" data-uid="pdftron.PDF.Font.CreateTrueTypeFont(pdftron.SDF.SDFDoc,String,Boolean,Boolean)">CreateTrueTypeFont(SDFDoc, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates the true type font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateTrueTypeFont(SDFDoc doc, String font_path, Boolean embed, Boolean subset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>PDF Document</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><p>Path to the external font file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>if font is embeded</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">subset</span></td>
+        <td><p>if font is subset</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateType1Font_pdftron_PDF_PDFDoc_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateType1Font(pdftron.PDF.PDFDoc%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L342">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateType1Font_" data-uid="pdftron.PDF.Font.CreateType1Font*"></a>
+  <h4 id="pdftron_PDF_Font_CreateType1Font_pdftron_PDF_PDFDoc_String_" data-uid="pdftron.PDF.Font.CreateType1Font(pdftron.PDF.PDFDoc,String)">CreateType1Font(PDFDoc, String)</h4>
+  <div class="markdown level1 summary"><p>Embed an external TrueType font in the document as a CID font.
+By default the function selects &quot;Identity-H&quot; encoding that maps 2-byte
+character codes ranging from 0 to 65,535 to the same Unicode value.
+Other predefined encodings are listed in Table 5.15 &apos;Predefined CMap names&apos;
+in PDF Reference Manual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateType1Font(PDFDoc doc, String font_path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>document in which the external font should be embedded.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><ul>
+<li>path to the external font file.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateType1Font_pdftron_PDF_PDFDoc_String_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateType1Font(pdftron.PDF.PDFDoc%2CString%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L376">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateType1Font_" data-uid="pdftron.PDF.Font.CreateType1Font*"></a>
+  <h4 id="pdftron_PDF_Font_CreateType1Font_pdftron_PDF_PDFDoc_String_Boolean_" data-uid="pdftron.PDF.Font.CreateType1Font(pdftron.PDF.PDFDoc,String,Boolean)">CreateType1Font(PDFDoc, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates the type1 font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateType1Font(PDFDoc doc, String font_path, Boolean embed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><p>the font_path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>the embed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateType1Font_pdftron_SDF_SDFDoc_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateType1Font(pdftron.SDF.SDFDoc%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L360">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateType1Font_" data-uid="pdftron.PDF.Font.CreateType1Font*"></a>
+  <h4 id="pdftron_PDF_Font_CreateType1Font_pdftron_SDF_SDFDoc_String_" data-uid="pdftron.PDF.Font.CreateType1Font(pdftron.SDF.SDFDoc,String)">CreateType1Font(SDFDoc, String)</h4>
+  <div class="markdown level1 summary"><p>Embed an external TrueType font in the document as a CID font.
+By default the function selects &quot;Identity-H&quot; encoding that maps 2-byte
+character codes ranging from 0 to 65,535 to the same Unicode value.
+Other predefined encodings are listed in Table 5.15 &apos;Predefined CMap names&apos;
+in PDF Reference Manual.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateType1Font(SDFDoc doc, String font_path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>document in which the external font should be embedded.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><ul>
+<li>path to the external font file.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_CreateType1Font_pdftron_SDF_SDFDoc_String_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.CreateType1Font(pdftron.SDF.SDFDoc%2CString%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L392">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_CreateType1Font_" data-uid="pdftron.PDF.Font.CreateType1Font*"></a>
+  <h4 id="pdftron_PDF_Font_CreateType1Font_pdftron_SDF_SDFDoc_String_Boolean_" data-uid="pdftron.PDF.Font.CreateType1Font(pdftron.SDF.SDFDoc,String,Boolean)">CreateType1Font(SDFDoc, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates the type1 font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font CreateType1Font(SDFDoc doc, String font_path, Boolean embed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">font_path</span></td>
+        <td><p>the font_path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>the embed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>the font</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L83">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Destroy_" data-uid="pdftron.PDF.Font.Destroy*"></a>
+  <h4 id="pdftron_PDF_Font_Destroy" data-uid="pdftron.PDF.Font.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L67">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Dispose_" data-uid="pdftron.PDF.Font.Dispose*"></a>
+  <h4 id="pdftron_PDF_Font_Dispose" data-uid="pdftron.PDF.Font.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L72">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Dispose_" data-uid="pdftron.PDF.Font.Dispose*"></a>
+  <h4 id="pdftron_PDF_Font_Dispose_System_Boolean_" data-uid="pdftron.PDF.Font.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L63">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_Finalize_" data-uid="pdftron.PDF.Font.Finalize*"></a>
+  <h4 id="pdftron_PDF_Font_Finalize" data-uid="pdftron.PDF.Font.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the Font </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetAscent.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetAscent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1091">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetAscent_" data-uid="pdftron.PDF.Font.GetAscent*"></a>
+  <h4 id="pdftron_PDF_Font_GetAscent" data-uid="pdftron.PDF.Font.GetAscent">GetAscent()</h4>
+  <div class="markdown level1 summary"><p>The face&apos;s ascender is the vertical distance from the baseline to the topmost
+point of any glyph in the face. This field&apos;s value is a positive number, expressed
+in the glyph coordinate system. For all font types except Type 3, the units of
+glyph space are one-thousandth of a unit of text space. Some font designs use
+a value different from &apos;bbox.yMax&apos;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Double GetAscent()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><p>the ascent</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetAscent_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only relevant for scalable formats. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetBBox.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetBBox%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1124">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetBBox_" data-uid="pdftron.PDF.Font.GetBBox*"></a>
+  <h4 id="pdftron_PDF_Font_GetBBox" data-uid="pdftron.PDF.Font.GetBBox">GetBBox()</h4>
+  <div class="markdown level1 summary"><p>Gets the b box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect GetBBox()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><p>A rectangle expressed in the glyph coordinate system, specifying the
+font bounding box. This is the smallest rectangle enclosing the shape that would
+result if all of the glyphs of the font were placed with their origins coincident
+and then filled.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetCharCodeIterator.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetCharCodeIterator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L851">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetCharCodeIterator_" data-uid="pdftron.PDF.Font.GetCharCodeIterator*"></a>
+  <h4 id="pdftron_PDF_Font_GetCharCodeIterator" data-uid="pdftron.PDF.Font.GetCharCodeIterator">GetCharCodeIterator()</h4>
+  <div class="markdown level1 summary"><p>CharCodeGetIterator represents an iterator interface used to traverse
+a list of char codes for which there is a glyph outline in the embedded font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontCharCodeIterator GetCharCodeIterator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.FontCharCodeIterator.html">FontCharCodeIterator</a></td>
+        <td><p>the char code iterator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetCharCodeIterator_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>this function is in the process of being tested and shouldn&apos;t be used 
+in production applications.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetDescendant.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetDescendant%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1199">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetDescendant_" data-uid="pdftron.PDF.Font.GetDescendant*"></a>
+  <h4 id="pdftron_PDF_Font_GetDescendant" data-uid="pdftron.PDF.Font.GetDescendant">GetDescendant()</h4>
+  <div class="markdown level1 summary"><p>Gets the descendant.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Font GetDescendant()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><p>descendant CIDFont.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetDescendant_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Relevant only for a Type0 font. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetDescent.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetDescent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1108">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetDescent_" data-uid="pdftron.PDF.Font.GetDescent*"></a>
+  <h4 id="pdftron_PDF_Font_GetDescent" data-uid="pdftron.PDF.Font.GetDescent">GetDescent()</h4>
+  <div class="markdown level1 summary"><p>The face&apos;s descender is the vertical distance from the baseline to the bottommost
+point of any glyph in the face. This field&apos;s value is a negative number expressed
+in the glyph coordinate system. For all font types except Type 3, the units of
+glyph space are one-thousandth of a unit of text space. Some font designs use
+a value different from &apos;bbox.yMin&apos;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Double GetDescent()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><p>the descent</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetDescent_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only relevant for scalable formats. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetDescriptor.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetDescriptor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L645">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetDescriptor_" data-uid="pdftron.PDF.Font.GetDescriptor*"></a>
+  <h4 id="pdftron_PDF_Font_GetDescriptor" data-uid="pdftron.PDF.Font.GetDescriptor">GetDescriptor()</h4>
+  <div class="markdown level1 summary"><p>Gets the descriptor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetDescriptor()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>a SDF/Cos object representing FontDescriptor or NULL is FontDescriptor
+is not present.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetEmbeddedFont.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetEmbeddedFont%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1041">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetEmbeddedFont_" data-uid="pdftron.PDF.Font.GetEmbeddedFont*"></a>
+  <h4 id="pdftron_PDF_Font_GetEmbeddedFont" data-uid="pdftron.PDF.Font.GetEmbeddedFont">GetEmbeddedFont()</h4>
+  <div class="markdown level1 summary"><p>Gets the embedded font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetEmbeddedFont()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the stream object of the embedded font or NULL if there if the
+font is not embedded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetEmbeddedFont_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function is not applicable to Type3 font and will throw an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetEmbeddedFontBufSize.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetEmbeddedFontBufSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1058">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetEmbeddedFontBufSize_" data-uid="pdftron.PDF.Font.GetEmbeddedFontBufSize*"></a>
+  <h4 id="pdftron_PDF_Font_GetEmbeddedFontBufSize" data-uid="pdftron.PDF.Font.GetEmbeddedFontBufSize">GetEmbeddedFontBufSize()</h4>
+  <div class="markdown level1 summary"><p>Gets the embedded font buf size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 GetEmbeddedFontBufSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>the size of decoded buffer containing embedded font data or 0
+if this information is not known in advance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetEmbeddedFontBufSize_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The size of decoded buffer may not be known in advance for all
+fonts and may not be correct.
+This function is not applicable to Type3 font and will throw an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetEmbeddedFontName.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetEmbeddedFontName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1027">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetEmbeddedFontName_" data-uid="pdftron.PDF.Font.GetEmbeddedFontName*"></a>
+  <h4 id="pdftron_PDF_Font_GetEmbeddedFontName" data-uid="pdftron.PDF.Font.GetEmbeddedFontName">GetEmbeddedFontName()</h4>
+  <div class="markdown level1 summary"><p>Gets the embedded font name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String GetEmbeddedFontName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><p>the PostScript font name for the embedded font. If the embedded font
+name is not available the function returns the empty string .</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetEncoding.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetEncoding%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1001">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetEncoding_" data-uid="pdftron.PDF.Font.GetEncoding*"></a>
+  <h4 id="pdftron_PDF_Font_GetEncoding" data-uid="pdftron.PDF.Font.GetEncoding">GetEncoding()</h4>
+  <div class="markdown level1 summary"><p>Gets the encoding.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntPtr GetEncoding()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IntPtr</span></td>
+        <td><p>the font’s encoding array (the mapping of character codes to glyphs).
+The array contains 256 Strings. If a String is not NULL, it containing the name
+of the glyph for the code point corresponding to the index.
+If it is NULL, then the name of the glyph is unchanged from
+that specified by the font’s builtin encoding.</p>
+<p>For a Type 3 font, all glyph names will be present in the encoding array,
+and NULL entries correspond to un-encoded code points.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetEncoding_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The Font object is the owner of the array.
+This function is not applicable to composite fonts (e_type0, e_CIDType0,
+and e_CIDType2) and will throw an exception.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetFamilyName.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetFamilyName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L674">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetFamilyName_" data-uid="pdftron.PDF.Font.GetFamilyName*"></a>
+  <h4 id="pdftron_PDF_Font_GetFamilyName" data-uid="pdftron.PDF.Font.GetFamilyName">GetFamilyName()</h4>
+  <div class="markdown level1 summary"><p>Gets the family name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String GetFamilyName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><p>the face&apos;s family name. This is an ASCII string, usually in English,
+which describes the typeface&apos;s family (like &apos;Times New Roman&apos;, &apos;Bodoni&apos;, &apos;Garamond&apos;,
+etc). This is a least common denominator used to list fonts.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetGlyphPath_Int32_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetGlyphPath(Int32%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L876">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetGlyphPath_" data-uid="pdftron.PDF.Font.GetGlyphPath*"></a>
+  <h4 id="pdftron_PDF_Font_GetGlyphPath_Int32_Boolean_" data-uid="pdftron.PDF.Font.GetGlyphPath(Int32,Boolean)">GetGlyphPath(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>The function retrieves the glyph outline for a given character code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathData GetGlyphPath(Int32 char_code, Boolean conics2cubics)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">char_code</span></td>
+        <td><p>character to query</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">conics2cubics</span></td>
+        <td><p>if set to true converts all quadratic Bezier curves to cubic
+Beziers, otherwise no coversion is performed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PathData.html">PathData</a></td>
+        <td><p>A PathData object containing the path information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetGlyphPath_Int32_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>the function can return only the following operators (Element.e_moveto,
+Element.e_lineto, Element.e_cubicto and optionaly Element.e_conicto if
+conics2cubics parameter is set to true.</p>
+<p>This function is not applicable to Type3 font and will throw an exception.
+Use <code>GetType3GlyphStream</code> instead.</p>
+<p>Check PathData.IsDefined to see if the char_code was mapped to &apos;undefined character code&apos;.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetGlyphPath_Int32_System_Byte____System_Double____Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetGlyphPath(Int32%2CSystem.Byte%5B%5D%40%2CSystem.Double%5B%5D%40%2CBoolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L907">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetGlyphPath_" data-uid="pdftron.PDF.Font.GetGlyphPath*"></a>
+  <h4 id="pdftron_PDF_Font_GetGlyphPath_Int32_System_Byte____System_Double____Boolean_" data-uid="pdftron.PDF.Font.GetGlyphPath(Int32,System.Byte[]@,System.Double[]@,Boolean)">GetGlyphPath(Int32, ref Byte[], ref Double[], Boolean)</h4>
+  <div class="markdown level1 summary"><p>The function retrieves the glyph outline for a given character code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean GetGlyphPath(Int32 char_code, ref byte[] out_oprs, ref double[] out_data, Boolean conics2cubics)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">char_code</span></td>
+        <td><p>character to query</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">out_oprs</span></td>
+        <td><p>a vector of operators. The array is filled in by the method.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span>[]</td>
+        <td><span class="parametername">out_data</span></td>
+        <td><p>a vector of data points that represent arguments for operators. The array is filled in by the method.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">conics2cubics</span></td>
+        <td><p>if set to true converts all quadratic Bezier curves to cubic
+Beziers, otherwise no coversion is performed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>false if the char_code was mapped to &apos;undefined character code&apos;.
+In some fonts &apos;undefined character code&apos; corresponds to a space, in some fonts it
+is a box, and in others it may be a more complicated glyph.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetGlyphPath_Int32_System_Byte____System_Double____Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>the function can return only the following operators (Element.e_moveto,
+Element.e_lineto, Element.e_cubicto and optionaly Element.e_conicto if
+conics2cubics parameter is set to true.</p>
+<p>This function is not applicable to Type3 font and will throw an exception.
+Use <code>GetType3GlyphStream</code> instead.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetMaxWidth.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetMaxWidth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L791">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetMaxWidth_" data-uid="pdftron.PDF.Font.GetMaxWidth*"></a>
+  <h4 id="pdftron_PDF_Font_GetMaxWidth" data-uid="pdftron.PDF.Font.GetMaxWidth">GetMaxWidth()</h4>
+  <div class="markdown level1 summary"><p>Gets the max width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Double GetMaxWidth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><p>the maximal advance width, in font units, for all glyphs in this face.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetMissingWidth.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetMissingWidth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L804">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetMissingWidth_" data-uid="pdftron.PDF.Font.GetMissingWidth*"></a>
+  <h4 id="pdftron_PDF_Font_GetMissingWidth" data-uid="pdftron.PDF.Font.GetMissingWidth">GetMissingWidth()</h4>
+  <div class="markdown level1 summary"><p>Gets the missing width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Double GetMissingWidth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><p>the default width to use for character codes whose widths are
+not specified in a font dictionary’s Widths array.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetName.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L659">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetName_" data-uid="pdftron.PDF.Font.GetName*"></a>
+  <h4 id="pdftron_PDF_Font_GetName" data-uid="pdftron.PDF.Font.GetName">GetName()</h4>
+  <div class="markdown level1 summary"><p>Gets the name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String GetName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><p>the name of a font. The behavior depends on the font type;
+for a Type 3 font it gets the value of the Name key in a PDF Font resource.
+For other types it gets the value of the BaseFont key in a PDF font resource.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetSDFObj.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetSDFObj%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L632">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetSDFObj_" data-uid="pdftron.PDF.Font.GetSDFObj*"></a>
+  <h4 id="pdftron_PDF_Font_GetSDFObj" data-uid="pdftron.PDF.Font.GetSDFObj">GetSDFObj()</h4>
+  <div class="markdown level1 summary"><p>Gets the SDFObj.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetSDFObj()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>a SDF/Cos object of this Font.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetStandardType1FontType.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetStandardType1FontType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1137">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetStandardType1FontType_" data-uid="pdftron.PDF.Font.GetStandardType1FontType*"></a>
+  <h4 id="pdftron_PDF_Font_GetStandardType1FontType" data-uid="pdftron.PDF.Font.GetStandardType1FontType">GetStandardType1FontType()</h4>
+  <div class="markdown level1 summary"><p>Gets the standard type1 font type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 GetStandardType1FontType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>Font.e_null if the font is not a standard Type1 font or some
+other StandardType1Font value for a standard Type1 font.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetType.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L579">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetType_" data-uid="pdftron.PDF.Font.GetType*"></a>
+  <h4 id="pdftron_PDF_Font_GetType" data-uid="pdftron.PDF.Font.GetType">GetType()</h4>
+  <div class="markdown level1 summary"><p>Gets the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Font.Type GetType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.Type.html">Font.Type</a></td>
+        <td><p>Font Type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetType_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetType(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L621">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetType_" data-uid="pdftron.PDF.Font.GetType*"></a>
+  <h4 id="pdftron_PDF_Font_GetType_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Font.GetType(pdftron.SDF.Obj)">GetType(Obj)</h4>
+  <div class="markdown level1 summary"><p>Gets the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Font.Type GetType(Obj font_dict)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">font_dict</span></td>
+        <td><p>the font_dict</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.Type.html">Font.Type</a></td>
+        <td><p>The type of a given SDF/Cos font dictionary</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetType3FontMatrix.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetType3FontMatrix%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1168">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetType3FontMatrix_" data-uid="pdftron.PDF.Font.GetType3FontMatrix*"></a>
+  <h4 id="pdftron_PDF_Font_GetType3FontMatrix" data-uid="pdftron.PDF.Font.GetType3FontMatrix">GetType3FontMatrix()</h4>
+  <div class="markdown level1 summary"><p>Gets the type3 font matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix2D GetType3FontMatrix()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.Matrix2D.html">Matrix2D</a></td>
+        <td><p>Type3 font matrix, mapping glyph space to text space
+A common practice is to define glyphs in terms of a 1000-unit
+glyph coordinate system, in which case the font matrix is [0.001 0 0 0.001 0 0].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetType3FontMatrix_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Relevant only for a Type3 font. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetType3GlyphStream_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetType3GlyphStream(Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1184">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetType3GlyphStream_" data-uid="pdftron.PDF.Font.GetType3GlyphStream*"></a>
+  <h4 id="pdftron_PDF_Font_GetType3GlyphStream_Int32_" data-uid="pdftron.PDF.Font.GetType3GlyphStream(Int32)">GetType3GlyphStream(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the type3 glyph stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetType3GlyphStream(Int32 char_code)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">char_code</span></td>
+        <td><p>the char_code</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>a SDF/Cos glyph stream for the given char_code.
+If specified char_code is not found in CharPorcs dictionary the
+function returns NULL.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetType3GlyphStream_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Relevant only for a Type3 font. </p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetUnitsPerEm.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetUnitsPerEm%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1074">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetUnitsPerEm_" data-uid="pdftron.PDF.Font.GetUnitsPerEm*"></a>
+  <h4 id="pdftron_PDF_Font_GetUnitsPerEm" data-uid="pdftron.PDF.Font.GetUnitsPerEm">GetUnitsPerEm()</h4>
+  <div class="markdown level1 summary"><p>Gets the units per em.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int16 GetUnitsPerEm()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int16</span></td>
+        <td><p>the number of font units per EM square for this face. This is
+typically 2048 for TrueType fonts, 1000 for Type1 fonts</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetUnitsPerEm_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only relevant for scalable formats (such as TrueType and Type1).
+This function is not applicable to Type3 font and will throw an exception.
+Use GetType3FontMatrix instead.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetVerticalAdvance_Int32_Double_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetVerticalAdvance(Int32%2CDouble%2CDouble)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L835">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetVerticalAdvance_" data-uid="pdftron.PDF.Font.GetVerticalAdvance*"></a>
+  <h4 id="pdftron_PDF_Font_GetVerticalAdvance_Int32_Double_Double_" data-uid="pdftron.PDF.Font.GetVerticalAdvance(Int32,Double,Double)">GetVerticalAdvance(Int32, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Gets the vertical advance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Double GetVerticalAdvance(Int32 char_code, Double pos_x, Double pos_y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">char_code</span></td>
+        <td><p>character to query for vertical advance</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><span class="parametername">pos_x</span></td>
+        <td><p>x coordinate</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><span class="parametername">pos_y</span></td>
+        <td><p>y coordinate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><p>an double array containing in the following order</p>
+<p>vertical advance. vertical advance is a displacement vector for vertical
+writing mode (i.e. writing mode 1); its horizontal component is always 0.</p>
+<p>horizontal component of the position vector defining the position
+of the vertical writing mode origin relative to horizontal writing mode origin.</p>
+<p>vertical component of the position vector defining the position
+of the vertical writing mode origin relative to horizontal writing mode origin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetVerticalAdvance_Int32_Double_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this method only for composite fonts with vertical writing mode
+(i.e. if Font.IsHorizontalMode() returns false). The method will return 0 as vertical
+advance for simple fonts or for composite fonts with only horizontal writing mode.<br>Relevant only for a Type0 font. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetVerticalAdvance_System_Int32_System_Double__System_Double__.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetVerticalAdvance(System.Int32%2CSystem.Double%40%2CSystem.Double%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1245">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetVerticalAdvance_" data-uid="pdftron.PDF.Font.GetVerticalAdvance*"></a>
+  <h4 id="pdftron_PDF_Font_GetVerticalAdvance_System_Int32_System_Double__System_Double__" data-uid="pdftron.PDF.Font.GetVerticalAdvance(System.Int32,System.Double@,System.Double@)">GetVerticalAdvance(Int32, ref Double, ref Double)</h4>
+  <div class="markdown level1 summary"><p>Gets the vertical advance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetVerticalAdvance(int char_code, ref double out_pos_vect_x, ref double out_pos_vect_y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">char_code</span></td>
+        <td><p>character to query for vertical advance</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_pos_vect_x</span></td>
+        <td><p>initialized by the method. horizontal component of the position vector defining the position of the vertical writing mode origin relative to horizontal writing mode origin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_pos_vect_y</span></td>
+        <td><p>initialized by the method. vertical component of the position vector defining the position of the vertical writing mode origin relative to horizontal writing mode origin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>an double array containing in the following order</p>
+<p>vertical advance. vertical advance is a displacement vector for vertical
+writing mode (i.e. writing mode 1); its horizontal component is always 0.</p>
+<p>horizontal component of the position vector defining the position
+of the vertical writing mode origin relative to horizontal writing mode origin.</p>
+<p>vertical component of the position vector defining the position
+of the vertical writing mode origin relative to horizontal writing mode origin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_GetVerticalAdvance_System_Int32_System_Double__System_Double___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this method only for composite fonts with vertical writing mode
+(i.e. if Font.IsHorizontalMode() returns false). The method will return 0 as vertical
+advance for simple fonts or for composite fonts with only horizontal writing mode.<br>Relevant only for a Type0 font. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_GetWidth_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.GetWidth(Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L779">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_GetWidth_" data-uid="pdftron.PDF.Font.GetWidth*"></a>
+  <h4 id="pdftron_PDF_Font_GetWidth_Int32_" data-uid="pdftron.PDF.Font.GetWidth(Int32)">GetWidth(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Double GetWidth(Int32 char_code)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">char_code</span></td>
+        <td><p>the char_code</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><p>advance width, measured in character space units for the glyph
+matching given character code.</p>
+<p>The function gets the advance width of the font glyph. The advance width
+is the amount by which the current point advances when the glyph is drawn.
+The advance width may not correspond to the visible width of the glyph
+and for this reason, the advance width cannot be used to determine the glyphs’
+bounding boxes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_IsAllCap.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.IsAllCap%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L734">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_IsAllCap_" data-uid="pdftron.PDF.Font.IsAllCap*"></a>
+  <h4 id="pdftron_PDF_Font_IsAllCap" data-uid="pdftron.PDF.Font.IsAllCap">IsAllCap()</h4>
+  <div class="markdown level1 summary"><p>Checks if is all cap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsAllCap()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if font contains no lowercase letters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_IsCFF.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.IsCFF%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1151">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_IsCFF_" data-uid="pdftron.PDF.Font.IsCFF*"></a>
+  <h4 id="pdftron_PDF_Font_IsCFF" data-uid="pdftron.PDF.Font.IsCFF">IsCFF()</h4>
+  <div class="markdown level1 summary"><p>Checks if is cFF.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsCFF()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if the embedded font is represented as CFF (Compact Font Format).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_IsCFF_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only Type1 and Type1C fonts can be represented in CFF format</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_IsEmbedded.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.IsEmbedded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1014">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_IsEmbedded_" data-uid="pdftron.PDF.Font.IsEmbedded*"></a>
+  <h4 id="pdftron_PDF_Font_IsEmbedded" data-uid="pdftron.PDF.Font.IsEmbedded">IsEmbedded()</h4>
+  <div class="markdown level1 summary"><p>Tests whether or not the specified font is stored as a font file in a stream
+embedded in the PDF file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsEmbedded()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if the font is embedded in the file, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_IsFixedWidth.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.IsFixedWidth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L686">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_IsFixedWidth_" data-uid="pdftron.PDF.Font.IsFixedWidth*"></a>
+  <h4 id="pdftron_PDF_Font_IsFixedWidth" data-uid="pdftron.PDF.Font.IsFixedWidth">IsFixedWidth()</h4>
+  <div class="markdown level1 summary"><p>Checks if is fixed width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsFixedWidth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if all glyphs have the same width</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_IsForceBold.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.IsForceBold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L746">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_IsForceBold_" data-uid="pdftron.PDF.Font.IsForceBold*"></a>
+  <h4 id="pdftron_PDF_Font_IsForceBold" data-uid="pdftron.PDF.Font.IsForceBold">IsForceBold()</h4>
+  <div class="markdown level1 summary"><p>Checks if is force bold.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsForceBold()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if bold glyphs should be painted with extra pixels at very small text sizes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_IsHorizontalMode.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.IsHorizontalMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L758">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_IsHorizontalMode_" data-uid="pdftron.PDF.Font.IsHorizontalMode*"></a>
+  <h4 id="pdftron_PDF_Font_IsHorizontalMode" data-uid="pdftron.PDF.Font.IsHorizontalMode">IsHorizontalMode()</h4>
+  <div class="markdown level1 summary"><p>Checks if is horizontal mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsHorizontalMode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if the font uses horizontal writing mode, false for vertical writing mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_IsItalic.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.IsItalic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L722">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_IsItalic_" data-uid="pdftron.PDF.Font.IsItalic*"></a>
+  <h4 id="pdftron_PDF_Font_IsItalic" data-uid="pdftron.PDF.Font.IsItalic">IsItalic()</h4>
+  <div class="markdown level1 summary"><p>Checks if is italic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsItalic()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if glyphs have dominant vertical strokes that are slanted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_IsSerif.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.IsSerif%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L698">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_IsSerif_" data-uid="pdftron.PDF.Font.IsSerif*"></a>
+  <h4 id="pdftron_PDF_Font_IsSerif" data-uid="pdftron.PDF.Font.IsSerif">IsSerif()</h4>
+  <div class="markdown level1 summary"><p>Checks if is serif.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsSerif()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if glyphs have serifs</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_IsSimple.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.IsSimple%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L607">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_IsSimple_" data-uid="pdftron.PDF.Font.IsSimple*"></a>
+  <h4 id="pdftron_PDF_Font_IsSimple" data-uid="pdftron.PDF.Font.IsSimple">IsSimple()</h4>
+  <div class="markdown level1 summary"><p>Checks if is simple.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsSimple()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true for non-CID based fonts such as Type1, TrueType, and Type3</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_IsSimple_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>All simple fonts have the following properties:
+<ul><li>
+Glyphs in the font are selected by single-byte character codes
+obtained from a string that is shown by the text-showing operators.
+Logically, these codes index into a table of 256 glyphs; the mapping
+from codes to glyphs is called the font’s encoding. Each font program
+has a built-in encoding. Under some circumstances, the encoding can
+be altered by means described in Section 5.5.5 &quot;Character Encoding&quot; in
+PDF Reference Manual.
+</li><li>
+Each glyph has a single set of metrics. Therefore simple fonts support
+only horizontal writing mode.
+</li></ul></p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_IsSymbolic.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.IsSymbolic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L710">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_IsSymbolic_" data-uid="pdftron.PDF.Font.IsSymbolic*"></a>
+  <h4 id="pdftron_PDF_Font_IsSymbolic" data-uid="pdftron.PDF.Font.IsSymbolic">IsSymbolic()</h4>
+  <div class="markdown level1 summary"><p>Checks if is symbolic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsSymbolic()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if font contains characters outside the Adobe standard Latin character set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_MapToCID_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.MapToCID(Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L1214">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_MapToCID_" data-uid="pdftron.PDF.Font.MapToCID*"></a>
+  <h4 id="pdftron_PDF_Font_MapToCID_Int32_" data-uid="pdftron.PDF.Font.MapToCID(Int32)">MapToCID(Int32)</h4>
+  <div class="markdown level1 summary"><p>Map to CID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 MapToCID(Int32 char_code)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">char_code</span></td>
+        <td><p>the char_code</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>a CID matching specified charcode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_MapToCID_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Relevant only for a Type0 font. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font_MapToUnicode_System_Int32_System_Int32____System_Int32_System_Int32__.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font.MapToUnicode(System.Int32%2CSystem.Int32%5B%5D%40%2CSystem.Int32%2CSystem.Int32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L966">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Font_MapToUnicode_" data-uid="pdftron.PDF.Font.MapToUnicode*"></a>
+  <h4 id="pdftron_PDF_Font_MapToUnicode_System_Int32_System_Int32____System_Int32_System_Int32__" data-uid="pdftron.PDF.Font.MapToUnicode(System.Int32,System.Int32[]@,System.Int32,System.Int32@)">MapToUnicode(Int32, ref Int32[], Int32, ref Int32)</h4>
+  <div class="markdown level1 summary"><p>Maps the encoding specific &apos;charcode&apos; to Unicode. Conversion of &apos;charcode&apos;
+to Unicode can result in upto four Unicode characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean MapToUnicode(int char_code, ref int[] out_unicode, int in_uni_sz, ref int out_chars)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">char_code</span></td>
+        <td><p>encoding specific &apos;charcode&apos; that needs to be converted
+to Unicode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td><span class="parametername">out_unicode</span></td>
+        <td><p>A pointer to an array of Unicode characters where the conversion result will be stored.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">in_uni_sz</span></td>
+        <td><p>The number of characters that can be written to out_uni_arr. You can assume that the function will never map to more than 10 characters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">out_chars</span></td>
+        <td><p>The function will modify this value to return the number of Unicode characters written in &apos;out_uni_arr&apos; array.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if char_code was mapped to Unicode public area or false if
+the char_code was mapped to Unicode private area.</p>
+<p>A char_code is mapped to Unicode private area when the information required
+for proper mapping is missing in PDF document (e.g. a predefined encoding
+or ToUnicode CMap).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Font_MapToUnicode_System_Int32_System_Int32____System_Int32_System_Int32___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This function is not applicable to CIDFonts (e_CIDType0 and e_CIDType2)
+and will throw an exception if called.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Font.md&amp;value=---%0Auid%3A%20pdftron.PDF.Font%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Font.cs/#L53" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

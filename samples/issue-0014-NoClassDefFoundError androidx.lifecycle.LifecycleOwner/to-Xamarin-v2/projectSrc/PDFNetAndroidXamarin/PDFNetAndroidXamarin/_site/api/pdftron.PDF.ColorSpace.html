@@ -1,0 +1,1608 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ColorSpace
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ColorSpace
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.ColorSpace">
+  
+  
+  <h1 id="pdftron_PDF_ColorSpace" data-uid="pdftron.PDF.ColorSpace" class="text-break">Class ColorSpace
+  </h1>
+  <div class="markdown level0 summary"><p>This abstract class is used to serve as a color space tag to identify the specific 
+color space of a Color object. It contains methods that transform colors in a specific 
+color space to/from several color space such as DeviceRGB and DeviceCMYK. </p>
+<p>For purposes of the methods in this class, colors are represented as arrays of color 
+components represented as doubles in a normalized range defined by each ColorSpace. 
+For many ColorSpaces (e.g. DeviceRGB), this range is 0.0 to 1.0. However, some ColorSpaces 
+have components whose values have a different range. Methods are provided to inquire per 
+component minimum and maximum normalized values. </p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ColorSpace</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_ColorSpace_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ColorSpace : IDisposable</code></pre>
+  </div>
+  <h5 id="pdftron_PDF_ColorSpace_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Note that in Pattern color space (i.e. for ColorSpace::e_pattern) &apos;color values&apos;
+are PDF::PatternColor objects instead of the numeric component values (i.e. ColorPt) 
+used with other spaces.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace__ctor_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.%23ctor(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L193">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace__ctor_" data-uid="pdftron.PDF.ColorSpace.#ctor*"></a>
+  <h4 id="pdftron_PDF_ColorSpace__ctor_pdftron_SDF_Obj_" data-uid="pdftron.PDF.ColorSpace.#ctor(pdftron.SDF.Obj)">ColorSpace(Obj)</h4>
+  <div class="markdown level1 summary"><p>Create a ColorSpace from the given SDF/Cos object listed under ColorSpaces entry
+in page Resource dictionary. If color_space dictionary is null, a non valid ColorSpace
+object is created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ColorSpace(Obj cs_dict)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">cs_dict</span></td>
+        <td><p>the color_space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_Convert2CMYK_pdftron_PDF_ColorPt_pdftron_PDF_ColorPt_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.Convert2CMYK(pdftron.PDF.ColorPt%2Cpdftron.PDF.ColorPt)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L315">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_Convert2CMYK_" data-uid="pdftron.PDF.ColorSpace.Convert2CMYK*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_Convert2CMYK_pdftron_PDF_ColorPt_pdftron_PDF_ColorPt_" data-uid="pdftron.PDF.ColorSpace.Convert2CMYK(pdftron.PDF.ColorPt,pdftron.PDF.ColorPt)">Convert2CMYK(ColorPt, ColorPt)</h4>
+  <div class="markdown level1 summary"><p>A convenience function used to convert color points from the current
+color space to DeviceCMYK color space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Convert2CMYK(ColorPt in_color, ColorPt out_color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><span class="parametername">in_color</span></td>
+        <td><p>input color point in the current color space</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><span class="parametername">out_color</span></td>
+        <td><p>output color point in the DeviceCMYK color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ColorSpace_Convert2CMYK_pdftron_PDF_ColorPt_pdftron_PDF_ColorPt__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>the number to input colorants must match the number of colorants expected by the current color space.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_Convert2Gray_pdftron_PDF_ColorPt_pdftron_PDF_ColorPt_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.Convert2Gray(pdftron.PDF.ColorPt%2Cpdftron.PDF.ColorPt)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L280">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_Convert2Gray_" data-uid="pdftron.PDF.ColorSpace.Convert2Gray*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_Convert2Gray_pdftron_PDF_ColorPt_pdftron_PDF_ColorPt_" data-uid="pdftron.PDF.ColorSpace.Convert2Gray(pdftron.PDF.ColorPt,pdftron.PDF.ColorPt)">Convert2Gray(ColorPt, ColorPt)</h4>
+  <div class="markdown level1 summary"><p>A convenience function used to convert color points from the current
+color space to DeviceGray color space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Convert2Gray(ColorPt in_color, ColorPt out_color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><span class="parametername">in_color</span></td>
+        <td><p>input color point in the current color space</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><span class="parametername">out_color</span></td>
+        <td><p>output color point in the DeviceGray color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ColorSpace_Convert2Gray_pdftron_PDF_ColorPt_pdftron_PDF_ColorPt__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>the number to input colorants must match the number of colorants 
+expected by the current color space.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_Convert2RGB_pdftron_PDF_ColorPt_pdftron_PDF_ColorPt_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.Convert2RGB(pdftron.PDF.ColorPt%2Cpdftron.PDF.ColorPt)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L298">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_Convert2RGB_" data-uid="pdftron.PDF.ColorSpace.Convert2RGB*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_Convert2RGB_pdftron_PDF_ColorPt_pdftron_PDF_ColorPt_" data-uid="pdftron.PDF.ColorSpace.Convert2RGB(pdftron.PDF.ColorPt,pdftron.PDF.ColorPt)">Convert2RGB(ColorPt, ColorPt)</h4>
+  <div class="markdown level1 summary"><p>A convenience function used to convert color points from the current
+color space to DeviceRGB color space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Convert2RGB(ColorPt in_color, ColorPt out_color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><span class="parametername">in_color</span></td>
+        <td><p>input color point in the current color space</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><span class="parametername">out_color</span></td>
+        <td><p>output color point in the DeviceRGB color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ColorSpace_Convert2RGB_pdftron_PDF_ColorPt_pdftron_PDF_ColorPt__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>the number to input colorants must match the number of colorants
+expected by the current color space.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_Create_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.Create(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L130">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_Create_" data-uid="pdftron.PDF.ColorSpace.Create*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_Create_pdftron_SDF_Obj_" data-uid="pdftron.PDF.ColorSpace.Create(pdftron.SDF.Obj)">Create(Obj)</h4>
+  <div class="markdown level1 summary"><p>Create a new ColorSpace from a given object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ColorSpace Create(Obj color_space)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">color_space</span></td>
+        <td><p>existing color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><p>the color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_CreateDeviceCMYK.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.CreateDeviceCMYK%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L107">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_CreateDeviceCMYK_" data-uid="pdftron.PDF.ColorSpace.CreateDeviceCMYK*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_CreateDeviceCMYK" data-uid="pdftron.PDF.ColorSpace.CreateDeviceCMYK">CreateDeviceCMYK()</h4>
+  <div class="markdown level1 summary"><p>Create a new DeviceCMYK ColorSpace object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ColorSpace CreateDeviceCMYK()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><p>the color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_CreateDeviceGray.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.CreateDeviceGray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L83">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_CreateDeviceGray_" data-uid="pdftron.PDF.ColorSpace.CreateDeviceGray*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_CreateDeviceGray" data-uid="pdftron.PDF.ColorSpace.CreateDeviceGray">CreateDeviceGray()</h4>
+  <div class="markdown level1 summary"><p>Create a new DeviceGray ColorSpace object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ColorSpace CreateDeviceGray()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><p>the color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_CreateDeviceRGB.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.CreateDeviceRGB%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L95">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_CreateDeviceRGB_" data-uid="pdftron.PDF.ColorSpace.CreateDeviceRGB*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_CreateDeviceRGB" data-uid="pdftron.PDF.ColorSpace.CreateDeviceRGB">CreateDeviceRGB()</h4>
+  <div class="markdown level1 summary"><p>Create a new DeviceRGB ColorSpace object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ColorSpace CreateDeviceRGB()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><p>the color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_CreateICCFromBuffer_pdftron_SDF_SDFDoc_System_Byte___.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.CreateICCFromBuffer(pdftron.SDF.SDFDoc%2CSystem.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L179">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_CreateICCFromBuffer_" data-uid="pdftron.PDF.ColorSpace.CreateICCFromBuffer*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_CreateICCFromBuffer_pdftron_SDF_SDFDoc_System_Byte___" data-uid="pdftron.PDF.ColorSpace.CreateICCFromBuffer(pdftron.SDF.SDFDoc,System.Byte[])">CreateICCFromBuffer(SDFDoc, Byte[])</h4>
+  <div class="markdown level1 summary"><p>Creates the icc from buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ColorSpace CreateICCFromBuffer(SDFDoc doc, byte[] buffer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>the data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><p>the color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_CreateICCFromFile_pdftron_SDF_SDFDoc_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.CreateICCFromFile(pdftron.SDF.SDFDoc%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L146">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_CreateICCFromFile_" data-uid="pdftron.PDF.ColorSpace.CreateICCFromFile*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_CreateICCFromFile_pdftron_SDF_SDFDoc_String_" data-uid="pdftron.PDF.ColorSpace.CreateICCFromFile(pdftron.SDF.SDFDoc,String)">CreateICCFromFile(SDFDoc, String)</h4>
+  <div class="markdown level1 summary"><p>Create a PDF &apos;ICCBased&apos; color space given an ICC profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ColorSpace CreateICCFromFile(SDFDoc doc, String filepath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">filepath</span></td>
+        <td><p>the filepath</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><p>the color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_CreateICCFromFilter_pdftron_SDF_SDFDoc_pdftron_Filters_Filter_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.CreateICCFromFilter(pdftron.SDF.SDFDoc%2Cpdftron.Filters.Filter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L163">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_CreateICCFromFilter_" data-uid="pdftron.PDF.ColorSpace.CreateICCFromFilter*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_CreateICCFromFilter_pdftron_SDF_SDFDoc_pdftron_Filters_Filter_" data-uid="pdftron.PDF.ColorSpace.CreateICCFromFilter(pdftron.SDF.SDFDoc,pdftron.Filters.Filter)">CreateICCFromFilter(SDFDoc, Filter)</h4>
+  <div class="markdown level1 summary"><p>Creates the icc from filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ColorSpace CreateICCFromFilter(SDFDoc doc, Filter filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>the filter</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><p>the color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_CreatePattern.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.CreatePattern%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L118">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_CreatePattern_" data-uid="pdftron.PDF.ColorSpace.CreatePattern*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_CreatePattern" data-uid="pdftron.PDF.ColorSpace.CreatePattern">CreatePattern()</h4>
+  <div class="markdown level1 summary"><p>Create a new Pattern ColorSpace object.         </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ColorSpace CreatePattern()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><p>the color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L61">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_Destroy_" data-uid="pdftron.PDF.ColorSpace.Destroy*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_Destroy" data-uid="pdftron.PDF.ColorSpace.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L44">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_Dispose_" data-uid="pdftron.PDF.ColorSpace.Dispose*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_Dispose" data-uid="pdftron.PDF.ColorSpace.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L49">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_Dispose_" data-uid="pdftron.PDF.ColorSpace.Dispose*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_Dispose_System_Boolean_" data-uid="pdftron.PDF.ColorSpace.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L39">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_Finalize_" data-uid="pdftron.PDF.ColorSpace.Finalize*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_Finalize" data-uid="pdftron.PDF.ColorSpace.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the ColorSpace </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_GetAlternateColorSpace.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.GetAlternateColorSpace%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L328">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_GetAlternateColorSpace_" data-uid="pdftron.PDF.ColorSpace.GetAlternateColorSpace*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_GetAlternateColorSpace" data-uid="pdftron.PDF.ColorSpace.GetAlternateColorSpace">GetAlternateColorSpace()</h4>
+  <div class="markdown level1 summary"><p>Gets the alternate color space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ColorSpace GetAlternateColorSpace()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><p>the alternate color space if it is available or NULL otherwise.
+Color spaces that include alternate color space are e_separation, e_device_n,
+and e_icc.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_GetBaseColorSpace.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.GetBaseColorSpace%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L341">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_GetBaseColorSpace_" data-uid="pdftron.PDF.ColorSpace.GetBaseColorSpace*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_GetBaseColorSpace" data-uid="pdftron.PDF.ColorSpace.GetBaseColorSpace">GetBaseColorSpace()</h4>
+  <div class="markdown level1 summary"><p>Gets the base color space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ColorSpace GetBaseColorSpace()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><p>the base color space if this is an e_indexed or e_pattern with
+associated base color space; NULL otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_GetComponentNum.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.GetComponentNum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L229">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_GetComponentNum_" data-uid="pdftron.PDF.ColorSpace.GetComponentNum*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_GetComponentNum" data-uid="pdftron.PDF.ColorSpace.GetComponentNum">GetComponentNum()</h4>
+  <div class="markdown level1 summary"><p>Gets the component num.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Int32 GetComponentNum()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>The number of components (tint components) used to represent color
+point for this color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_GetComponentNum_pdftron_PDF_ColorSpace_Type_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.GetComponentNum(pdftron.PDF.ColorSpace.Type%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L430">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_GetComponentNum_" data-uid="pdftron.PDF.ColorSpace.GetComponentNum*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_GetComponentNum_pdftron_PDF_ColorSpace_Type_pdftron_SDF_Obj_" data-uid="pdftron.PDF.ColorSpace.GetComponentNum(pdftron.PDF.ColorSpace.Type,pdftron.SDF.Obj)">GetComponentNum(ColorSpace.Type, Obj)</h4>
+  <div class="markdown level1 summary"><p>Gets the number of colorants (tint components) used to represent color point in this color space</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Int32 GetComponentNum(ColorSpace.Type cs_type, Obj cs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.Type.html">ColorSpace.Type</a></td>
+        <td><span class="parametername">cs_type</span></td>
+        <td><p><code>ColorSpace</code> type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">cs</span></td>
+        <td><p><code>ColorSpace</code> object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>The number of colorants (tint components) used to represent color point in this color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_GetHighVal.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.GetHighVal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L354">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_GetHighVal_" data-uid="pdftron.PDF.ColorSpace.GetHighVal*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_GetHighVal" data-uid="pdftron.PDF.ColorSpace.GetHighVal">GetHighVal()</h4>
+  <div class="markdown level1 summary"><p>Gets the highest index for the color lookup table for Indexed color space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int GetHighVal()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the highest index for the color lookup table for Indexed color space. Since the color table is indexed from zero to highval, the actual number of entries is highval + 1. For color spaces other than indexed the method returns 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ColorSpace_GetHighVal_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for color spaces other than Indexed this method throws an exception.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_GetLookupTable.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.GetLookupTable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L368">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_GetLookupTable_" data-uid="pdftron.PDF.ColorSpace.GetLookupTable*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_GetLookupTable" data-uid="pdftron.PDF.ColorSpace.GetLookupTable">GetLookupTable()</h4>
+  <div class="markdown level1 summary"><p>Gets the lookup table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntPtr GetLookupTable()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IntPtr</span></td>
+        <td><p>the color lookup table for Indexed color space. for color spaces other
+than indexed the method returns null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ColorSpace_GetLookupTable_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for color spaces other than Indexed this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_GetSDFObj.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.GetSDFObj%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L216">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_GetSDFObj_" data-uid="pdftron.PDF.ColorSpace.GetSDFObj*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_GetSDFObj" data-uid="pdftron.PDF.ColorSpace.GetSDFObj">GetSDFObj()</h4>
+  <div class="markdown level1 summary"><p>Gets the sDF obj.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetSDFObj()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the underlying SDF/Cos object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_GetTintFunction.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.GetTintFunction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L385">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_GetTintFunction_" data-uid="pdftron.PDF.ColorSpace.GetTintFunction*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_GetTintFunction" data-uid="pdftron.PDF.ColorSpace.GetTintFunction">GetTintFunction()</h4>
+  <div class="markdown level1 summary"><p>Gets the tint function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Function GetTintFunction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Function.html">Function</a></td>
+        <td><p>the function that transforms tint values into color component
+values in the alternate color space.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ColorSpace_GetTintFunction_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for color spaces other than Separation this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_GetType.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.GetType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L205">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_GetType_" data-uid="pdftron.PDF.ColorSpace.GetType*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_GetType" data-uid="pdftron.PDF.ColorSpace.GetType">GetType()</h4>
+  <div class="markdown level1 summary"><p>Gets the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ColorSpace.Type GetType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.Type.html">ColorSpace.Type</a></td>
+        <td><p>The type of this color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_GetType_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.GetType(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L445">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_GetType_" data-uid="pdftron.PDF.ColorSpace.GetType*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_GetType_pdftron_SDF_Obj_" data-uid="pdftron.PDF.ColorSpace.GetType(pdftron.SDF.Obj)">GetType(Obj)</h4>
+  <div class="markdown level1 summary"><p>Gets the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ColorSpace.Type GetType(Obj cs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">cs</span></td>
+        <td><p>Cos/SDF color space object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.Type.html">ColorSpace.Type</a></td>
+        <td><p>The Type of a given SDF/Cos color space, or e_null for if
+SDF object is not a valid color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_InitColor_pdftron_PDF_ColorPt_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.InitColor(pdftron.PDF.ColorPt)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L242">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_InitColor_" data-uid="pdftron.PDF.ColorSpace.InitColor*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_InitColor_pdftron_PDF_ColorPt_" data-uid="pdftron.PDF.ColorSpace.InitColor(pdftron.PDF.ColorPt)">InitColor(ColorPt)</h4>
+  <div class="markdown level1 summary"><p>Set color to the initial value used for this color space.
+The initial value depends on the color space (see 4.5.7 in PDF Ref. Manual).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InitColor(ColorPt out_colorants)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><span class="parametername">out_colorants</span></td>
+        <td><p>the out_colorants</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_InitComponentRanges_System_Double___System_Double___.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.InitComponentRanges(System.Double%5B%5D%2CSystem.Double%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L259">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_InitComponentRanges_" data-uid="pdftron.PDF.ColorSpace.InitComponentRanges*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_InitComponentRanges_System_Double___System_Double___" data-uid="pdftron.PDF.ColorSpace.InitComponentRanges(System.Double[],System.Double[])">InitComponentRanges(Double[], Double[])</h4>
+  <div class="markdown level1 summary"><p>Initialize default ranges for each color component in the color space.
+For example, default ranges for DeviceRGB are [0 1 0 1 0 1] but for Lab
+the default values might be [0 100 -100 100 -100 100].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void InitComponentRanges(double[] out_decode_low, double[] out_decode_range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span>[]</td>
+        <td><span class="parametername">out_decode_low</span></td>
+        <td><p>the out_decode_low</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span>[]</td>
+        <td><span class="parametername">out_decode_range</span></td>
+        <td><p>the out_decode_range</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ColorSpace_InitComponentRanges_System_Double___System_Double____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>the size of resulting vectors will match the number of color components 
+in this color space.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_IsAll.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.IsAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L398">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_IsAll_" data-uid="pdftron.PDF.ColorSpace.IsAll*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_IsAll" data-uid="pdftron.PDF.ColorSpace.IsAll">IsAll()</h4>
+  <div class="markdown level1 summary"><p>Checks if is all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsAll()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if Separation color space contains the colorant All.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ColorSpace_IsAll_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for color spaces other than Separation this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace_IsNone.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace.IsNone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L413">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ColorSpace_IsNone_" data-uid="pdftron.PDF.ColorSpace.IsNone*"></a>
+  <h4 id="pdftron_PDF_ColorSpace_IsNone" data-uid="pdftron.PDF.ColorSpace.IsNone">IsNone()</h4>
+  <div class="markdown level1 summary"><p>Checks if is none.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsNone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if Separation or DeviceN color space contains None colorants.
+For DeviceN the function returns true only if component colorant names are all None.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ColorSpace_IsNone_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for color spaces other than Separation or DeviceN this method throws
+an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ColorSpace.md&amp;value=---%0Auid%3A%20pdftron.PDF.ColorSpace%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ColorSpace.cs/#L33" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

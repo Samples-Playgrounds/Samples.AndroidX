@@ -1,0 +1,873 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PDFACompliance
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PDFACompliance
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.PDFA.PDFACompliance">
+  
+  
+  <h1 id="pdftron_PDF_PDFA_PDFACompliance" data-uid="pdftron.PDF.PDFA.PDFACompliance" class="text-break">Class PDFACompliance
+  </h1>
+  <div class="markdown level0 summary"><p>PDFACompliance class is used to validate PDF documents for PDF/A (ISO 19005:1/2/3)
+compliance or to convert existing PDF files to PDF/A compliant documents.
+<p>
+The conversion option analyses the content of existing PDF files and performs 
+a sequence of modifications in order to produce a PDF/A compliant document. 
+Features that are not suitable for long-term archiving (such as encryption, 
+obsolete compression schemes, missing fonts, or device-dependent color) are 
+replaced with their PDF/A compliant equivalents. Because the conversion process 
+applies only necessary changes to the source file, the information loss is 
+minimal. Also, because the converter provides a detailed report for each change,
+it is simple to inspect changes and to determine whether the conversion loss 
+is acceptable. </p>
+<p>
+The validation option in PDF/A Manager can be used to quickly determine whether 
+a PDF file fully complies with the PDF/A specification according to the 
+international standard ISO 19005:1/2/3. For files that are not compliant, the 
+validation option can be used to produce a detailed report of compliance 
+violations as well as a list of relevant error objects.</p></p>
+<p>Key Functions:
+<ul><li>Checks if a PDF file is compliant with PDF/A (ISO 19005-1) specification.</li><li>Converts any PDF to a PDF/A compliant document.</li><li>Supports PDF/A-1a, PDF/A-1b, PDF/A-2b.</li><li>Produces a detailed report of compliance violations and associated PDF objects.</li><li>Keeps the required changes a minimum, preserving the consistency of the original.</li><li>Tracks all changes to allow for automatic assessment of data loss.</li><li>Allows user to customize compliance checks or omit specific changes.</li><li>Preserves tags, logical structure, and color information in existing PDF documents.</li><li>Offers automatic font substitution, embedding, and subsetting options.</li><li>Supports automation and batch operation. PDF/A Converter is designed to be used 
+in unattended mode in high throughput server or batch environments</li></ul></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PDFACompliance</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.PDFA.html">pdftron.PDF.PDFA</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_PDFA_PDFACompliance_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PDFACompliance : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance__ctor_System_Boolean_System_Byte___System_String_pdftron_PDF_PDFA_PDFACompliance_Conformance_pdftron_PDF_PDFA_PDFACompliance_ErrorCode___System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.%23ctor(System.Boolean%2CSystem.Byte%5B%5D%2CSystem.String%2Cpdftron.PDF.PDFA.PDFACompliance.Conformance%2Cpdftron.PDF.PDFA.PDFACompliance.ErrorCode%5B%5D%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L87">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance__ctor_" data-uid="pdftron.PDF.PDFA.PDFACompliance.#ctor*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance__ctor_System_Boolean_System_Byte___System_String_pdftron_PDF_PDFA_PDFACompliance_Conformance_pdftron_PDF_PDFA_PDFACompliance_ErrorCode___System_Int32_System_Boolean_" data-uid="pdftron.PDF.PDFA.PDFACompliance.#ctor(System.Boolean,System.Byte[],System.String,pdftron.PDF.PDFA.PDFACompliance.Conformance,pdftron.PDF.PDFA.PDFACompliance.ErrorCode[],System.Int32,System.Boolean)">PDFACompliance(Boolean, Byte[], String, PDFACompliance.Conformance, PDFACompliance.ErrorCode[], Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PDFACompliance(bool convert, byte[] buf, string password, PDFACompliance.Conformance conf, PDFACompliance.ErrorCode[] exceptions, int max_ref_objs, bool first_stop)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">convert</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buf</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">password</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFA.PDFACompliance.Conformance.html">PDFACompliance.Conformance</a></td>
+        <td><span class="parametername">conf</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFA.PDFACompliance.ErrorCode.html">PDFACompliance.ErrorCode</a>[]</td>
+        <td><span class="parametername">exceptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">max_ref_objs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">first_stop</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance__ctor_System_Boolean_System_String_System_String_pdftron_PDF_PDFA_PDFACompliance_Conformance_pdftron_PDF_PDFA_PDFACompliance_ErrorCode___System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.%23ctor(System.Boolean%2CSystem.String%2CSystem.String%2Cpdftron.PDF.PDFA.PDFACompliance.Conformance%2Cpdftron.PDF.PDFA.PDFACompliance.ErrorCode%5B%5D%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L81">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance__ctor_" data-uid="pdftron.PDF.PDFA.PDFACompliance.#ctor*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance__ctor_System_Boolean_System_String_System_String_pdftron_PDF_PDFA_PDFACompliance_Conformance_pdftron_PDF_PDFA_PDFACompliance_ErrorCode___System_Int32_System_Boolean_" data-uid="pdftron.PDF.PDFA.PDFACompliance.#ctor(System.Boolean,System.String,System.String,pdftron.PDF.PDFA.PDFACompliance.Conformance,pdftron.PDF.PDFA.PDFACompliance.ErrorCode[],System.Int32,System.Boolean)">PDFACompliance(Boolean, String, String, PDFACompliance.Conformance, PDFACompliance.ErrorCode[], Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PDFACompliance(bool convert, string file_path, string password, PDFACompliance.Conformance conf, PDFACompliance.ErrorCode[] exceptions, int max_ref_objs, bool first_stop)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">convert</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">file_path</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">password</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFA.PDFACompliance.Conformance.html">PDFACompliance.Conformance</a></td>
+        <td><span class="parametername">conf</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFA.PDFACompliance.ErrorCode.html">PDFACompliance.ErrorCode</a>[]</td>
+        <td><span class="parametername">exceptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">max_ref_objs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">first_stop</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L72">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance_Destroy_" data-uid="pdftron.PDF.PDFA.PDFACompliance.Destroy*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance_Destroy" data-uid="pdftron.PDF.PDFA.PDFACompliance.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L54">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance_Dispose_" data-uid="pdftron.PDF.PDFA.PDFACompliance.Dispose*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance_Dispose" data-uid="pdftron.PDF.PDFA.PDFACompliance.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L60">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance_Dispose_" data-uid="pdftron.PDF.PDFA.PDFACompliance.Dispose*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance_Dispose_System_Boolean_" data-uid="pdftron.PDF.PDFA.PDFACompliance.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L50">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance_Finalize_" data-uid="pdftron.PDF.PDFA.PDFACompliance.Finalize*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance_Finalize" data-uid="pdftron.PDF.PDFA.PDFACompliance.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance_GetError_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.GetError(Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L124">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance_GetError_" data-uid="pdftron.PDF.PDFA.PDFACompliance.GetError*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance_GetError_Int32_" data-uid="pdftron.PDF.PDFA.PDFACompliance.GetError(Int32)">GetError(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PDFACompliance.ErrorCode GetError(Int32 idx)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">idx</span></td>
+        <td><p>The index in the array of error code identifiers.
+The array is indexed starting from zero.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFA.PDFACompliance.ErrorCode.html">PDFACompliance.ErrorCode</a></td>
+        <td><p>The error identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance_GetErrorCount.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.GetErrorCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L109">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance_GetErrorCount_" data-uid="pdftron.PDF.PDFA.PDFACompliance.GetErrorCount*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance_GetErrorCount" data-uid="pdftron.PDF.PDFA.PDFACompliance.GetErrorCount">GetErrorCount()</h4>
+  <div class="markdown level1 summary"><p>Gets the error count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 GetErrorCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>The number of compliance violations.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance_GetPDFAErrorMessage_pdftron_PDF_PDFA_PDFACompliance_ErrorCode_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.GetPDFAErrorMessage(pdftron.PDF.PDFA.PDFACompliance.ErrorCode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L172">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance_GetPDFAErrorMessage_" data-uid="pdftron.PDF.PDFA.PDFACompliance.GetPDFAErrorMessage*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance_GetPDFAErrorMessage_pdftron_PDF_PDFA_PDFACompliance_ErrorCode_" data-uid="pdftron.PDF.PDFA.PDFACompliance.GetPDFAErrorMessage(pdftron.PDF.PDFA.PDFACompliance.ErrorCode)">GetPDFAErrorMessage(PDFACompliance.ErrorCode)</h4>
+  <div class="markdown level1 summary"><p>Gets the pDFA error message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetPDFAErrorMessage(PDFACompliance.ErrorCode id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFA.PDFACompliance.ErrorCode.html">PDFACompliance.ErrorCode</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>error code identifier (obtained using GetError() method).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A descriptive error message for the given error identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance_GetRefObj_pdftron_PDF_PDFA_PDFACompliance_ErrorCode_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.GetRefObj(pdftron.PDF.PDFA.PDFACompliance.ErrorCode%2CInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L158">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance_GetRefObj_" data-uid="pdftron.PDF.PDFA.PDFACompliance.GetRefObj*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance_GetRefObj_pdftron_PDF_PDFA_PDFACompliance_ErrorCode_Int32_" data-uid="pdftron.PDF.PDFA.PDFACompliance.GetRefObj(pdftron.PDF.PDFA.PDFACompliance.ErrorCode,Int32)">GetRefObj(PDFACompliance.ErrorCode, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the ref obj.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 GetRefObj(PDFACompliance.ErrorCode id, Int32 obj_idx)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFA.PDFACompliance.ErrorCode.html">PDFACompliance.ErrorCode</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>error code identifier (obtained using GetError() method).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">obj_idx</span></td>
+        <td><p>the obj_idx</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>A specific object reference associated with a given error type.
+The return value is a PDF object identifier (i.e. object number for
+&apos;pdftron.SDF.Obj)) for the that is associated with the error.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance_GetRefObjCount_pdftron_PDF_PDFA_PDFACompliance_ErrorCode_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.GetRefObjCount(pdftron.PDF.PDFA.PDFACompliance.ErrorCode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L140">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance_GetRefObjCount_" data-uid="pdftron.PDF.PDFA.PDFACompliance.GetRefObjCount*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance_GetRefObjCount_pdftron_PDF_PDFA_PDFACompliance_ErrorCode_" data-uid="pdftron.PDF.PDFA.PDFACompliance.GetRefObjCount(pdftron.PDF.PDFA.PDFACompliance.ErrorCode)">GetRefObjCount(PDFACompliance.ErrorCode)</h4>
+  <div class="markdown level1 summary"><p>Gets the error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 GetRefObjCount(PDFACompliance.ErrorCode id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFA.PDFACompliance.ErrorCode.html">PDFACompliance.ErrorCode</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The index in the array of error code identifiers.
+The array is indexed starting from zero.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>The error identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance_SaveAs_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.SaveAs(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L206">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance_SaveAs_" data-uid="pdftron.PDF.PDFA.PDFACompliance.SaveAs*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance_SaveAs_System_Boolean_" data-uid="pdftron.PDF.PDFA.PDFACompliance.SaveAs(System.Boolean)">SaveAs(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Serializes the converted PDF/A document to a memory buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] SaveAs(bool linearized)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">linearized</span></td>
+        <td><p>An optional flag used to specify whether the the resulting
+PDF/A document should be web-optimized (linearized).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>Byte array containing the serialized version of the document</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PDFA_PDFACompliance_SaveAs_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method assumes that the first parameter passed in PDFACompliance
+constructor (i.e. the convert parameter) is set to &apos;true&apos;.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance_SaveAs_System_IO_Stream_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.SaveAs(System.IO.Stream%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L224">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance_SaveAs_" data-uid="pdftron.PDF.PDFA.PDFACompliance.SaveAs*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance_SaveAs_System_IO_Stream_System_Boolean_" data-uid="pdftron.PDF.PDFA.PDFACompliance.SaveAs(System.IO.Stream,System.Boolean)">SaveAs(System.IO.Stream, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Serializes the converted PDF/A document to a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveAs(System.IO.Stream stm, bool linearized)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stm</span></td>
+        <td><p>A stream where to serialize the document.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">linearized</span></td>
+        <td><p>An optional flag used to specify whether the the resulting
+PDF/A document should be web-optimized (linearized).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PDFA_PDFACompliance_SaveAs_System_IO_Stream_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method assumes that the first parameter passed in PDFACompliance
+constructor (i.e. the convert parameter) is set to &apos;true&apos;.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance_SaveAs_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance.SaveAs(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L191">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFA_PDFACompliance_SaveAs_" data-uid="pdftron.PDF.PDFA.PDFACompliance.SaveAs*"></a>
+  <h4 id="pdftron_PDF_PDFA_PDFACompliance_SaveAs_System_String_System_Boolean_" data-uid="pdftron.PDF.PDFA.PDFACompliance.SaveAs(System.String,System.Boolean)">SaveAs(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Serializes the converted PDF/A document to a file on disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveAs(string file_path, bool linearized)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">file_path</span></td>
+        <td><p>the file_path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">linearized</span></td>
+        <td><ul>
+<li>An optional flag used to specify whether the the resulting
+PDF/A document should be web-optimized (linearized).</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PDFA_PDFACompliance_SaveAs_System_String_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method assumes that the first parameter passed in PDFACompliance
+constructor (i.e. the convert parameter) is set to &apos;true&apos;.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFA_PDFACompliance.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFA.PDFACompliance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFA/PDFACompliance.cs/#L45" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

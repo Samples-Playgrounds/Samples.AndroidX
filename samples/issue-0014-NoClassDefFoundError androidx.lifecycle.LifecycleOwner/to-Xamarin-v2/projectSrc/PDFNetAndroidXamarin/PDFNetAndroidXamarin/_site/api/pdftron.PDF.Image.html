@@ -1,0 +1,3689 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Image
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Image
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.Image">
+  
+  
+  <h1 id="pdftron_PDF_Image" data-uid="pdftron.PDF.Image" class="text-break">Class Image
+  </h1>
+  <div class="markdown level0 summary"><p>Image class provides common methods for working with PDF images. </p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Image</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_Image_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Image : IDisposable</code></pre>
+  </div>
+  <h5 id="pdftron_PDF_Image_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>PDF.Element contains a similar interface used to access image data.
+To create the Image object from image PDF.Element, pass the Element&apos;s SDF/Cos 
+dictionary to Image constructor (i.e. Image image(element-&gt;GetXObject()) )</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image__ctor_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.%23ctor(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L871">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image__ctor_" data-uid="pdftron.PDF.Image.#ctor*"></a>
+  <h4 id="pdftron_PDF_Image__ctor_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Image.#ctor(pdftron.SDF.Obj)">Image(Obj)</h4>
+  <div class="markdown level1 summary"><p>Create an image from an existing image represented as a SDF/Cos object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Image(Obj image_xobject)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">image_xobject</span></td>
+        <td><p>the image_xobject</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Image__ctor_pdftron_SDF_Obj__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>To create the Image object from image PDF.Element, pass the Element&apos;s
+SDF/Cos dictionary to Image constructor (i.e. Image image(element-&gt;GetXObject()))</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_Android_Graphics_Bitmap_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2CAndroid.Graphics.Bitmap)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L228">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_Android_Graphics_Bitmap_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,Android.Graphics.Bitmap)">Create(SDFDoc, Android.Graphics.Bitmap)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, Android.Graphics.Bitmap bmp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Android.Graphics.Bitmap</span></td>
+        <td><span class="parametername">bmp</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_pdftron_Filters_Filter_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2Cpdftron.Filters.Filter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L629">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_pdftron_Filters_Filter_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,pdftron.Filters.Filter)">Create(SDFDoc, Filter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, Filter stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_pdftron_Filters_Filter_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2Cpdftron.Filters.Filter%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L621">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_pdftron_Filters_Filter_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,pdftron.Filters.Filter,pdftron.SDF.Obj)">Create(SDFDoc, Filter, Obj)</h4>
+  <div class="markdown level1 summary"><p>Directly embed the image that is already compressed using the Image.InputFilter
+format. The function can be used to pass-through pre-compressed image data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, Filter stream, Obj encoder_hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><ul>
+<li>input stream containing a serialized document. The input stream may be a
+random-access file, memory buffer, slow HTTP connection etc.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">encoder_hints</span></td>
+        <td><p>The encoder hints</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_pdftron_Filters_Filter_pdftron_SDF_Obj__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>if the input stream doesn&apos;t support <code>Seek()</code> operation the document will load whole  data stream in memory before parsing. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32_pdftron_PDF_ColorSpace_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2Cpdftron.Filters.FilterReader%2CInt32%2CInt32%2CInt32%2Cpdftron.PDF.ColorSpace)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L310">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32_pdftron_PDF_ColorSpace_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,pdftron.Filters.FilterReader,Int32,Int32,Int32,pdftron.PDF.ColorSpace)">Create(SDFDoc, FilterReader, Int32, Int32, Int32, ColorSpace)</h4>
+  <div class="markdown level1 summary"><p>Create and embed an Image. Embed the raw image data taking into account
+specified compression hints.</p>
+<p>By default the function will compress all images using Flate compression.
+It is possible to fine tune compression or to select a different compression
+algorithm using &apos;encoder_hints&apos; object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, FilterReader image_data, Int32 width, Int32 height, Int32 bpc, ColorSpace color_space)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterReader.html">FilterReader</a></td>
+        <td><span class="parametername">image_data</span></td>
+        <td><ul>
+<li>The stream or buffer containing image data. The image data must
+not be compressed and must follow PDF format for sample representation (please refer
+to section 4.8.2 &apos;Sample Representation&apos; in PDF Reference Manual for details).</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><ul>
+<li>The width of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><ul>
+<li>The height of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">bpc</span></td>
+        <td><ul>
+<li>The number of bits used to represent each color component.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><span class="parametername">color_space</span></td>
+        <td><ul>
+<li>The color space in which image samples are represented.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32_pdftron_PDF_ColorSpace_pdftron_PDF_Image_InputFilter_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2Cpdftron.Filters.FilterReader%2CInt32%2CInt32%2CInt32%2Cpdftron.PDF.ColorSpace%2Cpdftron.PDF.Image.InputFilter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L344">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32_pdftron_PDF_ColorSpace_pdftron_PDF_Image_InputFilter_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,pdftron.Filters.FilterReader,Int32,Int32,Int32,pdftron.PDF.ColorSpace,pdftron.PDF.Image.InputFilter)">Create(SDFDoc, FilterReader, Int32, Int32, Int32, ColorSpace, Image.InputFilter)</h4>
+  <div class="markdown level1 summary"><p>Create and embed an Image. Embed the raw image data taking into account
+specified compression hints.</p>
+<p>By default the function will compress all images using Flate compression.
+It is possible to fine tune compression or to select a different compression
+algorithm using &apos;encoder_hints&apos; object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, FilterReader image_data, Int32 width, Int32 height, Int32 bpc, ColorSpace color_space, Image.InputFilter input_format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterReader.html">FilterReader</a></td>
+        <td><span class="parametername">image_data</span></td>
+        <td><ul>
+<li>The stream or buffer containing image data. The image data must
+not be compressed and must follow PDF format for sample representation (please refer
+to section 4.8.2 &apos;Sample Representation&apos; in PDF Reference Manual for details).</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><ul>
+<li>The width of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><ul>
+<li>The height of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">bpc</span></td>
+        <td><ul>
+<li>The number of bits used to represent each color component.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><span class="parametername">color_space</span></td>
+        <td><ul>
+<li>The color space in which image samples are represented.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.InputFilter.html">Image.InputFilter</a></td>
+        <td><span class="parametername">input_format</span></td>
+        <td><ul>
+<li>Image.InputFilter describing the format of pre-compressed
+image data.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32_pdftron_PDF_ColorSpace_pdftron_PDF_Image_InputFilter__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>see the above method for details. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32_pdftron_PDF_ColorSpace_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2Cpdftron.Filters.FilterReader%2CInt32%2CInt32%2CInt32%2Cpdftron.PDF.ColorSpace%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L378">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32_pdftron_PDF_ColorSpace_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,pdftron.Filters.FilterReader,Int32,Int32,Int32,pdftron.PDF.ColorSpace,pdftron.SDF.Obj)">Create(SDFDoc, FilterReader, Int32, Int32, Int32, ColorSpace, Obj)</h4>
+  <div class="markdown level1 summary"><p>Create and embed an Image. Embed the raw image data taking into account
+specified compression hints.</p>
+<p>By default the function will compress all images using Flate compression.
+It is possible to fine tune compression or to select a different compression
+algorithm using &apos;encoder_hints&apos; object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, FilterReader image_data, Int32 width, Int32 height, Int32 bpc, ColorSpace color_space, Obj encoder_hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterReader.html">FilterReader</a></td>
+        <td><span class="parametername">image_data</span></td>
+        <td><ul>
+<li>The stream or buffer containing image data. The image data must
+not be compressed and must follow PDF format for sample representation (please refer
+to section 4.8.2 &apos;Sample Representation&apos; in PDF Reference Manual for details).</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><ul>
+<li>The width of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><ul>
+<li>The height of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">bpc</span></td>
+        <td><ul>
+<li>The number of bits used to represent each color component.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><span class="parametername">color_space</span></td>
+        <td><ul>
+<li>The color space in which image samples are represented.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">encoder_hints</span></td>
+        <td><p>The encoder hints</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L74">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_String_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,String)">Create(SDFDoc, String)</h4>
+  <div class="markdown level1 summary"><p>Create and embed an Image from an external file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, String filename)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>A document to which the image should be added. To obtain
+SDF.Doc from PDFDoc use PDFDoc.GetSDFDoc() or Obj.GetDoc().</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">filename</span></td>
+        <td><p>The name of the image file. Currently supported formats are
+JPEG, PNG, GIF, TIFF, BMP, EMF, and WMF. Other raster formats can be embedded by
+decompressing image data and using other versions of Image.Create(...) method.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded image.       </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>By default the function will either pass-through data preserving the original
+compression or will compress data using Flate compression. It is possible to
+fine tune compression or to select a different compression algorithm using
+&apos;encoder_hints&apos; object.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_String_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2CString%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L133">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_String_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,String,pdftron.SDF.Obj)">Create(SDFDoc, String, Obj)</h4>
+  <div class="markdown level1 summary"><p>Create and embed an Image from an external file taking into account specified 
+compression hints. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, String filename, Obj encoder_hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>A document to which the image should be added. To obtain
+SDF.Doc from PDFDoc use PDFDoc.GetSDFDoc() or Obj.GetDoc().</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">filename</span></td>
+        <td><p>The name of the image file. Currently supported formats are
+JPEG, PNG, GIF, TIFF, BMP, EMF, and WMF. Other raster formats can be embedded by
+decompressing image data and using other versions of Image.Create(...) method.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">encoder_hints</span></td>
+        <td><p>An optional SDF.Obj containing a hint (or an SDF.Array of 
+hints) that could be used to select a specific compression method and compression 
+parameters. For a concrete example of how to create encoder hints, please take a look 
+at JBIG2Test and AddImage sample projects. The image encoder accepts the following 
+hints: 
+<p>- /JBIG2; SDF.Name(&quot;JBIG2&quot;), An SDF.Name Object with value equal to &quot;JBIG2&quot;. If the 
+image is monochrome (i.e. bpc == 1), the encoder will compress the image using JBIG2Decode 
+filter. </p></p>
+<p>- [/JBIG2 /Threshold 0.6 /SharePages 50] - Compress a monochrome image using lossy JBIG2Decode 
+ compression with the given image threshold and by sharing segments from a specified number 
+ of pages. The threshold is a floating point number in the rage from 0.4 to 0.9. Increasing the threshold 
+ value will increase image quality, but may increase the file size. The default value 
+ for threshold is 0.85. &quot;SharePages&quot; parameter can be used to specify the maximum number of 
+ pages sharing a common &apos;JBIG2Globals&apos; segment stream. Increasing the value of this parameter 
+ improves compression ratio at the expense of memory usage.</p>
+
+<p>- [/JPEG] - Use JPEG compression with default compression. </p>
+<p>- [/JPEG /Quality 60] - Use JPEG compression with given quality setting. The &quot;Quality&quot; 
+value is expressed on the 0..100 scale.</p>
+
+<p>- [/JP2] or [/JPEG2000] - Use JPEG2000 compression to compress a RGB or a grayscale image</p>
+
+<p>- [/Flate] - Use Flate compression with maximum compression at the expense of 
+speed. </p>
+
+<p>- [/Flate /Level 9] - Use Flate compression using specified compression level. 
+Compression &quot;Level&quot; must be a number between 0 and 9: 1 gives best speed, 
+9 gives best compression, 0 gives no compression at all (the input data is simply 
+copied a block at a time). </p>
+
+<p>- /RAW or [/RAW] - The encoder will not use any compression method and the image 
+will be stored in the raw format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_String_pdftron_SDF_Obj__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>By default the function will either pass-through data preserving the original
+compression or will compress data using Flate compression. It is possible to
+fine tune compression or to select a different compression algorithm using
+&apos;encoder_hints&apos; object.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_Byte___.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2CSystem.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L529">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_Byte___" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,System.Byte[])">Create(SDFDoc, Byte[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, byte[] image_data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">image_data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_Int32_pdftron_PDF_ColorSpace_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2CSystem.Byte%5B%5D%2CInt32%2CInt32%2CInt32%2Cpdftron.PDF.ColorSpace)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L489">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_Int32_pdftron_PDF_ColorSpace_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,System.Byte[],Int32,Int32,Int32,pdftron.PDF.ColorSpace)">Create(SDFDoc, Byte[], Int32, Int32, Int32, ColorSpace)</h4>
+  <div class="markdown level1 summary"><p>Directly embed the image that is already compressed using the Image.InputFilter
+format. The function can be used to pass-through pre-compressed image data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, byte[] image_data, Int32 width, Int32 height, Int32 bpc, ColorSpace color_space)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">image_data</span></td>
+        <td><p>The stream or buffer containing compressed image data.
+The compression format must match the input_format parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the image, in samples.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the image, in samples.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">bpc</span></td>
+        <td><p>The number of bits used to represent each color component.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><span class="parametername">color_space</span></td>
+        <td><p>The color space in which image samples are specified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_Int32_pdftron_PDF_ColorSpace_pdftron_PDF_Image_InputFilter_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2CSystem.Byte%5B%5D%2CInt32%2CInt32%2CInt32%2Cpdftron.PDF.ColorSpace%2Cpdftron.PDF.Image.InputFilter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L409">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_Int32_pdftron_PDF_ColorSpace_pdftron_PDF_Image_InputFilter_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,System.Byte[],Int32,Int32,Int32,pdftron.PDF.ColorSpace,pdftron.PDF.Image.InputFilter)">Create(SDFDoc, Byte[], Int32, Int32, Int32, ColorSpace, Image.InputFilter)</h4>
+  <div class="markdown level1 summary"><p>Directly embed the image that is already compressed using the Image.InputFilter
+format. The function can be used to pass-through pre-compressed image data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, byte[] image_data, Int32 width, Int32 height, Int32 bpc, ColorSpace color_space, Image.InputFilter input_format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">image_data</span></td>
+        <td><p>The stream or buffer containing compressed image data.
+The compression format must match the input_format parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the image, in samples.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the image, in samples.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">bpc</span></td>
+        <td><p>The number of bits used to represent each color component.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><span class="parametername">color_space</span></td>
+        <td><p>The color space in which image samples are specified.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.InputFilter.html">Image.InputFilter</a></td>
+        <td><span class="parametername">input_format</span></td>
+        <td><p>Image.InputFilter describing the format of pre-compressed
+image data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_Int32_pdftron_PDF_ColorSpace_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2CSystem.Byte%5B%5D%2CInt32%2CInt32%2CInt32%2Cpdftron.PDF.ColorSpace%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L448">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_Int32_pdftron_PDF_ColorSpace_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,System.Byte[],Int32,Int32,Int32,pdftron.PDF.ColorSpace,pdftron.SDF.Obj)">Create(SDFDoc, Byte[], Int32, Int32, Int32, ColorSpace, Obj)</h4>
+  <div class="markdown level1 summary"><p>Directly embed the image that is already compressed using the Image.InputFilter
+format. The function can be used to pass-through pre-compressed image data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, byte[] image_data, Int32 width, Int32 height, Int32 bpc, ColorSpace color_space, Obj encoder_hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">image_data</span></td>
+        <td><p>The stream or buffer containing compressed image data.
+The compression format must match the input_format parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the image, in samples.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the image, in samples.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">bpc</span></td>
+        <td><p>The number of bits used to represent each color component.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><span class="parametername">color_space</span></td>
+        <td><p>The color space in which image samples are specified.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">encoder_hints</span></td>
+        <td><p>The encoder hints</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_Byte___pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2CSystem.Byte%5B%5D%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L509">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_Byte___pdftron_SDF_Obj_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,System.Byte[],pdftron.SDF.Obj)">Create(SDFDoc, Byte[], Obj)</h4>
+  <div class="markdown level1 summary"><p>Directly embed the image that is already compressed using the Image.InputFilter
+format. The function can be used to pass-through pre-compressed image data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, byte[] image_data, Obj encoder_hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">image_data</span></td>
+        <td><p>The stream or buffer containing compressed image data.
+The compression format must match the input_format parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">encoder_hints</span></td>
+        <td><p>The encoder hints</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_IO_Stream_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2CSystem.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L599">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_IO_Stream_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,System.IO.Stream)">Create(SDFDoc, System.IO.Stream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, System.IO.Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_IO_Stream_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc%2CSystem.IO.Stream%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L534">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Create_" data-uid="pdftron.PDF.Image.Create*"></a>
+  <h4 id="pdftron_PDF_Image_Create_pdftron_SDF_SDFDoc_System_IO_Stream_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Image.Create(pdftron.SDF.SDFDoc,System.IO.Stream,pdftron.SDF.Obj)">Create(SDFDoc, System.IO.Stream, Obj)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Create(SDFDoc doc, System.IO.Stream stream, Obj encoder_hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">encoder_hints</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_CreateImageMask_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.CreateImageMask(pdftron.SDF.SDFDoc%2Cpdftron.Filters.FilterReader%2CInt32%2CInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L713">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_CreateImageMask_" data-uid="pdftron.PDF.Image.CreateImageMask*"></a>
+  <h4 id="pdftron_PDF_Image_CreateImageMask_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_" data-uid="pdftron.PDF.Image.CreateImageMask(pdftron.SDF.SDFDoc,pdftron.Filters.FilterReader,Int32,Int32)">CreateImageMask(SDFDoc, FilterReader, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Create and embed an ImageMask. Embed the raw image data taking into account
+specified compression hints. The ImageMask can be used as a stencil mask for
+painting in the current color or as an explicit mask specifying which areas of
+the image to paint and which to mask out. One of the most important uses of
+stencil masking is for painting character glyphs represented as bitmaps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image CreateImageMask(SDFDoc doc, FilterReader image_data, Int32 width, Int32 height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterReader.html">FilterReader</a></td>
+        <td><span class="parametername">image_data</span></td>
+        <td><ul>
+<li>The stream or buffer containing image data stored in 1 bit per
+sample format. The image data must not be compressed and must follow PDF format for
+sample representation (please refer to section 4.8.2 &apos;Sample Representation&apos; in PDF
+Reference Manual for details).</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><ul>
+<li>The width of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><ul>
+<li>The height of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded ImageMask.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Image_CreateImageMask_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>see Image.CreateImageMask for details. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_CreateImageMask_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.CreateImageMask(pdftron.SDF.SDFDoc%2Cpdftron.Filters.FilterReader%2CInt32%2CInt32%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L741">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_CreateImageMask_" data-uid="pdftron.PDF.Image.CreateImageMask*"></a>
+  <h4 id="pdftron_PDF_Image_CreateImageMask_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Image.CreateImageMask(pdftron.SDF.SDFDoc,pdftron.Filters.FilterReader,Int32,Int32,pdftron.SDF.Obj)">CreateImageMask(SDFDoc, FilterReader, Int32, Int32, Obj)</h4>
+  <div class="markdown level1 summary"><p>Create and embed an ImageMask. Embed the raw image data taking into account
+specified compression hints. The ImageMask can be used as a stencil mask for
+painting in the current color or as an explicit mask specifying which areas of
+the image to paint and which to mask out. One of the most important uses of
+stencil masking is for painting character glyphs represented as bitmaps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image CreateImageMask(SDFDoc doc, FilterReader image_data, Int32 width, Int32 height, Obj encoder_hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterReader.html">FilterReader</a></td>
+        <td><span class="parametername">image_data</span></td>
+        <td><ul>
+<li>The stream or buffer containing image data stored in 1 bit per
+sample format. The image data must not be compressed and must follow PDF format for
+sample representation (please refer to section 4.8.2 &apos;Sample Representation&apos; in PDF
+Reference Manual for details).</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><ul>
+<li>The width of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><ul>
+<li>The height of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">encoder_hints</span></td>
+        <td><p>The encoder hints</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded ImageMask.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_CreateImageMask_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.CreateImageMask(pdftron.SDF.SDFDoc%2CSystem.Byte%5B%5D%2CInt32%2CInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L656">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_CreateImageMask_" data-uid="pdftron.PDF.Image.CreateImageMask*"></a>
+  <h4 id="pdftron_PDF_Image_CreateImageMask_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_" data-uid="pdftron.PDF.Image.CreateImageMask(pdftron.SDF.SDFDoc,System.Byte[],Int32,Int32)">CreateImageMask(SDFDoc, Byte[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Create and embed an ImageMask. Embed the raw image data taking into account
+specified compression hints. The ImageMask can be used as a stencil mask for
+painting in the current color or as an explicit mask specifying which areas of
+the image to paint and which to mask out. One of the most important uses of
+stencil masking is for painting character glyphs represented as bitmaps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image CreateImageMask(SDFDoc doc, byte[] image_data, Int32 width, Int32 height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">image_data</span></td>
+        <td><ul>
+<li>The stream or buffer containing image data stored in 1 bit per
+sample format. The image data must not be compressed and must follow PDF format for
+sample representation (please refer to section 4.8.2 &apos;Sample Representation&apos; in PDF
+Reference Manual for details).</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><ul>
+<li>The width of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><ul>
+<li>The height of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded ImageMask.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_CreateImageMask_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.CreateImageMask(pdftron.SDF.SDFDoc%2CSystem.Byte%5B%5D%2CInt32%2CInt32%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L684">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_CreateImageMask_" data-uid="pdftron.PDF.Image.CreateImageMask*"></a>
+  <h4 id="pdftron_PDF_Image_CreateImageMask_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Image.CreateImageMask(pdftron.SDF.SDFDoc,System.Byte[],Int32,Int32,pdftron.SDF.Obj)">CreateImageMask(SDFDoc, Byte[], Int32, Int32, Obj)</h4>
+  <div class="markdown level1 summary"><p>Create and embed an ImageMask. Embed the raw image data taking into account
+specified compression hints. The ImageMask can be used as a stencil mask for
+painting in the current color or as an explicit mask specifying which areas of
+the image to paint and which to mask out. One of the most important uses of
+stencil masking is for painting character glyphs represented as bitmaps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image CreateImageMask(SDFDoc doc, byte[] image_data, Int32 width, Int32 height, Obj encoder_hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">image_data</span></td>
+        <td><ul>
+<li>The stream or buffer containing image data stored in 1 bit per
+sample format. The image data must not be compressed and must follow PDF format for
+sample representation (please refer to section 4.8.2 &apos;Sample Representation&apos; in PDF
+Reference Manual for details).</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><ul>
+<li>The width of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><ul>
+<li>The height of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">encoder_hints</span></td>
+        <td><p>The encoder hints</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>PDF.Image object representing the embedded ImageMask.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_CreateSoftMask_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.CreateSoftMask(pdftron.SDF.SDFDoc%2Cpdftron.Filters.FilterReader%2CInt32%2CInt32%2CInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L834">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_CreateSoftMask_" data-uid="pdftron.PDF.Image.CreateSoftMask*"></a>
+  <h4 id="pdftron_PDF_Image_CreateSoftMask_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32_" data-uid="pdftron.PDF.Image.CreateSoftMask(pdftron.SDF.SDFDoc,pdftron.Filters.FilterReader,Int32,Int32,Int32)">CreateSoftMask(SDFDoc, FilterReader, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Create and embed a Soft Mask. Embed the raw image data taking into account
+specified compression hints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image CreateSoftMask(SDFDoc doc, FilterReader image_data, Int32 width, Int32 height, Int32 bpc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>A document to which the image should be added. The &apos;Doc&apos; object
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterReader.html">FilterReader</a></td>
+        <td><span class="parametername">image_data</span></td>
+        <td><ul>
+<li>The stream or buffer containing image data represented in
+DeviceGray color space (i.e. one component per sample). The image data must not
+be compressed and must follow PDF format for sample representation (please refer
+to section 4.8.2 &apos;Sample Representation&apos; in PDF Reference Manual for details).</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><ul>
+<li>The width of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><ul>
+<li>The height of the image, in samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">bpc</span></td>
+        <td><ul>
+<li>The number of bits used to represent each color component.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>the image</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Image_CreateSoftMask_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>this feature is available only in PDF 1.4 and higher. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_CreateSoftMask_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.CreateSoftMask(pdftron.SDF.SDFDoc%2Cpdftron.Filters.FilterReader%2CInt32%2CInt32%2CInt32%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L857">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_CreateSoftMask_" data-uid="pdftron.PDF.Image.CreateSoftMask*"></a>
+  <h4 id="pdftron_PDF_Image_CreateSoftMask_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Image.CreateSoftMask(pdftron.SDF.SDFDoc,pdftron.Filters.FilterReader,Int32,Int32,Int32,pdftron.SDF.Obj)">CreateSoftMask(SDFDoc, FilterReader, Int32, Int32, Int32, Obj)</h4>
+  <div class="markdown level1 summary"><p>Creates the soft mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image CreateSoftMask(SDFDoc doc, FilterReader image_data, Int32 width, Int32 height, Int32 bpc, Obj encoder_hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterReader.html">FilterReader</a></td>
+        <td><span class="parametername">image_data</span></td>
+        <td><p>the image_data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>the width</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>the height</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">bpc</span></td>
+        <td><p>the bpc</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">encoder_hints</span></td>
+        <td><p>the encoder_hint</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>the image</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Image_CreateSoftMask_pdftron_SDF_SDFDoc_pdftron_Filters_FilterReader_Int32_Int32_Int32_pdftron_SDF_Obj__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>see Image.CreateSoftMask for details. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_CreateSoftMask_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.CreateSoftMask(pdftron.SDF.SDFDoc%2CSystem.Byte%5B%5D%2CInt32%2CInt32%2CInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L808">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_CreateSoftMask_" data-uid="pdftron.PDF.Image.CreateSoftMask*"></a>
+  <h4 id="pdftron_PDF_Image_CreateSoftMask_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_Int32_" data-uid="pdftron.PDF.Image.CreateSoftMask(pdftron.SDF.SDFDoc,System.Byte[],Int32,Int32,Int32)">CreateSoftMask(SDFDoc, Byte[], Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Create and embed a Soft Mask. Embed the raw image data taking into account
+specified compression hints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image CreateSoftMask(SDFDoc doc, byte[] image_data, Int32 width, Int32 height, Int32 bpc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">image_data</span></td>
+        <td><p>the image_data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>the width</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>the height</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">bpc</span></td>
+        <td><p>the bpc</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>the image</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Image_CreateSoftMask_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>see Image.CreateSoftMask for details. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_CreateSoftMask_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_Int32_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.CreateSoftMask(pdftron.SDF.SDFDoc%2CSystem.Byte%5B%5D%2CInt32%2CInt32%2CInt32%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L772">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_CreateSoftMask_" data-uid="pdftron.PDF.Image.CreateSoftMask*"></a>
+  <h4 id="pdftron_PDF_Image_CreateSoftMask_pdftron_SDF_SDFDoc_System_Byte___Int32_Int32_Int32_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Image.CreateSoftMask(pdftron.SDF.SDFDoc,System.Byte[],Int32,Int32,Int32,pdftron.SDF.Obj)">CreateSoftMask(SDFDoc, Byte[], Int32, Int32, Int32, Obj)</h4>
+  <div class="markdown level1 summary"><p>Create and embed a Soft Mask. Embed the raw image data taking into account 
+specified compression hints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image CreateSoftMask(SDFDoc doc, byte[] image_data, Int32 width, Int32 height, Int32 bpc, Obj encoder_hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>A document to which the image should be added. The &apos;Doc&apos; object 
+can be obtained using Obj.GetDoc() or PDFDoc.GetSDFDoc().</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">image_data</span></td>
+        <td><p>The stream or buffer containing image data represented in 
+DeviceGray color space (i.e. one component per sample). The image data must not 
+be compressed and must follow PDF format for sample representation (please refer
+to section 4.8.2 &apos;Sample Representation&apos; in PDF Reference Manual for details).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the image, in samples.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the image, in samples.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">bpc</span></td>
+        <td><p>The number of bits used to represent each color component.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">encoder_hints</span></td>
+        <td><p>An optional parameter that can be used to fine tune 
+compression or to select a different compression algorithm. See Image.Create() 
+for details.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>the image</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L37">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Dispose_" data-uid="pdftron.PDF.Image.Dispose*"></a>
+  <h4 id="pdftron_PDF_Image_Dispose" data-uid="pdftron.PDF.Image.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L42">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Dispose_" data-uid="pdftron.PDF.Image.Dispose*"></a>
+  <h4 id="pdftron_PDF_Image_Dispose_System_Boolean_" data-uid="pdftron.PDF.Image.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Export_pdftron_Filters_FilterWriter_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Export(pdftron.Filters.FilterWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1184">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Export_" data-uid="pdftron.PDF.Image.Export*"></a>
+  <h4 id="pdftron_PDF_Image_Export_pdftron_Filters_FilterWriter_" data-uid="pdftron.PDF.Image.Export(pdftron.Filters.FilterWriter)">Export(FilterWriter)</h4>
+  <div class="markdown level1 summary"><p>Saves this image to the output stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 Export(FilterWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterWriter.html">FilterWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>A pointer to FilterWriter used to write to the
+output stream. If the parameter is null, nothing will be written
+to the output stream, but the function returns the format identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>the number indicating the selected image format:
+(0 - PNG, 1 - TIF, 2 - JPEG).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Image_Export_pdftron_Filters_FilterWriter__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>see the overloaded Image.Export method for more information. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Export_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Export(String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1165">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Export_" data-uid="pdftron.PDF.Image.Export*"></a>
+  <h4 id="pdftron_PDF_Image_Export_String_" data-uid="pdftron.PDF.Image.Export(String)">Export(String)</h4>
+  <div class="markdown level1 summary"><p>Saves this image to a file.</p>
+<p>The output image format (TIFF, JPEG, or PNG) will be
+automatically selected based on the properties of the embedded
+image. For example, if the embedded image is using CCITT Fax
+compression, the output format will be TIFF. Similarly, if the
+embedded image is using JPEG compression the output format will
+be JPEG. If your application needs to explicitly control output
+image format you may want to use ExportAsTiff() or ExportAsPng().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 Export(String filename)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">filename</span></td>
+        <td><p>string that specifies the path name for
+the saved image. The filename should not include the extension
+which will be appended to the filename string based on the output
+format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>the number indicating the selected image format:
+(0 - PNG, 1 - TIF, 2 - JPEG).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_ExportAsPng_pdftron_Filters_FilterWriter_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.ExportAsPng(pdftron.Filters.FilterWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1230">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_ExportAsPng_" data-uid="pdftron.PDF.Image.ExportAsPng*"></a>
+  <h4 id="pdftron_PDF_Image_ExportAsPng_pdftron_Filters_FilterWriter_" data-uid="pdftron.PDF.Image.ExportAsPng(pdftron.Filters.FilterWriter)">ExportAsPng(FilterWriter)</h4>
+  <div class="markdown level1 summary"><p>Saves this image to a PNG output stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExportAsPng(FilterWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterWriter.html">FilterWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>FilterWriter used to write to the output stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_ExportAsPng_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.ExportAsPng(String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1219">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_ExportAsPng_" data-uid="pdftron.PDF.Image.ExportAsPng*"></a>
+  <h4 id="pdftron_PDF_Image_ExportAsPng_String_" data-uid="pdftron.PDF.Image.ExportAsPng(String)">ExportAsPng(String)</h4>
+  <div class="markdown level1 summary"><p>Saves this image to a PNG file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExportAsPng(String filename)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">filename</span></td>
+        <td><p>string that specifies the path name for
+the saved image. The filename should include the file extension</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_ExportAsTiff_pdftron_Filters_FilterWriter_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.ExportAsTiff(pdftron.Filters.FilterWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1208">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_ExportAsTiff_" data-uid="pdftron.PDF.Image.ExportAsTiff*"></a>
+  <h4 id="pdftron_PDF_Image_ExportAsTiff_pdftron_Filters_FilterWriter_" data-uid="pdftron.PDF.Image.ExportAsTiff(pdftron.Filters.FilterWriter)">ExportAsTiff(FilterWriter)</h4>
+  <div class="markdown level1 summary"><p>Saves this image to a TIFF output stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExportAsTiff(FilterWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterWriter.html">FilterWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>FilterWriter used to write to the output stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_ExportAsTiff_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.ExportAsTiff(String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1197">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_ExportAsTiff_" data-uid="pdftron.PDF.Image.ExportAsTiff*"></a>
+  <h4 id="pdftron_PDF_Image_ExportAsTiff_String_" data-uid="pdftron.PDF.Image.ExportAsTiff(String)">ExportAsTiff(String)</h4>
+  <div class="markdown level1 summary"><p>Saves this image to a TIFF file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExportAsTiff(String filename)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">filename</span></td>
+        <td><p>string that specifies the path name for
+the saved image. The filename should include the file extension</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1235">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Finalize_" data-uid="pdftron.PDF.Image.Finalize*"></a>
+  <h4 id="pdftron_PDF_Image_Finalize" data-uid="pdftron.PDF.Image.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the Image </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_GetBitsPerComponent.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.GetBitsPerComponent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1019">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_GetBitsPerComponent_" data-uid="pdftron.PDF.Image.GetBitsPerComponent*"></a>
+  <h4 id="pdftron_PDF_Image_GetBitsPerComponent" data-uid="pdftron.PDF.Image.GetBitsPerComponent">GetBitsPerComponent()</h4>
+  <div class="markdown level1 summary"><p>Gets the bits per component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 GetBitsPerComponent()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>the number of bits used to represent each color component. Only a
+single value may be specified; the number of bits is the same for all color
+components. Valid values are 1, 2, 4, 8, and 16.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_GetComponentNum.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.GetComponentNum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1031">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_GetComponentNum_" data-uid="pdftron.PDF.Image.GetComponentNum*"></a>
+  <h4 id="pdftron_PDF_Image_GetComponentNum" data-uid="pdftron.PDF.Image.GetComponentNum">GetComponentNum()</h4>
+  <div class="markdown level1 summary"><p>Gets the component number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 GetComponentNum()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>the number of color components per sample.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_GetDecodeArray.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.GetDecodeArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1005">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_GetDecodeArray_" data-uid="pdftron.PDF.Image.GetDecodeArray*"></a>
+  <h4 id="pdftron_PDF_Image_GetDecodeArray" data-uid="pdftron.PDF.Image.GetDecodeArray">GetDecodeArray()</h4>
+  <div class="markdown level1 summary"><p>Gets the decode array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetDecodeArray()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>Decode array or NULL if the paramter is not specified. A decode object is an
+array of numbers describing how to map image samples into the range of values
+appropriate for the images color space . If ImageMask is true, the array must be
+either [0 1] or [1 0]; otherwise, its length must be twice the number of color
+components required by ColorSpace. Default value depends on the color space,
+See Table 4.36 in PDF Ref. Manual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_GetImageColorSpace.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.GetImageColorSpace%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L964">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_GetImageColorSpace_" data-uid="pdftron.PDF.Image.GetImageColorSpace*"></a>
+  <h4 id="pdftron_PDF_Image_GetImageColorSpace" data-uid="pdftron.PDF.Image.GetImageColorSpace">GetImageColorSpace()</h4>
+  <div class="markdown level1 summary"><p>Gets the image color space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ColorSpace GetImageColorSpace()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><p>The SDF object representing the color space in which image
+samples are specified or NULL if:</p>
+<ul>
+<li>the image is an image mask</li>
+<li>or is compressed using JPXDecode with missing ColorSpace entry in image dictionary.</li>
+</ul>
+<p>The returned color space may be any type of color space except Pattern.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_GetImageData.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.GetImageData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L928">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_GetImageData_" data-uid="pdftron.PDF.Image.GetImageData*"></a>
+  <h4 id="pdftron_PDF_Image_GetImageData" data-uid="pdftron.PDF.Image.GetImageData">GetImageData()</h4>
+  <div class="markdown level1 summary"><p>Gets the image data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Filter GetImageData()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><p>A stream (filter) containing decoded image data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_GetImageDataSize.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.GetImageDataSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L940">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_GetImageDataSize_" data-uid="pdftron.PDF.Image.GetImageDataSize*"></a>
+  <h4 id="pdftron_PDF_Image_GetImageDataSize" data-uid="pdftron.PDF.Image.GetImageDataSize">GetImageDataSize()</h4>
+  <div class="markdown level1 summary"><p>Gets the image data size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 GetImageDataSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>the size of image data in bytes</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_GetImageHeight.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.GetImageHeight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L988">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_GetImageHeight_" data-uid="pdftron.PDF.Image.GetImageHeight*"></a>
+  <h4 id="pdftron_PDF_Image_GetImageHeight" data-uid="pdftron.PDF.Image.GetImageHeight">GetImageHeight()</h4>
+  <div class="markdown level1 summary"><p>Gets the image height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 GetImageHeight()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>the height of the image, in samples.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_GetImageRenderingIntent.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.GetImageRenderingIntent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1138">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_GetImageRenderingIntent_" data-uid="pdftron.PDF.Image.GetImageRenderingIntent*"></a>
+  <h4 id="pdftron_PDF_Image_GetImageRenderingIntent" data-uid="pdftron.PDF.Image.GetImageRenderingIntent">GetImageRenderingIntent()</h4>
+  <div class="markdown level1 summary"><p>Gets the image rendering intent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GState.RenderingIntent GetImageRenderingIntent()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.GState.RenderingIntent.html">GState.RenderingIntent</a></td>
+        <td><p>The color rendering intent to be used in rendering the image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_GetImageWidth.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.GetImageWidth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L976">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_GetImageWidth_" data-uid="pdftron.PDF.Image.GetImageWidth*"></a>
+  <h4 id="pdftron_PDF_Image_GetImageWidth" data-uid="pdftron.PDF.Image.GetImageWidth">GetImageWidth()</h4>
+  <div class="markdown level1 summary"><p>Gets the image width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 GetImageWidth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>the width of the image, in samples.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_GetMask.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.GetMask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1071">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_GetMask_" data-uid="pdftron.PDF.Image.GetMask*"></a>
+  <h4 id="pdftron_PDF_Image_GetMask" data-uid="pdftron.PDF.Image.GetMask">GetMask()</h4>
+  <div class="markdown level1 summary"><p>Gets the mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetMask()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>an image XObject defining an image mask to be applied to this image (See
+&apos;Explicit Masking&apos;, 4.8.5), or an array specifying a range of colors
+to be applied to it as a color key mask (See &apos;Color Key Masking&apos;).</p>
+<p>If IsImageMask() return true, this method will return NULL.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_GetSDFObj.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.GetSDFObj%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L916">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_GetSDFObj_" data-uid="pdftron.PDF.Image.GetSDFObj*"></a>
+  <h4 id="pdftron_PDF_Image_GetSDFObj" data-uid="pdftron.PDF.Image.GetSDFObj">GetSDFObj()</h4>
+  <div class="markdown level1 summary"><p>Gets the SDFObj.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetSDFObj()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the underlying SDF/Cos object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_GetSoftMask.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.GetSoftMask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1112">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_GetSoftMask_" data-uid="pdftron.PDF.Image.GetSoftMask*"></a>
+  <h4 id="pdftron_PDF_Image_GetSoftMask" data-uid="pdftron.PDF.Image.GetSoftMask">GetSoftMask()</h4>
+  <div class="markdown level1 summary"><p>Gets the soft mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetSoftMask()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>an image XObject defining a Soft Mask to be applied to this image
+(See section 7.5.4 &apos;Soft-Mask Images&apos; in PDF Reference Manual), or NULL
+if the image does not have the soft mask.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_IsImageInterpolate.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.IsImageInterpolate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1055">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_IsImageInterpolate_" data-uid="pdftron.PDF.Image.IsImageInterpolate*"></a>
+  <h4 id="pdftron_PDF_Image_IsImageInterpolate" data-uid="pdftron.PDF.Image.IsImageInterpolate">IsImageInterpolate()</h4>
+  <div class="markdown level1 summary"><p>Checks if is image interpolate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsImageInterpolate()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>a boolean indicating whether image interpolation is to be performed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_IsImageMask.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.IsImageMask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1043">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_IsImageMask_" data-uid="pdftron.PDF.Image.IsImageMask*"></a>
+  <h4 id="pdftron_PDF_Image_IsImageMask" data-uid="pdftron.PDF.Image.IsImageMask">IsImageMask()</h4>
+  <div class="markdown level1 summary"><p>Checks if is image mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsImageMask()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>a boolean indicating whether the inline image is to be treated as an image mask.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_IsValid.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.IsValid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L904">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_IsValid_" data-uid="pdftron.PDF.Image.IsValid*"></a>
+  <h4 id="pdftron_PDF_Image_IsValid" data-uid="pdftron.PDF.Image.IsValid">IsValid()</h4>
+  <div class="markdown level1 summary"><p>Checks if is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsValid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>whether this is a valid raster image. If the function returns false the
+underlying SDF/Cos object is not a valid raster image and this Image object should
+be treated as null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_op_Assign_pdftron_PDF_Image_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.op_Assign(pdftron.PDF.Image)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L890">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_op_Assign_" data-uid="pdftron.PDF.Image.op_Assign*"></a>
+  <h4 id="pdftron_PDF_Image_op_Assign_pdftron_PDF_Image_" data-uid="pdftron.PDF.Image.op_Assign(pdftron.PDF.Image)">op_Assign(Image)</h4>
+  <div class="markdown level1 summary"><p>Assignment operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Image op_Assign(Image r)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><span class="parametername">r</span></td>
+        <td><p>an given <code>Image</code> object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><p>an <code>Image</code> object that equals to the given object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_Set_pdftron_PDF_Image_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.Set(pdftron.PDF.Image)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L881">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_Set_" data-uid="pdftron.PDF.Image.Set*"></a>
+  <h4 id="pdftron_PDF_Image_Set_pdftron_PDF_Image_" data-uid="pdftron.PDF.Image.Set(pdftron.PDF.Image)">Set(Image)</h4>
+  <div class="markdown level1 summary"><p>Sets value to the given image value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(Image p)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><span class="parametername">p</span></td>
+        <td><p>image object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_SetMask_pdftron_PDF_Image_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.SetMask(pdftron.PDF.Image)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1085">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_SetMask_" data-uid="pdftron.PDF.Image.SetMask*"></a>
+  <h4 id="pdftron_PDF_Image_SetMask_pdftron_PDF_Image_" data-uid="pdftron.PDF.Image.SetMask(pdftron.PDF.Image)">SetMask(Image)</h4>
+  <div class="markdown level1 summary"><p>Set an Explicit Image Mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMask(Image image_mask)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><span class="parametername">image_mask</span></td>
+        <td><p>the new mask</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Image_SetMask_pdftron_PDF_Image__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>image_mask must be a valid image mask (i.e. image_mask.IsImageMask() must 
+return true.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_SetMask_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.SetMask(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1100">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_SetMask_" data-uid="pdftron.PDF.Image.SetMask*"></a>
+  <h4 id="pdftron_PDF_Image_SetMask_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Image.SetMask(pdftron.SDF.Obj)">SetMask(Obj)</h4>
+  <div class="markdown level1 summary"><p>Set a Color Key Mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMask(Obj mask)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">mask</span></td>
+        <td><p>is an Cos/SDF array specifying a range of colors to be masked
+out. Samples in the image that fall within this range are not painted, allowing
+the existing background to show through. The effect is similar to that of the
+video technique known as chroma-key. For details of the array format please
+refer to section 4.8.5 &apos;Color Key Masking&apos; in PDF Reference Manual.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Image_SetMask_pdftron_SDF_Obj__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>the current document takes the ownership of the given SDF object. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image_SetSoftMask_pdftron_PDF_Image_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image.SetSoftMask(pdftron.PDF.Image)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L1128">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Image_SetSoftMask_" data-uid="pdftron.PDF.Image.SetSoftMask*"></a>
+  <h4 id="pdftron_PDF_Image_SetSoftMask_pdftron_PDF_Image_" data-uid="pdftron.PDF.Image.SetSoftMask(pdftron.PDF.Image)">SetSoftMask(Image)</h4>
+  <div class="markdown level1 summary"><p>Set a Soft Mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSoftMask(Image soft_mask)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><span class="parametername">soft_mask</span></td>
+        <td><p>is a subsidiary Image object defining a soft-mask image
+(See section 7.5.4 &apos;Soft-Mask Images&apos; in PDF Reference Manual) to be used
+as a source of mask shape or mask opacity values in the transparent imaging
+model. The alpha source parameter in the graphics state determines whether
+the mask values are interpreted as shape or opacity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Image.md&amp;value=---%0Auid%3A%20pdftron.PDF.Image%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Image.cs/#L24" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

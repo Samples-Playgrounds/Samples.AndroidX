@@ -1,0 +1,1446 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ElementReader
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ElementReader
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.ElementReader">
+  
+  
+  <h1 id="pdftron_PDF_ElementReader" data-uid="pdftron.PDF.ElementReader" class="text-break">Class ElementReader
+  </h1>
+  <div class="markdown level0 summary"><p>ElementReader can be used to parse and process content streams. ElementReader provides a 
+convenient interface used to traverse the Element display list of a page. The display list 
+representing graphical elements (such as text-runs, paths, images, shadings, forms, etc) is 
+accessed using the intrinsic iterator. ElementReader automatically concatenates page contents
+spanning multiple streams and provides a mechanism to parse contents of sub-display lists 
+(e.g. forms XObjects and Type3 fonts).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ElementReader</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_ElementReader_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ElementReader : IDisposable</code></pre>
+  </div>
+  <h5 id="pdftron_PDF_ElementReader_examples"><strong>Examples</strong></h5>
+  <p>For a full sample, please refer to ElementReader and ElementReaderAdv sample projects.
+A sample use case for ElementReader is given below: </p>
+<pre><code>  
+...
+ElementReader reader=new ElementReader();
+reader.Begin(page);
+for (Element element=reader.next(); element!=null;element=reader.next()) {
+Rect bbox;
+if((bbox=element.getBBox())!=null) System.out.println(&quot;Bounding Box: &quot; + bbox.getRectangle());
+switch (element.getType())  {
+case Element.e_path: { // Process path data...
+double[] data = element.getPathPoints();
+}
+break; 
+case Element.e_text: 
+// ...
+break;
+}
+}
+reader.End();       </code></pre>   
+
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader__ctor.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L91">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader__ctor_" data-uid="pdftron.PDF.ElementReader.#ctor*"></a>
+  <h4 id="pdftron_PDF_ElementReader__ctor" data-uid="pdftron.PDF.ElementReader.#ctor">ElementReader()</h4>
+  <div class="markdown level1 summary"><p>Instantiates a new element reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ElementReader()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_Begin_pdftron_PDF_Page_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.Begin(pdftron.PDF.Page)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L103">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_Begin_" data-uid="pdftron.PDF.ElementReader.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementReader_Begin_pdftron_PDF_Page_" data-uid="pdftron.PDF.ElementReader.Begin(pdftron.PDF.Page)">Begin(Page)</h4>
+  <div class="markdown level1 summary"><p>Begin processing a page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Page page)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>A page to start processing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementReader_Begin_pdftron_PDF_Page__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When page processing is completed, make sure to call ElementReader.End(). </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_Begin_pdftron_PDF_Page_pdftron_PDF_OCG_Context_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.Begin(pdftron.PDF.Page%2Cpdftron.PDF.OCG.Context)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L116">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_Begin_" data-uid="pdftron.PDF.ElementReader.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementReader_Begin_pdftron_PDF_Page_pdftron_PDF_OCG_Context_" data-uid="pdftron.PDF.ElementReader.Begin(pdftron.PDF.Page,pdftron.PDF.OCG.Context)">Begin(Page, Context)</h4>
+  <div class="markdown level1 summary"><p>Begin processing a page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Page page, Context ctx)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>A page to start processing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.Context.html">Context</a></td>
+        <td><span class="parametername">ctx</span></td>
+        <td><p>the ctx</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementReader_Begin_pdftron_PDF_Page_pdftron_PDF_OCG_Context__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When page processing is completed, make sure to call ElementReader.End(). </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_Begin_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.Begin(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L130">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_Begin_" data-uid="pdftron.PDF.ElementReader.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementReader_Begin_pdftron_SDF_Obj_" data-uid="pdftron.PDF.ElementReader.Begin(pdftron.SDF.Obj)">Begin(Obj)</h4>
+  <div class="markdown level1 summary"><p>Begin processing given content stream. The content stream may be
+a Form XObject, Type3 glyph stream, pattern stream or any other content stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Obj content_stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">content_stream</span></td>
+        <td><ul>
+<li>A stream object representing the content stream (usually
+a Form XObject).</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementReader_Begin_pdftron_SDF_Obj__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When page processing is completed, make sure to call ElementReader.End(). </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_Begin_pdftron_SDF_Obj_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.Begin(pdftron.SDF.Obj%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L148">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_Begin_" data-uid="pdftron.PDF.ElementReader.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementReader_Begin_pdftron_SDF_Obj_pdftron_SDF_Obj_" data-uid="pdftron.PDF.ElementReader.Begin(pdftron.SDF.Obj,pdftron.SDF.Obj)">Begin(Obj, Obj)</h4>
+  <div class="markdown level1 summary"><p>Begin processing given content stream. The content stream may be
+a Form XObject, Type3 glyph stream, pattern stream or any other content stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Obj content_stream, Obj resource_dict)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">content_stream</span></td>
+        <td><ul>
+<li>A stream object representing the content stream (usually
+a Form XObject).</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">resource_dict</span></td>
+        <td><ul>
+<li>An optional &apos;/Resource&apos; dictionary parameter.
+If content stream refers to named resources that are not present in
+the local Resource dictionary, the names are looked up in the supplied
+resource dictionary.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementReader_Begin_pdftron_SDF_Obj_pdftron_SDF_Obj__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When page processing is completed, make sure to call ElementReader.End(). </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_Begin_pdftron_SDF_Obj_pdftron_SDF_Obj_pdftron_PDF_OCG_Context_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.Begin(pdftron.SDF.Obj%2Cpdftron.SDF.Obj%2Cpdftron.PDF.OCG.Context)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L168">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_Begin_" data-uid="pdftron.PDF.ElementReader.Begin*"></a>
+  <h4 id="pdftron_PDF_ElementReader_Begin_pdftron_SDF_Obj_pdftron_SDF_Obj_pdftron_PDF_OCG_Context_" data-uid="pdftron.PDF.ElementReader.Begin(pdftron.SDF.Obj,pdftron.SDF.Obj,pdftron.PDF.OCG.Context)">Begin(Obj, Obj, Context)</h4>
+  <div class="markdown level1 summary"><p>Begin processing given content stream. The content stream may be
+a Form XObject, Type3 glyph stream, pattern stream or any other content stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Obj content_stream, Obj resource_dict, Context ctx)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">content_stream</span></td>
+        <td><ul>
+<li>A stream object representing the content stream (usually
+a Form XObject).</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">resource_dict</span></td>
+        <td><ul>
+<li>An optional &apos;/Resource&apos; dictionary parameter.
+If content stream refers to named resources that are not present in
+the local Resource dictionary, the names are looked up in the supplied
+resource dictionary.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.Context.html">Context</a></td>
+        <td><span class="parametername">ctx</span></td>
+        <td><p>the ctx</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementReader_Begin_pdftron_SDF_Obj_pdftron_SDF_Obj_pdftron_PDF_OCG_Context__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When page processing is completed, make sure to call ElementReader.End(). </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_ClearChangeList.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.ClearChangeList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L330">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_ClearChangeList_" data-uid="pdftron.PDF.ElementReader.ClearChangeList*"></a>
+  <h4 id="pdftron_PDF_ElementReader_ClearChangeList" data-uid="pdftron.PDF.ElementReader.ClearChangeList">ClearChangeList()</h4>
+  <div class="markdown level1 summary"><p>Clear the list containing identifiers of modified graphics state attributes.
+The list of modified attributes is then accumulated during a subsequent call(s)
+to ElementReader.Next().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearChangeList()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_Current.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.Current%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L200">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_Current_" data-uid="pdftron.PDF.ElementReader.Current*"></a>
+  <h4 id="pdftron_PDF_ElementReader_Current" data-uid="pdftron.PDF.ElementReader.Current">Current()</h4>
+  <div class="markdown level1 summary"><p>Current.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Element Current()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Element.html">Element</a></td>
+        <td><p>the current Element or a &apos;NULL&apos; Element. The current element is the one
+returned in the last call to Next().</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementReader_Current_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Every call to ElementReader::Next() destroys the current Element. Therefore, an
+Element becomes invalid after subsequent ElementReader::Next() operation.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L77">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_Destroy_" data-uid="pdftron.PDF.ElementReader.Destroy*"></a>
+  <h4 id="pdftron_PDF_ElementReader_Destroy" data-uid="pdftron.PDF.ElementReader.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L60">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_Dispose_" data-uid="pdftron.PDF.ElementReader.Dispose*"></a>
+  <h4 id="pdftron_PDF_ElementReader_Dispose" data-uid="pdftron.PDF.ElementReader.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L65">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_Dispose_" data-uid="pdftron.PDF.ElementReader.Dispose*"></a>
+  <h4 id="pdftron_PDF_ElementReader_Dispose_System_Boolean_" data-uid="pdftron.PDF.ElementReader.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_End.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.End%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L286">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_End_" data-uid="pdftron.PDF.ElementReader.End*"></a>
+  <h4 id="pdftron_PDF_ElementReader_End" data-uid="pdftron.PDF.ElementReader.End">End()</h4>
+  <div class="markdown level1 summary"><p>Close the current display list.</p>
+<p>If the current display list is a sub-list created using FormBegin(), PatternBegin(),
+or Type3FontBegin() methods, the function will end the sub-list and will return
+processing to the parent display list at the point where it left off before
+entering the sub-list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool End()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the closed display list is a sub-list or false if it is a root
+display list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L55">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_Finalize_" data-uid="pdftron.PDF.ElementReader.Finalize*"></a>
+  <h4 id="pdftron_PDF_ElementReader_Finalize" data-uid="pdftron.PDF.ElementReader.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the ElementReader </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_FormBegin.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.FormBegin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L220">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_FormBegin_" data-uid="pdftron.PDF.ElementReader.FormBegin*"></a>
+  <h4 id="pdftron_PDF_ElementReader_FormBegin" data-uid="pdftron.PDF.ElementReader.FormBegin">FormBegin()</h4>
+  <div class="markdown level1 summary"><p>When the current element is a form XObject you have the option to skip form
+processing (by not calling FormBegin()) or to open the form stream and
+continue Element traversal into the form.</p>
+<p>To open a form XObject display list use FormBegin() method. The Next() returned
+Element will be the first Element in the form XObject display list. Subsequent calls to Next()
+will traverse form&apos;s display list until NULL is returned. At any point you can
+close the form sub-list using ElementReader::End() method. After the form display
+list is closed (using End()) the processing will return to the parent display list
+at the point where it left off before entering the form XObject.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FormBegin()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_GetChangesIterator.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.GetChangesIterator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L303">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_GetChangesIterator_" data-uid="pdftron.PDF.ElementReader.GetChangesIterator*"></a>
+  <h4 id="pdftron_PDF_ElementReader_GetChangesIterator" data-uid="pdftron.PDF.ElementReader.GetChangesIterator">GetChangesIterator()</h4>
+  <div class="markdown level1 summary"><p>Gets the changes iterator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GSChangesIterator GetChangesIterator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.GSChangesIterator.html">GSChangesIterator</a></td>
+        <td><p>an iterator to the beginning of the list containing identifiers of modified
+graphics state attributes since the last call to ClearChangeList(). The list can
+be consulted to determine which graphics states were modified between two
+Elements. Attributes are ordered in the same way as they are set in the content
+stream. Duplicate attributes are eliminated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_GetColorSpace_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.GetColorSpace(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L391">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_GetColorSpace_" data-uid="pdftron.PDF.ElementReader.GetColorSpace*"></a>
+  <h4 id="pdftron_PDF_ElementReader_GetColorSpace_System_String_" data-uid="pdftron.PDF.ElementReader.GetColorSpace(System.String)">GetColorSpace(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the color space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetColorSpace(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>the name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the color space</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementReader_GetColorSpace_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>see ElementReader::GetFont </p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_GetExtGState_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.GetExtGState(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L419">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_GetExtGState_" data-uid="pdftron.PDF.ElementReader.GetExtGState*"></a>
+  <h4 id="pdftron_PDF_ElementReader_GetExtGState_System_String_" data-uid="pdftron.PDF.ElementReader.GetExtGState(System.String)">GetExtGState(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the ext g state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetExtGState(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>the name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the ext g state</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementReader_GetExtGState_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>see ElementReader::GetFont </p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_GetFont_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.GetFont(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L349">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_GetFont_" data-uid="pdftron.PDF.ElementReader.GetFont*"></a>
+  <h4 id="pdftron_PDF_ElementReader_GetFont_System_String_" data-uid="pdftron.PDF.ElementReader.GetFont(System.String)">GetFont(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetFont(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>the name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>SDF/Cos object matching the specified name in the current resource
+dictionary. For &apos;Page&apos; the name is looked up in the page&apos;s /Resources/&lt;Class&gt;
+dictionary. For Form XObjects, Patterns, and Type3 fonts that have a content
+stream within page content stream the specified resource is first looked-up in the
+resource dictionary of the inner stream. If the resource is not found, the name is
+looked up in the outer content stream’s resource dictionary. The function returns
+NULL if the resource was not found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_GetPattern_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.GetPattern(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L405">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_GetPattern_" data-uid="pdftron.PDF.ElementReader.GetPattern*"></a>
+  <h4 id="pdftron_PDF_ElementReader_GetPattern_System_String_" data-uid="pdftron.PDF.ElementReader.GetPattern(System.String)">GetPattern(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the pattern.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetPattern(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>the name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the pattern</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementReader_GetPattern_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>see ElementReader::GetFont </p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_GetShading_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.GetShading(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L377">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_GetShading_" data-uid="pdftron.PDF.ElementReader.GetShading*"></a>
+  <h4 id="pdftron_PDF_ElementReader_GetShading_System_String_" data-uid="pdftron.PDF.ElementReader.GetShading(System.String)">GetShading(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the shading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetShading(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>the name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the shading</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementReader_GetShading_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>see ElementReader::GetFont </p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_GetXObject_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.GetXObject(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L363">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_GetXObject_" data-uid="pdftron.PDF.ElementReader.GetXObject*"></a>
+  <h4 id="pdftron_PDF_ElementReader_GetXObject_System_String_" data-uid="pdftron.PDF.ElementReader.GetXObject(System.String)">GetXObject(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the x object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetXObject(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>the name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the x object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementReader_GetXObject_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>see ElementReader::GetFont </p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_IsChanged_pdftron_PDF_GState_GStateAttribute_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.IsChanged(pdftron.PDF.GState.GStateAttribute)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L318">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_IsChanged_" data-uid="pdftron.PDF.ElementReader.IsChanged*"></a>
+  <h4 id="pdftron_PDF_ElementReader_IsChanged_pdftron_PDF_GState_GStateAttribute_" data-uid="pdftron.PDF.ElementReader.IsChanged(pdftron.PDF.GState.GStateAttribute)">IsChanged(GState.GStateAttribute)</h4>
+  <div class="markdown level1 summary"><p>Checks if is changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsChanged(GState.GStateAttribute attrib)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.GState.GStateAttribute.html">GState.GStateAttribute</a></td>
+        <td><span class="parametername">attrib</span></td>
+        <td><p>the gstate_attrib</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if given GState attribute was changed since the last call to
+ClearChangeList().</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_Next.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.Next%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L184">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_Next_" data-uid="pdftron.PDF.ElementReader.Next*"></a>
+  <h4 id="pdftron_PDF_ElementReader_Next" data-uid="pdftron.PDF.ElementReader.Next">Next()</h4>
+  <div class="markdown level1 summary"><p>Next.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Element Next()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Element.html">Element</a></td>
+        <td><p>a page Element or a &apos;NULL&apos; element if the end of current-display list was
+reached. You may use GetType() to determine the type of the returned Element.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ElementReader_Next_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Every call to ElementReader::Next() destroys the current Element.
+Therefore, an Element becomes invalid after subsequent
+ElementReader::Next() operation.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_PatternBegin_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.PatternBegin(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L230">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_PatternBegin_" data-uid="pdftron.PDF.ElementReader.PatternBegin*"></a>
+  <h4 id="pdftron_PDF_ElementReader_PatternBegin_System_Boolean_" data-uid="pdftron.PDF.ElementReader.PatternBegin(System.Boolean)">PatternBegin(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Pattern begin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PatternBegin(bool fill_pattern)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">fill_pattern</span></td>
+        <td><p>the fill_pattern</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_PatternBegin_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.PatternBegin(System.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L257">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_PatternBegin_" data-uid="pdftron.PDF.ElementReader.PatternBegin*"></a>
+  <h4 id="pdftron_PDF_ElementReader_PatternBegin_System_Boolean_System_Boolean_" data-uid="pdftron.PDF.ElementReader.PatternBegin(System.Boolean,System.Boolean)">PatternBegin(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>A method used to spawn the sub-display list representing the tiling pattern
+of the current element in the ElementReader. You can call this method at any
+point as long as the current element is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PatternBegin(bool fill_pattern, bool reset_ctm_tfm)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">fill_pattern</span></td>
+        <td><p>If true, the filling pattern of the current element will
+be spawned; otherwise, the stroking pattern of the current element will be
+spawned. Note that the graphics state will be inherited from the parent content
+stream (the content stream in which the pattern is defined as a resource) automatically.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">reset_ctm_tfm</span></td>
+        <td><p>An optional parameter used to indicate whether the pattern&apos;s
+display list should set its initial CTM and transformation matrices to identity matrix.
+In general, we should leave it to be false.</p>
+<p>To open a tiling pattern sub-display list use PatternBegin() method.
+The Next() returned Element will be the first Element in the pattern display list.
+Subsequent calls to Next() will traverse pattern&apos;s display list until NULL is
+encountered. At any point you can close the pattern sub-list using
+ElementReader::End() method. After the pattern display list is closed,
+the processing will return to the parent display list at the point where
+pattern display list was spawned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader_Type3FontBegin_pdftron_PDF_CharData_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader.Type3FontBegin(pdftron.PDF.CharData)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L270">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ElementReader_Type3FontBegin_" data-uid="pdftron.PDF.ElementReader.Type3FontBegin*"></a>
+  <h4 id="pdftron_PDF_ElementReader_Type3FontBegin_pdftron_PDF_CharData_" data-uid="pdftron.PDF.ElementReader.Type3FontBegin(pdftron.PDF.CharData)">Type3FontBegin(CharData)</h4>
+  <div class="markdown level1 summary"><p>A method used to spawn a sub-display list representing a Type3 Font glyph. You can
+call this method at any point as long as the current element in the ElementReader
+is a text element whose font type is type 3.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Type3FontBegin(CharData char_data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.CharData.html">CharData</a></td>
+        <td><span class="parametername">char_data</span></td>
+        <td><p>The information about the glyph to process. You can get this information
+by dereferencing a CharIterator.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ElementReader.md&amp;value=---%0Auid%3A%20pdftron.PDF.ElementReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ElementReader.cs/#L49" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

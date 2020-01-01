@@ -1,0 +1,534 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Flattener
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Flattener
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.Flattener">
+  
+  
+  <h1 id="pdftron_PDF_Flattener" data-uid="pdftron.PDF.Flattener" class="text-break">Class Flattener
+  </h1>
+  <div class="markdown level0 summary"><p>Flattener is a optional PDFNet add-on that can be used to simplify and optimize 
+existing PDF&apos;s to render faster on devices with lower memory and speeds.</p>
+<p>PDF documents can frequently contain very complex page description (e.g. 
+thousands of paths, different shadings, color spaces, blend modes, large images 
+etc.) that may not be suitable for interactive viewing on mobile devices.
+Flattener can be used to speed-up PDF rendering on mobile devices and on the Web 
+by simplifying page content (e.g. flattening complex graphics into images) while 
+maintaining vector text whenever possible.</p>
+<p>By using the FlattenMode::e_simple option each page in the PDF will be
+reduced to a single background image, with the remaining text over top in vector
+format. Some text may still get flattened, in particular any text that is clipped, 
+or underneath, other content that will be flattened.</p>
+<p>On the other hand the FlattenMode::e_fast will not flatten simple content, such
+as simple straight lines, nor will it flatten Type3 fonts.</p>
+<p>@note &apos;Flattener&apos; is available as a separately licensable add-on to PDFNet 
+core license or for use via Cloud API (<a href="http://www.pdftron.com/pdfnet/cloud">http://www.pdftron.com/pdfnet/cloud</a>).</p>
+<p>@note See &apos;pdftron.PDF.Optimizer&apos; for alternate approach to optimize PDFs with 
+focus on file size reduction.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Flattener</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_Flattener_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Flattener : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener__ctor.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L79">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener__ctor_" data-uid="pdftron.PDF.Flattener.#ctor*"></a>
+  <h4 id="pdftron_PDF_Flattener__ctor" data-uid="pdftron.PDF.Flattener.#ctor">Flattener()</h4>
+  <div class="markdown level1 summary"><p>Flattener constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Flattener()</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L67">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener_Destroy_" data-uid="pdftron.PDF.Flattener.Destroy*"></a>
+  <h4 id="pdftron_PDF_Flattener_Destroy" data-uid="pdftron.PDF.Flattener.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L49">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener_Dispose_" data-uid="pdftron.PDF.Flattener.Dispose*"></a>
+  <h4 id="pdftron_PDF_Flattener_Dispose" data-uid="pdftron.PDF.Flattener.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L55">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener_Dispose_" data-uid="pdftron.PDF.Flattener.Dispose*"></a>
+  <h4 id="pdftron_PDF_Flattener_Dispose_System_Boolean_" data-uid="pdftron.PDF.Flattener.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L45">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener_Finalize_" data-uid="pdftron.PDF.Flattener.Finalize*"></a>
+  <h4 id="pdftron_PDF_Flattener_Finalize" data-uid="pdftron.PDF.Flattener.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener_Process_pdftron_PDF_Page_pdftron_PDF_Flattener_FlattenMode_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.Process(pdftron.PDF.Page%2Cpdftron.PDF.Flattener.FlattenMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L156">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener_Process_" data-uid="pdftron.PDF.Flattener.Process*"></a>
+  <h4 id="pdftron_PDF_Flattener_Process_pdftron_PDF_Page_pdftron_PDF_Flattener_FlattenMode_" data-uid="pdftron.PDF.Flattener.Process(pdftron.PDF.Page,pdftron.PDF.Flattener.FlattenMode)">Process(Page, Flattener.FlattenMode)</h4>
+  <div class="markdown level1 summary"><p>Process the given page, flattening content that matches the mode criteria.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Process(Page page, Flattener.FlattenMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>the page to flatten.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Flattener.FlattenMode.html">Flattener.FlattenMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td><p>indicates the criteria for which elements are flattened.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener_Process_pdftron_PDF_PDFDoc_pdftron_PDF_Flattener_FlattenMode_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.Process(pdftron.PDF.PDFDoc%2Cpdftron.PDF.Flattener.FlattenMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L168">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener_Process_" data-uid="pdftron.PDF.Flattener.Process*"></a>
+  <h4 id="pdftron_PDF_Flattener_Process_pdftron_PDF_PDFDoc_pdftron_PDF_Flattener_FlattenMode_" data-uid="pdftron.PDF.Flattener.Process(pdftron.PDF.PDFDoc,pdftron.PDF.Flattener.FlattenMode)">Process(PDFDoc, Flattener.FlattenMode)</h4>
+  <div class="markdown level1 summary"><p>Process each page in the PDF, flattening content that matches the mode criteria.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Process(PDFDoc doc, Flattener.FlattenMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the document to flatten.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Flattener.FlattenMode.html">Flattener.FlattenMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td><p>indicates the criteria for which elements are flattened.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener_SetDPI_UInt32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.SetDPI(UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L91">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener_SetDPI_" data-uid="pdftron.PDF.Flattener.SetDPI*"></a>
+  <h4 id="pdftron_PDF_Flattener_SetDPI_UInt32_" data-uid="pdftron.PDF.Flattener.SetDPI(UInt32)">SetDPI(UInt32)</h4>
+  <div class="markdown level1 summary"><p>The output resolution, from 1 to 1000, in Dots Per Inch (DPI) at which to 
+render elements which cannot be directly converted. 
+the default value is 96 Dots Per Inch</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDPI(UInt32 dpi)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UInt32</span></td>
+        <td><span class="parametername">dpi</span></td>
+        <td><p>the resolution in Dots Per Inch</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener_SetJPGQuality_UInt32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.SetJPGQuality(UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L121">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener_SetJPGQuality_" data-uid="pdftron.PDF.Flattener.SetJPGQuality*"></a>
+  <h4 id="pdftron_PDF_Flattener_SetJPGQuality_UInt32_" data-uid="pdftron.PDF.Flattener.SetJPGQuality(UInt32)">SetJPGQuality(UInt32)</h4>
+  <div class="markdown level1 summary"><p>Specifies the compression quality to use when generating JPEG images.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetJPGQuality(UInt32 quality)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UInt32</span></td>
+        <td><span class="parametername">quality</span></td>
+        <td><p>the JPEG compression quality, from 0(highest compression) to 100(best quality).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener_SetMaximumImagePixels_UInt32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.SetMaximumImagePixels(UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L101">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener_SetMaximumImagePixels_" data-uid="pdftron.PDF.Flattener.SetMaximumImagePixels*"></a>
+  <h4 id="pdftron_PDF_Flattener_SetMaximumImagePixels_UInt32_" data-uid="pdftron.PDF.Flattener.SetMaximumImagePixels(UInt32)">SetMaximumImagePixels(UInt32)</h4>
+  <div class="markdown level1 summary"><p>Specifies the maximum image size in pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMaximumImagePixels(UInt32 max_pixels)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UInt32</span></td>
+        <td><span class="parametername">max_pixels</span></td>
+        <td><p>the maximum number of pixels an image can have.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener_SetPathHinting_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.SetPathHinting(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L144">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener_SetPathHinting_" data-uid="pdftron.PDF.Flattener.SetPathHinting*"></a>
+  <h4 id="pdftron_PDF_Flattener_SetPathHinting_System_Boolean_" data-uid="pdftron.PDF.Flattener.SetPathHinting(System.Boolean)">SetPathHinting(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable path hinting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPathHinting(bool path_hinting)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">path_hinting</span></td>
+        <td><p>if true path hinting is enabled. Path hinting is used to slightly
+adjust paths in order to avoid or alleviate artifacts of hair line cracks between
+certain graphical elements. This option is turned on by default. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener_SetPreferJPG_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.SetPreferJPG(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L111">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener_SetPreferJPG_" data-uid="pdftron.PDF.Flattener.SetPreferJPG*"></a>
+  <h4 id="pdftron_PDF_Flattener_SetPreferJPG_System_Boolean_" data-uid="pdftron.PDF.Flattener.SetPreferJPG(System.Boolean)">SetPreferJPG(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to leave images in existing compression, or as JPEG.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPreferJPG(bool jpg)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">jpg</span></td>
+        <td><p>if true PDF will contain all JPEG images.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener_SetThreshold_pdftron_PDF_Flattener_Threshold_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener.SetThreshold(pdftron.PDF.Flattener.Threshold)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L132">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Flattener_SetThreshold_" data-uid="pdftron.PDF.Flattener.SetThreshold*"></a>
+  <h4 id="pdftron_PDF_Flattener_SetThreshold_pdftron_PDF_Flattener_Threshold_" data-uid="pdftron.PDF.Flattener.SetThreshold(pdftron.PDF.Flattener.Threshold)">SetThreshold(Flattener.Threshold)</h4>
+  <div class="markdown level1 summary"><p>Used to control how precise or relaxed text flattening is. When some text is 
+preserved (not flattened to image) the visual appearance of the document may be altered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetThreshold(Flattener.Threshold threshold)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Flattener.Threshold.html">Flattener.Threshold</a></td>
+        <td><span class="parametername">threshold</span></td>
+        <td><p>the threshold setting to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Flattener.md&amp;value=---%0Auid%3A%20pdftron.PDF.Flattener%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Flattener.cs/#L36" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

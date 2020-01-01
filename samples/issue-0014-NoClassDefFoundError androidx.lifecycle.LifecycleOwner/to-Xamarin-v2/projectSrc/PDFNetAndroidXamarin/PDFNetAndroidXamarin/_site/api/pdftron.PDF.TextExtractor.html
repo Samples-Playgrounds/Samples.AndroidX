@@ -1,0 +1,782 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TextExtractor
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TextExtractor
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.TextExtractor">
+  
+  
+  <h1 id="pdftron_PDF_TextExtractor" data-uid="pdftron.PDF.TextExtractor" class="text-break">Class TextExtractor
+  </h1>
+  <div class="markdown level0 summary"><param>
+TextExtractor is used to analyze a PDF page and extract words and logical 
+structures that are visible within a given region. The resulting list of 
+lines and words can be traversed element by element or accessed as a 
+string buffer. The class also includes utility methods to extract PDF 
+text as HTML or XML.<br>
+
+<p>Possible use case scenarios for TextExtractor include:
+<ul><li>Converting PDF pages to text or XML for content repurposing.</li><li>Searching PDF pages for specific words or keywords.</li><li>Indexing large PDF repositories for indexing or content.</li></ul>
+retrieval purposes (i.e. implementing a PDF search engine).
+<ul><li>Classifying or summarizing PDF documents based on their text content.</li><li>Finding specific words for content editing purposes (such as splitting pages.</li></ul>
+The main task of TextExtractor is to interpret PDF pages and offer a 
+simple to use API to: 
+<ul><li>Normalize all text content to Unicode.</li><li>Extract inferred logical structure (word by word, line by line, 
+or paragraph by paragraph).</li><li>Extract positioning information for every line, word, or a glyph.</li><li>Extract style information (such as information about the font, font size,
+font styles, etc) for every line, word, or a glyph.</li><li>Control the content analysis process. A number of options (such as 
+removal of text obscured by images) is available to let the user 
+direct the flow of content recognition algorithms that will meet their
+requirements.</li><li>Offer utility methods to convert PDF page content to text, XML, or HTML.</li></ul></p>
+<p><remarks>
+<p>TextExtractor is analyzing only textual content of the page.
+This means that the rasterized (e.g. in scanned pages) or vectorized
+text (where glyphs are converted to path outlines) will not be recognized 
+as text. Please note that it is still possible to extract this content 
+using pdftron.PDF.ElementReader interface.
+</p>
+<p>
+In some cases TextExtractor may extract text that does not appear to 
+be on the visible page (e.g. when text is obscured by an image or a 
+rectangle). In these situations it is possible to use processing flags
+such as &apos;e_remove_hidden_text&apos; and &apos;e_no_invisible_text&apos; to remove 
+hidden text. 
+</p>
+</remarks>
+<example>
+For full sample code, please take a look at TextExtract sample project.    <p>
+<pre><code>  
+//... Initialize PDFNet ...
+PDFDoc doc = new PDFDoc(filein);
+doc.initSecurityHandler();
+Page page = doc.pageBegin().current();
+TextExtractor txt = new TextExtractor();
+txt.begin(page, 0, TextExtractor.ProcessingFlags.e_remove_hidden_text);
+string text = txt.getAsText();
+// or traverse words one by one...
+TextExtractor.Word word;
+for (TextExtractor.Line line = txt.GetFirstLine(); line.IsValid(); line=line.GetNextLine()) {
+for (word=line.GetFirstWord(); word.IsValid(); word=word.GetNextWord()) {
+string w = word.GetString();
+}
+}</code></pre>
+<p></example></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TextExtractor</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_TextExtractor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TextExtractor : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor__ctor.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L118">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor__ctor_" data-uid="pdftron.PDF.TextExtractor.#ctor*"></a>
+  <h4 id="pdftron_PDF_TextExtractor__ctor" data-uid="pdftron.PDF.TextExtractor.#ctor">TextExtractor()</h4>
+  <div class="markdown level1 summary"><p>Constructor and destructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextExtractor()</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_Begin_pdftron_PDF_Page_.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.Begin(pdftron.PDF.Page)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L125">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_Begin_" data-uid="pdftron.PDF.TextExtractor.Begin*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_Begin_pdftron_PDF_Page_" data-uid="pdftron.PDF.TextExtractor.Begin(pdftron.PDF.Page)">Begin(Page)</h4>
+  <div class="markdown level1 summary"><p>Start reading the page. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Page page)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>Page to read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_Begin_pdftron_PDF_Page_pdftron_PDF_Rect_.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.Begin(pdftron.PDF.Page%2Cpdftron.PDF.Rect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L137">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_Begin_" data-uid="pdftron.PDF.TextExtractor.Begin*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_Begin_pdftron_PDF_Page_pdftron_PDF_Rect_" data-uid="pdftron.PDF.TextExtractor.Begin(pdftron.PDF.Page,pdftron.PDF.Rect)">Begin(Page, Rect)</h4>
+  <div class="markdown level1 summary"><p>Start reading the page. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Page page, Rect clip_ptr)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>Page to read.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">clip_ptr</span></td>
+        <td><p>A pointer to the optional clipping rectangle. This 
+parameter can be used to selectively read text from a given rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_Begin_pdftron_PDF_Page_pdftron_PDF_Rect_pdftron_PDF_TextExtractor_ProcessingFlags_.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.Begin(pdftron.PDF.Page%2Cpdftron.PDF.Rect%2Cpdftron.PDF.TextExtractor.ProcessingFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L152">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_Begin_" data-uid="pdftron.PDF.TextExtractor.Begin*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_Begin_pdftron_PDF_Page_pdftron_PDF_Rect_pdftron_PDF_TextExtractor_ProcessingFlags_" data-uid="pdftron.PDF.TextExtractor.Begin(pdftron.PDF.Page,pdftron.PDF.Rect,pdftron.PDF.TextExtractor.ProcessingFlags)">Begin(Page, Rect, TextExtractor.ProcessingFlags)</h4>
+  <div class="markdown level1 summary"><p>Start reading the page. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Begin(Page page, Rect clip, TextExtractor.ProcessingFlags flags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>Page to read.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">clip</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.TextExtractor.ProcessingFlags.html">TextExtractor.ProcessingFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>A list of ProcessingFlags used to control text extraction 
+algorithm.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L109">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_Destroy_" data-uid="pdftron.PDF.TextExtractor.Destroy*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_Destroy" data-uid="pdftron.PDF.TextExtractor.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L93">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_Dispose_" data-uid="pdftron.PDF.TextExtractor.Dispose*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_Dispose" data-uid="pdftron.PDF.TextExtractor.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L98">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_Dispose_" data-uid="pdftron.PDF.TextExtractor.Dispose*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_Dispose_System_Boolean_" data-uid="pdftron.PDF.TextExtractor.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L347">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_Finalize_" data-uid="pdftron.PDF.TextExtractor.Finalize*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_Finalize" data-uid="pdftron.PDF.TextExtractor.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the TextExtractor </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_GetAsText.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.GetAsText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L194">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_GetAsText_" data-uid="pdftron.PDF.TextExtractor.GetAsText*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_GetAsText" data-uid="pdftron.PDF.TextExtractor.GetAsText">GetAsText()</h4>
+  <div class="markdown level1 summary"><p>Get all words in the current selection as a single string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String GetAsText()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><p>The string containing all words in the current 
+selection. Words will be separated with space (i.e. &apos; &apos;) or 
+new line (i.e. &apos;\n&apos;) characters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_GetAsText_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.GetAsText(Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L211">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_GetAsText_" data-uid="pdftron.PDF.TextExtractor.GetAsText*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_GetAsText_Boolean_" data-uid="pdftron.PDF.TextExtractor.GetAsText(Boolean)">GetAsText(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Get all words in the current selection as a single string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String GetAsText(Boolean dehyphen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><span class="parametername">dehyphen</span></td>
+        <td><p>If true, finds and removes hyphens that split words
+across two lines. Hyphens are often used a the end of lines as an
+indicator that a word spans two lines. Hyphen detection enables removal
+of hyphen character and merging of text runs to form a single word.
+This option has no effect on Tagged PDF files.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><p>The string containing all words in the current
+selection. Words will be separated with space (i.e. &apos; &apos;) or
+new line (i.e. &apos;\n&apos;) characters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_GetAsXML.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.GetAsXML%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L272">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_GetAsXML_" data-uid="pdftron.PDF.TextExtractor.GetAsXML*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_GetAsXML" data-uid="pdftron.PDF.TextExtractor.GetAsXML">GetAsXML()</h4>
+  <div class="markdown level1 summary"><p>Get text content in a form of an XML string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String GetAsXML()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><p>The string containing XML output.       </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_TextExtractor_GetAsXML_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>XML output will be encoded in UTF-8 and will have the following
+structure:</p>
+<pre><code>&lt;Page num=&quot;1 crop_box=&quot;0, 0, 612, 792&quot; media_box=&quot;0, 0, 612, 792&quot; rotate=&quot;0&quot;>
+&lt;Flow id=&quot;1&quot;>
+&lt;Para id=&quot;1&quot;>
+&lt;Line box=&quot;72, 708.075, 467.895, 10.02&quot; style=&quot;font-family:Calibri; font-size:10.02; color: #000000;&quot;>
+&lt;Word box=&quot;72, 708.075, 30.7614, 10.02&quot;>PDFNet&lt;/Word>
+&lt;Word box=&quot;106.188, 708.075, 15.9318, 10.02&quot;>SDK&lt;/Word>
+&lt;Word box=&quot;125.617, 708.075, 6.22242, 10.02&quot;>is&lt;/Word>
+...
+&lt;/Line>
+&lt;/Para>  
+&lt;/Flow>
+&lt;/Page></code></pre>
+<p>The above XML output was generated by passing the following union of 
+flags in the call to GetAsXML(): 
+<code>(TextExtractor.e_words_as_elements | TextExtractor.e_output_bbox | TextExtractor.e_output_style_info)</code></p>
+<p>In case &apos;xml_output_flags&apos; was not specified, the default XML output 
+would look as follows:</p>
+<pre><code>&lt;Page num=&quot;1 crop_box=&quot;0, 0, 612, 792&quot; media_box=&quot;0, 0, 612, 792&quot; rotate=&quot;0&quot;>
+&lt;Flow id=&quot;1&quot;>
+&lt;Para id=&quot;1&quot;>
+&lt;Line>PDFNet SDK is an amazingly comprehensive, high-quality PDF developer toolkit...&lt;/Line>
+&lt;Line>levels. Using the PDFNet PDF library, ...&lt;/Line>
+...
+&lt;/Para>
+&lt;/Flow>
+&lt;/Page>
+&lt;/code>
+&lt;/example></code></pre>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_GetAsXML_pdftron_PDF_TextExtractor_XMLOutputFlags_.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.GetAsXML(pdftron.PDF.TextExtractor.XMLOutputFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L319">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_GetAsXML_" data-uid="pdftron.PDF.TextExtractor.GetAsXML*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_GetAsXML_pdftron_PDF_TextExtractor_XMLOutputFlags_" data-uid="pdftron.PDF.TextExtractor.GetAsXML(pdftron.PDF.TextExtractor.XMLOutputFlags)">GetAsXML(TextExtractor.XMLOutputFlags)</h4>
+  <div class="markdown level1 summary"><p>Get text content in a form of an XML string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String GetAsXML(TextExtractor.XMLOutputFlags flags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.TextExtractor.XMLOutputFlags.html">TextExtractor.XMLOutputFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>flags controlling XML output. For more
+information, please see <code>TextExtract.XMLOutputFlags</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><p>The string containing XML output.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_TextExtractor_GetAsXML_pdftron_PDF_TextExtractor_XMLOutputFlags__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>XML output will be encoded in UTF-8 and will have the following
+structure:
+<code>&lt;Page num=&quot;1 crop_box=&quot;0, 0, 612, 792&quot; media_box=&quot;0, 0, 612, 792&quot; rotate=&quot;0&quot;&gt;
+&lt;Flow id=&quot;1&quot;&gt;
+&lt;Para id=&quot;1&quot;&gt;
+&lt;Line box=&quot;72, 708.075, 467.895, 10.02&quot; style=&quot;font-family:Calibri; font-size:10.02; color: #000000;&quot;&gt;
+&lt;Word box=&quot;72, 708.075, 30.7614, 10.02&quot;&gt;PDFNet&lt;/Word&gt;
+&lt;Word box=&quot;106.188, 708.075, 15.9318, 10.02&quot;&lt;SDK&lt;/Word&gt;
+&lt;Word box=&quot;125.617, 708.075, 6.22242, 10.02&quot;&lt;is&lt;/Word&gt;
+...
+&lt;/Line&gt;
+&lt;/Para&gt;
+&lt;/Flow&gt;
+&lt;/Page&gt;</code>
+The above XML output was generated by passing the following union of
+flags in the call to GetAsXML():
+<code>(TextExtractor.e_words_as_elements | TextExtractor.e_output_bbox | TextExtractor.e_output_style_info)</code></p>
+<p>In case &apos;xml_output_flags&apos; was not specified, the default XML output
+would look as follows:</p>
+<pre><code>&lt;Page num=&quot;1 crop_box=&quot;0, 0, 612, 792&quot; media_box=&quot;0, 0, 612, 792&quot; rotate=&quot;0&quot;>
+&lt;Flow id=&quot;1&quot;>
+&lt;Para id=&quot;1&quot;>
+&lt;Line&lt;PDFNet SDK is an amazingly comprehensive, high-quality PDF developer toolkit...&lt;/Line>
+&lt;Line&lt;levels. Using the PDFNet PDF library, ...&lt;/Line>
+...
+&lt;/Para>
+&lt;/Flow>
+&lt;/Page></code></pre>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_GetFirstLine.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.GetFirstLine%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L340">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_GetFirstLine_" data-uid="pdftron.PDF.TextExtractor.GetFirstLine*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_GetFirstLine" data-uid="pdftron.PDF.TextExtractor.GetFirstLine">GetFirstLine()</h4>
+  <div class="markdown level1 summary"><p>Gets the first line of text on the selected page</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextExtractor.Line GetFirstLine()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.TextExtractor.Line.html">TextExtractor.Line</a></td>
+        <td><p>The first line of text on the selected page.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_GetNumLines.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.GetNumLines%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L330">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_GetNumLines_" data-uid="pdftron.PDF.TextExtractor.GetNumLines*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_GetNumLines" data-uid="pdftron.PDF.TextExtractor.GetNumLines">GetNumLines()</h4>
+  <div class="markdown level1 summary"><p>Gets the number of line </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 GetNumLines()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>number of lines</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_GetTextUnderAnnot_pdftron_PDF_Annot_.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.GetTextUnderAnnot(pdftron.PDF.Annot)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L224">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_GetTextUnderAnnot_" data-uid="pdftron.PDF.TextExtractor.GetTextUnderAnnot*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_GetTextUnderAnnot_pdftron_PDF_Annot_" data-uid="pdftron.PDF.TextExtractor.GetTextUnderAnnot(pdftron.PDF.Annot)">GetTextUnderAnnot(Annot)</h4>
+  <div class="markdown level1 summary"><p>Get all the characters that intersect an annotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String GetTextUnderAnnot(Annot annot)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annot.html">Annot</a></td>
+        <td><span class="parametername">annot</span></td>
+        <td><p>The annotation to intersect with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><p>The string under annot</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor_GetWordCount.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor.GetWordCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L181">View Source</a>
+  </span>
+  <a id="pdftron_PDF_TextExtractor_GetWordCount_" data-uid="pdftron.PDF.TextExtractor.GetWordCount*"></a>
+  <h4 id="pdftron_PDF_TextExtractor_GetWordCount" data-uid="pdftron.PDF.TextExtractor.GetWordCount">GetWordCount()</h4>
+  <div class="markdown level1 summary"><p>Gets the word count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 GetWordCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><p>the number of words on the page.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_TextExtractor.md&amp;value=---%0Auid%3A%20pdftron.PDF.TextExtractor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/TextExtractor.cs/#L84" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

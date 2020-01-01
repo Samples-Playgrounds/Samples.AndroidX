@@ -1,0 +1,1080 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PageLabel
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PageLabel
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.PageLabel">
+  
+  
+  <h1 id="pdftron_PDF_PageLabel" data-uid="pdftron.PDF.PageLabel" class="text-break">Class PageLabel
+  </h1>
+  <div class="markdown level0 summary"><p>PDF page labels can be used to describe a page. This is used to 
+allow for non-sequential page numbering or the addition of arbitrary 
+labels for a page (such as the inclusion of Roman numerals at the 
+beginning of a book). PDFNet PageLabel object can be used to specify 
+the numbering style to use (for example, upper- or lower-case Roman, 
+decimal, and so forth), the starting number for the first page,
+and an arbitrary prefix to be pre-appended to each number (for 
+example, &quot;A-&quot; to generate &quot;A-1&quot;, &quot;A-2&quot;, &quot;A-3&quot;, and so forth.)
+</p>
+<p>
+<code>PageLabel</code> corresponds to the PDF Page Label object (Section 8.3.1, 
+&apos;Page Labels&apos; in the PDF Reference Manual.
+</p>
+<p>
+Each page in a PDF document is identified by an integer page index 
+that expresses the page’s relative position within the document. 
+In addition, a document may optionally define page labels to identify 
+each page visually on the screen or in print. Page labels and page 
+indices need not coincide: the indices are fixed, running consecutively 
+through the document starting from 1 for the first page, but the 
+labels can be specified in any way that is appropriate for the particular
+document. For example, if the document begins with 12 pages of front 
+matter numbered in roman numerals and the remainder of the document is 
+numbered in Arabic, the first page would have a page index of 1 and a 
+page label of i, the twelfth page would have index 12 and label xii, 
+and the thirteenth page would have index 13 and label 1.
+</p>
+<p>
+For purposes of page labeling, a document can be divided into labeling 
+ranges, each of which is a series of consecutive pages using the same 
+numbering system. Pages within a range are numbered sequentially in 
+ascending order. A page&apos;s label consists of a numeric portion based 
+on its position within its labeling range, optionally preceded by a 
+label prefix denoting the range itself. For example, the pages in an 
+appendix might be labeled with decimal numeric portions prefixed with 
+the string &quot;A-&quot; and the resulting page labels would be &quot;A-1&quot;, &quot;A-2&quot;, 
+</p>    
+
+<p>There is no default numbering style; if no &apos;S&apos; (Style) entry is present, 
+page labels consist solely of a label prefix with no numeric portion. 
+For example, if the &apos;P&apos; entry (Prefix) specifies the label prefix 
+&quot;Appendix&quot;, each page is simply labeled &quot;Appendix&quot; with no page number. 
+If the &apos;P&apos; entry is also missing or empty, the page label is an empty 
+string.</p>
+<example>
+Sample code (See PableLabelsTest sample project for examples):<br>
+Create a page labeling scheme that starts with the first page in 
+the document (page 1) and is using uppercase roman numbering 
+style. 
+
+<pre><code> doc.SetPageLabel(1, PageLabel::Create(doc, PageLabel::e_roman_uppercase, &quot;My Prefix &quot;, 1)); </code></pre>
+
+Create a page labeling scheme that starts with the fourth page in 
+the document and is using decimal arabic numbering style. 
+Also the numeric portion of the first label should start with number 
+4 (otherwise the first label would be &quot;My Prefix 1&quot;). 
+<pre><code>PageLabel L2 = PageLabel::Create(doc, PageLabel::e_decimal, &quot;My Prefix &quot;, 4);
+doc.SetPageLabel(4, L2);</code></pre>
+
+Create a page labeling scheme that starts with the seventh page in 
+the document and is using alphabetic numbering style. The numeric 
+portion of the first label should start with number 1. 
+<pre><code>PageLabel L3 = PageLabel::Create(doc, PageLabel::e_alphabetic_uppercase, &quot;My Prefix &quot;, 1);
+doc.SetPageLabel(7, L3);</code></pre>
+
+Read page labels from an existing PDF document.
+<pre><code>PageLabel label = new PageLabel();
+for (int i=1; i&lt;=doc.GetPageCount(); ++i) {
+label = doc.GetPageLabel(i);
+if (label.IsValid()) {
+string title = label.GetLabelTitle(i);
+}</code></pre>
+</example>  
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PageLabel</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_PageLabel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PageLabel : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel__ctor.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L164">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel__ctor_" data-uid="pdftron.PDF.PageLabel.#ctor*"></a>
+  <h4 id="pdftron_PDF_PageLabel__ctor" data-uid="pdftron.PDF.PageLabel.#ctor">PageLabel()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PageLabel()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel__ctor_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.%23ctor(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L172">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel__ctor_" data-uid="pdftron.PDF.PageLabel.#ctor*"></a>
+  <h4 id="pdftron_PDF_PageLabel__ctor_pdftron_SDF_Obj_" data-uid="pdftron.PDF.PageLabel.#ctor(pdftron.SDF.Obj)">PageLabel(Obj)</h4>
+  <div class="markdown level1 summary"><p>Instantiates a new page label.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PageLabel(Obj obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>the l</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_Create_pdftron_SDF_SDFDoc_pdftron_PDF_PageLabel_Style_String_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.Create(pdftron.SDF.SDFDoc%2Cpdftron.PDF.PageLabel.Style%2CString%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L149">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_Create_" data-uid="pdftron.PDF.PageLabel.Create*"></a>
+  <h4 id="pdftron_PDF_PageLabel_Create_pdftron_SDF_SDFDoc_pdftron_PDF_PageLabel_Style_String_System_Int32_" data-uid="pdftron.PDF.PageLabel.Create(pdftron.SDF.SDFDoc,pdftron.PDF.PageLabel.Style,String,System.Int32)">Create(SDFDoc, PageLabel.Style, String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new PageLabel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PageLabel Create(SDFDoc doc, PageLabel.Style style, String prefix, int start_at)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>A document to which the page label is added.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PageLabel.Style.html">PageLabel.Style</a></td>
+        <td><span class="parametername">style</span></td>
+        <td><p>The numbering style for the label.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">prefix</span></td>
+        <td><p>page label prefix</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">start_at</span></td>
+        <td><p>start at position</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PageLabel.html">PageLabel</a></td>
+        <td><p>newly created PageLabel object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L108">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_Dispose_" data-uid="pdftron.PDF.PageLabel.Dispose*"></a>
+  <h4 id="pdftron_PDF_PageLabel_Dispose" data-uid="pdftron.PDF.PageLabel.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L113">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_Dispose_" data-uid="pdftron.PDF.PageLabel.Dispose*"></a>
+  <h4 id="pdftron_PDF_PageLabel_Dispose_System_Boolean_" data-uid="pdftron.PDF.PageLabel.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L103">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_Finalize_" data-uid="pdftron.PDF.PageLabel.Finalize*"></a>
+  <h4 id="pdftron_PDF_PageLabel_Finalize" data-uid="pdftron.PDF.PageLabel.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the PageLabel </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_GetFirstPageNum.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.GetFirstPageNum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L318">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_GetFirstPageNum_" data-uid="pdftron.PDF.PageLabel.GetFirstPageNum*"></a>
+  <h4 id="pdftron_PDF_PageLabel_GetFirstPageNum" data-uid="pdftron.PDF.PageLabel.GetFirstPageNum">GetFirstPageNum()</h4>
+  <div class="markdown level1 summary"><p>Gets the first page num.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetFirstPageNum()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the first page in the range associated with this label
+or -1 if the label is not associated with any page.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_GetLabelTitle_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.GetLabelTitle(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L216">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_GetLabelTitle_" data-uid="pdftron.PDF.PageLabel.GetLabelTitle*"></a>
+  <h4 id="pdftron_PDF_PageLabel_GetLabelTitle_System_Int32_" data-uid="pdftron.PDF.PageLabel.GetLabelTitle(System.Int32)">GetLabelTitle(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets full tittle of the page label</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String GetLabelTitle(int page_num)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">page_num</span></td>
+        <td><p>page number</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><p>the full label title that is in effect for the given page. If there is no label object in effect, this method returns an empty string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_GetLastPageNum.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.GetLastPageNum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L331">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_GetLastPageNum_" data-uid="pdftron.PDF.PageLabel.GetLastPageNum*"></a>
+  <h4 id="pdftron_PDF_PageLabel_GetLastPageNum" data-uid="pdftron.PDF.PageLabel.GetLastPageNum">GetLastPageNum()</h4>
+  <div class="markdown level1 summary"><p>Gets the last page num.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetLastPageNum()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the last page in the range associated with this label
+or -1 if the label is not associated with any page.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_GetPrefix.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.GetPrefix%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L268">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_GetPrefix_" data-uid="pdftron.PDF.PageLabel.GetPrefix*"></a>
+  <h4 id="pdftron_PDF_PageLabel_GetPrefix" data-uid="pdftron.PDF.PageLabel.GetPrefix">GetPrefix()</h4>
+  <div class="markdown level1 summary"><p>Gets the prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String GetPrefix()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><p>the string used to prefix the numeric portion of
+the page label</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_GetSDFObj.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.GetSDFObj%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L344">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_GetSDFObj_" data-uid="pdftron.PDF.PageLabel.GetSDFObj*"></a>
+  <h4 id="pdftron_PDF_PageLabel_GetSDFObj" data-uid="pdftron.PDF.PageLabel.GetSDFObj">GetSDFObj()</h4>
+  <div class="markdown level1 summary"><p>Gets the sDF obj.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetSDFObj()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>The pointer to the underlying SDF/Cos object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_GetStart.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.GetStart%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L293">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_GetStart_" data-uid="pdftron.PDF.PageLabel.GetStart*"></a>
+  <h4 id="pdftron_PDF_PageLabel_GetStart" data-uid="pdftron.PDF.PageLabel.GetStart">GetStart()</h4>
+  <div class="markdown level1 summary"><p>Gets the start.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetStart()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>the value to use when generating the numeric portion of
+the first label in this range; must be greater than or equal to 1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_GetStyle.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.GetStyle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L255">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_GetStyle_" data-uid="pdftron.PDF.PageLabel.GetStyle*"></a>
+  <h4 id="pdftron_PDF_PageLabel_GetStyle" data-uid="pdftron.PDF.PageLabel.GetStyle">GetStyle()</h4>
+  <div class="markdown level1 summary"><p>Gets the style.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PageLabel.Style GetStyle()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PageLabel.Style.html">PageLabel.Style</a></td>
+        <td><p>page numbering style.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_IsValid.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.IsValid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L202">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_IsValid_" data-uid="pdftron.PDF.PageLabel.IsValid*"></a>
+  <h4 id="pdftron_PDF_PageLabel_IsValid" data-uid="pdftron.PDF.PageLabel.IsValid">IsValid()</h4>
+  <div class="markdown level1 summary"><p>Checks if is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>whether this is a valid (non-null) PageLabel. If the
+function returns false the underlying SDF/Cos object is null or is
+not valid and the PageLabel object should be treated as null as well.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_op_Assign_pdftron_PDF_PageLabel_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.op_Assign(pdftron.PDF.PageLabel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L181">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_op_Assign_" data-uid="pdftron.PDF.PageLabel.op_Assign*"></a>
+  <h4 id="pdftron_PDF_PageLabel_op_Assign_pdftron_PDF_PageLabel_" data-uid="pdftron.PDF.PageLabel.op_Assign(pdftron.PDF.PageLabel)">op_Assign(PageLabel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PageLabel op_Assign(PageLabel r)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PageLabel.html">PageLabel</a></td>
+        <td><span class="parametername">r</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PageLabel.html">PageLabel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_op_Compare_pdftron_PDF_PageLabel_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.op_Compare(pdftron.PDF.PageLabel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L187">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_op_Compare_" data-uid="pdftron.PDF.PageLabel.op_Compare*"></a>
+  <h4 id="pdftron_PDF_PageLabel_op_Compare_pdftron_PDF_PageLabel_" data-uid="pdftron.PDF.PageLabel.op_Compare(pdftron.PDF.PageLabel)">op_Compare(PageLabel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool op_Compare(PageLabel r)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PageLabel.html">PageLabel</a></td>
+        <td><span class="parametername">r</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_SetPrefix_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.SetPrefix(String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L281">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_SetPrefix_" data-uid="pdftron.PDF.PageLabel.SetPrefix*"></a>
+  <h4 id="pdftron_PDF_PageLabel_SetPrefix_String_" data-uid="pdftron.PDF.PageLabel.SetPrefix(String)">SetPrefix(String)</h4>
+  <div class="markdown level1 summary"><p>Sets the prefix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPrefix(String prefix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">prefix</span></td>
+        <td><p>the string used to prefix the numeric portion of
+the page label.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_SetStart_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.SetStart(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L307">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_SetStart_" data-uid="pdftron.PDF.PageLabel.SetStart*"></a>
+  <h4 id="pdftron_PDF_PageLabel_SetStart_System_Int32_" data-uid="pdftron.PDF.PageLabel.SetStart(System.Int32)">SetStart(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the start.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetStart(int start_at)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">start_at</span></td>
+        <td><p>the value to use when generating the numeric
+portion of the first label in this range; must be greater than
+or equal to 1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel_SetStyle_pdftron_PDF_PageLabel_Style_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel.SetStyle(pdftron.PDF.PageLabel.Style)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L245">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PageLabel_SetStyle_" data-uid="pdftron.PDF.PageLabel.SetStyle*"></a>
+  <h4 id="pdftron_PDF_PageLabel_SetStyle_pdftron_PDF_PageLabel_Style_" data-uid="pdftron.PDF.PageLabel.SetStyle(pdftron.PDF.PageLabel.Style)">SetStyle(PageLabel.Style)</h4>
+  <div class="markdown level1 summary"><p>Sets the numbering style for the label.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetStyle(PageLabel.Style style)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PageLabel.Style.html">PageLabel.Style</a></td>
+        <td><span class="parametername">style</span></td>
+        <td><p>the numbering style for the label.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PageLabel_SetStyle_pdftron_PDF_PageLabel_Style__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>You may use label style to customize the page numbering schemes
+used throughout a document. There are three numbering formats:</p>
+<p>There is no default numbering style; if no &apos;S&apos; (Style) entry is present,
+page labels consist solely of a label prefix with no numeric portion.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PageLabel.md&amp;value=---%0Auid%3A%20pdftron.PDF.PageLabel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PageLabel.cs/#L97" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

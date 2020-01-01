@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FDFField
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FDFField
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.FDF.FDFField">
+  
+  
+  <h1 id="pdftron_FDF_FDFField" data-uid="pdftron.FDF.FDFField" class="text-break">Class FDFField
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FDFField</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.FDF.html">pdftron.FDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_FDF_FDFField_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FDFField : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField__ctor_pdftron_SDF_Obj_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField.%23ctor(pdftron.SDF.Obj%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L59">View Source</a>
+  </span>
+  <a id="pdftron_FDF_FDFField__ctor_" data-uid="pdftron.FDF.FDFField.#ctor*"></a>
+  <h4 id="pdftron_FDF_FDFField__ctor_pdftron_SDF_Obj_pdftron_SDF_Obj_" data-uid="pdftron.FDF.FDFField.#ctor(pdftron.SDF.Obj,pdftron.SDF.Obj)">FDFField(Obj, Obj)</h4>
+  <div class="markdown level1 summary"><p>Construct a <code>FDF::FDFField</code> from a SDF dictionary representing a terminal field node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FDFField(Obj field_dict, Obj fdf_dict)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">field_dict</span></td>
+        <td><p>FDFField dictionary</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">fdf_dict</span></td>
+        <td><p>FDF dictionary</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField_Dispose.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L28">View Source</a>
+  </span>
+  <a id="pdftron_FDF_FDFField_Dispose_" data-uid="pdftron.FDF.FDFField.Dispose*"></a>
+  <h4 id="pdftron_FDF_FDFField_Dispose" data-uid="pdftron.FDF.FDFField.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L33">View Source</a>
+  </span>
+  <a id="pdftron_FDF_FDFField_Dispose_" data-uid="pdftron.FDF.FDFField.Dispose*"></a>
+  <h4 id="pdftron_FDF_FDFField_Dispose_System_Boolean_" data-uid="pdftron.FDF.FDFField.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField_Finalize.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L23">View Source</a>
+  </span>
+  <a id="pdftron_FDF_FDFField_Finalize_" data-uid="pdftron.FDF.FDFField.Finalize*"></a>
+  <h4 id="pdftron_FDF_FDFField_Finalize" data-uid="pdftron.FDF.FDFField.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the FDFField </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField_FindAttribute_System_String_.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField.FindAttribute(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L73">View Source</a>
+  </span>
+  <a id="pdftron_FDF_FDFField_FindAttribute_" data-uid="pdftron.FDF.FDFField.FindAttribute*"></a>
+  <h4 id="pdftron_FDF_FDFField_FindAttribute_System_String_" data-uid="pdftron.FDF.FDFField.FindAttribute(System.String)">FindAttribute(String)</h4>
+  <div class="markdown level1 summary"><p>The function returns the specified attribute.           </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj FindAttribute(string attrib)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">attrib</span></td>
+        <td><p>attribute name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>return the attribute value if the given attribute name
+was found or a NULL object if the given attribute name was not found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField_GetName.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField.GetName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L85">View Source</a>
+  </span>
+  <a id="pdftron_FDF_FDFField_GetName_" data-uid="pdftron.FDF.FDFField.GetName*"></a>
+  <h4 id="pdftron_FDF_FDFField_GetName" data-uid="pdftron.FDF.FDFField.GetName">GetName()</h4>
+  <div class="markdown level1 summary"><p>Get name of the FDFField</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>a string representing the fully qualified name of the field 
+(e.g. &quot;employee.name.first&quot;).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField_GetPartialName.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField.GetPartialName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L97">View Source</a>
+  </span>
+  <a id="pdftron_FDF_FDFField_GetPartialName_" data-uid="pdftron.FDF.FDFField.GetPartialName*"></a>
+  <h4 id="pdftron_FDF_FDFField_GetPartialName" data-uid="pdftron.FDF.FDFField.GetPartialName">GetPartialName()</h4>
+  <div class="markdown level1 summary"><p>Get partial name of the FDFField</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetPartialName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>a string representing the partial name of the field (e.g. 
+&quot;first&quot; when &quot;employee.name.first&quot; is fully qualified name).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField_GetSDFObj.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField.GetSDFObj%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L108">View Source</a>
+  </span>
+  <a id="pdftron_FDF_FDFField_GetSDFObj_" data-uid="pdftron.FDF.FDFField.GetSDFObj*"></a>
+  <h4 id="pdftron_FDF_FDFField_GetSDFObj" data-uid="pdftron.FDF.FDFField.GetSDFObj">GetSDFObj()</h4>
+  <div class="markdown level1 summary"><p>Get underlying SDF object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetSDFObj()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the object to the underlying SDF/Cos object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField_GetValue.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField.GetValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L125">View Source</a>
+  </span>
+  <a id="pdftron_FDF_FDFField_GetValue_" data-uid="pdftron.FDF.FDFField.GetValue*"></a>
+  <h4 id="pdftron_FDF_FDFField_GetValue" data-uid="pdftron.FDF.FDFField.GetValue">GetValue()</h4>
+  <div class="markdown level1 summary"><p>Get value of the FDFField       </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetValue()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the value of the Field (the value of its /V key) or NULL if the 
+value is not specified. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_FDF_FDFField_GetValue_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The format of field’s value varies depending on the field type.
+Set the value of the FDFField (the value of the field&apos;s /V key).
+the value of the field (the value of its /V key) or NULL if the 
+value is not specified.<br>in order to remove/erase the existing value use <code>SetValue(SDF::Null)</code></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField_op_Assign_pdftron_FDF_FDFField_.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField.op_Assign(pdftron.FDF.FDFField)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L134">View Source</a>
+  </span>
+  <a id="pdftron_FDF_FDFField_op_Assign_" data-uid="pdftron.FDF.FDFField.op_Assign*"></a>
+  <h4 id="pdftron_FDF_FDFField_op_Assign_pdftron_FDF_FDFField_" data-uid="pdftron.FDF.FDFField.op_Assign(pdftron.FDF.FDFField)">op_Assign(FDFField)</h4>
+  <div class="markdown level1 summary"><p>Assign value from another FDFField </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FDFField op_Assign(FDFField r)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.FDF.FDFField.html">FDFField</a></td>
+        <td><span class="parametername">r</span></td>
+        <td><p>another <code>FDFField</code>object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.FDF.FDFField.html">FDFField</a></td>
+        <td><p>a <code>FDFField</code> object equals to the give <code>FDFField</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField_Set_pdftron_FDF_FDFField_.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField.Set(pdftron.FDF.FDFField)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L141">View Source</a>
+  </span>
+  <a id="pdftron_FDF_FDFField_Set_" data-uid="pdftron.FDF.FDFField.Set*"></a>
+  <h4 id="pdftron_FDF_FDFField_Set_pdftron_FDF_FDFField_" data-uid="pdftron.FDF.FDFField.Set(pdftron.FDF.FDFField)">Set(FDFField)</h4>
+  <div class="markdown level1 summary"><p>Sets value to the given <code>FDFField</code> object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(FDFField rf)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.FDF.FDFField.html">FDFField</a></td>
+        <td><span class="parametername">rf</span></td>
+        <td><p>another FDFField object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField_SetValue_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField.SetValue(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L154">View Source</a>
+  </span>
+  <a id="pdftron_FDF_FDFField_SetValue_" data-uid="pdftron.FDF.FDFField.SetValue*"></a>
+  <h4 id="pdftron_FDF_FDFField_SetValue_pdftron_SDF_Obj_" data-uid="pdftron.FDF.FDFField.SetValue(pdftron.SDF.Obj)">SetValue(Obj)</h4>
+  <div class="markdown level1 summary"><p>Set value of the FDFField       </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetValue(Obj value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>new value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_FDF_FDFField_SetValue_pdftron_SDF_Obj__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The format of field’s value varies depending on the field type.
+Set the value of the FDFField (the value of the field&apos;s /V key).
+the value of the field (the value of its /V key) or NULL if the 
+value is not specified.<br>in order to remove/erase the existing value use <code>SetValue(SDF::Null)</code></p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_FDF_FDFField.md&amp;value=---%0Auid%3A%20pdftron.FDF.FDFField%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/FDF/FDFField.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

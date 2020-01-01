@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ContentReplacer
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ContentReplacer
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.ContentReplacer">
+  
+  
+  <h1 id="pdftron_PDF_ContentReplacer" data-uid="pdftron.PDF.ContentReplacer" class="text-break">Class ContentReplacer
+  </h1>
+  <div class="markdown level0 summary"><p>ContentReplacer is a utility class for replacing content (text and images)
+in existing PDF (template) documents.</p>
+<p>Users can replace content in a PDF page using the following operations:</p>
+<ul>
+<li>Replace an image that exists in a target rectangle with a replacement image. </li>
+<li>Replace text that exists in a target rectangle with replacement text. </li>
+<li>Replace all instances of a specially marked string with replacement string.</li>
+</ul>
+<example>
+The following code replaces an image in a target region. It also replaces
+the text &quot;[NAME]&quot; and &quot;[JOB_TITLE]&quot; with &quot;John Smith&quot;
+and &quot;Software Developer&quot; respectively. Notice the square braces (&apos;[&apos; and &apos;]&apos;) on
+the target strings in the original PDFDoc. These square braces are not included in
+the actual function calls below, as they&apos;re implicitly added.
+
+<pre><code>PDFDoc doc(&quot;../../TestFiles/BusinessCardTemplate.pdf&quot;);
+doc.InitSecurityHandler();
+ContentReplacer replacer;
+Page pg = doc.GetPage(1);
+Image img = Image.Create(doc, &quot;../../TestFiles/peppers.jpg&quot;);
+replacer.AddImage(page.GetMediaBox(), img.GetSDFObj());
+replacer.AddString(&quot;NAME&quot;, &quot;John Smith&quot;);
+replacer.AddString(&quot;JOB_TITLE&quot;, &quot;Software Developer&quot;);
+replacer.Process(page);</code></pre>
+</example>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ContentReplacer</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_ContentReplacer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ContentReplacer : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ContentReplacer__ctor.md&amp;value=---%0Auid%3A%20pdftron.PDF.ContentReplacer.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ContentReplacer.cs/#L53">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ContentReplacer__ctor_" data-uid="pdftron.PDF.ContentReplacer.#ctor*"></a>
+  <h4 id="pdftron_PDF_ContentReplacer__ctor" data-uid="pdftron.PDF.ContentReplacer.#ctor">ContentReplacer()</h4>
+  <div class="markdown level1 summary"><p>Create a new ContentReplacer object, to which replacement rules will be added.
+The same object can be used to &apos;Process&apos; multiple pages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContentReplacer()</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ContentReplacer_AddImage_pdftron_PDF_Rect_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ContentReplacer.AddImage(pdftron.PDF.Rect%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ContentReplacer.cs/#L73">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ContentReplacer_AddImage_" data-uid="pdftron.PDF.ContentReplacer.AddImage*"></a>
+  <h4 id="pdftron_PDF_ContentReplacer_AddImage_pdftron_PDF_Rect_pdftron_SDF_Obj_" data-uid="pdftron.PDF.ContentReplacer.AddImage(pdftron.PDF.Rect,pdftron.SDF.Obj)">AddImage(Rect, Obj)</h4>
+  <div class="markdown level1 summary"><p>Replace the image that best fits &apos;target_region&apos; with &apos;replacement_image&apos;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddImage(Rect target_region, Obj replacement_image)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">target_region</span></td>
+        <td><p>The rectangle defining the area in which an image
+that best fits the rectangle will be replaced by &apos;replacement_image&apos;.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">replacement_image</span></td>
+        <td><p>The &apos;SDF.Obj&apos; of a &apos;PDF.Image&apos; object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ContentReplacer_AddImage_pdftron_PDF_Rect_pdftron_SDF_Obj__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The best fit is the image that closest matches &apos;target_region&apos;. For example if
+there are two images on the page, one taking up the entire page, and the other 
+smaller, and the smaller one has similar dimensions and position of 
+&apos;target_region&apos;, then the smaller image would be replaced, not the larger.
+Furthermore, if &apos;target_region&apos; encloses multiple images, then only the image
+with the largest area will be replaced.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ContentReplacer_AddString_String_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ContentReplacer.AddString(String%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ContentReplacer.cs/#L111">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ContentReplacer_AddString_" data-uid="pdftron.PDF.ContentReplacer.AddString*"></a>
+  <h4 id="pdftron_PDF_ContentReplacer_AddString_String_String_" data-uid="pdftron.PDF.ContentReplacer.AddString(String,String)">AddString(String, String)</h4>
+  <div class="markdown level1 summary"><p>Any text of the form &quot;[template_text]&quot; will be replaced by &quot;replacement_text&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddString(String template_text, String replacement_text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">template_text</span></td>
+        <td><p>The text to remove.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">replacement_text</span></td>
+        <td><p>The new text that will appear in place of &apos;template_text&apos;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ContentReplacer_AddString_String_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only text wrapped in &apos;[&apos; and &apos;]&apos; will be checked, and if it matches &apos;template_text&apos;,
+then &apos;template_text&apos; and the surrounding square braces will be replaced
+by &apos;replacement_text&apos;. For example AddString(&quot;TITLE&quot;, &quot;Doctor&quot;) will replace any
+text consisting of &quot;[TITLE]&quot; with &quot;Doctor&quot;.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ContentReplacer_AddText_pdftron_PDF_Rect_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ContentReplacer.AddText(pdftron.PDF.Rect%2CString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ContentReplacer.cs/#L93">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ContentReplacer_AddText_" data-uid="pdftron.PDF.ContentReplacer.AddText*"></a>
+  <h4 id="pdftron_PDF_ContentReplacer_AddText_pdftron_PDF_Rect_String_" data-uid="pdftron.PDF.ContentReplacer.AddText(pdftron.PDF.Rect,String)">AddText(Rect, String)</h4>
+  <div class="markdown level1 summary"><p>All text inside &apos;target_region&apos; will be deleted and replaced with &apos;replacement_text&apos;. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddText(Rect target_region, String replacement_text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">target_region</span></td>
+        <td><p>The rectangle defining the area in which all text will
+be replaced by &apos;replacement_text&apos;.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">replacement_text</span></td>
+        <td><p>The new text that will replace the existing text
+in &apos;target_region&apos;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_ContentReplacer_AddText_pdftron_PDF_Rect_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The &apos;replacement_text&apos; will be styled in the same font/color/style that is used 
+by the original text. If there are multiple font styles, the most prevalent style will
+be used. Also, the &apos;replacement_text&apos; will wrap within the &apos;target_region&apos;, 
+but if it is too long, the overflow text will not be visible, and no surrounding
+content will be affected.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ContentReplacer_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.ContentReplacer.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ContentReplacer.cs/#L149">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ContentReplacer_Destroy_" data-uid="pdftron.PDF.ContentReplacer.Destroy*"></a>
+  <h4 id="pdftron_PDF_ContentReplacer_Destroy" data-uid="pdftron.PDF.ContentReplacer.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ContentReplacer_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.ContentReplacer.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ContentReplacer.cs/#L133">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ContentReplacer_Dispose_" data-uid="pdftron.PDF.ContentReplacer.Dispose*"></a>
+  <h4 id="pdftron_PDF_ContentReplacer_Dispose" data-uid="pdftron.PDF.ContentReplacer.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ContentReplacer_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ContentReplacer.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ContentReplacer.cs/#L138">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ContentReplacer_Dispose_" data-uid="pdftron.PDF.ContentReplacer.Dispose*"></a>
+  <h4 id="pdftron_PDF_ContentReplacer_Dispose_System_Boolean_" data-uid="pdftron.PDF.ContentReplacer.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ContentReplacer_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.ContentReplacer.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ContentReplacer.cs/#L129">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ContentReplacer_Finalize_" data-uid="pdftron.PDF.ContentReplacer.Finalize*"></a>
+  <h4 id="pdftron_PDF_ContentReplacer_Finalize" data-uid="pdftron.PDF.ContentReplacer.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the ContentReplacer </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ContentReplacer_Process_pdftron_PDF_Page_.md&amp;value=---%0Auid%3A%20pdftron.PDF.ContentReplacer.Process(pdftron.PDF.Page)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ContentReplacer.cs/#L124">View Source</a>
+  </span>
+  <a id="pdftron_PDF_ContentReplacer_Process_" data-uid="pdftron.PDF.ContentReplacer.Process*"></a>
+  <h4 id="pdftron_PDF_ContentReplacer_Process_pdftron_PDF_Page_" data-uid="pdftron.PDF.ContentReplacer.Process(pdftron.PDF.Page)">Process(Page)</h4>
+  <div class="markdown level1 summary"><p>Apply the replacement instructions to the target page. Subsequent calls
+to &apos;Process&apos; can be made on other pages, and it will apply the same rules.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Process(Page page)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>The page to apply the content replacement instructions to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_ContentReplacer.md&amp;value=---%0Auid%3A%20pdftron.PDF.ContentReplacer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/ContentReplacer.cs/#L41" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

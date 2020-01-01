@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace pdftron.PDF.OCG
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace pdftron.PDF.OCG
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.OCG">
+  
+  <h1 id="pdftron_PDF_OCG" data-uid="pdftron.PDF.OCG" class="text-break">Namespace pdftron.PDF.OCG
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="pdftron.PDF.OCG.Config.html">Config</a></h4>
+      <section><p>The OCG.Config object represents an optional-content (OC) configuration 
+structure (see section 4.10.3 in PDF Reference), used to persist a set 
+of visibility states and other optional-content information in a PDF file 
+A document has a default configuration, saved in the D entry in the 
+&apos;OCProperties&apos; dictionary (that can be obtained using pdfdoc.GetOCConfig()), 
+and can have a list of other configurations, saved as an array in the 
+&apos;Configs&apos; entry in the OCProperties dictionary.
+<p>
+Configurations are typically used to initialize the OCG ON-OFF states for 
+an optional-content context (OCG.Context). The OCG order in the configuration 
+is the order in which the groups appear in the Layers panel of a PDF viewer. 
+The configuration can also define a set of mutually exclusive OCGs, called a 
+radio button group.
+</p></p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.OCG.Context.html">Context</a></h4>
+      <section><p>
+   The OCG::Context object represents an optional-content context in a document, within which 
+   document objects such as words or annotations are visible or hidden. The context keeps track 
+   of the ON-OFF states of all of the optional-content groups (OCGs) in a document. Content is 
+   or is not visible with respect to the OCG states stored in a specific context. Unlike other 
+   objects in OCG namespace, the OCG::Context does not correspond to any explicit PDF structure.
+</p><p>
+Each PDFView has a default context (PDF::GetOCGContext()) that it uses for on-screen drawing 
+and that determines the default state for any drawing. The context has flags that control 
+whether to draw content that is marked as optional, and whether to draw content that is not 
+marked as optional.
+</p><p>
+When enumerating page content, OCG::Context can be passed as a parameter in ElementReader.Begin() 
+method. When using PDFDraw, PDFRasterizer, or PDFViewCtrl class to render PDF pages use 
+SetOCGContext() method to select an OC context.
+</p><p>
+There can be more than one Context object, representing different combinations of OCG states. 
+You can change the states of OCGs within any context. You can build contexts with your own 
+combination of OCG states, and issue drawing or enumeration commands using that context.
+For example, you can pass an optional-content context to ElementReader.Begin(). You can save 
+the resulting state information as part of the configuration (e.g. using Config::SetInit methods), 
+but the context itself has no corresponding PDF representation, and is not saved. 
+</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.OCG.Group.html">Group</a></h4>
+      <section><p>The OCG.Group object represents an optional-content group. This corresponds
+to a PDF OCG dictionary representing a collection of graphic objects that can 
+be made visible or invisible (Section 4.10.1 &apos;Optional Content Groups&apos; in PDF 
+Reference). Any graphic content of the PDF can be made optional, including page 
+contents, XObjects, and annotations. The specific content objects in the group 
+have an OC entry in the PDF as part of the surrounding marked content or in the 
+XObject dictionary. The group itself is a named object that can be typically 
+manipulated through a Layers panel in a PDF viewer.
+<p>
+In the simplest case, the group&apos;s ON-OFF state makes the associated content 
+visible or hidden. The ON-OFF state of a group can be toggled for a particular 
+context (OCG.Context), and a set of states is kept in a configuration (OCG.Config). 
+The visibility can depend on more than one group in an optional-content membership 
+dictionary (OCG.OCMD), and can also be affected by the context&apos;s draw mode
+(OCGContext.OCDrawMode).
+</p><p>
+A group has an Intent entry, broadly describing the intended use. A group&apos;s 
+content is considered to be optional (that is, the group&apos;s state is considered in 
+its visibility) if any intent in its list matches an intent of the context. The 
+intent list of the context is usually set from the intent list of the document 
+configuration.
+</p><p>
+A Usage dictionary entry provides more specific intended usage information than 
+an intent entry. Possible key values are: CreatorInfo, Language, Export, Zoom,
+Print, View, User, PageElement. The usage value can act as a kind of metadata, 
+describing the sort of things that belong to the group, such as text in French, 
+fine detail on a map, or a watermark. The usage values can also be used by the 
+AutoState mechanism to make decisions about what groups should be on and what 
+groups should be off. The AutoState mechanism considers the usage information 
+in the OCGs, the AS array of the configuration, and external factors; for example, 
+the language the application is running in, the current zoom level on the page, 
+or whether the page is being printed.</p></p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.OCG.OCMD.html">OCMD</a></h4>
+      <section><p> The OCMD object represents an Optional Content Membership Dictionary (OCMD) 
+    that allows the visibility of optional content to depend on the states in a 
+    set of optional-content groups (OCG::Group). The object directly corresponds 
+    to the OCMD dictionary (Section 4.10.1 &apos;Optional Content Groups&apos; in PDF 
+    Reference).</p>
+<p>
+An OCMD collects a set of OCGs. It sets a visibility policy, so that 
+content in the member groups is visible only when all groups are ON 
+or OFF, or when any of the groups is ON or OFF. This makes it possible 
+to set up complex dependencies among groups. For example, an object can be 
+visible only if some other conditions are met (such as if another layer is 
+visible).
+</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="pdftron.PDF.OCG.Context.OCDrawMode.html">Context.OCDrawMode</a></h4>
+      <section><p>OCDrawMode controls drawing or enumerating the page with respect to optional content.
+ Together with the value of SetNonOCDrawing this mode controls drawing or enumerating 
+ content on a page with optional content: 
+<ul>
+<li>Content that is marked as optional content is drawn or not drawn according to the 
+OCDrawMode and the visibility state as determined by the Optional Content Groups (OCGs) 
+and OCMDs. 
+</li>
+<li>Content that is not marked as optional content is drawn when GetNonOCDrawing() is 
+true, and not drawn when GetNonOCDrawing() is false.
+</li>
+</ul></p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.OCG.OCMD.VisibilityPolicyType.html">OCMD.VisibilityPolicyType</a></h4>
+      <section><p>Visibility Policy Type.
+A Visibility Policy is used to determine whether an PDF::Element is visible 
+in a given OCG::Context, depending on whether all groups in OCGs array are 
+&quot;ON&quot; or &quot;OFF&quot;, or when any of the groups is &quot;ON&quot; or &quot;OFF&quot;. </p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
