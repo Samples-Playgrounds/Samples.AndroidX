@@ -1,24 +1,19 @@
 ﻿@page "/mappings"
 @using Blazored.LocalStorage;
 
+@*
 @inject HttpClient Http
 @inject Blazored.LocalStorage.ILocalStorageService local_store
-
+*@
 
 <h1>AndroidX Mappings</h1>
 
 
-<button @onclick="UpdateLocalStorage">Save</button>
-<button @onclick="ClearLocalStorage">Clear</button>
+<button @onclick="UpdateLocalStorageAsync">Save</button>
+<button @onclick="ClearLocalStorageAsync">Clear</button>
 <br />
-<textarea @bind="string_mappings_google" />
+<textarea @bind="DataMappings.UrlMappingsGoogle" />
 
-@if (mappings_google == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
     <table class="table">
         <thead>
             <tr>
@@ -27,30 +22,25 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (MappingsGoogle mg in mappings_google)
+            @if (DataMappings.mappings_google == null)
             {
-                <tr>
-                    <td>@mg.ClassAndroidSupport</td>
-                    <td>@mg.ClassAndroidX</td>
-                </tr>
+                <p><em>Loading...</em></p>
+            }
+            else
+            {
+                @foreach (MappingsGoogle mg in DataMappings.mappings_google)
+                {
+                    <tr>
+                        <td>@mg.ClassAndroidSupport</td>
+                        <td>@mg.ClassAndroidX</td>
+                    </tr>
+                }
             }
         </tbody>
     </table>
-}
 
 @code 
 {
-    HttpClient client = new HttpClient();
-
-    private string url_mappings_google = $"https://raw.githubusercontent.com/xamarin/AndroidX/master/mappings/androidx-class-mapping.csv";
-    private string url_mappings_xamarin = $"https://raw.githubusercontent.com/xamarin/AndroidX/master/mappings/androidx-mapping.csv";
-
-    private string string_mappings_google;
-    private string string_mappings_xamarin;
-
-    private IEnumerable<MappingsGoogle> mappings_google;
-    private IEnumerable<MappingsXamarin> mappings_xamarin;
-
     protected override async Task OnInitializedAsync()
     {
 
@@ -58,34 +48,16 @@ else
     }
 
 
-    public class MappingsGoogle
+    public async Task UpdateLocalStorageAsync()
     {
-        public string ClassAndroidSupport { get; set; }
-
-        public string ClassAndroidX { get; set; }
-    }
-
-    public class MappingsXamarin
-    {
-
-    }
-
-    public async Task UpdateLocalStorage()
-    {
-        string_mappings_google = await client.GetStringAsync(url_mappings_google);
-        string_mappings_xamarin = await client.GetStringAsync(url_mappings_xamarin);
-
-        Console.WriteLine($"Mappings = {string_mappings_google}");
-
-        await local_store.SetItemAsync("androidx-class-mapping.csv", string_mappings_google);
-        await local_store.SetItemAsync("androidx-mapping.csv", string_mappings_xamarin);
-        //Console.WriteLine($"Mappings = {result_xamarin}");
         
         return;
     }
 
-    public async Task ClearLocalStorage()
+    public async Task ClearLocalStorageAsync()
     {
- 
+        await DataMappings.LocalStorage.ClearAsync(); 
+
+        return;
     }
 }
