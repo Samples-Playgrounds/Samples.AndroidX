@@ -1,6 +1,4 @@
-# readme
-
-Problem:
+## Problem
 
 Changing `type` (java) with managed FQCVlassName works:
 
@@ -28,6 +26,12 @@ https://github.com/moljac/Samples.AndroidX/blob/master/source/bindings/type-vs-m
         AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
     </attr>
 ```
+Errors:
+
+```
+```
+
+## References Links
 
 Solution (minimal repro) is zipped/archived in:
 
