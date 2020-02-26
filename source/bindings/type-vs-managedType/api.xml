@@ -1,0 +1,236 @@
+<api>
+  <package name="androidx.leanback.preference" jni-name="androidx/leanback/preference">
+    <class abstract="true" deprecated="not deprecated" extends="androidx.preference.PreferenceFragment" extends-generic-aware="androidx.preference.PreferenceFragment" jni-extends="Landroidx/preference/PreferenceFragment;" final="false" name="BaseLeanbackPreferenceFragment" static="false" visibility="public" jni-signature="Landroidx/leanback/preference/BaseLeanbackPreferenceFragment;">
+      <constructor deprecated="not deprecated" final="false" name="BaseLeanbackPreferenceFragment" jni-signature="()V" bridge="false" static="false" type="androidx.leanback.preference.BaseLeanbackPreferenceFragment" synthetic="false" visibility="public">
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="androidx.leanback.preference.LeanbackPreferenceDialogFragment" extends-generic-aware="androidx.leanback.preference.LeanbackPreferenceDialogFragment" jni-extends="Landroidx/leanback/preference/LeanbackPreferenceDialogFragment;" final="false" name="LeanbackListPreferenceDialogFragment" static="false" visibility="public" jni-signature="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment;">
+      <constructor deprecated="not deprecated" final="false" name="LeanbackListPreferenceDialogFragment" jni-signature="()V" bridge="false" static="false" type="androidx.leanback.preference.LeanbackListPreferenceDialogFragment" synthetic="false" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="newInstanceMulti" jni-signature="(Ljava/lang/String;)Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment;" bridge="false" native="false" return="androidx.leanback.preference.LeanbackListPreferenceDialogFragment" jni-return="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="key" type="java.lang.String" jni-type="Ljava/lang/String;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="newInstanceSingle" jni-signature="(Ljava/lang/String;)Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment;" bridge="false" native="false" return="androidx.leanback.preference.LeanbackListPreferenceDialogFragment" jni-return="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="key" type="java.lang.String" jni-type="Ljava/lang/String;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCreateAdapter" jni-signature="()Landroidx/recyclerview/widget/RecyclerView$Adapter;" bridge="false" native="false" return="androidx.recyclerview.widget.RecyclerView.Adapter" jni-return="Landroidx/recyclerview/widget/RecyclerView$Adapter;" static="false" synchronized="false" synthetic="false" visibility="public">
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="androidx.recyclerview.widget.RecyclerView.Adapter" extends-generic-aware="androidx.recyclerview.widget.RecyclerView.Adapter&lt;androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder&gt;" jni-extends="Landroidx/recyclerview/widget/RecyclerView$Adapter;" final="false" name="LeanbackListPreferenceDialogFragment.AdapterMulti" static="false" visibility="public" jni-signature="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$AdapterMulti;">
+      <implements name="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener" name-generic-aware="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener" jni-type="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder$OnItemClickListener;">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="LeanbackListPreferenceDialogFragment.AdapterMulti" jni-signature="(Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment;[Ljava/lang/CharSequence;[Ljava/lang/CharSequence;Ljava/util/Set;)V" bridge="false" static="false" type="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.AdapterMulti" synthetic="false" visibility="public">
+        <parameter name="entries" type="java.lang.CharSequence[]" jni-type="[Ljava/lang/CharSequence;">
+        </parameter>
+        <parameter name="entryValues" type="java.lang.CharSequence[]" jni-type="[Ljava/lang/CharSequence;">
+        </parameter>
+        <parameter name="initialSelections" type="java.util.Set&lt;java.lang.String&gt;" jni-type="Ljava/util/Set&lt;Ljava/lang/String;&gt;;">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getItemCount" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onBindViewHolder" jni-signature="(Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="holder" type="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder" jni-type="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;">
+        </parameter>
+        <parameter name="position" type="int" jni-type="I">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCreateViewHolder" jni-signature="(Landroid/view/ViewGroup;I)Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;" bridge="false" native="false" return="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder" jni-return="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="parent" type="android.view.ViewGroup" jni-type="Landroid/view/ViewGroup;">
+        </parameter>
+        <parameter name="viewType" type="int" jni-type="I">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onItemClick" jni-signature="(Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="viewHolder" type="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder" jni-type="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="androidx.recyclerview.widget.RecyclerView.Adapter" extends-generic-aware="androidx.recyclerview.widget.RecyclerView.Adapter&lt;androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder&gt;" jni-extends="Landroidx/recyclerview/widget/RecyclerView$Adapter;" final="false" name="LeanbackListPreferenceDialogFragment.AdapterSingle" static="false" visibility="public" jni-signature="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$AdapterSingle;">
+      <implements name="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener" name-generic-aware="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener" jni-type="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder$OnItemClickListener;">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="LeanbackListPreferenceDialogFragment.AdapterSingle" jni-signature="(Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment;[Ljava/lang/CharSequence;[Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V" bridge="false" static="false" type="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.AdapterSingle" synthetic="false" visibility="public">
+        <parameter name="entries" type="java.lang.CharSequence[]" jni-type="[Ljava/lang/CharSequence;">
+        </parameter>
+        <parameter name="entryValues" type="java.lang.CharSequence[]" jni-type="[Ljava/lang/CharSequence;">
+        </parameter>
+        <parameter name="selectedValue" type="java.lang.CharSequence" jni-type="Ljava/lang/CharSequence;">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getItemCount" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onBindViewHolder" jni-signature="(Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="holder" type="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder" jni-type="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;">
+        </parameter>
+        <parameter name="position" type="int" jni-type="I">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCreateViewHolder" jni-signature="(Landroid/view/ViewGroup;I)Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;" bridge="false" native="false" return="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder" jni-return="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="parent" type="android.view.ViewGroup" jni-type="Landroid/view/ViewGroup;">
+        </parameter>
+        <parameter name="viewType" type="int" jni-type="I">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onItemClick" jni-signature="(Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="viewHolder" type="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder" jni-type="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="androidx.recyclerview.widget.RecyclerView.ViewHolder" extends-generic-aware="androidx.recyclerview.widget.RecyclerView.ViewHolder" jni-extends="Landroidx/recyclerview/widget/RecyclerView$ViewHolder;" final="false" name="LeanbackListPreferenceDialogFragment.ViewHolder" static="true" visibility="public" jni-signature="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;">
+      <implements name="android.view.View.OnClickListener" name-generic-aware="android.view.View.OnClickListener" jni-type="Landroid/view/View$OnClickListener;">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="LeanbackListPreferenceDialogFragment.ViewHolder" jni-signature="(Landroid/view/View;Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder$OnItemClickListener;)V" bridge="false" static="false" type="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder" synthetic="false" visibility="public">
+        <parameter name="view" type="android.view.View" jni-type="Landroid/view/View;">
+        </parameter>
+        <parameter name="listener" type="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener" jni-type="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder$OnItemClickListener;">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContainer" jni-signature="()Landroid/view/ViewGroup;" bridge="false" native="false" return="android.view.ViewGroup" jni-return="Landroid/view/ViewGroup;" static="false" synchronized="false" synthetic="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTitleView" jni-signature="()Landroid/widget/TextView;" bridge="false" native="false" return="android.widget.TextView" jni-return="Landroid/widget/TextView;" static="false" synchronized="false" synthetic="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getWidgetView" jni-signature="()Landroid/widget/Checkable;" bridge="false" native="false" return="android.widget.Checkable" jni-return="Landroid/widget/Checkable;" static="false" synchronized="false" synthetic="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onClick" jni-signature="(Landroid/view/View;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="v" type="android.view.View" jni-type="Landroid/view/View;">
+        </parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="LeanbackListPreferenceDialogFragment.ViewHolder.OnItemClickListener" static="true" visibility="public" jni-signature="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder$OnItemClickListener;">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onItemClick" jni-signature="(Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="androidx.leanback.preference.LeanbackListPreferenceDialogFragment.ViewHolder" jni-type="Landroidx/leanback/preference/LeanbackListPreferenceDialogFragment$ViewHolder;">
+        </parameter>
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="android.app.Fragment" extends-generic-aware="android.app.Fragment" jni-extends="Landroid/app/Fragment;" final="false" name="LeanbackPreferenceDialogFragment" static="false" visibility="public" jni-signature="Landroidx/leanback/preference/LeanbackPreferenceDialogFragment;">
+      <constructor deprecated="not deprecated" final="false" name="LeanbackPreferenceDialogFragment" jni-signature="()V" bridge="false" static="false" type="androidx.leanback.preference.LeanbackPreferenceDialogFragment" synthetic="false" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPreference" jni-signature="()Landroidx/preference/DialogPreference;" bridge="false" native="false" return="androidx.preference.DialogPreference" jni-return="Landroidx/preference/DialogPreference;" static="false" synchronized="false" synthetic="false" visibility="public">
+      </method>
+      <field deprecated="not deprecated" final="true" name="ARG_KEY" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;key&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="true" deprecated="not deprecated" extends="androidx.leanback.preference.BaseLeanbackPreferenceFragment" extends-generic-aware="androidx.leanback.preference.BaseLeanbackPreferenceFragment" jni-extends="Landroidx/leanback/preference/BaseLeanbackPreferenceFragment;" final="false" name="LeanbackPreferenceFragment" static="false" visibility="public" jni-signature="Landroidx/leanback/preference/LeanbackPreferenceFragment;">
+      <constructor deprecated="not deprecated" final="false" name="LeanbackPreferenceFragment" jni-signature="()V" bridge="false" static="false" type="androidx.leanback.preference.LeanbackPreferenceFragment" synthetic="false" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setTitle" jni-signature="(Ljava/lang/CharSequence;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="title" type="java.lang.CharSequence" jni-type="Ljava/lang/CharSequence;">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="LeanbackPreferenceFragmentTransitionHelperApi21" static="false" visibility="public" jni-signature="Landroidx/leanback/preference/LeanbackPreferenceFragmentTransitionHelperApi21;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="addTransitions" jni-signature="(Landroid/app/Fragment;)V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="f" type="android.app.Fragment" jni-type="Landroid/app/Fragment;">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="true" deprecated="not deprecated" extends="android.app.Fragment" extends-generic-aware="android.app.Fragment" jni-extends="Landroid/app/Fragment;" final="false" name="LeanbackSettingsFragment" static="false" visibility="public" jni-signature="Landroidx/leanback/preference/LeanbackSettingsFragment;">
+      <implements name="androidx.preference.PreferenceFragment.OnPreferenceDisplayDialogCallback" name-generic-aware="androidx.preference.PreferenceFragment.OnPreferenceDisplayDialogCallback" jni-type="Landroidx/preference/PreferenceFragment$OnPreferenceDisplayDialogCallback;">
+      </implements>
+      <implements name="androidx.preference.PreferenceFragment.OnPreferenceStartFragmentCallback" name-generic-aware="androidx.preference.PreferenceFragment.OnPreferenceStartFragmentCallback" jni-type="Landroidx/preference/PreferenceFragment$OnPreferenceStartFragmentCallback;">
+      </implements>
+      <implements name="androidx.preference.PreferenceFragment.OnPreferenceStartScreenCallback" name-generic-aware="androidx.preference.PreferenceFragment.OnPreferenceStartScreenCallback" jni-type="Landroidx/preference/PreferenceFragment$OnPreferenceStartScreenCallback;">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="LeanbackSettingsFragment" jni-signature="()V" bridge="false" static="false" type="androidx.leanback.preference.LeanbackSettingsFragment" synthetic="false" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPreferenceDisplayDialog" jni-signature="(Landroidx/preference/PreferenceFragment;Landroidx/preference/Preference;)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="caller" type="androidx.preference.PreferenceFragment" jni-type="Landroidx/preference/PreferenceFragment;">
+        </parameter>
+        <parameter name="pref" type="androidx.preference.Preference" jni-type="Landroidx/preference/Preference;">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onPreferenceStartInitialScreen" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="startImmersiveFragment" jni-signature="(Landroid/app/Fragment;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="fragment" type="android.app.Fragment" jni-type="Landroid/app/Fragment;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="startPreferenceFragment" jni-signature="(Landroid/app/Fragment;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="fragment" type="android.app.Fragment" jni-type="Landroid/app/Fragment;">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.app.Fragment" extends-generic-aware="android.app.Fragment" jni-extends="Landroid/app/Fragment;" final="false" name="LeanbackSettingsFragment.DummyFragment" static="true" visibility="public" jni-signature="Landroidx/leanback/preference/LeanbackSettingsFragment$DummyFragment;">
+      <constructor deprecated="not deprecated" final="false" name="LeanbackSettingsFragment.DummyFragment" jni-signature="()V" bridge="false" static="false" type="androidx.leanback.preference.LeanbackSettingsFragment.DummyFragment" synthetic="false" visibility="public">
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="LeanbackSettingsFragment.RootViewOnKeyListener" static="false" visibility="private" jni-signature="Landroidx/leanback/preference/LeanbackSettingsFragment$RootViewOnKeyListener;">
+      <implements name="android.view.View.OnKeyListener" name-generic-aware="android.view.View.OnKeyListener" jni-type="Landroid/view/View$OnKeyListener;">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onKey" jni-signature="(Landroid/view/View;ILandroid/view/KeyEvent;)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="v" type="android.view.View" jni-type="Landroid/view/View;">
+        </parameter>
+        <parameter name="keyCode" type="int" jni-type="I">
+        </parameter>
+        <parameter name="event" type="android.view.KeyEvent" jni-type="Landroid/view/KeyEvent;">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.widget.FrameLayout" extends-generic-aware="android.widget.FrameLayout" jni-extends="Landroid/widget/FrameLayout;" final="false" name="LeanbackSettingsRootView" static="false" visibility="public" jni-signature="Landroidx/leanback/preference/LeanbackSettingsRootView;">
+      <constructor deprecated="not deprecated" final="false" name="LeanbackSettingsRootView" jni-signature="(Landroid/content/Context;)V" bridge="false" static="false" type="androidx.leanback.preference.LeanbackSettingsRootView" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="LeanbackSettingsRootView" jni-signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" bridge="false" static="false" type="androidx.leanback.preference.LeanbackSettingsRootView" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;">
+        </parameter>
+        <parameter name="attrs" type="android.util.AttributeSet" jni-type="Landroid/util/AttributeSet;">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="LeanbackSettingsRootView" jni-signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" bridge="false" static="false" type="androidx.leanback.preference.LeanbackSettingsRootView" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;">
+        </parameter>
+        <parameter name="attrs" type="android.util.AttributeSet" jni-type="Landroid/util/AttributeSet;">
+        </parameter>
+        <parameter name="defStyleAttr" type="int" jni-type="I">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setOnBackKeyListener" jni-signature="(Landroid/view/View$OnKeyListener;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="backKeyListener" type="android.view.View.OnKeyListener" jni-type="Landroid/view/View$OnKeyListener;">
+        </parameter>
+      </method>
+    </class>
+  </package>
+  <package name="androidx.leanback.preference.internal" jni-name="androidx/leanback/preference/internal">
+    <class abstract="false" deprecated="not deprecated" extends="android.widget.FrameLayout" extends-generic-aware="android.widget.FrameLayout" jni-extends="Landroid/widget/FrameLayout;" final="false" name="OutlineOnlyWithChildrenFrameLayout" static="false" visibility="public" jni-signature="Landroidx/leanback/preference/internal/OutlineOnlyWithChildrenFrameLayout;">
+      <constructor deprecated="not deprecated" final="false" name="OutlineOnlyWithChildrenFrameLayout" jni-signature="(Landroid/content/Context;)V" bridge="false" static="false" type="androidx.leanback.preference.internal.OutlineOnlyWithChildrenFrameLayout" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="OutlineOnlyWithChildrenFrameLayout" jni-signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" bridge="false" static="false" type="androidx.leanback.preference.internal.OutlineOnlyWithChildrenFrameLayout" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;">
+        </parameter>
+        <parameter name="attrs" type="android.util.AttributeSet" jni-type="Landroid/util/AttributeSet;">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="OutlineOnlyWithChildrenFrameLayout" jni-signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" bridge="false" static="false" type="androidx.leanback.preference.internal.OutlineOnlyWithChildrenFrameLayout" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;">
+        </parameter>
+        <parameter name="attrs" type="android.util.AttributeSet" jni-type="Landroid/util/AttributeSet;">
+        </parameter>
+        <parameter name="defStyleAttr" type="int" jni-type="I">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="OutlineOnlyWithChildrenFrameLayout" jni-signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" bridge="false" static="false" type="androidx.leanback.preference.internal.OutlineOnlyWithChildrenFrameLayout" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;">
+        </parameter>
+        <parameter name="attrs" type="android.util.AttributeSet" jni-type="Landroid/util/AttributeSet;">
+        </parameter>
+        <parameter name="defStyleAttr" type="int" jni-type="I">
+        </parameter>
+        <parameter name="defStyleRes" type="int" jni-type="I">
+        </parameter>
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.view.ViewOutlineProvider" extends-generic-aware="android.view.ViewOutlineProvider" jni-extends="Landroid/view/ViewOutlineProvider;" final="false" name="OutlineOnlyWithChildrenFrameLayout.1" static="false" visibility="" jni-signature="Landroidx/leanback/preference/internal/OutlineOnlyWithChildrenFrameLayout$1;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOutline" jni-signature="(Landroid/view/View;Landroid/graphics/Outline;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="view" type="android.view.View" jni-type="Landroid/view/View;">
+        </parameter>
+        <parameter name="outline" type="android.graphics.Outline" jni-type="Landroid/graphics/Outline;">
+        </parameter>
+      </method>
+    </class>
+  </package>
+</api>
