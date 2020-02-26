@@ -1,0 +1,1009 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FilterWriter
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FilterWriter
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.Filters.FilterWriter">
+  
+  
+  <h1 id="pdftron_Filters_FilterWriter" data-uid="pdftron.Filters.FilterWriter" class="text-break">Class FilterWriter
+  </h1>
+  <div class="markdown level0 summary"><p>FilterWriter is a utility class providing a convenient way to write data
+to an output filter (using Filter directly is not very intuitive).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FilterWriter</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.Filters.html">pdftron.Filters</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_Filters_FilterWriter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FilterWriter : IDisposable</code></pre>
+  </div>
+  <h5 id="pdftron_Filters_FilterWriter_examples"><strong>Examples</strong></h5>
+  <pre><code>  
+StdFile outfile=new StdFile(&quot;file.dat&quot;), StdFile.e_write_mode);
+FilterWriter fwriter=new FilterWriter(outfile);
+byte[] buf=...
+fwriter.writeBuffer(buf);
+fwriter.flush();</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter__ctor.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L39">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter__ctor_" data-uid="pdftron.Filters.FilterWriter.#ctor*"></a>
+  <h4 id="pdftron_Filters_FilterWriter__ctor" data-uid="pdftron.Filters.FilterWriter.#ctor">FilterWriter()</h4>
+  <div class="markdown level1 summary"><p>Instantiates a new filter writer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FilterWriter()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter__ctor_pdftron_Filters_Filter_.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.%23ctor(pdftron.Filters.Filter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L49">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter__ctor_" data-uid="pdftron.Filters.FilterWriter.#ctor*"></a>
+  <h4 id="pdftron_Filters_FilterWriter__ctor_pdftron_Filters_Filter_" data-uid="pdftron.Filters.FilterWriter.#ctor(pdftron.Filters.Filter)">FilterWriter(Filter)</h4>
+  <div class="markdown level1 summary"><p>Instantiates a new filter writer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FilterWriter(Filter output_filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><span class="parametername">output_filter</span></td>
+        <td><p>the filter</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_AttachFilter_pdftron_Filters_Filter_.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.AttachFilter(pdftron.Filters.Filter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L153">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_AttachFilter_" data-uid="pdftron.Filters.FilterWriter.AttachFilter*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_AttachFilter_pdftron_Filters_Filter_" data-uid="pdftron.Filters.FilterWriter.AttachFilter(pdftron.Filters.Filter)">AttachFilter(Filter)</h4>
+  <div class="markdown level1 summary"><p>Attaches a filter to the this FilterWriter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AttachFilter(Filter filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>the filter</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_Count.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L141">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_Count_" data-uid="pdftron.Filters.FilterWriter.Count*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_Count" data-uid="pdftron.Filters.FilterWriter.Count">Count()</h4>
+  <div class="markdown level1 summary"><p>Count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 Count()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><ul>
+<li>the number of bytes consumed since opening the filter or
+since the last Seek operation.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_Destroy.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L238">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_Destroy_" data-uid="pdftron.Filters.FilterWriter.Destroy*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_Destroy" data-uid="pdftron.Filters.FilterWriter.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_Dispose.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L222">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_Dispose_" data-uid="pdftron.Filters.FilterWriter.Dispose*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_Dispose" data-uid="pdftron.Filters.FilterWriter.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L227">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_Dispose_" data-uid="pdftron.Filters.FilterWriter.Dispose*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_Dispose_System_Boolean_" data-uid="pdftron.Filters.FilterWriter.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_Finalize.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L217">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_Finalize_" data-uid="pdftron.Filters.FilterWriter.Finalize*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_Finalize" data-uid="pdftron.Filters.FilterWriter.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the FilterWriter </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_Flush.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.Flush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L203">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_Flush_" data-uid="pdftron.Filters.FilterWriter.Flush*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_Flush" data-uid="pdftron.Filters.FilterWriter.Flush">Flush()</h4>
+  <div class="markdown level1 summary"><p>Forces any data remaining in the buffer to be written to input or output filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Flush()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_FlushAll.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.FlushAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L211">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_FlushAll_" data-uid="pdftron.Filters.FilterWriter.FlushAll*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_FlushAll" data-uid="pdftron.Filters.FilterWriter.FlushAll">FlushAll()</h4>
+  <div class="markdown level1 summary"><p>Forces any data remaining in the filter chain to the source or destination.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FlushAll()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_GetAttachedFilter.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.GetAttachedFilter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L164">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_GetAttachedFilter_" data-uid="pdftron.Filters.FilterWriter.GetAttachedFilter*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_GetAttachedFilter" data-uid="pdftron.Filters.FilterWriter.GetAttachedFilter">GetAttachedFilter()</h4>
+  <div class="markdown level1 summary"><p>Gets the attached filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Filter GetAttachedFilter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><ul>
+<li>The attached Filter or a NULL filter if no filter is attached.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_Seek_Int32_pdftron_Filters_Filter_ReferencePos_.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.Seek(Int32%2Cpdftron.Filters.Filter.ReferencePos)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L183">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_Seek_" data-uid="pdftron.Filters.FilterWriter.Seek*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_Seek_Int32_pdftron_Filters_Filter_ReferencePos_" data-uid="pdftron.Filters.FilterWriter.Seek(Int32,pdftron.Filters.Filter.ReferencePos)">Seek(Int32, Filter.ReferencePos)</h4>
+  <div class="markdown level1 summary"><p>Sets the position within the current stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Seek(Int32 offset, Filter.ReferencePos origin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><ul>
+<li>A byte offset relative to origin. If offset is negative,
+the new position will precede the position specified by origin by the number
+of bytes specified by offset. If offset is zero, the new position will be the
+position specified by origin. If offset is positive, the new position will follow
+the position specified by origin by the number of bytes specified by offset.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.ReferencePos.html">Filter.ReferencePos</a></td>
+        <td><span class="parametername">origin</span></td>
+        <td><ul>
+<li>A value of type ReferencePos indicating the reference point used
+to obtain the new position</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_Filters_FilterWriter_Seek_Int32_pdftron_Filters_Filter_ReferencePos__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><ul>
+<li>After each Seek() operation the number of consumed bytes (i.e. Count()) is set to 0. </li>
+</ul>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_Tell.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.Tell%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L193">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_Tell_" data-uid="pdftron.Filters.FilterWriter.Tell*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_Tell" data-uid="pdftron.Filters.FilterWriter.Tell">Tell()</h4>
+  <div class="markdown level1 summary"><p>Reports the current read position in the stream relative to the stream origin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 Tell()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><ul>
+<li>The current position in the stream</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_WriteBuffer_System_Byte___.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.WriteBuffer(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L124">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_WriteBuffer_" data-uid="pdftron.Filters.FilterWriter.WriteBuffer*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_WriteBuffer_System_Byte___" data-uid="pdftron.Filters.FilterWriter.WriteBuffer(System.Byte[])">WriteBuffer(Byte[])</h4>
+  <div class="markdown level1 summary"><p>Write buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Int32 WriteBuffer(byte[] buf)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buf</span></td>
+        <td><p>the buf</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><ul>
+<li>returns the number of bytes actually written to a stream. This number may
+less than buf_size if the stream is corrupted.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_WriteFilter_pdftron_Filters_FilterReader_.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.WriteFilter(pdftron.Filters.FilterReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L111">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_WriteFilter_" data-uid="pdftron.Filters.FilterWriter.WriteFilter*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_WriteFilter_pdftron_Filters_FilterReader_" data-uid="pdftron.Filters.FilterWriter.WriteFilter(pdftron.Filters.FilterReader)">WriteFilter(FilterReader)</h4>
+  <div class="markdown level1 summary"><p>Write the entire input stream to the output stream (i.e. to this FilterWriter).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteFilter(FilterReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterReader.html">FilterReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td><p>A FilterReader attached to an input stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_WriteInt_Int32_.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.WriteInt(Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L70">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_WriteInt_" data-uid="pdftron.Filters.FilterWriter.WriteInt*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_WriteInt_Int32_" data-uid="pdftron.Filters.FilterWriter.WriteInt(Int32)">WriteInt(Int32)</h4>
+  <div class="markdown level1 summary"><p>Write a 32 bit integer to the output stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteInt(Int32 num)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int32</span></td>
+        <td><span class="parametername">num</span></td>
+        <td><p>An integer to write to the output stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_WriteInt_Int64_.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.WriteInt(Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L80">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_WriteInt_" data-uid="pdftron.Filters.FilterWriter.WriteInt*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_WriteInt_Int64_" data-uid="pdftron.Filters.FilterWriter.WriteInt(Int64)">WriteInt(Int64)</h4>
+  <div class="markdown level1 summary"><p>Write a 64 bit integer to the output stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteInt(Int64 num)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Int64</span></td>
+        <td><span class="parametername">num</span></td>
+        <td><p>An integer to write to the output stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_WriteLine_System_String_.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.WriteLine(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L101">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_WriteLine_" data-uid="pdftron.Filters.FilterWriter.WriteLine*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_WriteLine_System_String_" data-uid="pdftron.Filters.FilterWriter.WriteLine(System.String)">WriteLine(String)</h4>
+  <div class="markdown level1 summary"><p>Write out a null terminated &apos;line&apos; followed by a end of line character
+default end of line character  is carriage return.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteLine(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>the line</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_WriteString_System_String_.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.WriteString(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L90">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_WriteString_" data-uid="pdftron.Filters.FilterWriter.WriteString*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_WriteString_System_String_" data-uid="pdftron.Filters.FilterWriter.WriteString(System.String)">WriteString(String)</h4>
+  <div class="markdown level1 summary"><p>Write a string to the output stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteString(string str)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">str</span></td>
+        <td><p>A string to write to the output stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter_WriteUChar_Byte_.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter.WriteUChar(Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L60">View Source</a>
+  </span>
+  <a id="pdftron_Filters_FilterWriter_WriteUChar_" data-uid="pdftron.Filters.FilterWriter.WriteUChar*"></a>
+  <h4 id="pdftron_Filters_FilterWriter_WriteUChar_Byte_" data-uid="pdftron.Filters.FilterWriter.WriteUChar(Byte)">WriteUChar(Byte)</h4>
+  <div class="markdown level1 summary"><p>Write a single character to the output stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void WriteUChar(Byte ch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Byte</span></td>
+        <td><span class="parametername">ch</span></td>
+        <td><p>An unsigned character to write to the output stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_Filters_FilterWriter.md&amp;value=---%0Auid%3A%20pdftron.Filters.FilterWriter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/Filters/FilterWriter.cs/#L25" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

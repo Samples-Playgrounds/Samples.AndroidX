@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Xappy"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:views="clr-namespace:Xappy.Content.Settings"
+    x:Class="Xappy.Content.Settings.SettingsPage"
+    Title="Craft Your Experience"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="true"
+    Shell.TabBarIsVisible="{Binding IsTabBarVisible}"
+    BackgroundColor="{DynamicResource backgroundColor}">
+
+    <ContentPage.BindingContext>
+        <views:SettingsViewModel x:Name="vm" />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="44" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <ImageButton
+                    Aspect="AspectFit"
+                    BackgroundColor="transparent"
+                    VerticalOptions="Center"
+                    Grid.Column="0"
+                    Padding="5"
+                    Clicked="Handle_CloseClicked">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource FontAwesome}"
+                            Glyph="{x:Static local:IconFont.Times}"
+                            Color="{StaticResource cerulean}" />
+                    </ImageButton.Source>
+                </ImageButton>
+
+                <Label Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Fill"
+                       HorizontalTextAlignment="Center"
+                       Style="{StaticResource TextHeadline}"
+                       TextColor="{StaticResource cerulean}"
+                       Text="Craft Your Experience" />
+            </Grid>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontSize="17"
+                              FontAttributes="Bold"
+                              TextColor="{DynamicResource TextPrimaryColor}">Display Settings
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <!--<CollectionView
+                SelectionChangedCommand="{Binding ChangeThemeCommand}"
+                SelectionMode="Single"
+                SelectedItem="{Binding SelectedTheme}"
+                HeightRequest="120">
+                <CollectionView.ItemsLayout>
+                    <ListItemsLayout Orientation="Horizontal"
+
+ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Light</x:String>
+                        <x:String>Dark</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <views:ThemeCardView WidthRequest="125" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>-->
+
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <CheckBox IsChecked="{Binding UseDeviceThemeSettings}" VerticalOptions="Center" />
+                <Label Text="Use device settings"
+                       Style="{StaticResource TextBody}" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout
+                IsVisible="{Binding UseDeviceThemeSettings, Converter={StaticResource InvertedBoolConverter}}"
+                Orientation="Horizontal"
+                Spacing="10">
+                <CheckBox IsChecked="{Binding UseDarkMode}" VerticalOptions="Center"/>
+                <Label Text="Dark mode"
+                       Style="{StaticResource TextBody}" VerticalOptions="Center"/>
+            </StackLayout>
+
+            
+
+            <Label Margin="0,15,0,0" Style="{StaticResource TextTitle}" Text="Visual"/>
+
+            <FlexLayout Direction="Row"
+                        Wrap="Wrap">
+                <CheckBox x:Name="ChkDefault"
+                          IsChecked="{Binding IsVisualDefault}"
+                          Visual="Default"
+                          FlexLayout.Basis="10%"
+                          FlexLayout.AlignSelf="Center" />
+                <Label Text="Default"
+                       Style="{StaticResource TextBody}"
+                       FlexLayout.Basis="90%"
+                       FlexLayout.AlignSelf="Center" />
+                <CheckBox x:Name="ChkMaterial"
+                          Visual="Material"
+                          IsChecked="{Binding IsVisualMaterial}"
+                          FlexLayout.Basis="10%"
+                          FlexLayout.AlignSelf="Center" />
+                <Label Text="Material"
+                       
+                       Style="{StaticResource TextBody}"
+                       FlexLayout.Basis="90%"
+                       FlexLayout.AlignSelf="Center" />
+            </FlexLayout>
+
+            <Label Margin="0,15,0,0"
+                   Style="{StaticResource TextTitle}"
+                   Text="Navigation"/>
+            <FlexLayout Direction="Row"
+                        Wrap="Wrap">
+                <Button
+                    BackgroundColor="{Binding UseFlyout,
+                        Converter={StaticResource IndexToColorConverter},
+                        ConverterParameter='white;cerulean'}"
+                    TextColor="{Binding UseFlyout,
+                        Converter={StaticResource IndexToColorConverter},
+                        ConverterParameter='cerulean;white'}"
+                    Text="Flyout"
+                    Command="{Binding ChangeNavigationCommand}"
+                    CommandParameter="flyout"
+                    FlexLayout.Basis="50%"
+                    BorderColor="{StaticResource cerulean}"
+                    BorderWidth="1"
+                    CornerRadius="0" />
+                <Button
+                    BackgroundColor="{Binding UseTabs,
+                        Converter={StaticResource IndexToColorConverter},
+                        ConverterParameter='white;cerulean'}"
+                    TextColor="{Binding UseTabs,
+                        Converter={StaticResource IndexToColorConverter},
+                        ConverterParameter='cerulean;white'}"
+                    Text="Bottom Tabs"
+                    Command="{Binding ChangeNavigationCommand}"
+                    CommandParameter="tabs"
+                    BorderColor="{StaticResource cerulean}"
+                    BorderWidth="1"
+                    FlexLayout.Basis="50%"
+                    CornerRadius="0" />
+            </FlexLayout>
+
+        </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>

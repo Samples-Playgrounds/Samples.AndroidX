@@ -1,0 +1,48 @@
+﻿<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/app_color_primary_day</item>
+    <item name="colorPrimaryDark">@color/app_color_primary_dark_day</item>
+    <item name="colorAccent">@color/app_color_accent</item>
+  </style>
+
+  <style name="CustomAppTheme" parent="AppTheme">
+    <item name="actionModeBackground">?attr/colorPrimary</item>
+    <item name="windowActionModeOverlay">true</item>
+
+    <!--Style customization-->
+    <item name="toolbarNavigationButtonStyle">@style/ToolbarButtonNavigationStyle</item>
+    <item name="annotation_toolbar">@style/CustomAnnotationToolbarStyle</item>
+  </style>
+
+  <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="titleTextColor">@color/app_color_icon</item>
+    <item name="colorControlNormal">@color/app_color_icon</item>
+    <item name="iconTint">@color/app_color_icon</item>
+  </style>
+
+  <style name="ToolbarButtonNavigationStyle" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+    <item name="android:tint">@color/app_color_icon</item>
+  </style>
+
+  <style name="CustomAnnotationToolbarStyle" parent="AnnotationToolbarStyle">
+    <item name="colorToolIcon">@color/app_color_icon</item>
+    <item name="colorCloseIcon">@color/app_color_icon</item>
+  </style>
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+  <style name="MyToolManager">
+    <!-- enable image stamper tool -->
+    <item name="add_image_stamper_tool">true</item>
+    <!-- show the built-in page number indicator -->
+    <item name="build_in_page_number_indicator">true</item>
+    <!-- whether to copy marked-up text of TextMarkup annot to annotation's content property upon TextMarkup annotation creation -->
+    <item name="copy_annotated_text_to_note">true</item>
+  </style>
+
+</resources>

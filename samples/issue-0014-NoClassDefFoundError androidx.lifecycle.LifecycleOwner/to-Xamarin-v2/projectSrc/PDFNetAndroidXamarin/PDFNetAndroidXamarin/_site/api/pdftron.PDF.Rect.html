@@ -1,0 +1,1253 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Rect
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Rect
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.Rect">
+  
+  
+  <h1 id="pdftron_PDF_Rect" data-uid="pdftron.PDF.Rect" class="text-break">Class Rect
+  </h1>
+  <div class="markdown level0 summary"><p>Rect is a utility class used to manipulate PDF rectangle objects (refer to 
+section 3.8.3 of the PDF Reference Manual). </p>
+<p>Rect can be associated with a SDF/Cos rectangle array using Rect(Obj<em>) constructor 
+or later using Rect::Attach(Obj</em>) or Rect::Update(Obj*) methods. </p>
+<p>Rect keeps a local cache for rectangle points so it is necessary to call Rect::Update() 
+method if the changes to the Rect should be saved in the attached Cos/SDF array.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Rect</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_Rect_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Rect : IDisposable</code></pre>
+  </div>
+  <h5 id="pdftron_PDF_Rect_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Although rectangles are conventionally specified by their lower-left and
+upperright corners, it is acceptable to specify any two diagonally opposite corners.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect__ctor.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L72">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect__ctor_" data-uid="pdftron.PDF.Rect.#ctor*"></a>
+  <h4 id="pdftron_PDF_Rect__ctor" data-uid="pdftron.PDF.Rect.#ctor">Rect()</h4>
+  <div class="markdown level1 summary"><p>Rect default constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect__ctor_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.%23ctor(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L86">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect__ctor_" data-uid="pdftron.PDF.Rect.#ctor*"></a>
+  <h4 id="pdftron_PDF_Rect__ctor_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Rect.#ctor(pdftron.SDF.Obj)">Rect(Obj)</h4>
+  <div class="markdown level1 summary"><p>Create a Rect and initialize it using given Cos/SDF rectangle Array object.
+The rect is attached to this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect(Obj rect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">rect</span></td>
+        <td><p>the rect</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect__ctor_System_Double_System_Double_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.%23ctor(System.Double%2CSystem.Double%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L105">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect__ctor_" data-uid="pdftron.PDF.Rect.#ctor*"></a>
+  <h4 id="pdftron_PDF_Rect__ctor_System_Double_System_Double_System_Double_System_Double_" data-uid="pdftron.PDF.Rect.#ctor(System.Double,System.Double,System.Double,System.Double)">Rect(Double, Double, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Create a Rect and initialize it using specified parameters.
+The rect is not attached to any Cos/SDF object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect(double x1, double y1, double x2, double y2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x1</span></td>
+        <td><p>x coordinate of the bottom left corner</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y1</span></td>
+        <td><p>y coordinate of the bottom left corner</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x2</span></td>
+        <td><p>x coordinate of the top right corner</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y2</span></td>
+        <td><p>y coordinate of the top right corner</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_x1.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.x1%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L295">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_x1_" data-uid="pdftron.PDF.Rect.x1*"></a>
+  <h4 id="pdftron_PDF_Rect_x1" data-uid="pdftron.PDF.Rect.x1">x1</h4>
+  <div class="markdown level1 summary"><p>x coordinate of the bottom left corner</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double x1 { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_x2.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.x2%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L325">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_x2_" data-uid="pdftron.PDF.Rect.x2*"></a>
+  <h4 id="pdftron_PDF_Rect_x2" data-uid="pdftron.PDF.Rect.x2">x2</h4>
+  <div class="markdown level1 summary"><p>x coordinate of the top right corner</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double x2 { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_y1.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.y1%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L310">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_y1_" data-uid="pdftron.PDF.Rect.y1*"></a>
+  <h4 id="pdftron_PDF_Rect_y1" data-uid="pdftron.PDF.Rect.y1">y1</h4>
+  <div class="markdown level1 summary"><p>y coordinate of the bottom left corner</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double y1 { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_y2.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.y2%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L340">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_y2_" data-uid="pdftron.PDF.Rect.y2*"></a>
+  <h4 id="pdftron_PDF_Rect_y2" data-uid="pdftron.PDF.Rect.y2">y2</h4>
+  <div class="markdown level1 summary"><p>y coordinate of the top right corner</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double y2 { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Attach_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Attach(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L139">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Attach_" data-uid="pdftron.PDF.Rect.Attach*"></a>
+  <h4 id="pdftron_PDF_Rect_Attach_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Rect.Attach(pdftron.SDF.Obj)">Attach(Obj)</h4>
+  <div class="markdown level1 summary"><p>Attach the Cos/SDF object to the Rect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Attach(Obj obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td><ul>
+<li>underlying Cos/SDF object. Must be an SDF::Array with four
+SDF::Number elements.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Contains_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Contains(System.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L237">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Contains_" data-uid="pdftron.PDF.Rect.Contains*"></a>
+  <h4 id="pdftron_PDF_Rect_Contains_System_Double_System_Double_" data-uid="pdftron.PDF.Rect.Contains(System.Double,System.Double)">Contains(Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Determines if the specified point is contained within the rectangular region
+defined by this Rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(double x, double y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>x coordinate of the specified point</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>y coordinate of the specified point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true is the point is in the rectangle, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L37">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Dispose_" data-uid="pdftron.PDF.Rect.Dispose*"></a>
+  <h4 id="pdftron_PDF_Rect_Dispose" data-uid="pdftron.PDF.Rect.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L43">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Dispose_" data-uid="pdftron.PDF.Rect.Dispose*"></a>
+  <h4 id="pdftron_PDF_Rect_Dispose_System_Boolean_" data-uid="pdftron.PDF.Rect.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L32">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Finalize_" data-uid="pdftron.PDF.Rect.Finalize*"></a>
+  <h4 id="pdftron_PDF_Rect_Finalize" data-uid="pdftron.PDF.Rect.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the Rect </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Get_System_Double_System_Double_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Get(System.Double%2CSystem.Double%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L180">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Get_" data-uid="pdftron.PDF.Rect.Get*"></a>
+  <h4 id="pdftron_PDF_Rect_Get_System_Double_System_Double_System_Double_System_Double_" data-uid="pdftron.PDF.Rect.Get(System.Double,System.Double,System.Double,System.Double)">Get(Double, Double, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Gets the Rectangle coordinates  </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Get(double out_x1, double out_y1, double out_x2, double out_y2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_x1</span></td>
+        <td><p>x coordinate of the bottom left corner</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_y1</span></td>
+        <td><p>y coordinate of the bottom left corner</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_x2</span></td>
+        <td><p>x coordinate of the top right corner</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_y2</span></td>
+        <td><p>y coordinate of the top right corner</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Height.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Height%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L220">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Height_" data-uid="pdftron.PDF.Rect.Height*"></a>
+  <h4 id="pdftron_PDF_Rect_Height" data-uid="pdftron.PDF.Rect.Height">Height()</h4>
+  <div class="markdown level1 summary"><p>Gets the height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Height()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>rectangle&apos;s height</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Inflate_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Inflate(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L277">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Inflate_" data-uid="pdftron.PDF.Rect.Inflate*"></a>
+  <h4 id="pdftron_PDF_Rect_Inflate_System_Double_" data-uid="pdftron.PDF.Rect.Inflate(System.Double)">Inflate(Double)</h4>
+  <div class="markdown level1 summary"><p>Inflate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inflate(double amount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td><p>amount of inflate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Inflate_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Inflate(System.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L288">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Inflate_" data-uid="pdftron.PDF.Rect.Inflate*"></a>
+  <h4 id="pdftron_PDF_Rect_Inflate_System_Double_System_Double_" data-uid="pdftron.PDF.Rect.Inflate(System.Double,System.Double)">Inflate(Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Inflate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Inflate(double x, double y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>the x</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>the y</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_IntersectRect_pdftron_PDF_Rect_pdftron_PDF_Rect_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.IntersectRect(pdftron.PDF.Rect%2Cpdftron.PDF.Rect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L254">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_IntersectRect_" data-uid="pdftron.PDF.Rect.IntersectRect*"></a>
+  <h4 id="pdftron_PDF_Rect_IntersectRect_pdftron_PDF_Rect_pdftron_PDF_Rect_" data-uid="pdftron.PDF.Rect.IntersectRect(pdftron.PDF.Rect,pdftron.PDF.Rect)">IntersectRect(Rect, Rect)</h4>
+  <div class="markdown level1 summary"><p>Makes a Rect equal to the intersection of two existing rectangles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IntersectRect(Rect rect1, Rect rect2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">rect1</span></td>
+        <td><ul>
+<li>A Rect object that contains a source rectangle.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">rect2</span></td>
+        <td><ul>
+<li>A Rect object that contains a source rectangle.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the intersection is not empty; 0 if the intersection is empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Rect_IntersectRect_pdftron_PDF_Rect_pdftron_PDF_Rect__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The intersection is the largest rectangle contained in both existing rectangles. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Normalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Normalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L268">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Normalize_" data-uid="pdftron.PDF.Rect.Normalize*"></a>
+  <h4 id="pdftron_PDF_Rect_Normalize" data-uid="pdftron.PDF.Rect.Normalize">Normalize()</h4>
+  <div class="markdown level1 summary"><p>Normalizes the rectagle to the one with lower-left and upper-right corners.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Normalize()</code></pre>
+  </div>
+  <h5 id="pdftron_PDF_Rect_Normalize_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Although rectangles are conventionally specified by their lower-left 
+and upper-right corners, it is acceptable to specify any two diagonally
+opposite corners.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_op_Assign_pdftron_PDF_Rect_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.op_Assign(pdftron.PDF.Rect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L127">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_op_Assign_" data-uid="pdftron.PDF.Rect.op_Assign*"></a>
+  <h4 id="pdftron_PDF_Rect_op_Assign_pdftron_PDF_Rect_" data-uid="pdftron.PDF.Rect.op_Assign(pdftron.PDF.Rect)">op_Assign(Rect)</h4>
+  <div class="markdown level1 summary"><p>Assignment operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect op_Assign(Rect rr)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">rr</span></td>
+        <td><p>a <code>Rect</code> object at the right of the operator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><p>a <code>Rect</code> object equals to the given <code>Rect</code> object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Set_pdftron_PDF_Rect_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Set(pdftron.PDF.Rect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L118">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Set_" data-uid="pdftron.PDF.Rect.Set*"></a>
+  <h4 id="pdftron_PDF_Rect_Set_pdftron_PDF_Rect_" data-uid="pdftron.PDF.Rect.Set(pdftron.PDF.Rect)">Set(Rect)</h4>
+  <div class="markdown level1 summary"><p>Set the coordinates of the rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(Rect p)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">p</span></td>
+        <td><p>the r</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Set_System_Double_System_Double_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Set(System.Double%2CSystem.Double%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L197">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Set_" data-uid="pdftron.PDF.Rect.Set*"></a>
+  <h4 id="pdftron_PDF_Rect_Set_System_Double_System_Double_System_Double_System_Double_" data-uid="pdftron.PDF.Rect.Set(System.Double,System.Double,System.Double,System.Double)">Set(Double, Double, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Set the coordinates of the rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(double x1, double y1, double x2, double y2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x1</span></td>
+        <td><p>x coordinate of the bottom left corner</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y1</span></td>
+        <td><p>y coordinate of the bottom left corner</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">x2</span></td>
+        <td><p>x coordinate of the top right corner</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">y2</span></td>
+        <td><p>y coordinate of the top right corner</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Update.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Update%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L150">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Update_" data-uid="pdftron.PDF.Rect.Update*"></a>
+  <h4 id="pdftron_PDF_Rect_Update" data-uid="pdftron.PDF.Rect.Update">Update()</h4>
+  <div class="markdown level1 summary"><p>Saves changes made to the Rect object in the attached (or specified) SDF/Cos rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Update()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the attached Cos/SDF rectangle array was successfully updated,
+false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Update_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Update(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L167">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Update_" data-uid="pdftron.PDF.Rect.Update*"></a>
+  <h4 id="pdftron_PDF_Rect_Update_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Rect.Update(pdftron.SDF.Obj)">Update(Obj)</h4>
+  <div class="markdown level1 summary"><p>Saves changes made to the Rect object in the attached (or specified) SDF/Cos rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Update(Obj obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td><ul>
+<li>an SDF array that should be
+updated and attached to this Rect. If parameter rect is NULL or is omitted, update
+is performed on previously attached Cos/SDF rectangle.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the attached Cos/SDF rectangle array was successfully updated,
+false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect_Width.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect.Width%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L208">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Rect_Width_" data-uid="pdftron.PDF.Rect.Width*"></a>
+  <h4 id="pdftron_PDF_Rect_Width" data-uid="pdftron.PDF.Rect.Width">Width()</h4>
+  <div class="markdown level1 summary"><p>Gets the width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Width()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>rectangle&apos;s width</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Rect.md&amp;value=---%0Auid%3A%20pdftron.PDF.Rect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Rect.cs/#L27" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

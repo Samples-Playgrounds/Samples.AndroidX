@@ -1,0 +1,1619 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PDFDraw
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PDFDraw
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.PDFDraw">
+  
+  
+  <h1 id="pdftron_PDF_PDFDraw" data-uid="pdftron.PDF.PDFDraw" class="text-break">Class PDFDraw
+  </h1>
+  <div class="markdown level0 summary"><p>PDFDraw contains methods for converting PDF pages to images and to Bitmap objects.
+Utility methods are provided to export PDF pages to various raster formats as well 
+as to convert pages to GDI+ bitmaps for further manipulation or drawing.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PDFDraw</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_PDFDraw_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PDFDraw : IDisposable</code></pre>
+  </div>
+  <h5 id="pdftron_PDF_PDFDraw_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This class is available on all platforms supported by PDFNet.  </p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw__ctor.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L131">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw__ctor_" data-uid="pdftron.PDF.PDFDraw.#ctor*"></a>
+  <h4 id="pdftron_PDF_PDFDraw__ctor" data-uid="pdftron.PDF.PDFDraw.#ctor">PDFDraw()</h4>
+  <div class="markdown level1 summary"><p>PDFDraw constructor and destructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PDFDraw()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw__ctor_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.%23ctor(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L142">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw__ctor_" data-uid="pdftron.PDF.PDFDraw.#ctor*"></a>
+  <h4 id="pdftron_PDF_PDFDraw__ctor_System_Double_" data-uid="pdftron.PDF.PDFDraw.#ctor(System.Double)">PDFDraw(Double)</h4>
+  <div class="markdown level1 summary"><p>Instantiates a new pDF draw.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PDFDraw(double dpi)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">dpi</span></td>
+        <td><p>the dpi</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L112">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_Destroy_" data-uid="pdftron.PDF.PDFDraw.Destroy*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_Destroy" data-uid="pdftron.PDF.PDFDraw.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L95">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_Dispose_" data-uid="pdftron.PDF.PDFDraw.Dispose*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_Dispose" data-uid="pdftron.PDF.PDFDraw.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L100">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_Dispose_" data-uid="pdftron.PDF.PDFDraw.Dispose*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_Dispose_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_Export_pdftron_PDF_Page_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.Export(pdftron.PDF.Page%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L470">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_Export_" data-uid="pdftron.PDF.PDFDraw.Export*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_Export_pdftron_PDF_Page_System_String_" data-uid="pdftron.PDF.PDFDraw.Export(pdftron.PDF.Page,System.String)">Export(Page, String)</h4>
+  <div class="markdown level1 summary"><p>A utility method to export the given PDF page to an image file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Export(Page page, string filename)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>The source PDF page.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filename</span></td>
+        <td><ul>
+<li>The name of the output image file. The filename should include
+the extension suffix (e.g. &apos;c:/output/myimage.png&apos;).</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PDFDraw_Export_pdftron_PDF_Page_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>By default, the function exports to PNG.. The file format of the output image. Currently supported formats are:
+<ul><li>&quot;RAW&quot; RAW format. There are four possibilities: 
+                         e_rgba - if transparent and color page;
+                         e_gray_alpha - if transparent and gray page;
+                         e_rgb - if opaque and color page;
+                         e_gray - if opaque and gray page.</li><li>&quot;BMP&quot; Bitmap image format (BMP)</li><li>&quot;JPEG&quot; Joint Photographic Experts Group (JPEG) image format</li><li>&quot;PNG&quot; 24-bit W3C Portable Network Graphics (PNG) image format</li><li>&quot;PNG8&quot; 8-bit, palettized PNG format. The exported file size should be
+smaller than the one generated using &quot;PNG&quot;, possibly at the
+expense of some image quality.</li><li>&quot;TIFF&quot; Tag Image File Format (TIFF) image format.</li><li>&quot;TIFF8&quot; Tag Image File Format (TIFF) image format (with 8-bit pallete).</li></ul></p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_Export_pdftron_PDF_Page_System_String_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.Export(pdftron.PDF.Page%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L439">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_Export_" data-uid="pdftron.PDF.PDFDraw.Export*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_Export_pdftron_PDF_Page_System_String_System_String_" data-uid="pdftron.PDF.PDFDraw.Export(pdftron.PDF.Page,System.String,System.String)">Export(Page, String, String)</h4>
+  <div class="markdown level1 summary"><p>Export.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Export(Page page, string filename, string format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>the page</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filename</span></td>
+        <td><p>the filename</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>the format</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_Export_pdftron_PDF_Page_System_String_System_String_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.Export(pdftron.PDF.Page%2CSystem.String%2CSystem.String%2Cpdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L424">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_Export_" data-uid="pdftron.PDF.PDFDraw.Export*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_Export_pdftron_PDF_Page_System_String_System_String_pdftron_SDF_Obj_" data-uid="pdftron.PDF.PDFDraw.Export(pdftron.PDF.Page,System.String,System.String,pdftron.SDF.Obj)">Export(Page, String, String, Obj)</h4>
+  <div class="markdown level1 summary"><p>Export.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Export(Page page, string filename, string format, Obj encoder_hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>the page</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filename</span></td>
+        <td><p>the filename</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>the format</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">encoder_hints</span></td>
+        <td><p>the encoder_params</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L90">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_Finalize_" data-uid="pdftron.PDF.PDFDraw.Finalize*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_Finalize" data-uid="pdftron.PDF.PDFDraw.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the PDFDraw </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_GetBitmap_pdftron_PDF_Page_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.GetBitmap(pdftron.PDF.Page)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L645">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_GetBitmap_" data-uid="pdftron.PDF.PDFDraw.GetBitmap*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_GetBitmap_pdftron_PDF_Page_" data-uid="pdftron.PDF.PDFDraw.GetBitmap(pdftron.PDF.Page)">GetBitmap(Page)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Android.Graphics.Bitmap GetBitmap(Page page)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Android.Graphics.Bitmap</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_GetBitmap_pdftron_PDF_Page_pdftron_PDF_PDFDraw_PixelFormat_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.GetBitmap(pdftron.PDF.Page%2Cpdftron.PDF.PDFDraw.PixelFormat%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L623">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_GetBitmap_" data-uid="pdftron.PDF.PDFDraw.GetBitmap*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_GetBitmap_pdftron_PDF_Page_pdftron_PDF_PDFDraw_PixelFormat_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.GetBitmap(pdftron.PDF.Page,pdftron.PDF.PDFDraw.PixelFormat,System.Boolean)">GetBitmap(Page, PDFDraw.PixelFormat, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BitmapInfo GetBitmap(Page page, PDFDraw.PixelFormat pix_fmt, bool demult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDraw.PixelFormat.html">PDFDraw.PixelFormat</a></td>
+        <td><span class="parametername">pix_fmt</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">demult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.BitmapInfo.html">BitmapInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_GetBitmapInfo_pdftron_PDF_Page_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.GetBitmapInfo(pdftron.PDF.Page)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L639">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_GetBitmapInfo_" data-uid="pdftron.PDF.PDFDraw.GetBitmapInfo*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_GetBitmapInfo_pdftron_PDF_Page_" data-uid="pdftron.PDF.PDFDraw.GetBitmapInfo(pdftron.PDF.Page)">GetBitmapInfo(Page)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BitmapInfo GetBitmapInfo(Page page)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.BitmapInfo.html">BitmapInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetAntiAliasing_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetAntiAliasing(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L345">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetAntiAliasing_" data-uid="pdftron.PDF.PDFDraw.SetAntiAliasing*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetAntiAliasing_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.SetAntiAliasing(System.Boolean)">SetAntiAliasing(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable anti-aliasing. Anti-Aliasing is a technique used to improve the visual quality of images 
+when displaying them on low resolution devices (for example, low DPI computer monitors). 
+Anti-aliasing is enabled by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAntiAliasing(bool enable_aa)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable_aa</span></td>
+        <td><p>whether to enable anti-aliasing</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetCaching_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetCaching(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L395">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetCaching_" data-uid="pdftron.PDF.PDFDraw.SetCaching*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetCaching_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.SetCaching(System.Boolean)">SetCaching(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the caching.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCaching(bool enabled)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td><p>the new caching</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetClipRect_pdftron_PDF_Rect_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetClipRect(pdftron.PDF.Rect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L238">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetClipRect_" data-uid="pdftron.PDF.PDFDraw.SetClipRect*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetClipRect_pdftron_PDF_Rect_" data-uid="pdftron.PDF.PDFDraw.SetClipRect(pdftron.PDF.Rect)">SetClipRect(Rect)</h4>
+  <div class="markdown level1 summary"><p>Clip the render region to the provided rect (in page space)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetClipRect(Rect clip_rect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">clip_rect</span></td>
+        <td><p>Clipping rect. By default, PDFDraw will rasterize 
+the entire page box.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetDefaultPageColor_System_Byte_System_Byte_System_Byte_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetDefaultPageColor(System.Byte%2CSystem.Byte%2CSystem.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L327">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetDefaultPageColor_" data-uid="pdftron.PDF.PDFDraw.SetDefaultPageColor*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetDefaultPageColor_System_Byte_System_Byte_System_Byte_" data-uid="pdftron.PDF.PDFDraw.SetDefaultPageColor(System.Byte,System.Byte,System.Byte)">SetDefaultPageColor(Byte, Byte, Byte)</h4>
+  <div class="markdown level1 summary"><p>Sets the default color of the page backdrop.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDefaultPageColor(byte r, byte g, byte b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">r</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">g</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetDPI_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetDPI(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L186">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetDPI_" data-uid="pdftron.PDF.PDFDraw.SetDPI*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetDPI_System_Double_" data-uid="pdftron.PDF.PDFDraw.SetDPI(System.Double)">SetDPI(Double)</h4>
+  <div class="markdown level1 summary"><p>Sets the output image resolution.</p>
+<p>DPI stands for Dots Per Inch. This parameter is used to specify the output
+image size and quality. A typical screen resolution for monitors these days is
+92 DPI, but printers could use 200 DPI or more.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDPI(double dpi)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">dpi</span></td>
+        <td><p>the new dPI</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PDFDraw_SetDPI_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The size of resulting image is a function of DPI and the dimensions of 
+   the source PDF page. For example, is DPI is 92 and page is 8 inches wide, the
+   output bitmap will have 92*8 = 736 pixels per line. If you know the dimensions
+   of the destination bitmap, but don&apos;t care about DPI of the image you can use
+   pdfdraw.SetImageSize() instead.
+</p>
+<p>
+if you would like to rasterize extremely large bitmaps (e.g. with
+resolutions of 2000 DPI or more) it is not practical to use PDFDraw directly
+because of the memory required to store the entire image. In this case, you
+can use PDFRasterizer directly to generate the rasterized image in stripes or
+tiles.
+</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetDrawAnnotations_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetDrawAnnotations(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L269">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetDrawAnnotations_" data-uid="pdftron.PDF.PDFDraw.SetDrawAnnotations*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetDrawAnnotations_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.SetDrawAnnotations(System.Boolean)">SetDrawAnnotations(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable annotation and forms rendering. By default, all annotations and form fields are rendered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDrawAnnotations(bool render_annots)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">render_annots</span></td>
+        <td><p>True to draw annotations, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetFlipYAxis_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetFlipYAxis(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L249">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetFlipYAxis_" data-uid="pdftron.PDF.PDFDraw.SetFlipYAxis*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetFlipYAxis_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.SetFlipYAxis(System.Boolean)">SetFlipYAxis(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Flips the vertical (i.e. Y) axis of the image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFlipYAxis(bool flip_y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">flip_y</span></td>
+        <td><p>true to flip the Y axis, false otherwise. For compatibility with
+most raster formats &apos;flip_y&apos; is true by default.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetGamma_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetGamma(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L290">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetGamma_" data-uid="pdftron.PDF.PDFDraw.SetGamma*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetGamma_System_Double_" data-uid="pdftron.PDF.PDFDraw.SetGamma(System.Double)">SetGamma(Double)</h4>
+  <div class="markdown level1 summary"><p>Sets the gamma factor used for anti-aliased rendering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGamma(double exp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">exp</span></td>
+        <td><p>exponent value of gamma function. Typical values are in the range from 0.1 to 3.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PDFDraw_SetGamma_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Gamma correction can be used to improve the quality of anti-aliased image output and can (to some extent) decrease the appearance common anti-aliasing artifacts (such as pixel width lines between polygons).
+Gamma correction is used only in the built-in rasterizer.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetHighlightFields_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetHighlightFields(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L278">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetHighlightFields_" data-uid="pdftron.PDF.PDFDraw.SetHighlightFields*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetHighlightFields_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.SetHighlightFields(System.Boolean)">SetHighlightFields(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable highlighting form fields. Default is disabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetHighlightFields(bool highlight_fields)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">highlight_fields</span></td>
+        <td><p>true to highlight, false otherwise. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetImageSize_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetImageSize(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L216">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetImageSize_" data-uid="pdftron.PDF.PDFDraw.SetImageSize*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetImageSize_System_Int32_System_Int32_" data-uid="pdftron.PDF.PDFDraw.SetImageSize(System.Int32,System.Int32)">SetImageSize(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>SetImageSize can be used instead of SetDPI() to adjust page  scaling so that
+image fits into a buffer of given dimensions.</p>
+<p>If this function is used, DPI will be calculated dynamically for each
+page so that every page fits into the buffer of given dimensions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetImageSize(int width, int height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><ul>
+<li>The width of the image, in pixels/samples.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><ul>
+<li>The height of the image, in pixels/samples.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetImageSize_System_Int32_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetImageSize(System.Int32%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L200">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetImageSize_" data-uid="pdftron.PDF.PDFDraw.SetImageSize*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetImageSize_System_Int32_System_Int32_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.SetImageSize(System.Int32,System.Int32,System.Boolean)">SetImageSize(Int32, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the image size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetImageSize(int width, int height, bool preserve_aspect_ratio)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>the width</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>the height</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">preserve_aspect_ratio</span></td>
+        <td><p>the preserve_aspect_ratio</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetImageSmoothing_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetImageSmoothing(System.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L385">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetImageSmoothing_" data-uid="pdftron.PDF.PDFDraw.SetImageSmoothing*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetImageSmoothing_System_Boolean_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.SetImageSmoothing(System.Boolean,System.Boolean)">SetImageSmoothing(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable image smoothing.<br>The rasterizer allows a tradeoff between rendering quality and rendering speed.
+This function can be used to indicate the preference between rendering speed and quality. image smoothing is enabled by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetImageSmoothing(bool smoothing_enabled, bool hq_image_resampling)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">smoothing_enabled</span></td>
+        <td><p>whether to enable image smoothing</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">hq_image_resampling</span></td>
+        <td><p>whether to use a higher quality (but slower) smoothing algorithm</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PDFDraw_SetImageSmoothing_System_Boolean_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>image smoothing option has effect only if the source image has higher resolution 
+that the output resolution of the image on the rasterized page. PDFNet automatically
+controls at what resolution/zoom factor, &apos;image smoothing&apos; needs to take effect.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetOCGContext_pdftron_PDF_OCG_Context_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetOCGContext(pdftron.PDF.OCG.Context)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L299">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetOCGContext_" data-uid="pdftron.PDF.PDFDraw.SetOCGContext*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetOCGContext_pdftron_PDF_OCG_Context_" data-uid="pdftron.PDF.PDFDraw.SetOCGContext(pdftron.PDF.OCG.Context)">SetOCGContext(Context)</h4>
+  <div class="markdown level1 summary"><p>Sets the Optional Content Group (OCG) context that should be used when rendering the page.
+This function can be used to selectively render optional content (such as PDF layers) based on the states of optional content groups in the given context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOCGContext(Context ctx)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.Context.html">Context</a></td>
+        <td><span class="parametername">ctx</span></td>
+        <td><p>Optional Content Group (OCG) context, or NULL if the rasterizer should render all content on the page.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetOverprint_pdftron_PDF_PDFRasterizer_OverprintPreviewMode_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetOverprint(pdftron.PDF.PDFRasterizer.OverprintPreviewMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L335">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetOverprint_" data-uid="pdftron.PDF.PDFDraw.SetOverprint*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetOverprint_pdftron_PDF_PDFRasterizer_OverprintPreviewMode_" data-uid="pdftron.PDF.PDFDraw.SetOverprint(pdftron.PDF.PDFRasterizer.OverprintPreviewMode)">SetOverprint(PDFRasterizer.OverprintPreviewMode)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable support for overprint. Overprint is a device dependent feature and the results will vary depending on the output color space and supported colorants (i.e. CMYK, CMYK+spot, RGB, etc). By default overprint is enabled for only PDF/X files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOverprint(PDFRasterizer.OverprintPreviewMode op)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFRasterizer.OverprintPreviewMode.html">PDFRasterizer.OverprintPreviewMode</a></td>
+        <td><span class="parametername">op</span></td>
+        <td><p>e_op_on: always enabled; e_op_off: always disabled; e_op_pdfx_on: enabled for PDF/X files only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetPageBox_pdftron_PDF_Page_Box_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetPageBox(pdftron.PDF.Page.Box)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L227">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetPageBox_" data-uid="pdftron.PDF.PDFDraw.SetPageBox*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetPageBox_pdftron_PDF_Page_Box_" data-uid="pdftron.PDF.PDFDraw.SetPageBox(pdftron.PDF.Page.Box)">SetPageBox(Page.Box)</h4>
+  <div class="markdown level1 summary"><p>Selects the page box/region to rasterize.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPageBox(Page.Box region)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.Box.html">Page.Box</a></td>
+        <td><span class="parametername">region</span></td>
+        <td><p>Page box to rasterize. By default, PDFDraw will rasterize
+page crop box.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetPageTransparent_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetPageTransparent(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L318">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetPageTransparent_" data-uid="pdftron.PDF.PDFDraw.SetPageTransparent*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetPageTransparent_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.SetPageTransparent(System.Boolean)">SetPageTransparent(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the page color to transparent. By default, PDFDraw assumes that the page is imposed directly on an opaque white surface. Some applications may need to impose the page on a different backdrop. In this case any pixels that are not covered during rendering will be transparent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPageTransparent(bool is_transp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">is_transp</span></td>
+        <td><p>If true, page&apos;s backdrop color will be transparent. If false, the page&apos;s backdrop will be a opaque white.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PDFDraw_SetPageTransparent_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If true, page&apos;s backdrop color will be transparent. If false, the page&apos;s backdrop will be a opaque white.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetPathHinting_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetPathHinting(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L355">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetPathHinting_" data-uid="pdftron.PDF.PDFDraw.SetPathHinting*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetPathHinting_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.SetPathHinting(System.Boolean)">SetPathHinting(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable path hinting. Path hinting is used to slightly adjust paths in order to avoid or alleviate artifacts of hair line cracks between
+certain graphical elements. This option is turned on by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPathHinting(bool enable_ph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable_ph</span></td>
+        <td><p>whether to enable path hinting.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetPrintMode_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetPrintMode(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L308">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetPrintMode_" data-uid="pdftron.PDF.PDFDraw.SetPrintMode*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetPrintMode_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.SetPrintMode(System.Boolean)">SetPrintMode(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Tells the rasterizer to render the page &apos;print&apos; mode.
+Certain page elements (such as annotations or OCG-s) are meant to be visible either on the screen or on the printed paper but not both. A common example, is the &quot;Submit&quot; button on electronic forms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPrintMode(bool is_printing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">is_printing</span></td>
+        <td><p>set to true if the page should be rendered in print mode. By default, print mode flag is set to false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetRasterizerType_pdftron_PDF_PDFRasterizer_Type_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetRasterizerType(pdftron.PDF.PDFRasterizer.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L156">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetRasterizerType_" data-uid="pdftron.PDF.PDFDraw.SetRasterizerType*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetRasterizerType_pdftron_PDF_PDFRasterizer_Type_" data-uid="pdftron.PDF.PDFDraw.SetRasterizerType(pdftron.PDF.PDFRasterizer.Type)">SetRasterizerType(PDFRasterizer.Type)</h4>
+  <div class="markdown level1 summary"><p>Sets the core graphics library used for rasterization and
+rendering. Using this method it is possible to quickly switch
+between different implementations. By default, PDFDraw uses
+the built-in, platform independent rasterizer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRasterizerType(PDFRasterizer.Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFRasterizer.Type.html">PDFRasterizer.Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Rasterizer type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetRotate_pdftron_PDF_Page_Rotate_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetRotate(pdftron.PDF.Page.Rotate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L261">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetRotate_" data-uid="pdftron.PDF.PDFDraw.SetRotate*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetRotate_pdftron_PDF_Page_Rotate_" data-uid="pdftron.PDF.PDFDraw.SetRotate(pdftron.PDF.Page.Rotate)">SetRotate(Page.Rotate)</h4>
+  <div class="markdown level1 summary"><p>Sets the rotation value for this page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRotate(Page.Rotate r)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.Rotate.html">Page.Rotate</a></td>
+        <td><span class="parametername">r</span></td>
+        <td><p>the new rotate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PDFDraw_SetRotate_pdftron_PDF_Page_Rotate__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is used only for drawing purposes and it does not modify
+the document (unlike Page.SetRotate()).</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw_SetThinLineAdjustment_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw.SetThinLineAdjustment(System.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L369">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFDraw_SetThinLineAdjustment_" data-uid="pdftron.PDF.PDFDraw.SetThinLineAdjustment*"></a>
+  <h4 id="pdftron_PDF_PDFDraw_SetThinLineAdjustment_System_Boolean_System_Boolean_" data-uid="pdftron.PDF.PDFDraw.SetThinLineAdjustment(System.Boolean,System.Boolean)">SetThinLineAdjustment(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Set thin line adjustment parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetThinLineAdjustment(bool pixel_grid_fit, bool stroke_adjust)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">pixel_grid_fit</span></td>
+        <td><p>if true (horizontal/vertical) thin lines will be snapped to 
+integer pixel positions. This helps make thin lines look sharper and clearer. This
+option is turned off by default and it only works if path hinting is enabled.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">stroke_adjust</span></td>
+        <td><p>if true auto stroke adjustment is enabled. Currently, this would 
+make lines with sub-pixel width to be one-pixel wide. This option is turned on by default.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFDraw.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFDraw%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFDraw.cs/#L84" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,746 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PatternColor
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PatternColor
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.PatternColor">
+  
+  
+  <h1 id="pdftron_PDF_PatternColor" data-uid="pdftron.PDF.PatternColor" class="text-break">Class PatternColor
+  </h1>
+  <div class="markdown level0 summary"><p>Patterns are quite general, and have many uses; for example, they can be used 
+to create various graphical textures, such as weaves, brick walls, sunbursts, 
+and similar geometrical and chromatic effects.
+Patterns are specified in a special family of color spaces named Pattern, whose
+&apos;color values&apos; are PatternColor objects instead of the numeric component values 
+used with other spaces. Therefore PatternColor is to pattern color space what is 
+ColorPt to all other color spaces.</p>
+<p>A tiling pattern consists of a small graphical figure called a pattern cell. 
+Painting with the pattern replicates the cell at fixed horizontal and vertical 
+intervals to fill an area. The effect is as if the figure were painted on the 
+surface of a clear glass tile, identical copies of which were then laid down 
+in an array covering the area and trimmed to its boundaries. This is called 
+tiling the area.</p>
+<p>The pattern cell can include graphical elements such as filled areas, text, 
+and sampled images. Its shape need not be rectangular, and the spacing of 
+tiles can differ from the dimensions of the cell itself.</p>
+<p>The order in which individual tiles (instances of the cell) are painted is 
+unspecified and unpredictable; it is inadvisable for the figures on adjacent 
+tiles to overlap.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PatternColor</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_PatternColor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PatternColor : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor__ctor_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.%23ctor(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L159">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor__ctor_" data-uid="pdftron.PDF.PatternColor.#ctor*"></a>
+  <h4 id="pdftron_PDF_PatternColor__ctor_pdftron_SDF_Obj_" data-uid="pdftron.PDF.PatternColor.#ctor(pdftron.SDF.Obj)">PatternColor(Obj)</h4>
+  <div class="markdown level1 summary"><p>Create a PatternColor from the given SDF/Cos object listed under Pattern entry
+in page Resource dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PatternColor(Obj pattern)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>the pattern</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L68">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_Destroy_" data-uid="pdftron.PDF.PatternColor.Destroy*"></a>
+  <h4 id="pdftron_PDF_PatternColor_Destroy" data-uid="pdftron.PDF.PatternColor.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L52">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_Dispose_" data-uid="pdftron.PDF.PatternColor.Dispose*"></a>
+  <h4 id="pdftron_PDF_PatternColor_Dispose" data-uid="pdftron.PDF.PatternColor.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L57">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_Dispose_" data-uid="pdftron.PDF.PatternColor.Dispose*"></a>
+  <h4 id="pdftron_PDF_PatternColor_Dispose_System_Boolean_" data-uid="pdftron.PDF.PatternColor.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L48">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_Finalize_" data-uid="pdftron.PDF.PatternColor.Finalize*"></a>
+  <h4 id="pdftron_PDF_PatternColor_Finalize" data-uid="pdftron.PDF.PatternColor.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the PatternColor </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_GetBBox.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.GetBBox%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L189">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_GetBBox_" data-uid="pdftron.PDF.PatternColor.GetBBox*"></a>
+  <h4 id="pdftron_PDF_PatternColor_GetBBox" data-uid="pdftron.PDF.PatternColor.GetBBox">GetBBox()</h4>
+  <div class="markdown level1 summary"><p>Gets the bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Rect GetBBox()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><p>A rectangle in the pattern coordinate system giving the
+coordinates of the left, bottom, right, and top edges, respectively,
+of the pattern cell’s bounding box. These boundaries are used to clip
+the pattern cell.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PatternColor_GetBBox_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for patterns other than Tiling this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_GetMatrix.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.GetMatrix%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L113">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_GetMatrix_" data-uid="pdftron.PDF.PatternColor.GetMatrix*"></a>
+  <h4 id="pdftron_PDF_PatternColor_GetMatrix" data-uid="pdftron.PDF.PatternColor.GetMatrix">GetMatrix()</h4>
+  <div class="markdown level1 summary"><p>Gets the matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix2D GetMatrix()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.Matrix2D.html">Matrix2D</a></td>
+        <td><p>pattern matrix, a transformation matrix that maps the pattern’s
+internal coordinate system to the default coordinate system of the pattern’s
+parent content stream (the content stream in which the pattern is defined as
+a resource). The concatenation of the pattern matrix with that of the parent content
+stream establishes the pattern coordinate space, within which all graphics objects
+in the pattern are interpreted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_GetSDFObj.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.GetSDFObj%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L96">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_GetSDFObj_" data-uid="pdftron.PDF.PatternColor.GetSDFObj*"></a>
+  <h4 id="pdftron_PDF_PatternColor_GetSDFObj" data-uid="pdftron.PDF.PatternColor.GetSDFObj">GetSDFObj()</h4>
+  <div class="markdown level1 summary"><p>Gets the SDFObj.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetSDFObj()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the underlying SDF/Cos object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_GetShading.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.GetShading%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L145">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_GetShading_" data-uid="pdftron.PDF.PatternColor.GetShading*"></a>
+  <h4 id="pdftron_PDF_PatternColor_GetShading" data-uid="pdftron.PDF.PatternColor.GetShading">GetShading()</h4>
+  <div class="markdown level1 summary"><p>Gets the shading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Shading GetShading()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Shading.html">Shading</a></td>
+        <td><p>The shading object defining the shading pattern’s gradient fill.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PatternColor_GetShading_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for patterns other than Shading this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_GetTilingType.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.GetTilingType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L173">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_GetTilingType_" data-uid="pdftron.PDF.PatternColor.GetTilingType*"></a>
+  <h4 id="pdftron_PDF_PatternColor_GetTilingType" data-uid="pdftron.PDF.PatternColor.GetTilingType">GetTilingType()</h4>
+  <div class="markdown level1 summary"><p>Gets the tiling type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PatternColor.TilingType GetTilingType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PatternColor.TilingType.html">PatternColor.TilingType</a></td>
+        <td><p>the tiling type identifier that controls adjustments to the spacing
+of tiles relative to the device pixel grid:</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PatternColor_GetTilingType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for patterns other than Tiling this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_GetType.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.GetType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L84">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_GetType_" data-uid="pdftron.PDF.PatternColor.GetType*"></a>
+  <h4 id="pdftron_PDF_PatternColor_GetType" data-uid="pdftron.PDF.PatternColor.GetType">GetType()</h4>
+  <div class="markdown level1 summary"><p>Gets the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PatternColor.Type GetType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PatternColor.Type.html">PatternColor.Type</a></td>
+        <td><p>The Type of a given SDF/Cos color space, or e_null for if
+SDF object is not a valid pattern object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_GetType_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.GetType(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L130">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_GetType_" data-uid="pdftron.PDF.PatternColor.GetType*"></a>
+  <h4 id="pdftron_PDF_PatternColor_GetType_pdftron_SDF_Obj_" data-uid="pdftron.PDF.PatternColor.GetType(pdftron.SDF.Obj)">GetType(Obj)</h4>
+  <div class="markdown level1 summary"><p>Gets the type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PatternColor.Type GetType(Obj pattern)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>the pattern</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PatternColor.Type.html">PatternColor.Type</a></td>
+        <td><p>The Type of a given SDF/Cos color space, or e_null for if
+SDF object is not a valid pattern object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_GetXStep.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.GetXStep%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L206">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_GetXStep_" data-uid="pdftron.PDF.PatternColor.GetXStep*"></a>
+  <h4 id="pdftron_PDF_PatternColor_GetXStep" data-uid="pdftron.PDF.PatternColor.GetXStep">GetXStep()</h4>
+  <div class="markdown level1 summary"><p>Gets the x step.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Double GetXStep()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><p>the desired horizontal spacing between pattern cells, measured
+in the pattern coordinate system.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PatternColor_GetXStep_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>that XStep and YStep may differ from the dimensions of the pattern
+cell implied by the BBox entry. This allows tiling with irregularly shaped
+figures. XStep and YStep may be either positive or negative, but not zero.<br>for patterns other than Tiling this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor_GetYStep.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor.GetYStep%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L220">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PatternColor_GetYStep_" data-uid="pdftron.PDF.PatternColor.GetYStep*"></a>
+  <h4 id="pdftron_PDF_PatternColor_GetYStep" data-uid="pdftron.PDF.PatternColor.GetYStep">GetYStep()</h4>
+  <div class="markdown level1 summary"><p>Gets the y step.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Double GetYStep()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><p>the desired vertical spacing between pattern cells, measured in
+the pattern coordinate system.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PatternColor_GetYStep_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for patterns other than Tiling this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PatternColor.md&amp;value=---%0Auid%3A%20pdftron.PDF.PatternColor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PatternColor.cs/#L38" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

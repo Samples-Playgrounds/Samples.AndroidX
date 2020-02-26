@@ -1,0 +1,1681 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Markup
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Markup
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.Annots.Markup">
+  
+  
+  <h1 id="pdftron_PDF_Annots_Markup" data-uid="pdftron.PDF.Annots.Markup" class="text-break">Class Markup
+  </h1>
+  <div class="markdown level0 summary"><p>The meaning of an annotation’s Contents entry varies by annotation type. 
+Typically, it is the text that shall be displayed for the annotation or, 
+if the annotation does not display text, an alternate description of the 
+annotation’s contents in human-readable form. In either case, the Contents 
+entry is useful when extracting the document’s contents in support of 
+accessibility to users with disabilities or for other purposes.
+Many annotation types are defined as markup annotations because they are 
+used primarily to mark up PDF documents. These annotations have text that 
+appears as part of the annotation and may be displayed in other ways by a 
+conforming reader, such as in a Comments pane.
+Markup annotations may be divided into the following groups:
+<ul><li>
+Free text annotations display text directly on the page. 
+The annotation’s Contents entry specifies the displayed text.
+</li><li>
+Most other markup annotations have an associated pop-up window 
+that may contain text. The annotation’s Contents entry specifies 
+the text that shall be displayed when the pop-up window is opened. 
+These include text, line, square, circle, polygon, polyline, 
+highlight,underline, squiggly-underline, strikeout, rubber stamp, 
+caret, ink, and file attachment annotations.
+</li><li>
+Sound annotations do not have a pop-up window but may also have 
+associated text specified by the Contents entry.
+When separating text into paragraphs, a CARRIAGE RETURN (0Dh) shall 
+be used and not, for example, a LINE FEED character (0Ah).
+<remarks>A subset of markup annotations is called text markup 
+annotations.</remarks>
+</li></ul>
+The remaining annotation types are not considered markup annotations:
+<ul><li>
+The pop-up annotation type shall not appear by itself; it shall be 
+associated with a markup annotation that uses it to display text.
+<remarks>If an annotation has no parent, the Contents entry shall 
+represent the text of the annotation, otherwise it shall be 
+ignored by a conforming reader.</remarks>
+</li><li>
+For all other annotation types (Link, Movie, Widget, PrinterMark, 
+and TrapNet), the Contents entry shall provide an alternate 
+representation of the annotation’s contents in human-readable form, 
+which is useful when extracting the document’s contents in support of 
+accessibility to users with disabilities or for other purposes.
+</li></ul></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="pdftron.PDF.Annot.html">Annot</a></div>
+    <div class="level2"><span class="xref">Markup</span></div>
+      <div class="level3"><a class="xref" href="pdftron.PDF.Annots.Caret.html">Caret</a></div>
+      <div class="level3"><a class="xref" href="pdftron.PDF.Annots.Circle.html">Circle</a></div>
+      <div class="level3"><a class="xref" href="pdftron.PDF.Annots.FileAttachment.html">FileAttachment</a></div>
+      <div class="level3"><a class="xref" href="pdftron.PDF.Annots.FreeText.html">FreeText</a></div>
+      <div class="level3"><a class="xref" href="pdftron.PDF.Annots.Ink.html">Ink</a></div>
+      <div class="level3"><a class="xref" href="pdftron.PDF.Annots.Line.html">Line</a></div>
+      <div class="level3"><a class="xref" href="pdftron.PDF.Annots.Redaction.html">Redaction</a></div>
+      <div class="level3"><a class="xref" href="pdftron.PDF.Annots.RubberStamp.html">RubberStamp</a></div>
+      <div class="level3"><a class="xref" href="pdftron.PDF.Annots.Sound.html">Sound</a></div>
+      <div class="level3"><a class="xref" href="pdftron.PDF.Annots.Square.html">Square</a></div>
+      <div class="level3"><a class="xref" href="pdftron.PDF.Annots.Text.html">Text</a></div>
+      <div class="level3"><a class="xref" href="pdftron.PDF.Annots.TextMarkup.html">TextMarkup</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_Dispose">Annot.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_Dispose_System_Boolean_">Annot.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetHandleInternal">Annot.GetHandleInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetRefHandleInternal">Annot.GetRefHandleInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_CreateInternal_System_IntPtr_Object_">Annot.CreateInternal(System.IntPtr, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_Create_pdftron_SDF_SDFDoc_pdftron_PDF_Annot_Type_pdftron_PDF_Rect_">Annot.Create(SDFDoc, Annot.Type, Rect)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_op_Assign_pdftron_PDF_Annot_">Annot.op_Assign(Annot)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_Equals_Object_">Annot.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_IsValid">Annot.IsValid()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetSDFObj">Annot.GetSDFObj()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetType">Annot.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_IsMarkup">Annot.IsMarkup()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetRect">Annot.GetRect()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetVisibleContentBox">Annot.GetVisibleContentBox()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetRect_pdftron_PDF_Rect_">Annot.SetRect(Rect)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetContents">Annot.GetContents()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetContents_System_String_">Annot.SetContents(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetPage">Annot.GetPage()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetPage_pdftron_PDF_Page_">Annot.SetPage(Page)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetUniqueID">Annot.GetUniqueID()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetUniqueID_System_String_">Annot.SetUniqueID(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetDate">Annot.GetDate()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetDate_pdftron_PDF_Date_">Annot.SetDate(Date)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetFlag_pdftron_PDF_Annot_Flag_">Annot.GetFlag(Annot.Flag)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetFlag_pdftron_PDF_Annot_Flag_System_Boolean_">Annot.SetFlag(Annot.Flag, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetBorderStyle">Annot.GetBorderStyle()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetBorderStyle_pdftron_PDF_Annot_BorderStyle_">Annot.SetBorderStyle(Annot.BorderStyle)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetAppearance">Annot.GetAppearance()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetAppearance_pdftron_PDF_Annot_AnnotationState_">Annot.GetAppearance(Annot.AnnotationState)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetAppearance_pdftron_PDF_Annot_AnnotationState_System_String_">Annot.GetAppearance(Annot.AnnotationState, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetAppearance_pdftron_SDF_Obj_">Annot.SetAppearance(Obj)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetAppearance_pdftron_SDF_Obj_pdftron_PDF_Annot_AnnotationState_">Annot.SetAppearance(Obj, Annot.AnnotationState)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetAppearance_pdftron_SDF_Obj_pdftron_PDF_Annot_AnnotationState_System_String_">Annot.SetAppearance(Obj, Annot.AnnotationState, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_RemoveAppearance">Annot.RemoveAppearance()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_RemoveAppearance_pdftron_PDF_Annot_AnnotationState_">Annot.RemoveAppearance(Annot.AnnotationState)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_RemoveAppearance_pdftron_PDF_Annot_AnnotationState_System_String_">Annot.RemoveAppearance(Annot.AnnotationState, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_Flatten_pdftron_PDF_Page_">Annot.Flatten(Page)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetActiveAppearanceState">Annot.GetActiveAppearanceState()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetActiveAppearanceState_System_String_">Annot.SetActiveAppearanceState(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetColorAsRGB">Annot.GetColorAsRGB()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetColorAsCMYK">Annot.GetColorAsCMYK()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetColorAsGray">Annot.GetColorAsGray()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetColorCompNum">Annot.GetColorCompNum()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetColor_pdftron_PDF_ColorPt_System_Int32_">Annot.SetColor(ColorPt, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetColor_pdftron_PDF_ColorPt_">Annot.SetColor(ColorPt)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetStructParent">Annot.GetStructParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetStructParent_System_Int32_">Annot.SetStructParent(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetOptionalContent">Annot.GetOptionalContent()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetOptionalContent_pdftron_SDF_Obj_">Annot.SetOptionalContent(Obj)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_Resize_pdftron_PDF_Rect_">Annot.Resize(Rect)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetRotation">Annot.GetRotation()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetRotation_System_Int32_">Annot.SetRotation(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_RefreshAppearance">Annot.RefreshAppearance()</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_GetCustomData_String_">Annot.GetCustomData(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_SetCustomData_String_String_">Annot.SetCustomData(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="pdftron.PDF.Annot.html#pdftron_PDF_Annot_DeleteCustomData_String_">Annot.DeleteCustomData(String)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.Annots.html">pdftron.PDF.Annots</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_Annots_Markup_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Markup : Annot</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup__ctor_pdftron_PDF_Annot_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.%23ctor(pdftron.PDF.Annot)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L458">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup__ctor_" data-uid="pdftron.PDF.Annots.Markup.#ctor*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup__ctor_pdftron_PDF_Annot_" data-uid="pdftron.PDF.Annots.Markup.#ctor(pdftron.PDF.Annot)">Markup(Annot)</h4>
+  <div class="markdown level1 summary"><p>Creates a Markup annotation and initialize it using given annotation object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Markup(Annot ann)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annot.html">Annot</a></td>
+        <td><span class="parametername">ann</span></td>
+        <td><p>the annot</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup__ctor_pdftron_PDF_Annot__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The constructor does not copy any data, but is instead the logical
+equivalent of a type cast.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup__ctor_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.%23ctor(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L71">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup__ctor_" data-uid="pdftron.PDF.Annots.Markup.#ctor*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup__ctor_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Annots.Markup.#ctor(pdftron.SDF.Obj)">Markup(Obj)</h4>
+  <div class="markdown level1 summary"><p>Creates a Markup annotation and initialize it using given <code>SDF.Obj</code> object. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Markup(Obj d)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">d</span></td>
+        <td><p>existing Markup object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup__ctor_pdftron_SDF_Obj__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The constructor does not copy any data, but is instead the logical equivalent of a type cast.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L463">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_Finalize_" data-uid="pdftron.PDF.Annots.Markup.Finalize*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_Finalize" data-uid="pdftron.PDF.Annots.Markup.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the Annot </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_GetBorderEffect.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.GetBorderEffect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L254">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_GetBorderEffect_" data-uid="pdftron.PDF.Annots.Markup.GetBorderEffect*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_GetBorderEffect" data-uid="pdftron.PDF.Annots.Markup.GetBorderEffect">GetBorderEffect()</h4>
+  <div class="markdown level1 summary"><p>Gets the Border Effect of the Markup Annotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Markup.BorderEffect GetBorderEffect()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annots.Markup.BorderEffect.html">Markup.BorderEffect</a></td>
+        <td><p>An entry from the enum &quot;BorderEffect&quot; that
+represents the border effect.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_GetBorderEffectIntensity.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.GetBorderEffectIntensity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L282">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_GetBorderEffectIntensity_" data-uid="pdftron.PDF.Annots.Markup.GetBorderEffectIntensity*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_GetBorderEffectIntensity" data-uid="pdftron.PDF.Annots.Markup.GetBorderEffectIntensity">GetBorderEffectIntensity()</h4>
+  <div class="markdown level1 summary"><p>Gets the Border Effect Intensity of the Markup Annotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetBorderEffectIntensity()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>A number representing the border effect.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_GetBorderEffectIntensity_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The BorderEffectIntensity value is a number describing
+the intensity of the effect, in the range 0 to 2. Default value: 0.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_GetContentRect.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.GetContentRect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L366">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_GetContentRect_" data-uid="pdftron.PDF.Annots.Markup.GetContentRect*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_GetContentRect" data-uid="pdftron.PDF.Annots.Markup.GetContentRect">GetContentRect()</h4>
+  <div class="markdown level1 summary"><p>Gets the inner bounding rectangle of the Square.
+(Optional; PDF 1.5)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect GetContentRect()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><p>A difference between the inner bounding rectangle and a positon rectangle
+may occur in situations where a border effect (described by BE)
+causes the size of the Rect to increase beyond that of the square or Square</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_GetCreationDates.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.GetCreationDates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L225">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_GetCreationDates_" data-uid="pdftron.PDF.Annots.Markup.GetCreationDates*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_GetCreationDates" data-uid="pdftron.PDF.Annots.Markup.GetCreationDates">GetCreationDates()</h4>
+  <div class="markdown level1 summary"><p>Gets the creation date of the Markup Annotation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Date GetCreationDates()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Date.html">Date</a></td>
+        <td><p>A Date object indicating the date the Markup Annotation is created</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_GetCreationDates_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The Date object not only includes date, it actually includes both date and  time when the annotation was created.
+This corresponds to the &apos;CreationDate&apos; field of the markup annotation&apos;s dictionary.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_GetInteriorColor.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.GetInteriorColor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L319">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_GetInteriorColor_" data-uid="pdftron.PDF.Annots.Markup.GetInteriorColor*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_GetInteriorColor" data-uid="pdftron.PDF.Annots.Markup.GetInteriorColor">GetInteriorColor()</h4>
+  <div class="markdown level1 summary"><p>Sets the interior color of the Square.
+(Optional; PDF 1.4 )</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ColorPt GetInteriorColor()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><p>interior color</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_GetInteriorColor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>it is necessary to make sure the consistancy between the ColorPt type
+and the ColorSpace.Type value. e_device_gray corresponds to an array of two numbers;
+e_device_rgb corresponds to an array of 3 numbers, e_device_cmyk corresponds to an array of
+4 numnbers, while e_null correspons to an arry of 0 number. Entries out of the specified
+color space array length will be desgarded. However, missing entries for a specified color space
+will throw exception either when setting the color or when later retrieving color(colorspace)
+information.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_GetInteriorColorCompNum.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.GetInteriorColorCompNum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L334">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_GetInteriorColorCompNum_" data-uid="pdftron.PDF.Annots.Markup.GetInteriorColorCompNum*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_GetInteriorColorCompNum" data-uid="pdftron.PDF.Annots.Markup.GetInteriorColorCompNum">GetInteriorColorCompNum()</h4>
+  <div class="markdown level1 summary"><p>Gets the number indicating interior color space of the Square.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetInteriorColorCompNum()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>An integer indicating a color space value from the ColorSpace.Type enum. That is, 1 corresponding to &quot;e_device_gray&quot;,
+3 corresponding to &quot;e_device_rgb&quot;, and 4 corresponding to &quot;e_device_cmyk&quot; if color space is applicable,
+orelse 0 corresponding to &quot;e_null&quot; if the color is transparent.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_GetOpacity.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.GetOpacity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L155">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_GetOpacity_" data-uid="pdftron.PDF.Annots.Markup.GetOpacity*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_GetOpacity" data-uid="pdftron.PDF.Annots.Markup.GetOpacity">GetOpacity()</h4>
+  <div class="markdown level1 summary"><p>Gets the contant opacity value corresponding to the annotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetOpacity()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>A number indicating the opacity value corresponding to the annotation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_GetOpacity_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The constant opacity value shall be used in painting the annotation.
+This value shall apply to all visible elements of the annotation in its closed state
+(including its background and border) but not to the pop-up window that appears when the annotation is opened.
+The specified value shall not used if the annotation has an appearance stream
+in that case, the appearance stream shall specify any transparency. (However, if the compliant viewer regenerates
+the annotation’s appearance stream, it may incorporate the CA value into the stream’s content.)
+The implicit blend mode is Normal.
+Default value: 1.0.
+If no explicit appearance stream is defined for the annotation,
+it may bepainted by implementation-dependent means that do not
+necessarily conform to the PDF imaging model; in this case, the effect
+of this entry is implementation-dependent as well.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_GetPadding.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.GetPadding%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L404">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_GetPadding_" data-uid="pdftron.PDF.Annots.Markup.GetPadding*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_GetPadding" data-uid="pdftron.PDF.Annots.Markup.GetPadding">GetPadding()</h4>
+  <div class="markdown level1 summary"><p>Gets the rectangle difference of the Square.
+(Optional; PDF 1.5)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect GetPadding()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><p>A set of four numbers(represented as a Rect object) specifying the difference on the four different directions.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_GetPadding_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>rectangle difference is A set of four numbers that shall describe the numerical differences
+between two rectangles: the Rect entry of the annotation and the actual boundaries of the underlying
+square or Square. Such a difference may occur in situations where a border effect (described by BE)
+causes the size of the Rect to increase beyond that of the square or Square.
+The four numbers shall correspond to the differences in default user space between the left, top, right,
+and bottom coordinates of Rect and those of the square or Square, respectively. Each value shall be greater
+than or equal to 0. The sum of the top and bottom differences shall be less than the height of Rect, and the
+sum of the left and right differences shall be less than the width of Rect.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_GetPopup.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.GetPopup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L115">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_GetPopup_" data-uid="pdftron.PDF.Annots.Markup.GetPopup*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_GetPopup" data-uid="pdftron.PDF.Annots.Markup.GetPopup">GetPopup()</h4>
+  <div class="markdown level1 summary"><p>Gets the Popup object associated with this Markup annotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Popup GetPopup()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annots.Popup.html">Popup</a></td>
+        <td><p>A Popup object that is associated with this Markup annotation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_GetPopup_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The Popup is An indirect reference to a pop-up annotation for
+entering or editing the text associated with this annotation.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_GetSubject.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.GetSubject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L194">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_GetSubject_" data-uid="pdftron.PDF.Annots.Markup.GetSubject*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_GetSubject" data-uid="pdftron.PDF.Annots.Markup.GetSubject">GetSubject()</h4>
+  <div class="markdown level1 summary"><p>Gets subject of the Markup Annotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetSubject()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A string representing the subject of the Markup Annotation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_GetSubject_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The subject is The Text representing a short description of
+the subject being addressed by the annotation.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_GetTitle.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.GetTitle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L85">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_GetTitle_" data-uid="pdftron.PDF.Annots.Markup.GetTitle*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_GetTitle" data-uid="pdftron.PDF.Annots.Markup.GetTitle">GetTitle()</h4>
+  <div class="markdown level1 summary"><p>Gets the title of the Markup Annotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetTitle()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A string representing the title of the Markup Annotation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_GetTitle_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The title is The text label that shall be displayed in the
+title bar of the annotation’s pop-up window when open and active.
+This entry shall identify the user who added the annotation.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_RotateAppearance_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.RotateAppearance(Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L444">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_RotateAppearance_" data-uid="pdftron.PDF.Annots.Markup.RotateAppearance*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_RotateAppearance_Double_" data-uid="pdftron.PDF.Annots.Markup.RotateAppearance(Double)">RotateAppearance(Double)</h4>
+  <div class="markdown level1 summary"><p>Rotates the appearance of the Markup Annotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RotateAppearance(Double angle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><span class="parametername">angle</span></td>
+        <td><p>the new rotation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_RotateAppearance_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Apply a rotation to an existing appearance.
+This rotation will be reflected in the bounding rect of the annot (which 
+will be updated), but not in any other part of the annotation dictionary.
+This will effectively create a custom appearance for the annotation, 
+and any subsequent calls to <code>RefreshAppearance</code> will clear this transformation.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_SetBorderEffect_pdftron_PDF_Annots_Markup_BorderEffect_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.SetBorderEffect(pdftron.PDF.Annots.Markup.BorderEffect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L269">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_SetBorderEffect_" data-uid="pdftron.PDF.Annots.Markup.SetBorderEffect*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_SetBorderEffect_pdftron_PDF_Annots_Markup_BorderEffect_" data-uid="pdftron.PDF.Annots.Markup.SetBorderEffect(pdftron.PDF.Annots.Markup.BorderEffect)">SetBorderEffect(Markup.BorderEffect)</h4>
+  <div class="markdown level1 summary"><p>Sets the Border Effect of the Markup Annotation.
+(Optional; PDF 1.5 )</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBorderEffect(Markup.BorderEffect effect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annots.Markup.BorderEffect.html">Markup.BorderEffect</a></td>
+        <td><span class="parametername">effect</span></td>
+        <td><p>An entry from the enum &quot;BorderEffect&quot; that
+represents the border effect.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_SetBorderEffectIntensity_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.SetBorderEffectIntensity(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L299">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_SetBorderEffectIntensity_" data-uid="pdftron.PDF.Annots.Markup.SetBorderEffectIntensity*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_SetBorderEffectIntensity_System_Double_" data-uid="pdftron.PDF.Annots.Markup.SetBorderEffectIntensity(System.Double)">SetBorderEffectIntensity(Double)</h4>
+  <div class="markdown level1 summary"><p>Sets the Border Effect Intensity of the Markup Annotation.
+(Optional; valid only if Border effect is Cloudy)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBorderEffectIntensity(double intensity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">intensity</span></td>
+        <td><p>A number representing the border effect.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_SetBorderEffectIntensity_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The BorderEffectIntensity value is a number describing 
+the intensity of the effect, in the range 0 to 2. Default value: 0.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_SetContentRect_pdftron_PDF_Rect_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.SetContentRect(pdftron.PDF.Rect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L384">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_SetContentRect_" data-uid="pdftron.PDF.Annots.Markup.SetContentRect*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_SetContentRect_pdftron_PDF_Rect_" data-uid="pdftron.PDF.Annots.Markup.SetContentRect(pdftron.PDF.Rect)">SetContentRect(Rect)</h4>
+  <div class="markdown level1 summary"><p>Sets the inner bounding rectangle of the Square.
+(Optional; PDF 1.5)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetContentRect(Rect cr)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">cr</span></td>
+        <td><p>the new content rect</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_SetCreationDates_pdftron_PDF_Date_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.SetCreationDates(pdftron.PDF.Date)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L242">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_SetCreationDates_" data-uid="pdftron.PDF.Annots.Markup.SetCreationDates*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_SetCreationDates_pdftron_PDF_Date_" data-uid="pdftron.PDF.Annots.Markup.SetCreationDates(pdftron.PDF.Date)">SetCreationDates(Date)</h4>
+  <div class="markdown level1 summary"><p>Sets the creation date of the Markup Annotation.
+(Optional; PDF 1.5 )</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCreationDates(Date dt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Date.html">Date</a></td>
+        <td><span class="parametername">dt</span></td>
+        <td><p>the new creation dates</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_SetCreationDates_pdftron_PDF_Date__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The Date object not only includes date, it actually includes both date and
+time when the annotation was created.
+This corresponds to the &apos;CreationDate&apos; field of the markup annotation&apos;s dictionary. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_SetInteriorColor_pdftron_PDF_ColorPt_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.SetInteriorColor(pdftron.PDF.ColorPt%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L352">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_SetInteriorColor_" data-uid="pdftron.PDF.Annots.Markup.SetInteriorColor*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_SetInteriorColor_pdftron_PDF_ColorPt_System_Int32_" data-uid="pdftron.PDF.Annots.Markup.SetInteriorColor(pdftron.PDF.ColorPt,System.Int32)">SetInteriorColor(ColorPt, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the interior color of the Square.              </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetInteriorColor(ColorPt c, int CompNum)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><span class="parametername">c</span></td>
+        <td><p>A ColorPt object that denotes the color of the Markup annotation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">CompNum</span></td>
+        <td><p>An integer indicating the number of channels forming the color space used. It also defines the length of the array to be allocated for storing the entries of c.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_SetInteriorColor_pdftron_PDF_ColorPt_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>that the color can be in different color spaces: Gray, RGB, or CMYK. Call &quot;GetInteriorColorCompNum&quot;
+to access the color space information corresponding to the interioir color.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_SetOpacity_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.SetOpacity(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L181">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_SetOpacity_" data-uid="pdftron.PDF.Annots.Markup.SetOpacity*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_SetOpacity_System_Double_" data-uid="pdftron.PDF.Annots.Markup.SetOpacity(System.Double)">SetOpacity(Double)</h4>
+  <div class="markdown level1 summary"><p>Sets the contant opacity value corresponding to the annotation.
+(Optional; PDF 1.4 )</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOpacity(double op)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">op</span></td>
+        <td><p>the new opacity</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_SetOpacity_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The constant opacity value shall be used in painting the annotation.
+This value shall apply to all visible elements of the annotation in its closed state
+(including its background and border) but not to the pop-up window that appears when the annotation is opened.
+The specified value shall not used if the annotation has an appearance stream
+in that case, the appearance stream shall specify any transparency. (However, if the compliant viewer regenerates
+the annotation’s appearance stream, it may incorporate the CA value into the stream’s content.)
+The implicit blend mode is Normal.
+Default value: 1.0.
+If no explicit appearance stream is defined for the annotation,
+it may bepainted by implementation-dependent means that do not
+necessarily conform to the PDF imaging model; in this case, the effect
+of this entry is implementation-dependent as well.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_SetPadding_pdftron_PDF_Rect_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.SetPadding(pdftron.PDF.Rect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L427">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_SetPadding_" data-uid="pdftron.PDF.Annots.Markup.SetPadding*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_SetPadding_pdftron_PDF_Rect_" data-uid="pdftron.PDF.Annots.Markup.SetPadding(pdftron.PDF.Rect)">SetPadding(Rect)</h4>
+  <div class="markdown level1 summary"><p>Sets the rectangle difference of the Square.
+(Optional; PDF 1.5)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPadding(Rect rd)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">rd</span></td>
+        <td><p>A set of four numbers(represented as a Rect object) specifying the difference on the four different directions.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_SetPadding_pdftron_PDF_Rect__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>rectangle difference is A set of four numbers that shall describe the numerical differences 
+between two rectangles: the Rect entry of the annotation and the actual boundaries of the underlying
+square or Square. Such a difference may occur in situations where a border effect (described by BE)
+causes the size of the Rect to increase beyond that of the square or Square.
+The four numbers shall correspond to the differences in default user space between the left, top, right,
+and bottom coordinates of Rect and those of the square or Square, respectively. Each value shall be greater
+than or equal to 0. The sum of the top and bottom differences shall be less than the height of Rect, and the
+sum of the left and right differences shall be less than the width of Rect.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_SetPopup_pdftron_PDF_Annots_Popup_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.SetPopup(pdftron.PDF.Annots.Popup)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L131">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_SetPopup_" data-uid="pdftron.PDF.Annots.Markup.SetPopup*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_SetPopup_pdftron_PDF_Annots_Popup_" data-uid="pdftron.PDF.Annots.Markup.SetPopup(pdftron.PDF.Annots.Popup)">SetPopup(Popup)</h4>
+  <div class="markdown level1 summary"><p>Sets the Popup object associated with this Markup annotation.
+(Optional; PDF 1.3 )</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPopup(Popup bs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annots.Popup.html">Popup</a></td>
+        <td><span class="parametername">bs</span></td>
+        <td><p>the new popup</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_SetPopup_pdftron_PDF_Annots_Popup__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>the Popup is An indirect reference to a pop-up annotation for
+entering or editing the text associated with this annotation.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_SetSubject_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.SetSubject(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L210">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_SetSubject_" data-uid="pdftron.PDF.Annots.Markup.SetSubject*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_SetSubject_System_String_" data-uid="pdftron.PDF.Annots.Markup.SetSubject(System.String)">SetSubject(String)</h4>
+  <div class="markdown level1 summary"><p>Sets subject of the Markup Annotation.
+(Optional; PDF 1.5 )</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSubject(string subj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">subj</span></td>
+        <td><p>the new subject</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_SetSubject_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The subject is The Text representing a short description of
+the subject being addressed by the annotation.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup_SetTitle_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup.SetTitle(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L102">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Annots_Markup_SetTitle_" data-uid="pdftron.PDF.Annots.Markup.SetTitle*"></a>
+  <h4 id="pdftron_PDF_Annots_Markup_SetTitle_System_String_" data-uid="pdftron.PDF.Annots.Markup.SetTitle(System.String)">SetTitle(String)</h4>
+  <div class="markdown level1 summary"><p>Sets the title of the Markup Annotation.
+(Optional; PDF 1.1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTitle(string title)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">title</span></td>
+        <td><p>A string representing the title of the Markup Annotation</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Annots_Markup_SetTitle_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The title is The text label that shall be displayed in the
+title bar of the annotation’s pop-up window when open and active.
+This entry shall identify the user who added the annotation.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Annots_Markup.md&amp;value=---%0Auid%3A%20pdftron.PDF.Annots.Markup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Annots/Markup.cs/#L63" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1151 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace pdftron.PDF
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace pdftron.PDF
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF">
+  
+  <h1 id="pdftron_PDF" data-uid="pdftron.PDF" class="text-break">Namespace pdftron.PDF
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="pdftron.PDF.Action.html">Action</a></h4>
+      <section><p>Actions are typically what happens when a user clicks on a link or bookmark.</p>
+<p>Instead of simply jumping to a destination in the document, an annotation or
+outline item can specify an action for the viewer application to perform, such 
+as launching an application, playing a sound, or changing an annotation’s 
+appearance state.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.ActionParameter.html">ActionParameter</a></h4>
+      <section><p>Container for parameters used in handling various actions</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Annot.html">Annot</a></h4>
+      <section><p>Annot is a base class for different types of annotations. For annotation 
+specific properties, please refer to derived classes. </p>
+<p>An annotation is an interactive object placed on a page, such as a text note, a link, 
+or an embedded file. PDF includes a wide variety of standard annotation types. 
+An annotation associates an object such as a widget, note, or movie with a location
+on a page of a PDF document, or provides a means of interacting with the user
+via the mouse and keyboard. For more details on PDF annotations please refer to 
+section 12.5 in the PDF Reference Manual and the </p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Annot.BorderStyle.html">Annot.BorderStyle</a></h4>
+      <section><p>BorderStyle structure specifies the characteristics of the annotation&apos;s border.
+The border is specified as a rounded rectangle.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.BitmapInfo.html">BitmapInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Bookmark.html">Bookmark</a></h4>
+      <section><p>A PDF document may optionally display a document outline on the screen, allowing
+the user to navigate interactively from one part of the document to another.
+The outline consists of a tree-structured hierarchy of Bookmarks (sometimes
+called outline items), which serve as a &apos;visual table of contents&apos; to display the 
+document’s structure to the user. </p>
+<p>Each Bookmark has a title that appears on screen, and an Action that specifies 
+what happens when a user clicks on the Bookmark. The typical action for a 
+user-created Bookmark is to move to another location in the current document, 
+although any action (see PDF.Action) can be specified.</p>
+<p>Bookmark is a utility class used to simplify work with PDF bookmarks (or 
+outlines; see section 8.2.2 &apos;Document Outline&apos; in PDF Reference Manual for 
+more details).</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.CharData.html">CharData</a></h4>
+      <section><p>CharData is a data structure returned by CharIterator that is 
+used to provide extra information about a character within 
+a text run. The extra information includes positioning information, 
+the character data and a number of bytes taken by the character.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.CharIterator.html">CharIterator</a></h4>
+      <section><p>CharIterator is an iterator type that can be used to traverse CharData 
+in the current e_text element. For a sample use case, please take a look 
+at ElementReaderAdv sample project.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></h4>
+      <section><p>ColorPt is an array of colorants (or tint values) representing a color point
+in an associated color space.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></h4>
+      <section><p>This abstract class is used to serve as a color space tag to identify the specific 
+color space of a Color object. It contains methods that transform colors in a specific 
+color space to/from several color space such as DeviceRGB and DeviceCMYK. </p>
+<p>For purposes of the methods in this class, colors are represented as arrays of color 
+components represented as doubles in a normalized range defined by each ColorSpace. 
+For many ColorSpaces (e.g. DeviceRGB), this range is 0.0 to 1.0. However, some ColorSpaces 
+have components whose values have a different range. Methods are provided to inquire per 
+component minimum and maximum normalized values. </p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.ContentReplacer.html">ContentReplacer</a></h4>
+      <section><p>ContentReplacer is a utility class for replacing content (text and images)
+in existing PDF (template) documents.</p>
+<p>Users can replace content in a PDF page using the following operations:</p>
+<ul>
+<li>Replace an image that exists in a target rectangle with a replacement image. </li>
+<li>Replace text that exists in a target rectangle with replacement text. </li>
+<li>Replace all instances of a specially marked string with replacement string.</li>
+</ul>
+<example>
+The following code replaces an image in a target region. It also replaces
+the text &quot;[NAME]&quot; and &quot;[JOB_TITLE]&quot; with &quot;John Smith&quot;
+and &quot;Software Developer&quot; respectively. Notice the square braces (&apos;[&apos; and &apos;]&apos;) on
+the target strings in the original PDFDoc. These square braces are not included in
+the actual function calls below, as they&apos;re implicitly added.
+
+<pre><code>PDFDoc doc(&quot;../../TestFiles/BusinessCardTemplate.pdf&quot;);
+doc.InitSecurityHandler();
+ContentReplacer replacer;
+Page pg = doc.GetPage(1);
+Image img = Image.Create(doc, &quot;../../TestFiles/peppers.jpg&quot;);
+replacer.AddImage(page.GetMediaBox(), img.GetSDFObj());
+replacer.AddString(&quot;NAME&quot;, &quot;John Smith&quot;);
+replacer.AddString(&quot;JOB_TITLE&quot;, &quot;Software Developer&quot;);
+replacer.Process(page);</code></pre>
+</example>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.ConversionOptions.html">ConversionOptions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.html">Convert</a></h4>
+      <section><p>Encapsulates the conversion of a single document from one format to another.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.EPUBOutputOptions.html">Convert.EPUBOutputOptions</a></h4>
+      <section><p>A class containing options for PDF to EPUB conversion</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.HTMLOutputOptions.html">Convert.HTMLOutputOptions</a></h4>
+      <section><p>A class containing options for PDF to HTML conversion</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.Printer.html">Convert.Printer</a></h4>
+      <section><p>Convert.Printer is a utility class to install the a printer for print-based conversion of documents for Convert.ToPdf.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.SVGOutputOptions.html">Convert.SVGOutputOptions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.TiffOutputOptions.html">Convert.TiffOutputOptions</a></h4>
+      <section><p>A class containing options for PDF to Tiff conversion</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.XODOutputOptions.html">Convert.XODOutputOptions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.XPSOutputCommonOptions.html">Convert.XPSOutputCommonOptions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.XPSOutputOptions.html">Convert.XPSOutputOptions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Date.html">Date</a></h4>
+      <section><p>The Date class is a utility class used to simplify work with PDF date objects.</p>
+<p>PDF defines a standard date format, which closely follows international
+standard ASN.1 (Abstract Syntax Notation One), A date is a string of the form
+(D:YYYYMMDDHHmmSSOHH&apos;mm&apos;); See PDF Reference Manual for details. </p>
+<p>Date can be associated with a SDF/Cos date string using Date(Obj<em>) constructor 
+or later using Date::Attach(Obj</em>) or Date::Update(Obj*) methods. </p>
+<p>Date keeps a local date/time cache so it is necessary to call Date::Update() 
+method if the changes to the Date should be saved in the attached Cos/SDF string.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Destination.html">Destination</a></h4>
+      <section><p>A destination defines a particular view of a document, consisting of the 
+following:
+<ul><li>
+The page of the document to be displayed
+</li><li>
+The location of the document window on that page
+</li><li>
+The magnification (zoom) factor to use when displaying the page
+</li></ul>
+Destinations may be associated with Bookmarks, Annotations, and Remote Go-To Actions.</p>
+<p>Destination is a utility class used to simplify work with PDF Destinations; 
+Please refer to section 8.2.1 &apos;Destinations&apos; in PDF Reference Manual for details.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.DiffOptions.html">DiffOptions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.DigitalSignatureField.html">DigitalSignatureField</a></h4>
+      <section><p>A class representing a digital signature form field.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.DigitalSignatureFieldIterator.html">DigitalSignatureFieldIterator</a></h4>
+      <section><p>DigitalSignatureFieldIterator is an iterator type that can be used to traverse a list 
+of digital signature form fields in a PDF document. </p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.DocumentConversion.html">DocumentConversion</a></h4>
+      <section><p>Encapsulates the conversion of a single document from one format to another.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Element.html">Element</a></h4>
+      <section><p>Element is the abstract interface used to access graphical elements used to build the 
+display list. </p>
+<p>Just like many other classes in PDFNet (e.g. ColorSpace, Font, Annot, etc), Element
+class follows the composite design pattern. This means that all Elements are 
+accessed through the same interface, but depending on the Element type (that can be 
+obtained using GetType()), only methods related to that type can be called.
+For example, if GetType() returns e_image, it is illegal to call a method specific to 
+another Element type (i.e. a call to a text specific GetTextData() will throw an 
+Exception).</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.ElementBuilder.html">ElementBuilder</a></h4>
+      <section><p>ElementBuilder is used to build new PDF.Elements (e.g. image, text, path, etc) 
+from scratch. In conjunction with ElementWriter, ElementBuilder can be used to create
+new page content.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.ElementReader.html">ElementReader</a></h4>
+      <section><p>ElementReader can be used to parse and process content streams. ElementReader provides a 
+convenient interface used to traverse the Element display list of a page. The display list 
+representing graphical elements (such as text-runs, paths, images, shadings, forms, etc) is 
+accessed using the intrinsic iterator. ElementReader automatically concatenates page contents
+spanning multiple streams and provides a mechanism to parse contents of sub-display lists 
+(e.g. forms XObjects and Type3 fonts).</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.ElementWriter.html">ElementWriter</a></h4>
+      <section><p>ElementWriter can be used to assemble and write new content to a page, Form XObject, 
+Type3 Glyph stream, pattern stream, or any other content stream. </p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Field.html">Field</a></h4>
+      <section><p>
+An interactive form (sometimes referred to as an AcroForm) is a 
+collection of fields for gathering information interactively from 
+the user. A PDF document may contain any number of Fields appearing 
+on any combination of pages, all of which make up a single, global 
+interactive form spanning the entire document.
+</p>
+<p>
+PDFNet fully supports reading, writing, and editing PDF forms and 
+provides many utility methods so that work with forms is simple and 
+efficient. Using PDFNet forms API arbitrary subsets of form fields 
+can be imported or exported from the document, new forms can be 
+created from scratch, and the appearance of existing forms can be 
+modified. 
+</p>
+
+<example>
+In PDFNet Fields are accessed through FieldIterator-s. For a full 
+sample, please refer to &apos;InteractiveForms&apos; sample project. The 
+list of all Fields present in the document can be traversed as 
+follows:<br><pre><code>  
+for(FieldIterator itr = doc.getFieldIterator(); itr.hasNext();) {
+Field current=(Field)(itr.next());
+System.out.println(&quot;Field name: &quot; + current.getName());
+System.out.println(&quot;Field partial name: &quot; + current.getPartialName());
+}</code></pre><br>To search field by name use FieldFind method. For example:<br><pre><code>// Search for a specific field
+FieldIterator itr = doc.fieldFind(&quot;employee.name.first&quot;);
+if (itr.hasNext()) System.out.println(&quot;Field search for &quot; + ((Field)(itr.next())).getName() + &quot; was successful&quot;);
+else System.out.println(&quot;Field search failed&quot;);</code></pre>
+
+If a given field name was not found or if the end of the field list 
+was reached the iterator <code>HasNext()</code> will return false.
+
+If you have a valid iterator you can access the Field using <code>Current()</code> method. For example: 
+<pre><code>Field field = itr.Current();</code></pre>
+
+Using <code>Flatten(...)</code> method it is possible to merge field 
+appearances with the page content. Form &apos;flattening&apos; refers to the 
+operation that changes active form fields into a static area that is<br>part of the PDF document, just like the other text and images in 
+the document. A completely flattened PDF form does not have any 
+widget annotations or interactive fields. 
+</example>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.FieldIterator.html">FieldIterator</a></h4>
+      <section><p>FieldIterator is an iterator type that can be used to traverse a list 
+form fields in a PDF document. For more information, please PDFDoc.getFieldIterator().</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.FileSpec.html">FileSpec</a></h4>
+      <section><p>FileSpec corresponds to the PDF file specification object. </p>
+<p>A PDF file can refer to the contents of another file by using a file specification, 
+which can take either of the following forms:
+<ul><li>
+A simple file specification gives just the name of the target file in 
+a standard format, independent of the naming conventions of any particular file system. 
+</li><li>
+A full file specification includes information related to one or more specific file
+systems.
+</li><li>
+A URL reference.
+</li></ul>
+Although the file designated by a file specification is normally external to the
+PDF file referring to it, it is also possible to embed the file allowing its contents 
+to be stored or transmitted along with the PDF file. However, embedding a file does not 
+change the presumption that it is external to (or separate from) the PDF file.</p>
+<p>For more details on file specifications, please refer to Section 3.10, &apos;File Specifications&apos;
+in the PDF Reference Manual.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Flattener.html">Flattener</a></h4>
+      <section><p>Flattener is a optional PDFNet add-on that can be used to simplify and optimize 
+existing PDF&apos;s to render faster on devices with lower memory and speeds.</p>
+<p>PDF documents can frequently contain very complex page description (e.g. 
+thousands of paths, different shadings, color spaces, blend modes, large images 
+etc.) that may not be suitable for interactive viewing on mobile devices.
+Flattener can be used to speed-up PDF rendering on mobile devices and on the Web 
+by simplifying page content (e.g. flattening complex graphics into images) while 
+maintaining vector text whenever possible.</p>
+<p>By using the FlattenMode::e_simple option each page in the PDF will be
+reduced to a single background image, with the remaining text over top in vector
+format. Some text may still get flattened, in particular any text that is clipped, 
+or underneath, other content that will be flattened.</p>
+<p>On the other hand the FlattenMode::e_fast will not flatten simple content, such
+as simple straight lines, nor will it flatten Type3 fonts.</p>
+<p>@note &apos;Flattener&apos; is available as a separately licensable add-on to PDFNet 
+core license or for use via Cloud API (<a href="http://www.pdftron.com/pdfnet/cloud">http://www.pdftron.com/pdfnet/cloud</a>).</p>
+<p>@note See &apos;pdftron.PDF.Optimizer&apos; for alternate approach to optimize PDFs with 
+focus on file size reduction.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Font.html">Font</a></h4>
+      <section><p>A font that is used to draw text on a page. It corresponds to a Font Resource 
+in a PDF file. More than one page may reference the same Font object.
+A Font has a number of attributes, including an array of widths, the character 
+encoding, and the font’s resource name.</p>
+<p>PDF document can contain several different types of fonts and Font class 
+represents a single, flat interface around all PDF font types.</p>
+<p>There are two main classes of fonts in PDF: simple and composite fonts.</p>
+<p>Simple fonts are Type1, TrueType, and Type3 fonts. All simple fonts have the 
+following properties:
+<ul><li>
+Glyphs in the font are selected by single-byte character codes 
+obtained from a string that is shown by the text-showing operators. 
+Logically, these codes index into a table of 256 glyphs; the mapping 
+from codes to glyphs is called the font’s encoding. Each font program 
+has a built-in encoding. Under some circumstances, the encoding can 
+be altered by means described in Section 5.5.5 &quot;Character Encoding&quot; in 
+PDF Reference Manual.
+</li><li>
+Each glyph has a single set of metrics. Therefore simple fonts support 
+only horizontal writing mode.
+</li></ul>
+A composite font is one whose glyphs are obtained from a font like object 
+called a CIDFont (e.g. CIDType0Font and CIDType0Font). A composite font is 
+represented by a font dictionary whose Subtype value is Type0. The Type 0 font 
+is known as the root font, while its associated CIDFont is called its descendant.
+CID-keyed fonts provide a convenient and efficient method for defining
+multiple-byte character encodings and fonts with a large number of glyphs. 
+These capabilities provide great flexibility for representing text in writing 
+systems for languages with large character sets, such as Chinese, Japanese, 
+and Korean (CJK).</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.FontCharCodeIterator.html">FontCharCodeIterator</a></h4>
+      <section><p>FontCharCodeIterator is an iterator type that can be used to traverse a list 
+of visible char codes in a font embedded in PDF. For more information, please 
+take a look at Font.getCodeIterator().</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Function.html">Function</a></h4>
+      <section><p>Although PDF is not a programming language it provides several types of function 
+object that represent parameterized classes of functions, including mathematical 
+formulas and sampled representations with arbitrary resolution. Functions are used 
+in various ways in PDF, including device-dependent rasterization information for 
+high-quality printing (halftone spot functions and transfer functions), color 
+transform functions for certain color spaces, and specification of colors as a 
+function of position for smooth shadings. Functions in PDF represent static, 
+self-contained numerical transformations.</p>
+<p>PDF::Function represents a single, flat interface around all PDF function types.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.GeometryCollection.html">GeometryCollection</a></h4>
+      <section><p>A Preprocessed PDF geometry collection</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.GSChangesIterator.html">GSChangesIterator</a></h4>
+      <section><p>GSChangesIterator is an iterator type that can be used to traverse a list 
+of changes in the graphics state between subsequnet graphical elements on the 
+page. For a sample use case, please take a look at ElementReaderAdv sample project.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.GState.html">GState</a></h4>
+      <section><p>GState is a class that keeps track of a number of style attributes used to visually 
+define graphical Elements. Each PDF.Element has an associated GState that can be used to 
+query or set various graphics properties.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Highlights.html">Highlights</a></h4>
+      <section><p>Highlights is used to store the necessary information and perform certain 
+tasks in accordance with Adobe&apos;s Highlight standard, whose details can be
+found at:</p>
+<p><a href="http://partners.adobe.com/public/developer/en/pdf/HighlightFileFormat.pdf">http://partners.adobe.com/public/developer/en/pdf/HighlightFileFormat.pdf</a></p>
+<p>In a nutshell, the Highlights class maintains a set of highlights.
+Each highlight contains three pieces of information: </p>
+<p>page: the number of the page this Highlight is on;
+position: the start position (text offset) of this Highlight;
+length: the length of this Highlight.</p>
+<p>Possible use case scenarios for Highlights include:
+<ul><li>
+Load a Highlight file (in XML format) and highlight the corresponding 
+texts in the viewer (e.g., if the viewer is implemented using PDFViewCtrl, 
+it can be achieved simply by calling PDFViewCtrl::SelectByHighlights() 
+method);
+</li><li>
+Save the Highlight information (e.g., constructed by the TextSearch 
+class) to an XML file for external uses.
+</li></ul>
+Note: 
+<ul><li>
+The Highlights class does not maintain the corresponding PDF document for
+its highlights. It is the user&apos;s responsibility to match them up.
+</li><li>
+The Highlights class ensures that each highlight it maintains is 
+unique (no two highlights have the same page, position and length values).
+</li><li>
+The current implementation of Highlights only supports the &apos;characters&apos;
+encoding for &apos;units&apos; as described in the format; the &apos;words&apos; encoding is 
+not supported at this point.
+</li></ul></p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Image.html">Image</a></h4>
+      <section><p>Image class provides common methods for working with PDF images. </p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Image2RGB.html">Image2RGB</a></h4>
+      <section><p>Image2RGB is a filter that can decompress and normalize any PDF image stream 
+(e.g. monochrome, CMYK, etc) into a raw RGB pixel stream.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Image2RGBA.html">Image2RGBA</a></h4>
+      <section><p>Image2RGBA is a filter that can decompress and normalize any PDF image stream 
+(e.g. monochrome, CMYK, etc) into a raw RGBA pixel stream.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.OfficeToPDFOptions.html">OfficeToPDFOptions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Optimizer.html">Optimizer</a></h4>
+      <section><p>The Optimizer class provides functionality for optimizing/shrinking
+output PDF files.</p>
+<p>&apos;pdftron.PDF.Optimizer&apos; is an optional PDFNet Add-On utility class that can be 
+used to optimize PDF documents by reducing the file size, removing redundant 
+information, and compressing data streams using the latest in image compression 
+technology. PDF Optimizer can compress and shrink PDF file size with the 
+following operations:</p>
+<ul>
+<li>Remove duplicated fonts, images, ICC profiles, and any other data stream. </li>
+<li>Optionally convert high-quality or print-ready PDF files to small, efficient and web-ready PDF. </li>
+<li>Optionally down-sample large images to a given resolution. </li>
+<li>Optionally compress or recompress PDF images using JBIG2 and JPEG2000 compression formats. </li>
+<li>Compress uncompressed streams and remove unused PDF objects. </li>
+</ul>
+<p>@note &apos;Optimizer&apos; is available as a separately licensable add-on to PDFNet 
+core license or for use via Cloud API (<a href="http://www.pdftron.com/pdfnet/cloud">http://www.pdftron.com/pdfnet/cloud</a>).</p>
+<p>@note See &apos;pdftron.PDF.Flattener&apos; for alternate approach to optimize PDFs for fast 
+viewing on mobile devices and the Web.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Optimizer.ImageSettings.html">Optimizer.ImageSettings</a></h4>
+      <section><p>A class that stores downsampling/recompression
+ settings for color and grayscale images.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Optimizer.MonoImageSettings.html">Optimizer.MonoImageSettings</a></h4>
+      <section><p>A class that stores image downsampling/recompression
+settings for monochrome images.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Optimizer.OptimizerSettings.html">Optimizer.OptimizerSettings</a></h4>
+      <section><p>A class that stores settings
+for the optimizer</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Optimizer.TextSettings.html">Optimizer.TextSettings</a></h4>
+      <section><p>A class that stores text optimization settings.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.OptionsBase.html">OptionsBase</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Page.html">Page</a></h4>
+      <section><p>Page is a high-level class representing PDF page object (see &apos;Page Objects&apos; in 
+Section 3.6.2, &apos;Page Tree,&apos; in PDF Reference Manual).</p>
+<p>Among other associated objects, a page object contains: 
+<ul><li>A series of objects representing the objects drawn on the page (See Element and 
+ElementReader class for examples of how to extract page content).</li><li>A list of resources used in drawing the page 
+</li><li>Annotations 
+</li><li>Beads, private metadata, optional thumbnail image, etc.
+</li></ul></p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PageIterator.html">PageIterator</a></h4>
+      <section><p>PageIterator is an iterator type that can be used to traverse a list 
+pages in a PDF document. For more information, please PDFDoc.GetPageIterator().</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PageLabel.html">PageLabel</a></h4>
+      <section><p>PDF page labels can be used to describe a page. This is used to 
+allow for non-sequential page numbering or the addition of arbitrary 
+labels for a page (such as the inclusion of Roman numerals at the 
+beginning of a book). PDFNet PageLabel object can be used to specify 
+the numbering style to use (for example, upper- or lower-case Roman, 
+decimal, and so forth), the starting number for the first page,
+and an arbitrary prefix to be pre-appended to each number (for 
+example, &quot;A-&quot; to generate &quot;A-1&quot;, &quot;A-2&quot;, &quot;A-3&quot;, and so forth.)
+</p>
+<p>
+<code>PageLabel</code> corresponds to the PDF Page Label object (Section 8.3.1, 
+&apos;Page Labels&apos; in the PDF Reference Manual.
+</p>
+<p>
+Each page in a PDF document is identified by an integer page index 
+that expresses the page’s relative position within the document. 
+In addition, a document may optionally define page labels to identify 
+each page visually on the screen or in print. Page labels and page 
+indices need not coincide: the indices are fixed, running consecutively 
+through the document starting from 1 for the first page, but the 
+labels can be specified in any way that is appropriate for the particular
+document. For example, if the document begins with 12 pages of front 
+matter numbered in roman numerals and the remainder of the document is 
+numbered in Arabic, the first page would have a page index of 1 and a 
+page label of i, the twelfth page would have index 12 and label xii, 
+and the thirteenth page would have index 13 and label 1.
+</p>
+<p>
+For purposes of page labeling, a document can be divided into labeling 
+ranges, each of which is a series of consecutive pages using the same 
+numbering system. Pages within a range are numbered sequentially in 
+ascending order. A page&apos;s label consists of a numeric portion based 
+on its position within its labeling range, optionally preceded by a 
+label prefix denoting the range itself. For example, the pages in an 
+appendix might be labeled with decimal numeric portions prefixed with 
+the string &quot;A-&quot; and the resulting page labels would be &quot;A-1&quot;, &quot;A-2&quot;, 
+</p>    
+
+<p>There is no default numbering style; if no &apos;S&apos; (Style) entry is present, 
+page labels consist solely of a label prefix with no numeric portion. 
+For example, if the &apos;P&apos; entry (Prefix) specifies the label prefix 
+&quot;Appendix&quot;, each page is simply labeled &quot;Appendix&quot; with no page number. 
+If the &apos;P&apos; entry is also missing or empty, the page label is an empty 
+string.</p>
+<example>
+Sample code (See PableLabelsTest sample project for examples):<br>
+Create a page labeling scheme that starts with the first page in 
+the document (page 1) and is using uppercase roman numbering 
+style. 
+
+<pre><code> doc.SetPageLabel(1, PageLabel::Create(doc, PageLabel::e_roman_uppercase, &quot;My Prefix &quot;, 1)); </code></pre>
+
+Create a page labeling scheme that starts with the fourth page in 
+the document and is using decimal arabic numbering style. 
+Also the numeric portion of the first label should start with number 
+4 (otherwise the first label would be &quot;My Prefix 1&quot;). 
+<pre><code>PageLabel L2 = PageLabel::Create(doc, PageLabel::e_decimal, &quot;My Prefix &quot;, 4);
+doc.SetPageLabel(4, L2);</code></pre>
+
+Create a page labeling scheme that starts with the seventh page in 
+the document and is using alphabetic numbering style. The numeric 
+portion of the first label should start with number 1. 
+<pre><code>PageLabel L3 = PageLabel::Create(doc, PageLabel::e_alphabetic_uppercase, &quot;My Prefix &quot;, 1);
+doc.SetPageLabel(7, L3);</code></pre>
+
+Read page labels from an existing PDF document.
+<pre><code>PageLabel label = new PageLabel();
+for (int i=1; i&lt;=doc.GetPageCount(); ++i) {
+label = doc.GetPageLabel(i);
+if (label.IsValid()) {
+string title = label.GetLabelTitle(i);
+}</code></pre>
+</example>  
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PageSet.html">PageSet</a></h4>
+      <section><p>PageSet is a container of page numbers ordered following a linear sequence. 
+The page numbers are integers and must be greater than zero. Duplicates are allowed.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PathData.html">PathData</a></h4>
+      <section><p>Contains the information required to draw the path. Contains an array of 
+PathSegmentType Operators and corresponding path data Points. A point may 
+be on or off (off points are control points). The meaning of a point 
+depends on associated id (or segment type) in the path segment type array.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PatternColor.html">PatternColor</a></h4>
+      <section><p>Patterns are quite general, and have many uses; for example, they can be used 
+to create various graphical textures, such as weaves, brick walls, sunbursts, 
+and similar geometrical and chromatic effects.
+Patterns are specified in a special family of color spaces named Pattern, whose
+&apos;color values&apos; are PatternColor objects instead of the numeric component values 
+used with other spaces. Therefore PatternColor is to pattern color space what is 
+ColorPt to all other color spaces.</p>
+<p>A tiling pattern consists of a small graphical figure called a pattern cell. 
+Painting with the pattern replicates the cell at fixed horizontal and vertical 
+intervals to fill an area. The effect is as if the figure were painted on the 
+surface of a clear glass tile, identical copies of which were then laid down 
+in an array covering the area and trimmed to its boundaries. This is called 
+tiling the area.</p>
+<p>The pattern cell can include graphical elements such as filled areas, text, 
+and sampled images. Its shape need not be rectangular, and the spacing of 
+tiles can differ from the dimensions of the cell itself.</p>
+<p>The order in which individual tiles (instances of the cell) are painted is 
+unspecified and unpredictable; it is inadvisable for the figures on adjacent 
+tiles to overlap.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></h4>
+      <section><p>PDFDoc is a high-level class describing a single PDF (Portable Document 
+Format) document. Most applications using PDFNet will use this class to 
+open existing PDF documents, or to create new PDF documents from scratch.</p>
+<p>The class offers a number of entry points into the document. For example,
+<ul><li>To access pages use pdfdoc.getPageIterator() or pdfdoc.PageFind(page_num).</li><li>To access form fields use pdfdoc.GetFieldIterator() or pdfdoc.FieldFind(name).</li><li>To access document&apos;s meta-data use pdfdoc.GetDocInfo().</li><li>To access the outline tree use pdfdoc.GetFirstBookmark().</li><li>To access low-level Document Catalog use pdfdoc.GetRoot().</li></ul>
+The class also offers utility methods to slit and merge PDF pages, 
+to create new pages, to flatten forms, to change security settings, etc.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFDocGenerator.html">PDFDocGenerator</a></h4>
+      <section><p>A collection of static methods to create blank documents</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFDocInfo.html">PDFDocInfo</a></h4>
+      <section><p>PDFDocInfo is a high-level utility class that can be used 
+to read and modify document&apos;s metadata.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFDocViewPrefs.html">PDFDocViewPrefs</a></h4>
+      <section><p>PDFDocViewPrefs is a high-level utility class that can be 
+used to control the way the document is to be presented on 
+the screen or in print.</p>
+<p>PDFDocViewPrefs class corresponds to PageMode, PageLayout, and
+ViewerPreferences entries in the document’s catalog. For more 
+details please refer to section 8.1 &apos;Viewer Preferences&apos; in 
+PDF Reference Manual.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFDraw.html">PDFDraw</a></h4>
+      <section><p>PDFDraw contains methods for converting PDF pages to images and to Bitmap objects.
+Utility methods are provided to export PDF pages to various raster formats as well 
+as to convert pages to GDI+ bitmaps for further manipulation or drawing.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFNetInternalTools.html">PDFNetInternalTools</a></h4>
+      <section><p>Encapsulates the conversion of a single document from one format to another.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFRasterizer.html">PDFRasterizer</a></h4>
+      <section><p>PDFRasterizer is a low-level PDF rasterizer.
+The main purpose of this class is to convert PDF pages to raster images (or bitmaps).
+PDFRasterizer is a relatively low-level class. If you need to convert PDF page to an image format or a Bitmap, 
+consider using PDF.PDFDraw. Similarly, if you are building an interactive PDF viewing application 
+use PDF.PDFViewCtrl instead.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFViewCtrl.html">PDFViewCtrl</a></h4>
+      <section><p>PDFViewCtrl is derived from android.view.ViewGroup and encapsulates a rich set
+of functionalities for interactive viewing of PDF documents. See parent class
+documentation here: <a href="https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/PDFViewCtrl.html">https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/PDFViewCtrl.html</a>.
+<p>PDFViewCtrl makes use of PDFTron&apos;s PDFNet library that is compiled as a
+native library to ensure real-time viewing experience. It provides a
+comprehensive set of functionalities, including multi-threaded rendering, PDF
+rendering settings, scrolling, zooming, page navigation, different page
+viewing modes, coordinates conversion, text selection, text search, etc.
+In addition, PDFViewCtrl also allows for extension to accommodate a user&apos;s
+specific needs, which can be achieved in one of the following two ways:</p></p>
+<ul><li>Derive from PDFViewCtrl and override its functions such as
+<see cref="!:OnMeasure"></see>, <see cref="!:OnDraw"></see>, <see cref="!:OnScroll"></see>, etc. However, note
+that since PDFViewCtrl implements these functions, it is necessary to call
+PDFViewCtrl&apos;s implementations first.</li><li>The recommended way is to use PDFViewCtrl&apos;s <see cref="!:PDFViewCtrl.ITool"></see>
+interface. The interface provides a way for users to interact with PDFViewCtrl, 
+including customizing responses to gestures and drawing extra contents on top of
+the PDF content. In fact, PDFNet SDK also ships with a separate library, Tools.dll,
+that is programmed via the interface. 
+This library utilizes functions offered by PDFNet and implements
+several ready-to-use UI modules such as annotation editing, text selection,
+text search, page navigation, etc. PDFNet customers can have access to the
+source code of Tools.jar for full customization.</li></ul>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Point.html">Point</a></h4>
+      <section><p>The Class Point.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Print.html">Print</a></h4>
+      <section><p>Print is a utility class that can be used to print PDF documents. It is only supported on Android 4.4 and up (API Level 19+).</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.QuadPoint.html">QuadPoint</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></h4>
+      <section><p>Rect is a utility class used to manipulate PDF rectangle objects (refer to 
+section 3.8.3 of the PDF Reference Manual). </p>
+<p>Rect can be associated with a SDF/Cos rectangle array using Rect(Obj<em>) constructor 
+or later using Rect::Attach(Obj</em>) or Rect::Update(Obj*) methods. </p>
+<p>Rect keeps a local cache for rectangle points so it is necessary to call Rect::Update() 
+method if the changes to the Rect should be saved in the attached Cos/SDF array.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.RectCollection.html">RectCollection</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Redactor.html">Redactor</a></h4>
+      <section><p>PDF Redactor is a separately licensable Add-on that offers options to remove 
+(not just covering or obscuring) content within a region of PDF. 
+With printed pages, redaction involves blacking-out or cutting-out areas of 
+the printed page. With electronic documents that use formats such as PDF, 
+redaction typically involves removing sensitive content within documents for 
+safe distribution to courts, patent and government institutions, the media, 
+customers, vendors or any other audience with restricted access to the content. </p>
+<p>The redaction process in PDFNet consists of two steps:</p>
+<p>a) Content identification: A user applies redact annotations that specify the 
+pieces or regions of content that should be removed. The content for redaction 
+can be identified either interactively (e.g. using &apos;pdftron.PDF.PDFViewCtrl&apos; 
+as shown in PDFView sample) or programmatically (e.g. using &apos;pdftron.PDF.TextSearch&apos;
+or &apos;pdftron.PDF.TextExtractor&apos;). Up until the next step is performed, the user 
+can see, move and redefine these annotations.
+b) Content removal: Using &apos;pdftron.PDF.Redactor.Redact()&apos; the user instructs 
+PDFNet to apply the redact regions, after which the content in the area specified 
+by the redact annotations is removed. The redaction function includes number of 
+options to control the style of the redaction overlay (including color, text, 
+font, border, transparency, etc.).</p>
+<p>PDFTron Redactor makes sure that if a portion of an image, text, or vector graphics 
+is contained in a redaction region, that portion of the image or path data is 
+destroyed and is not simply hidden with clipping or image masks. PDFNet API can also 
+be used to review and remove metadata and other content that can exist in a PDF 
+document, including XML Forms Architecture (XFA) content and Extensible Metadata 
+Platform (XMP) content.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Redactor.Appearance.html">Redactor.Appearance</a></h4>
+      <section><p>Class used to customize the appearance of the optional redaction overlay.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Redactor.Redaction.html">Redactor.Redaction</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Shading.html">Shading</a></h4>
+      <section><p>Shading is a class that represents a flat interface around all PDF shading types: 
+<ul><li>
+In Function-based (type 1) shadings, the color at every point in 
+the domain is defined by a specified mathematical function. The function need 
+not be smooth or continuous. This is the most general of the available shading 
+types, and is useful for shadings that cannot be adequately described with any 
+of the other types.
+</li><li>
+Axial shadings (type 2) define a color blend along a line between two points,
+optionally extended beyond the boundary points by continuing the boundary
+colors.
+</li><li>
+Radial shadings (type 3) define a color blend that varies between two circles.
+Shadings of this type are commonly used to depict three-dimensional spheres
+and cones.
+</li><li>
+Free-form Gouraud-shaded triangle mesh shadings (type 4) and lattice gouraud 
+shadings (type 5) are commonly used to represent complex colored and shaded 
+three-dimensional shapes. The area to be shaded is defined by a path composed entirely 
+of triangles. The color at each vertex of the triangles is specified, and a technique 
+known as Gouraud interpolation is used to color the interiors. The interpolation 
+functions defining the shading may be linear or nonlinear.
+</li></ul>
+Coons patch mesh shadings (type 6) are constructed from one or more color
+patches, each bounded by four cubic Bézier curves.</p>
+<p>A Coons patch generally has two independent aspects:
+<ul><li>
+Colors are specified for each corner of the unit square, and bilinear 
+interpolation is used to fill in colors over the entire unit square
+</li><li>
+Coordinates are mapped from the unit square into a four-sided patch whose
+sides are not necessarily linear. The mapping is continuous: the corners 
+of the unit square map to corners of the patch and the sides of the unit 
+square map to sides of the patch.
+</li><li>
+Tensor-product patch mesh shadings (type 7) are identical to type 6 
+(Coons mesh), except that they are based on a bicubic tensor-product 
+patch defined by 16 control points, instead of the 12 control points 
+that define a Coons patch. The shading Patterns dictionaries representing 
+the two patch types differ only in the value of the Type entry and 
+in the number of control points specified for each patch in the data stream. 
+Although the Coons patch is more concise and easier to use, the tensor-
+product patch affords greater control over color mapping. 
+</li></ul></p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Stamper.html">Stamper</a></h4>
+      <section><p>Stamper is a utility class that can be used to stamp PDF pages with text, images, 
+or vector art (including another PDF page) in only a few lines of code.</p>
+<p>Although Stamper is very simple to use compared to ElementBuilder/ElementWriter 
+it is not as powerful or flexible. In case you need full control over PDF creation
+use ElementBuilder/ElementWriter to add new content to existing PDF pages as 
+shown in the ElementBuilder sample project.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.TextExtractor.html">TextExtractor</a></h4>
+      <section><param>
+TextExtractor is used to analyze a PDF page and extract words and logical 
+structures that are visible within a given region. The resulting list of 
+lines and words can be traversed element by element or accessed as a 
+string buffer. The class also includes utility methods to extract PDF 
+text as HTML or XML.<br>
+
+<p>Possible use case scenarios for TextExtractor include:
+<ul><li>Converting PDF pages to text or XML for content repurposing.</li><li>Searching PDF pages for specific words or keywords.</li><li>Indexing large PDF repositories for indexing or content.</li></ul>
+retrieval purposes (i.e. implementing a PDF search engine).
+<ul><li>Classifying or summarizing PDF documents based on their text content.</li><li>Finding specific words for content editing purposes (such as splitting pages.</li></ul>
+The main task of TextExtractor is to interpret PDF pages and offer a 
+simple to use API to: 
+<ul><li>Normalize all text content to Unicode.</li><li>Extract inferred logical structure (word by word, line by line, 
+or paragraph by paragraph).</li><li>Extract positioning information for every line, word, or a glyph.</li><li>Extract style information (such as information about the font, font size,
+font styles, etc) for every line, word, or a glyph.</li><li>Control the content analysis process. A number of options (such as 
+removal of text obscured by images) is available to let the user 
+direct the flow of content recognition algorithms that will meet their
+requirements.</li><li>Offer utility methods to convert PDF page content to text, XML, or HTML.</li></ul></p>
+<p><remarks>
+<p>TextExtractor is analyzing only textual content of the page.
+This means that the rasterized (e.g. in scanned pages) or vectorized
+text (where glyphs are converted to path outlines) will not be recognized 
+as text. Please note that it is still possible to extract this content 
+using pdftron.PDF.ElementReader interface.
+</p>
+<p>
+In some cases TextExtractor may extract text that does not appear to 
+be on the visible page (e.g. when text is obscured by an image or a 
+rectangle). In these situations it is possible to use processing flags
+such as &apos;e_remove_hidden_text&apos; and &apos;e_no_invisible_text&apos; to remove 
+hidden text. 
+</p>
+</remarks>
+<example>
+For full sample code, please take a look at TextExtract sample project.    <p>
+<pre><code>  
+//... Initialize PDFNet ...
+PDFDoc doc = new PDFDoc(filein);
+doc.initSecurityHandler();
+Page page = doc.pageBegin().current();
+TextExtractor txt = new TextExtractor();
+txt.begin(page, 0, TextExtractor.ProcessingFlags.e_remove_hidden_text);
+string text = txt.getAsText();
+// or traverse words one by one...
+TextExtractor.Word word;
+for (TextExtractor.Line line = txt.GetFirstLine(); line.IsValid(); line=line.GetNextLine()) {
+for (word=line.GetFirstWord(); word.IsValid(); word=word.GetNextWord()) {
+string w = word.GetString();
+}
+}</code></pre>
+<p></example></p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.TextExtractor.Line.html">TextExtractor.Line</a></h4>
+      <section><p>TextExtractor.Line object represents a line of text on a PDF page. 
+Each line consists of a sequence of words, and each words in one or 
+more styles.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.TextExtractor.Style.html">TextExtractor.Style</a></h4>
+      <section><p>A class representing predominant text style associated with a 
+given Line, a Word, or a Glyph. The class includes information about 
+the font, font size, font styles, text color, etc.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.TextExtractor.Word.html">TextExtractor.Word</a></h4>
+      <section><p>TextExtractor.Word object represents a word on a PDF page. 
+Each word contains a sequence of characters in one or more styles 
+(see TextExtractor.Style).</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.TextSearch.html">TextSearch</a></h4>
+      <section><p>TextSearch searches through a PDF document for a user-given search pattern.
+The current implementation supports both verbatim search and the search
+using regular expressions, whose detailed syntax can be found at:</p>
+<p><a href="http://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html">http://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html</a></p>
+<p>TextSearch also provides users with several useful search modes and extra 
+information besides the found string that matches the pattern. TextSearch
+can either keep running until a matched string is found or be set to return
+periodically in order for the caller to perform any necessary updates 
+(e.g., UI updates). It is also worth mentioning that the search modes can be
+changed on the fly while searching through a document.</p>
+<p>Possible use case scenarios for TextSearch include:
+<ul><li>Guide users of a PDF viewer (e.g. implemented by PDFViewCtrl) to places
+where they are intersted in;</li><li>Find interested PDF documents which contain certain patterns;</li><li>Extract interested information (e.g., credit card numbers) from a set of files;</li><li>Extract Highlight information (refer to the Highlights class for details) from
+files for external use.</li><li>Since hyphens (&apos;-&apos;) are frequently used in PDF documents to concatenate the two
+broken pieces of a word at the end of a line, for example
+<code>&quot;TextSearch is powerful for finding patterns in PDF files; yes, it is really pow-
+erful.&quot;</code>
+a search for &quot;powerful&quot; should return both instances. However, not all end-of-line
+hyphens are hyphens added to connect a broken word; some of them could be &quot;real&quot;
+hyphens. In addition, an input search pattern may also contain hyphens that complicate
+the situation. To tackle this problem, the following conventions are adopted:
+<ol><li>When in the verbatim search mode and the pattern contains no hyphen, a matching
+string is returned if it is exactly the same or it contains end-of-line
+or start-of-line hyphens. For example, as mentioned above, a search for &quot;powerful&quot; 
+would return both instances.</li><li>When in verbatim search mode and the pattern contains one or multiple hyphens, a 
+matching string is returned only if the string matches the pattern exactly. For 
+example, a search for &quot;pow-erful&quot; will only return the second instance, and a search
+for &quot;power-ful&quot; will return nothing.</li><li>When searching using regular expressions, hyphens are not taken care implicitly.
+Users should take care of it themselves. For example, in order to find both the
+&quot;powerful&quot; instances, the input pattern can be &quot;pow-{0,1}erful&quot;.</li></ol>
+</li></ul><br><example>
+For a full sample, please take a look at the TextSearch sample project.<p>
+<pre><code>//... Initialize PDFNet ...
+PDFDoc doc = new PDFDoc(filein);
+doc.initSecurityHandler();
+int mode = TextSearch.e_whole_word | TextSearch.e_page_stop;
+UString pattern( &quot;joHn sMiTh&quot; );
+TextSearch txt_search = new TextSearch();
+
+//PDFDoc doesn&apos;t allow simultaneous access from different threads. If this
+//document could be used from other threads (e.g., the rendering thread inside
+//PDFView/PDFViewCtrl, if used), it is good practice to lock it.
+//Notice: don&apos;t forget to call doc.Unlock() to avoid deadlock.
+doc.Lock(); 
+txt_search.Begin( doc, pattern, mode, -1, -1 );
+while ( true )
+{
+    TextSearchResult result = txt_search.Run();
+    if ( result.getCode() == TextSearchResult.e_TextSearch_found )
+    {
+        System.out.println(&quot;found one instance: &quot; + result.getResultStr());
+    }
+}
+else
+{
+    break;
+}
+
+//unlock the document to avoid deadlock.
+doc.UnLock();</code></pre>
+<p></example></p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.TypeConvertHelper.html">TypeConvertHelper</a></h4>
+      <section><p>Utility class for type mapping between C# object and java object</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.ViewChangeCollection.html">ViewChangeCollection</a></h4>
+      <section><p>Class for collecting changes to a PDFDoc and/or viewer, which can be 
+passed to various functions to act on. Allows for chaining of 
+modifications, which can then be updated by PDFNet in the best possible
+way.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.WebFontDownloader.html">WebFontDownloader</a></h4>
+      <section><p>static interface to control the behaviour of PDFNet web font downloading</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.WordToPDFOptions.html">WordToPDFOptions</a></h4>
+      <section></section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="pdftron.PDF.Action.FormActionFlag.html">Action.FormActionFlag</a></h4>
+      <section><p>Flags used by submit form actions. Exclude flag is also used by reset form action.
+ No other action types use flags in the current version of PDF standard (ISO 2300).</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Action.Type.html">Action.Type</a></h4>
+      <section><p>Action types</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Annot.AnnotationState.html">Annot.AnnotationState</a></h4>
+      <section><p>annotation appearances types</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Annot.BorderStyle.Style.html">Annot.BorderStyle.Style</a></h4>
+      <section><p>The border style </p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Annot.Flag.html">Annot.Flag</a></h4>
+      <section><p>Flags specifying various characteristics of the annotation.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Annot.Type.html">Annot.Type</a></h4>
+      <section><p>Annotation types</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.ColorSpace.Type.html">ColorSpace.Type</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.FlattenFlag.html">Convert.FlattenFlag</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.FlattenThresholdFlag.html">Convert.FlattenThresholdFlag</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.Printer.Mode.html">Convert.Printer.Mode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Convert.XODOutputOptions.AnnotationOutputFlag.html">Convert.XODOutputOptions.AnnotationOutputFlag</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Destination.FitType.html">Destination.FitType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.DigitalSignatureField.DocumentPermissions.html">DigitalSignatureField.DocumentPermissions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.DigitalSignatureField.FieldPermissions.html">DigitalSignatureField.FieldPermissions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.DigitalSignatureField.SubFilterType.html">DigitalSignatureField.SubFilterType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.DocumentConversionResult.html">DocumentConversionResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Element.Type.html">Element.Type</a></h4>
+      <section><p><code>Element</code> types</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.ElementWriter.WriteMode.html">ElementWriter.WriteMode</a></h4>
+      <section><p>Enumeration describing the placement of the element written to a page.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Field.Flag.html">Field.Flag</a></h4>
+      <section><p>Flags specifying various characteristics of the fields.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Field.TextJustification.html">Field.TextJustification</a></h4>
+      <section><p>form of quadding (justification) to be used in displaying the text fields.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Field.Type.html">Field.Type</a></h4>
+      <section><p>interactive form field type</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Flattener.FlattenMode.html">Flattener.FlattenMode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Flattener.Threshold.html">Flattener.Threshold</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Font.Encoding.html">Font.Encoding</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Font.StandardType1Font.html">Font.StandardType1Font</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Font.Type.html">Font.Type</a></h4>
+      <section><p>Font types</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Function.Type.html">Function.Type</a></h4>
+      <section><p>functions types</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.GeometryCollectionSnappingMode.html">GeometryCollectionSnappingMode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.GState.BlendMode.html">GState.BlendMode</a></h4>
+      <section><p>The standard separable blend modes available in PDF.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.GState.GStateAttribute.html">GState.GStateAttribute</a></h4>
+      <section><p>GState properties</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.GState.LineCap.html">GState.LineCap</a></h4>
+      <section><p>LineCap types</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.GState.LineJoin.html">GState.LineJoin</a></h4>
+      <section><p>LineJoin types</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.GState.RenderingIntent.html">GState.RenderingIntent</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.GState.TextRenderingMode.html">GState.TextRenderingMode</a></h4>
+      <section><p>Text Rendering modes</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Image.InputFilter.html">Image.InputFilter</a></h4>
+      <section><p>InputFilter types</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Optimizer.ImageSettings.CompressionMode.html">Optimizer.ImageSettings.CompressionMode</a></h4>
+      <section><p>Different Compression Modes for color and grayscale images.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Optimizer.ImageSettings.DownsampleMode.html">Optimizer.ImageSettings.DownsampleMode</a></h4>
+      <section><p>Different Downsample Modes for color and grayscale images.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Optimizer.MonoImageSettings.CompressionMode.html">Optimizer.MonoImageSettings.CompressionMode</a></h4>
+      <section><p>mono-image compression mode</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Optimizer.MonoImageSettings.DownsampleMode.html">Optimizer.MonoImageSettings.DownsampleMode</a></h4>
+      <section><p>mono-image downsample mode</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Page.Box.html">Page.Box</a></h4>
+      <section><p>PDF page can define as many as five separate boundaries to control various aspects of the 
+imaging process (for more details please refer to Section 10.10.1 &apos;Page Boundaries&apos; in PDF 
+Reference Manual).      </p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Page.Rotate.html">Page.Rotate</a></h4>
+      <section><p>specify page rotations in degrees</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PageLabel.Style.html">PageLabel.Style</a></h4>
+      <section><p>The numbering style to be used for the numeric portion of page label.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PageSet.Filter.html">PageSet.Filter</a></h4>
+      <section><p>PageSet filters</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PathData.PathSegmentType.html">PathData.PathSegmentType</a></h4>
+      <section><p>Enumaration used to indicate operator type. </p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PatternColor.TilingType.html">PatternColor.TilingType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.PatternColor.Type.html">PatternColor.Type</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.PDFDoc.ExtractFlag.html">PDFDoc.ExtractFlag</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.PDFDoc.FlattenAnnotationFlag.html">PDFDoc.FlattenAnnotationFlag</a></h4>
+      <section><p>Flatten selected items in the document.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFDoc.InsertFlag.html">PDFDoc.InsertFlag</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.PDFDocViewPrefs.PageLayout.html">PDFDocViewPrefs.PageLayout</a></h4>
+      <section><p>PageLayout specifies the page layout to be used when the
+document is opened</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFDocViewPrefs.PageMode.html">PDFDocViewPrefs.PageMode</a></h4>
+      <section><p>PageMode specifies how the document should be displayed
+when opened</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFDocViewPrefs.ViewerPref.html">PDFDocViewPrefs.ViewerPref</a></h4>
+      <section><p>ViewerPref enumeration specifies how various GUI elements 
+should behave when the document is opened.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFDraw.PixelFormat.html">PDFDraw.PixelFormat</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.PDFNetInternalToolsLogBackend.html">PDFNetInternalToolsLogBackend</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.PDFNetInternalToolsLogLevel.html">PDFNetInternalToolsLogLevel</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.PDFRasterizer.ColorPostProcessMode.html">PDFRasterizer.ColorPostProcessMode</a></h4>
+      <section><p>ColorPostProcessMode is used to modify colors after rendering.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFRasterizer.OverprintPreviewMode.html">PDFRasterizer.OverprintPreviewMode</a></h4>
+      <section><p>Determines if overprint is used.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFRasterizer.Type.html">PDFRasterizer.Type</a></h4>
+      <section><p>PDFNet includes two separate rasterizer implementations utilizing different graphics libraries.
+The default rasterizer is &apos;e_BuiltIn&apos; which is a high-quality, anti-aliased and platform independent rasterizer. 
+This rasterizer is available on all supported platforms.
+On Windows platforms, PDFNet also includes GDI+ based rasterizer. 
+This rasterizer is included mainly to provide vector output for printing, for EMF/WMF export, etc. 
+For plain image rasterization we recommend using the built-in rasterizer.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Print.PrintContent.html">Print.PrintContent</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Shading.Type.html">Shading.Type</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Stamper.HorizontalAlignment.html">Stamper.HorizontalAlignment</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Stamper.SizeType.html">Stamper.SizeType</a></h4>
+      <section><p>Size Types</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.Stamper.TextAlignment.html">Stamper.TextAlignment</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.Stamper.VerticalAlignment.html">Stamper.VerticalAlignment</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.PDF.TextExtractor.ProcessingFlags.html">TextExtractor.ProcessingFlags</a></h4>
+      <section><p>Processing options that can be passed in Begin() method to direct the flow of content recognition algorithms. </p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.TextExtractor.XMLOutputFlags.html">TextExtractor.XMLOutputFlags</a></h4>
+      <section><p>Flags controlling the structure of XML output in a call to GetAsXML().</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.TextSearch.ResultCode.html">TextSearch.ResultCode</a></h4>
+      <section><p>The code indicating the reason when a search returns.</p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.TextSearch.SearchMode.html">TextSearch.SearchMode</a></h4>
+      <section><p>Search modes that control how searching is conducted.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

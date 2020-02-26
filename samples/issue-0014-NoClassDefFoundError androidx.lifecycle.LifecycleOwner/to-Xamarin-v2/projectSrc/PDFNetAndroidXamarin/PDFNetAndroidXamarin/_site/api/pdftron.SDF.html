@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace pdftron.SDF
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace pdftron.SDF
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.SDF">
+  
+  <h1 id="pdftron_SDF" data-uid="pdftron.SDF" class="text-break">Namespace pdftron.SDF
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="pdftron.SDF.DictIterator.html">DictIterator</a></h4>
+      <section><p>DictIterator is used to traverse key-value pairs in a dictionary.<br><example>
+DictIterator can be used to print out all the entries
+in a given Obj dictionary as follows: <p>
+<pre><code>  
+DictIterator itr = dict.getDictIterator();
+while (itr.hasNext()) {
+Obj key = itr.key();        
+printf(key.getName());
+Obj value = itr.value();
+//...
+itr.next()
+}
+}</code></pre></example>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.DocSnapshot.html">DocSnapshot</a></h4>
+      <section><p>Represents a state of the document.</p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.NameTree.html">NameTree</a></h4>
+      <section><p>A NameTree is a common data structure in PDF. See section 3.8.5 &apos;Name Trees&apos; 
+in PDF Reference Manual for more details.</p>
+<p>A name tree serves a similar purpose to a dictionary - associating keys and
+values - but by different means. NameTrees allow efficient storage of very 
+large association collections (string/Obj* maps). A NameTree can have many 
+more entries than a SDF/Cos dictionary can.</p>
+<p>NameTree-s use SDF/Cos-style strings (not null-terminated C strings), which 
+may use Unicode encoding etc.</p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.NameTreeIterator.html">NameTreeIterator</a></h4>
+      <section><p>NameTreeIterator is used to traverse key/value pairs in a NameTree.</p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.NumberTreeIterator.html">NumberTreeIterator</a></h4>
+      <section><p>NumberTreeIterator is used to traverse key/value pairs in a NumberTree.</p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></h4>
+      <section><p>Obj is a concrete class for all SDF/Cos objects. Obj hierarchy implements the 
+composite design pattern. As a result, you can invoke a member function of any 
+&apos;derived&apos; object through Obj interface. If the member function is not supported 
+(e.g. if you invoke Obj.GetNumber() on a boolean object) an Exception will be 
+thrown.</p>
+<p>You can use GetType() or obl.Is???() member functions to find out type-information at 
+run time, however most of the time the type can be inferred from the PDF specification.
+Therefore when you call Doc.GetTrailer() you can assume that returned object is 
+a dictionary. If there is any ambiguity use Is???() methods. </p>
+<p>Objects can&apos;t be shared across documents, however you can use Doc.ImportObj() 
+to copy objects from one document to another. </p>
+<p>Objects can be shared within a document provided that they are created as indirect.
+Indirect objects are the ones that are referenced in cross-reference table.
+To create an object as indirect use Doc.CreateIndirect???() (where ? is the 
+Object type).</p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.ObjSet.html">ObjSet</a></h4>
+      <section><p>ObjSet is a lightweight container that can hold a collection of SDF objects.</p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.ResultSnapshot.html">ResultSnapshot</a></h4>
+      <section><p>Represents a transition between two document states.</p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></h4>
+      <section><p>SDFDoc is a low-level document representing a graph of SDF.Obj nodes that 
+can be used to build higher-level document models such as PDF (Portable Document
+Format) or FDF (Forms Document Format).</p>
+<p>SDF Doc brings together document security, document utility methods, and all SDF 
+objects.</p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.SecurityHandler.html">SecurityHandler</a></h4>
+      <section><p>Standard Security Handler is a built-in password-based security handler.</p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.SignatureHandler.html">SignatureHandler</a></h4>
+      <section><p>A base class for SignatureHandler. SignatureHandler instances are responsible for defining the digest and cipher
+algorithms to sign and/or verify a PDF document. SignatureHandlers are added to PDFDoc instances by calling the
+PDFDoc.AddSignatureHandler method.</p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.UndoManager.html">UndoManager</a></h4>
+      <section><p>Undo-redo interface; one-to-one mapped to document</p>
+</section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="pdftron.SDF.SignatureHandlerId.html">SignatureHandlerId</a></h4>
+      <section><p>Used for identifying a SignatureHandler instances as they are added to the PDFDoc&apos;s SignatureManager.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="pdftron.SDF.Obj.ObjType.html">Obj.ObjType</a></h4>
+      <section><p>Obj types</p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.SDFDoc.SaveOptions.html">SDFDoc.SaveOptions</a></h4>
+      <section><p>SDFDoc save options </p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.SecurityHandler.AlgorithmType.html">SecurityHandler.AlgorithmType</a></h4>
+      <section><p>Algorithm types. New in PDFNet v3.1</p>
+</section>
+      <h4><a class="xref" href="pdftron.SDF.SecurityHandler.Permission.html">SecurityHandler.Permission</a></h4>
+      <section><p>permission types</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

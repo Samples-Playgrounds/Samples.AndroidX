@@ -1,0 +1,650 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DictIterator
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DictIterator
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.SDF.DictIterator">
+  
+  
+  <h1 id="pdftron_SDF_DictIterator" data-uid="pdftron.SDF.DictIterator" class="text-break">Class DictIterator
+  </h1>
+  <div class="markdown level0 summary"><p>DictIterator is used to traverse key-value pairs in a dictionary.<br><example>
+DictIterator can be used to print out all the entries
+in a given Obj dictionary as follows: <p>
+<pre><code>  
+DictIterator itr = dict.getDictIterator();
+while (itr.hasNext()) {
+Obj key = itr.key();        
+printf(key.getName());
+Obj value = itr.value();
+//...
+itr.next()
+}
+}</code></pre></example>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DictIterator</span></div>
+      <div class="level2"><a class="xref" href="pdftron.SDF.NameTreeIterator.html">NameTreeIterator</a></div>
+      <div class="level2"><a class="xref" href="pdftron.SDF.NumberTreeIterator.html">NumberTreeIterator</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.SDF.html">pdftron.SDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_SDF_DictIterator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DictIterator : IDisposable</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_Destroy.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L177">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_Destroy_" data-uid="pdftron.SDF.DictIterator.Destroy*"></a>
+  <h4 id="pdftron_SDF_DictIterator_Destroy" data-uid="pdftron.SDF.DictIterator.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_Dispose.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L161">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_Dispose_" data-uid="pdftron.SDF.DictIterator.Dispose*"></a>
+  <h4 id="pdftron_SDF_DictIterator_Dispose" data-uid="pdftron.SDF.DictIterator.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L166">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_Dispose_" data-uid="pdftron.SDF.DictIterator.Dispose*"></a>
+  <h4 id="pdftron_SDF_DictIterator_Dispose_System_Boolean_" data-uid="pdftron.SDF.DictIterator.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_Equals_System_Object_.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L98">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_Equals_" data-uid="pdftron.SDF.DictIterator.Equals*"></a>
+  <h4 id="pdftron_SDF_DictIterator_Equals_System_Object_" data-uid="pdftron.SDF.DictIterator.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>checks if equals to the specified <code>DictIterator</code> object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">rhs</span></td>
+        <td><p>specified <code>DictIterator</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if both are equal</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_Finalize.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L156">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_Finalize_" data-uid="pdftron.SDF.DictIterator.Finalize*"></a>
+  <h4 id="pdftron_SDF_DictIterator_Finalize" data-uid="pdftron.SDF.DictIterator.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the DictIterator </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_HasNext.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.HasNext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L55">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_HasNext_" data-uid="pdftron.SDF.DictIterator.HasNext*"></a>
+  <h4 id="pdftron_SDF_DictIterator_HasNext" data-uid="pdftron.SDF.DictIterator.HasNext">HasNext()</h4>
+  <div class="markdown level1 summary"><p>Checks for next.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasNext()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the iterator can be successfully advanced to the
+next element; false if the end collection is reached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_Key.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L66">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_Key_" data-uid="pdftron.SDF.DictIterator.Key*"></a>
+  <h4 id="pdftron_SDF_DictIterator_Key" data-uid="pdftron.SDF.DictIterator.Key">Key()</h4>
+  <div class="markdown level1 summary"><p>Key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj Key()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>key of the current dictionary entry</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_Next.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.Next%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L43">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_Next_" data-uid="pdftron.SDF.DictIterator.Next*"></a>
+  <h4 id="pdftron_SDF_DictIterator_Next" data-uid="pdftron.SDF.DictIterator.Next">Next()</h4>
+  <div class="markdown level1 summary"><p>Advances the iterator to the next element of the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Next()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_op_Assign_pdftron_SDF_DictIterator_.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.op_Assign(pdftron.SDF.DictIterator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L112">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_op_Assign_" data-uid="pdftron.SDF.DictIterator.op_Assign*"></a>
+  <h4 id="pdftron_SDF_DictIterator_op_Assign_pdftron_SDF_DictIterator_" data-uid="pdftron.SDF.DictIterator.op_Assign(pdftron.SDF.DictIterator)">op_Assign(DictIterator)</h4>
+  <div class="markdown level1 summary"><p>Assignment operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DictIterator op_Assign(DictIterator rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.DictIterator.html">DictIterator</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td><p><code>DictIterator</code> at the right side of the operator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.DictIterator.html">DictIterator</a></td>
+        <td><p><code>DictIterator</code> that equals to the object at the right side of the operator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_Set_pdftron_SDF_DictIterator_.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.Set(pdftron.SDF.DictIterator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L88">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_Set_" data-uid="pdftron.SDF.DictIterator.Set*"></a>
+  <h4 id="pdftron_SDF_DictIterator_Set_pdftron_SDF_DictIterator_" data-uid="pdftron.SDF.DictIterator.Set(pdftron.SDF.DictIterator)">Set(DictIterator)</h4>
+  <div class="markdown level1 summary"><p>Sets value to the specified <code>DictIterator</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(DictIterator p)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.DictIterator.html">DictIterator</a></td>
+        <td><span class="parametername">p</span></td>
+        <td><p>another <code>DictIterator</code> object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_Value.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L77">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_Value_" data-uid="pdftron.SDF.DictIterator.Value*"></a>
+  <h4 id="pdftron_SDF_DictIterator_Value" data-uid="pdftron.SDF.DictIterator.Value">Value()</h4>
+  <div class="markdown level1 summary"><p>Value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj Value()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>value of the current dictionary entry</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_op_Equality_pdftron_SDF_DictIterator_pdftron_SDF_DictIterator_.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.op_Equality(pdftron.SDF.DictIterator%2Cpdftron.SDF.DictIterator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L124">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_op_Equality_" data-uid="pdftron.SDF.DictIterator.op_Equality*"></a>
+  <h4 id="pdftron_SDF_DictIterator_op_Equality_pdftron_SDF_DictIterator_pdftron_SDF_DictIterator_" data-uid="pdftron.SDF.DictIterator.op_Equality(pdftron.SDF.DictIterator,pdftron.SDF.DictIterator)">Equality(DictIterator, DictIterator)</h4>
+  <div class="markdown level1 summary"><p>Equality operator checks whether two <code>DictIterator</code> objects are the same.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(DictIterator lhs, DictIterator rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.DictIterator.html">DictIterator</a></td>
+        <td><span class="parametername">lhs</span></td>
+        <td><p><code>DictIterator</code> at the left side of the operator</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.DictIterator.html">DictIterator</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td><p><code>DictIterator</code> at the right side of the operator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if both objects are equal, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator_op_Inequality_pdftron_SDF_DictIterator_pdftron_SDF_DictIterator_.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator.op_Inequality(pdftron.SDF.DictIterator%2Cpdftron.SDF.DictIterator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L142">View Source</a>
+  </span>
+  <a id="pdftron_SDF_DictIterator_op_Inequality_" data-uid="pdftron.SDF.DictIterator.op_Inequality*"></a>
+  <h4 id="pdftron_SDF_DictIterator_op_Inequality_pdftron_SDF_DictIterator_pdftron_SDF_DictIterator_" data-uid="pdftron.SDF.DictIterator.op_Inequality(pdftron.SDF.DictIterator,pdftron.SDF.DictIterator)">Inequality(DictIterator, DictIterator)</h4>
+  <div class="markdown level1 summary"><p>Inequality operator checks whether two <code>DictIterator</code> objects are different.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(DictIterator lhs, DictIterator rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.DictIterator.html">DictIterator</a></td>
+        <td><span class="parametername">lhs</span></td>
+        <td><p><code>DictIterator</code> at the left side of the operator</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.DictIterator.html">DictIterator</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td><p><code>DictIterator</code> at the right side of the operator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if both objects are not equal, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_DictIterator.md&amp;value=---%0Auid%3A%20pdftron.SDF.DictIterator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/DictIterator.cs/#L28" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

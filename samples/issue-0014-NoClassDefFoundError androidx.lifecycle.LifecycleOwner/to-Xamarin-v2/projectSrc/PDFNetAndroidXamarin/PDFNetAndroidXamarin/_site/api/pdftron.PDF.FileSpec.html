@@ -1,0 +1,1082 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FileSpec
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FileSpec
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.FileSpec">
+  
+  
+  <h1 id="pdftron_PDF_FileSpec" data-uid="pdftron.PDF.FileSpec" class="text-break">Class FileSpec
+  </h1>
+  <div class="markdown level0 summary"><p>FileSpec corresponds to the PDF file specification object. </p>
+<p>A PDF file can refer to the contents of another file by using a file specification, 
+which can take either of the following forms:
+<ul><li>
+A simple file specification gives just the name of the target file in 
+a standard format, independent of the naming conventions of any particular file system. 
+</li><li>
+A full file specification includes information related to one or more specific file
+systems.
+</li><li>
+A URL reference.
+</li></ul>
+Although the file designated by a file specification is normally external to the
+PDF file referring to it, it is also possible to embed the file allowing its contents 
+to be stored or transmitted along with the PDF file. However, embedding a file does not 
+change the presumption that it is external to (or separate from) the PDF file.</p>
+<p>For more details on file specifications, please refer to Section 3.10, &apos;File Specifications&apos;
+in the PDF Reference Manual.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FileSpec</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_FileSpec_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FileSpec : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec__ctor_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.%23ctor(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L87">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec__ctor_" data-uid="pdftron.PDF.FileSpec.#ctor*"></a>
+  <h4 id="pdftron_PDF_FileSpec__ctor_pdftron_SDF_Obj_" data-uid="pdftron.PDF.FileSpec.#ctor(pdftron.SDF.Obj)">FileSpec(Obj)</h4>
+  <div class="markdown level1 summary"><p>Create a FileSpec and initialize it using given Cos/SDF object. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileSpec(Obj a)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">a</span></td>
+        <td><p>given Cos/SDF object. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_Create_pdftron_SDF_SDFDoc_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.Create(pdftron.SDF.SDFDoc%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L123">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_Create_" data-uid="pdftron.PDF.FileSpec.Create*"></a>
+  <h4 id="pdftron_PDF_FileSpec_Create_pdftron_SDF_SDFDoc_System_String_" data-uid="pdftron.PDF.FileSpec.Create(pdftron.SDF.SDFDoc,System.String)">Create(SDFDoc, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a file specification for the given file. By default, the specified
+file is embedded in PDF.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FileSpec Create(SDFDoc doc, string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>A document to which the FileSpec should be added. To obtain
+SDFDoc from PDFDoc use PDFDoc.GetSDFDoc() or Obj.GetDoc().</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><ul>
+<li>The path to convert into a file specification.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.FileSpec.html">FileSpec</a></td>
+        <td><p>newly created FileSpec object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_Create_pdftron_SDF_SDFDoc_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.Create(pdftron.SDF.SDFDoc%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L104">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_Create_" data-uid="pdftron.PDF.FileSpec.Create*"></a>
+  <h4 id="pdftron_PDF_FileSpec_Create_pdftron_SDF_SDFDoc_System_String_System_Boolean_" data-uid="pdftron.PDF.FileSpec.Create(pdftron.SDF.SDFDoc,System.String,System.Boolean)">Create(SDFDoc, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates the.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FileSpec Create(SDFDoc doc, string path, bool embed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>the doc</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>the path</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">embed</span></td>
+        <td><p>the embed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.FileSpec.html">FileSpec</a></td>
+        <td><p>the file spec</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_CreateURL_pdftron_SDF_SDFDoc_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.CreateURL(pdftron.SDF.SDFDoc%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L139">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_CreateURL_" data-uid="pdftron.PDF.FileSpec.CreateURL*"></a>
+  <h4 id="pdftron_PDF_FileSpec_CreateURL_pdftron_SDF_SDFDoc_System_String_" data-uid="pdftron.PDF.FileSpec.CreateURL(pdftron.SDF.SDFDoc,System.String)">CreateURL(SDFDoc, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a URL file specification.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FileSpec CreateURL(SDFDoc doc, string url)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><ul>
+<li>A document to which the FileSpec should be added. To obtain
+SDF.Doc from PDFDoc use PDFDoc.GetSDFDoc() or Obj.GetDoc().</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">url</span></td>
+        <td><ul>
+<li>A uniform resource locator (URL) of the form defined in
+Internet RFC 1738, Uniform Resource Locators Specification.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.FileSpec.html">FileSpec</a></td>
+        <td><p>newly created FileSpec object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L53">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_Dispose_" data-uid="pdftron.PDF.FileSpec.Dispose*"></a>
+  <h4 id="pdftron_PDF_FileSpec_Dispose" data-uid="pdftron.PDF.FileSpec.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L58">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_Dispose_" data-uid="pdftron.PDF.FileSpec.Dispose*"></a>
+  <h4 id="pdftron_PDF_FileSpec_Dispose_System_Boolean_" data-uid="pdftron.PDF.FileSpec.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_Equals_Object_.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.Equals(Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L186">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_Equals_" data-uid="pdftron.PDF.FileSpec.Equals*"></a>
+  <h4 id="pdftron_PDF_FileSpec_Equals_Object_" data-uid="pdftron.PDF.FileSpec.Equals(Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(Object o)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Object</span></td>
+        <td><span class="parametername">o</span></td>
+        <td><p>a given <code>Object</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true, if equals to the given object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_Export.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.Export%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L231">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_Export_" data-uid="pdftron.PDF.FileSpec.Export*"></a>
+  <h4 id="pdftron_PDF_FileSpec_Export" data-uid="pdftron.PDF.FileSpec.Export">Export()</h4>
+  <div class="markdown level1 summary"><p>The function saves the data referenced by this FileSpec to an external file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Export()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true is the file was saved successfully, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_Export_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.Export(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L218">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_Export_" data-uid="pdftron.PDF.FileSpec.Export*"></a>
+  <h4 id="pdftron_PDF_FileSpec_Export_System_String_" data-uid="pdftron.PDF.FileSpec.Export(System.String)">Export(String)</h4>
+  <div class="markdown level1 summary"><p>Export.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Export(string save_as)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">save_as</span></td>
+        <td><p>the save_as</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true, if successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L48">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_Finalize_" data-uid="pdftron.PDF.FileSpec.Finalize*"></a>
+  <h4 id="pdftron_PDF_FileSpec_Finalize" data-uid="pdftron.PDF.FileSpec.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the FileSpec </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_GetFileData.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.GetFileData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L246">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_GetFileData_" data-uid="pdftron.PDF.FileSpec.GetFileData*"></a>
+  <h4 id="pdftron_PDF_FileSpec_GetFileData" data-uid="pdftron.PDF.FileSpec.GetFileData">GetFileData()</h4>
+  <div class="markdown level1 summary"><p>The function returns data referenced by this FileSpec.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Filter GetFileData()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><p>A stream (filter) containing file data.
+If the file is embedded, the function returns a stream to the embedded file.
+If the file is not embedded, the function will return a stream to the external file.
+If the file is not embedded and the external file can&apos;t be found, the function
+returns NULL.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_GetFilePath.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.GetFilePath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L264">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_GetFilePath_" data-uid="pdftron.PDF.FileSpec.GetFilePath*"></a>
+  <h4 id="pdftron_PDF_FileSpec_GetFilePath" data-uid="pdftron.PDF.FileSpec.GetFilePath">GetFilePath()</h4>
+  <div class="markdown level1 summary"><p>Gets the file path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetFilePath()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The file path for this file specification.</p>
+<p>If the FileSpec is a dictionary, a corresponding platform specific path
+is returned (DOS, Mac, or Unix). Otherwise the function returns the path represented
+in the form described in Section 3.10.1, &apos;File Specification Strings,&apos; or , if the
+file system is URL, as a uniform resource locator (URL). If the FileSpec is not
+valid, an empty string is returned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_GetSDFObj.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.GetSDFObj%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L275">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_GetSDFObj_" data-uid="pdftron.PDF.FileSpec.GetSDFObj*"></a>
+  <h4 id="pdftron_PDF_FileSpec_GetSDFObj" data-uid="pdftron.PDF.FileSpec.GetSDFObj">GetSDFObj()</h4>
+  <div class="markdown level1 summary"><p>Gets the SDFObj.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetSDFObj()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>The underlying SDF/Cos object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_IsValid.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.IsValid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L203">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_IsValid_" data-uid="pdftron.PDF.FileSpec.IsValid*"></a>
+  <h4 id="pdftron_PDF_FileSpec_IsValid" data-uid="pdftron.PDF.FileSpec.IsValid">IsValid()</h4>
+  <div class="markdown level1 summary"><p>Checks if is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>whether this is a valid (non-null) FileSpec. If the
+function returns false the underlying SDF/Cos object is null or is not valid
+and the FileSpec object should be treated as null as well.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_op_Assign_pdftron_PDF_FileSpec_.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.op_Assign(pdftron.PDF.FileSpec)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L155">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_op_Assign_" data-uid="pdftron.PDF.FileSpec.op_Assign*"></a>
+  <h4 id="pdftron_PDF_FileSpec_op_Assign_pdftron_PDF_FileSpec_" data-uid="pdftron.PDF.FileSpec.op_Assign(pdftron.PDF.FileSpec)">op_Assign(FileSpec)</h4>
+  <div class="markdown level1 summary"><p>Assignment operator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileSpec op_Assign(FileSpec r)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.FileSpec.html">FileSpec</a></td>
+        <td><span class="parametername">r</span></td>
+        <td><p>a given <code>FileSpec</code> object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.FileSpec.html">FileSpec</a></td>
+        <td><p>a <code>FileSpec</code> object equals to the given object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_Set_pdftron_PDF_FileSpec_.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.Set(pdftron.PDF.FileSpec)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L148">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_Set_" data-uid="pdftron.PDF.FileSpec.Set*"></a>
+  <h4 id="pdftron_PDF_FileSpec_Set_pdftron_PDF_FileSpec_" data-uid="pdftron.PDF.FileSpec.Set(pdftron.PDF.FileSpec)">Set(FileSpec)</h4>
+  <div class="markdown level1 summary"><p>Sets value to the give <code>FileSpec</code> object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(FileSpec p)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.FileSpec.html">FileSpec</a></td>
+        <td><span class="parametername">p</span></td>
+        <td><p>a <code>FileSpec</code> object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_SetDesc_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.SetDesc(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L284">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_SetDesc_" data-uid="pdftron.PDF.FileSpec.SetDesc*"></a>
+  <h4 id="pdftron_PDF_FileSpec_SetDesc_System_String_" data-uid="pdftron.PDF.FileSpec.SetDesc(System.String)">SetDesc(String)</h4>
+  <div class="markdown level1 summary"><p>The functions sets the descriptive text associated with the file specification.
+This text is typically used in the EmbeddedFiles name tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDesc(string desc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">desc</span></td>
+        <td><p>descriptive text</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_op_Equality_pdftron_PDF_FileSpec_pdftron_PDF_FileSpec_.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.op_Equality(pdftron.PDF.FileSpec%2Cpdftron.PDF.FileSpec)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L164">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_op_Equality_" data-uid="pdftron.PDF.FileSpec.op_Equality*"></a>
+  <h4 id="pdftron_PDF_FileSpec_op_Equality_pdftron_PDF_FileSpec_pdftron_PDF_FileSpec_" data-uid="pdftron.PDF.FileSpec.op_Equality(pdftron.PDF.FileSpec,pdftron.PDF.FileSpec)">Equality(FileSpec, FileSpec)</h4>
+  <div class="markdown level1 summary"><p>Equality operator checks whether two FileSpec objects are the same</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(FileSpec l, FileSpec r)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.FileSpec.html">FileSpec</a></td>
+        <td><span class="parametername">l</span></td>
+        <td><p>the<code>FileSpec</code> object on the left of the operator</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.FileSpec.html">FileSpec</a></td>
+        <td><span class="parametername">r</span></td>
+        <td><p>the<code>FileSpec</code> object on the right of the operator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true, if both objects are equal</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec_op_Inequality_pdftron_PDF_FileSpec_pdftron_PDF_FileSpec_.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec.op_Inequality(pdftron.PDF.FileSpec%2Cpdftron.PDF.FileSpec)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L178">View Source</a>
+  </span>
+  <a id="pdftron_PDF_FileSpec_op_Inequality_" data-uid="pdftron.PDF.FileSpec.op_Inequality*"></a>
+  <h4 id="pdftron_PDF_FileSpec_op_Inequality_pdftron_PDF_FileSpec_pdftron_PDF_FileSpec_" data-uid="pdftron.PDF.FileSpec.op_Inequality(pdftron.PDF.FileSpec,pdftron.PDF.FileSpec)">Inequality(FileSpec, FileSpec)</h4>
+  <div class="markdown level1 summary"><p>Inequality operator checks whether two FileSpec objects are different</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(FileSpec l, FileSpec r)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.FileSpec.html">FileSpec</a></td>
+        <td><span class="parametername">l</span></td>
+        <td><p>the<code>FileSpec</code> object on the left of the operator</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.FileSpec.html">FileSpec</a></td>
+        <td><span class="parametername">r</span></td>
+        <td><p>the<code>FileSpec</code> object on the right of the operator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true, if both objects are not equal</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_FileSpec.md&amp;value=---%0Auid%3A%20pdftron.PDF.FileSpec%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/FileSpec.cs/#L42" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

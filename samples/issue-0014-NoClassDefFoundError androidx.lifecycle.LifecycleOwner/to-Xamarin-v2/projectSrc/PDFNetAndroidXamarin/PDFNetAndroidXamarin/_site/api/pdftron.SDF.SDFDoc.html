@@ -1,0 +1,3107 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SDFDoc
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SDFDoc
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.SDF.SDFDoc">
+  
+  
+  <h1 id="pdftron_SDF_SDFDoc" data-uid="pdftron.SDF.SDFDoc" class="text-break">Class SDFDoc
+  </h1>
+  <div class="markdown level0 summary"><p>SDFDoc is a low-level document representing a graph of SDF.Obj nodes that 
+can be used to build higher-level document models such as PDF (Portable Document
+Format) or FDF (Forms Document Format).</p>
+<p>SDF Doc brings together document security, document utility methods, and all SDF 
+objects.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SDFDoc</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.SDF.html">pdftron.SDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_SDF_SDFDoc_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SDFDoc : IDisposable</code></pre>
+  </div>
+  <h5 id="pdftron_SDF_SDFDoc_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Note that the examples above used doc.GetTrailer() in order to access document 
+trailer, the starting SDF object (root node) in every document. Following the trailer 
+links, it is possible to visit all low-level objects in a document (e.g. all pages, 
+outlines, fonts, etc). </p>
+<p>SDFDoc also provides utility methods used to import objects and object collections 
+from one document to another. These methods can be useful for copy operations between 
+documents such as a high-level page merge and document assembly.</p>
+</div>
+  <h5 id="pdftron_SDF_SDFDoc_examples"><strong>Examples</strong></h5>
+  <p>A SDF document can be created from scratch using a default constructor:</p>
+<pre><code>SDFDoc mydoc = new SDFDoc();
+Obj trailer = mydoc.getTrailer();</code></pre>
+<p>SDF document can be also created from an existing file (e.g. an external PDF document):     </p>
+<pre><code>  
+SDFDoc mydoc = new SDFDoc(&quot;in.pdf&quot;);
+Obj trailer = mydoc.getTrailer();</code></pre>  
+<p>SDF document can be also created from a memory buffer or some other Filter/Stream such as a HTTP Filter connection:     </p>
+<pre><code>  
+MemoryFilter memory = ....
+SDFDoc mydoc = new SDFDoc(memory);
+Obj trailer = mydoc.getTrailer();</code></pre>  
+<p>SDF document can be accessed from a high-level PDF document as follows:     </p>
+<pre><code>  
+PDFDoc doc = new PDFDoc(&quot;in.pdf&quot;);
+SDFDoc mydoc = doc.getSDFDoc();
+Obj trailer = mydoc.getTrailer();</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc__ctor.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L133">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc__ctor_" data-uid="pdftron.SDF.SDFDoc.#ctor*"></a>
+  <h4 id="pdftron_SDF_SDFDoc__ctor" data-uid="pdftron.SDF.SDFDoc.#ctor">SDFDoc()</h4>
+  <div class="markdown level1 summary"><p>Default constructor. Creates a new document.
+The new document contains only trailer and Info dictionary.
+To build the rest of the document get document&apos;s root dictionary using GetTrailer() and
+populate it with new key/value pairs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SDFDoc()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc__ctor_pdftron_Filters_Filter_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.%23ctor(pdftron.Filters.Filter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L152">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc__ctor_" data-uid="pdftron.SDF.SDFDoc.#ctor*"></a>
+  <h4 id="pdftron_SDF_SDFDoc__ctor_pdftron_Filters_Filter_" data-uid="pdftron.SDF.SDFDoc.#ctor(pdftron.Filters.Filter)">SDFDoc(Filter)</h4>
+  <div class="markdown level1 summary"><p>Open a SDF/Cos document from a Filter (i.e. a data stream) object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SDFDoc(Filter stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><ul>
+<li>input stream containing a serialized document. The input stream may be a
+random-access file, memory buffer, slow HTTP connection etc.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_SDF_SDFDoc__ctor_pdftron_Filters_Filter__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>if the input stream doesn&apos;t support Seek() operation the document will load whole 
+data stream in memory before parsing. In case of linearized PDF, the document may be parsed
+on-the-fly while it is being loaded in memory. Note that since StdFile implements Seek()
+interface, the document does not have to be fully in memory before it is used.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc__ctor_pdftron_PDF_PDFDoc_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.%23ctor(pdftron.PDF.PDFDoc)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L162">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc__ctor_" data-uid="pdftron.SDF.SDFDoc.#ctor*"></a>
+  <h4 id="pdftron_SDF_SDFDoc__ctor_pdftron_PDF_PDFDoc_" data-uid="pdftron.SDF.SDFDoc.#ctor(pdftron.PDF.PDFDoc)">SDFDoc(PDFDoc)</h4>
+  <div class="markdown level1 summary"><p>Open a SDF/Cos document from a PDFDoc object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SDFDoc(PDFDoc pdfdoc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">pdfdoc</span></td>
+        <td><p><code>PDFDoc</code> object containing <code>SDFDoc</code> object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc__ctor_System_Byte___System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.%23ctor(System.Byte%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L190">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc__ctor_" data-uid="pdftron.SDF.SDFDoc.#ctor*"></a>
+  <h4 id="pdftron_SDF_SDFDoc__ctor_System_Byte___System_Int32_" data-uid="pdftron.SDF.SDFDoc.#ctor(System.Byte[],System.Int32)">SDFDoc(Byte[], Int32)</h4>
+  <div class="markdown level1 summary"><p>Instantiates a new <code>SDFDoc</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SDFDoc(byte[] buf, int buf_size)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buf</span></td>
+        <td><p>the buffer</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">buf_size</span></td>
+        <td><p>the size</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>IOException Signals that an I/O exception has occurred. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc__ctor_System_IO_Stream_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.%23ctor(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L207">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc__ctor_" data-uid="pdftron.SDF.SDFDoc.#ctor*"></a>
+  <h4 id="pdftron_SDF_SDFDoc__ctor_System_IO_Stream_" data-uid="pdftron.SDF.SDFDoc.#ctor(System.IO.Stream)">SDFDoc(System.IO.Stream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SDFDoc(System.IO.Stream stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stream</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc__ctor_System_String_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L176">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc__ctor_" data-uid="pdftron.SDF.SDFDoc.#ctor*"></a>
+  <h4 id="pdftron_SDF_SDFDoc__ctor_System_String_" data-uid="pdftron.SDF.SDFDoc.#ctor(System.String)">SDFDoc(String)</h4>
+  <div class="markdown level1 summary"><p>Open a SDF/Cos document from a file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SDFDoc(string filepath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">filepath</span></td>
+        <td><ul>
+<li>path name to the file.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_SDF_SDFDoc__ctor_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Make sure to call InitStdSecurityHandler() or InitSecurityHandler() after SDFDoc(...) 
+in case the document is encrypted.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_ClearMarks.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.ClearMarks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L293">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_ClearMarks_" data-uid="pdftron.SDF.SDFDoc.ClearMarks*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_ClearMarks" data-uid="pdftron.SDF.SDFDoc.ClearMarks">ClearMarks()</h4>
+  <div class="markdown level1 summary"><p>Removes &apos;marked&apos; flag from all objects in cross reference table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearMarks()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Close.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L285">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Close_" data-uid="pdftron.SDF.SDFDoc.Close*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Close" data-uid="pdftron.SDF.SDFDoc.Close">Close()</h4>
+  <div class="markdown level1 summary"><p>Close.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_CreateIndirectArray.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.CreateIndirectArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L303">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_CreateIndirectArray_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectArray*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_CreateIndirectArray" data-uid="pdftron.SDF.SDFDoc.CreateIndirectArray">CreateIndirectArray()</h4>
+  <div class="markdown level1 summary"><p>Creates the indirect array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj CreateIndirectArray()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_CreateIndirectBool_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.CreateIndirectBool(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L317">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_CreateIndirectBool_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectBool*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_CreateIndirectBool_System_Boolean_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectBool(System.Boolean)">CreateIndirectBool(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates the indirect bool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj CreateIndirectBool(bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>the value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_CreateIndirectDict.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.CreateIndirectDict%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L329">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_CreateIndirectDict_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectDict*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_CreateIndirectDict" data-uid="pdftron.SDF.SDFDoc.CreateIndirectDict">CreateIndirectDict()</h4>
+  <div class="markdown level1 summary"><p>Creates the indirect dict.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj CreateIndirectDict()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_CreateIndirectName_System_String_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.CreateIndirectName(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L346">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_CreateIndirectName_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectName*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_CreateIndirectName_System_String_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectName(System.String)">CreateIndirectName(String)</h4>
+  <div class="markdown level1 summary"><p>The following list of methods is used to create SDF/Cos indirect objects.</p>
+<p>Unlike direct objects, indirect objects can be referenced by more than one
+object (i.e. indirect objects they can be shared).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj CreateIndirectName(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>the name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_CreateIndirectNull.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.CreateIndirectNull%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L358">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_CreateIndirectNull_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectNull*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_CreateIndirectNull" data-uid="pdftron.SDF.SDFDoc.CreateIndirectNull">CreateIndirectNull()</h4>
+  <div class="markdown level1 summary"><p>Creates the indirect null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj CreateIndirectNull()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_CreateIndirectNumber_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.CreateIndirectNumber(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L372">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_CreateIndirectNumber_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectNumber*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_CreateIndirectNumber_System_Double_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectNumber(System.Double)">CreateIndirectNumber(Double)</h4>
+  <div class="markdown level1 summary"><p>Creates the indirect number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj CreateIndirectNumber(double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>the value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_CreateIndirectStream_pdftron_Filters_FilterReader_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.CreateIndirectStream(pdftron.Filters.FilterReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L386">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_CreateIndirectStream_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectStream*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_CreateIndirectStream_pdftron_Filters_FilterReader_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectStream(pdftron.Filters.FilterReader)">CreateIndirectStream(FilterReader)</h4>
+  <div class="markdown level1 summary"><p>Creates the indirect stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj CreateIndirectStream(FilterReader data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterReader.html">FilterReader</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>the data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_CreateIndirectStream_pdftron_Filters_FilterReader_pdftron_Filters_Filter_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.CreateIndirectStream(pdftron.Filters.FilterReader%2Cpdftron.Filters.Filter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L445">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_CreateIndirectStream_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectStream*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_CreateIndirectStream_pdftron_Filters_FilterReader_pdftron_Filters_Filter_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectStream(pdftron.Filters.FilterReader,pdftron.Filters.Filter)">CreateIndirectStream(FilterReader, Filter)</h4>
+  <div class="markdown level1 summary"><p>Creates the indirect stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj CreateIndirectStream(FilterReader data, Filter filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.FilterReader.html">FilterReader</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>the data</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>the filter_chain</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_CreateIndirectStream_System_Byte___.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.CreateIndirectStream(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L398">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_CreateIndirectStream_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectStream*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_CreateIndirectStream_System_Byte___" data-uid="pdftron.SDF.SDFDoc.CreateIndirectStream(System.Byte[])">CreateIndirectStream(Byte[])</h4>
+  <div class="markdown level1 summary"><p>Creates the indirect stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj CreateIndirectStream(byte[] buf)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buf</span></td>
+        <td><p>the data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_CreateIndirectStream_System_Byte___pdftron_Filters_Filter_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.CreateIndirectStream(System.Byte%5B%5D%2Cpdftron.Filters.Filter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L412">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_CreateIndirectStream_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectStream*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_CreateIndirectStream_System_Byte___pdftron_Filters_Filter_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectStream(System.Byte[],pdftron.Filters.Filter)">CreateIndirectStream(Byte[], Filter)</h4>
+  <div class="markdown level1 summary"><p>Creates the indirect stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj CreateIndirectStream(byte[] buf, Filter filter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buf</span></td>
+        <td><p>the data</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>the filter_chain</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_CreateIndirectString_System_Byte___.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.CreateIndirectString(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L478">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_CreateIndirectString_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectString*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_CreateIndirectString_System_Byte___" data-uid="pdftron.SDF.SDFDoc.CreateIndirectString(System.Byte[])">CreateIndirectString(Byte[])</h4>
+  <div class="markdown level1 summary"><p>Creates the indirect string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj CreateIndirectString(byte[] buf)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">buf</span></td>
+        <td><p>the value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_CreateIndirectString_System_String_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.CreateIndirectString(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L463">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_CreateIndirectString_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectString*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_CreateIndirectString_System_String_" data-uid="pdftron.SDF.SDFDoc.CreateIndirectString(System.String)">CreateIndirectString(String)</h4>
+  <div class="markdown level1 summary"><p>Creates the indirect string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj CreateIndirectString(string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>the str</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Destroy.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L94">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Destroy_" data-uid="pdftron.SDF.SDFDoc.Destroy*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Destroy" data-uid="pdftron.SDF.SDFDoc.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Dispose.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L74">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Dispose_" data-uid="pdftron.SDF.SDFDoc.Dispose*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Dispose" data-uid="pdftron.SDF.SDFDoc.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L79">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Dispose_" data-uid="pdftron.SDF.SDFDoc.Dispose*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Dispose_System_Boolean_" data-uid="pdftron.SDF.SDFDoc.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_EnableDiskCaching_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.EnableDiskCaching(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L491">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_EnableDiskCaching_" data-uid="pdftron.SDF.SDFDoc.EnableDiskCaching*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_EnableDiskCaching_System_Boolean_" data-uid="pdftron.SDF.SDFDoc.EnableDiskCaching(System.Boolean)">EnableDiskCaching(Boolean)</h4>
+  <div class="markdown level1 summary"><p>If true, this PDFDoc will use a temporary file to cache
+new content streams (this is the default behavior).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableDiskCaching(bool use_cache)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">use_cache</span></td>
+        <td><p>the use_cache</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Finalize.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L69">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Finalize_" data-uid="pdftron.SDF.SDFDoc.Finalize*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Finalize" data-uid="pdftron.SDF.SDFDoc.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_GetFileName.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.GetFileName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L503">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_GetFileName_" data-uid="pdftron.SDF.SDFDoc.GetFileName*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_GetFileName" data-uid="pdftron.SDF.SDFDoc.GetFileName">GetFileName()</h4>
+  <div class="markdown level1 summary"><p>Gets the file name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetFileName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The filename of the document if the document is loaded from disk,
+or empty string if the document is not yet saved or is loaded from a memory
+buffer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_GetHeader.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.GetHeader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L518">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_GetHeader_" data-uid="pdftron.SDF.SDFDoc.GetHeader*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_GetHeader" data-uid="pdftron.SDF.SDFDoc.GetHeader">GetHeader()</h4>
+  <div class="markdown level1 summary"><p>Gets the PDF file header.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetHeader()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>the header string identifying the document version to which the file conforms.
+For a file conforming to PDF version 1.4, the header should be %PDF-1.4.
+In general header strings have the following syntax: %AAA-N.n where AAA identifies
+document specification (such as PDF, FDF, PJTF etc), N is the major version and
+n is the minor version. The new header string can be set during a full save (see SDFDoc.save()).
+For a document that is not serialized the function returns an empty string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_GetHintStream.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.GetHintStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L531">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_GetHintStream_" data-uid="pdftron.SDF.SDFDoc.GetHintStream*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_GetHintStream" data-uid="pdftron.SDF.SDFDoc.GetHintStream">GetHintStream()</h4>
+  <div class="markdown level1 summary"><p>Gets document&apos;s initial linearization hint stream if it is available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetHintStream()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><ul>
+<li>the linearization hint stream of the original document or NULL
+if the hint stream is not available.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_GetLinearizationDict.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.GetLinearizationDict%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L544">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_GetLinearizationDict_" data-uid="pdftron.SDF.SDFDoc.GetLinearizationDict*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_GetLinearizationDict" data-uid="pdftron.SDF.SDFDoc.GetLinearizationDict">GetLinearizationDict()</h4>
+  <div class="markdown level1 summary"><p>Gets document&apos;s initial linearization dictionary if it is available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetLinearizationDict()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><ul>
+<li>the linearization dictionary of the original document or NULL
+if the dictionary is not available.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_GetObj_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.GetObj(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L558">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_GetObj_" data-uid="pdftron.SDF.SDFDoc.GetObj*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_GetObj_System_Int32_" data-uid="pdftron.SDF.SDFDoc.GetObj(System.Int32)">GetObj(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the obj.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetObj(int obj_num)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">obj_num</span></td>
+        <td><p>the obj_num</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><ul>
+<li>the latest version of the object matching specified object number.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_GetTrailer.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.GetTrailer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L586">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_GetTrailer_" data-uid="pdftron.SDF.SDFDoc.GetTrailer*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_GetTrailer" data-uid="pdftron.SDF.SDFDoc.GetTrailer">GetTrailer()</h4>
+  <div class="markdown level1 summary"><p>Gets the trailer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetTrailer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><ul>
+<li>A dictionary representing the root of the document (i.e.
+a document trailer dictionary)</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_HasRepairedXRef.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.HasRepairedXRef%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L724">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_HasRepairedXRef_" data-uid="pdftron.SDF.SDFDoc.HasRepairedXRef*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_HasRepairedXRef" data-uid="pdftron.SDF.SDFDoc.HasRepairedXRef">HasRepairedXRef()</h4>
+  <div class="markdown level1 summary"><p>Checks whether or not the underlying file has an XRef table that had to be repaired
+when the file was opened.If the document had an invalid XRef table when opened,
+PDFNet will have repaired the XRef table for its working representation of the document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasRepairedXRef()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><ul>
+<li>true if document was found to be corrupted, and was repaired, during
+opening and has not been saved since.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_SDF_SDFDoc_HasRepairedXRef_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If this function returns true, it is not possible to incrementally save the document
+(see <a href="http://www.pdftron.com/kb_corrupt_xref">http://www.pdftron.com/kb_corrupt_xref</a>)</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_ImportObj_pdftron_SDF_Obj_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.ImportObj(pdftron.SDF.Obj%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L610">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_ImportObj_" data-uid="pdftron.SDF.SDFDoc.ImportObj*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_ImportObj_pdftron_SDF_Obj_System_Boolean_" data-uid="pdftron.SDF.SDFDoc.ImportObj(pdftron.SDF.Obj,System.Boolean)">ImportObj(Obj, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Import obj.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj ImportObj(Obj obj, bool deep_copy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td><ul>
+<li>an object to import.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">deep_copy</span></td>
+        <td><ul>
+<li>a boolean indicating whether to perform a deep or shallow copy.
+In case of shallow copy all indirect references will be set to null.</li>
+</ul>
+<p>If the object belongs to a document the function will perform deep or shallow
+clone depending whether deep_copy flag was specified.</p>
+<p>If the object does not belong to any document ImportObj does not take the
+object ownership. ImportObj copies the source object and it is users
+responibility to delete free objects.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><ul>
+<li>a pointer to the root indirect object in this document</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_InitSecurityHandler.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.InitSecurityHandler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L635">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_InitSecurityHandler_" data-uid="pdftron.SDF.SDFDoc.InitSecurityHandler*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_InitSecurityHandler" data-uid="pdftron.SDF.SDFDoc.InitSecurityHandler">InitSecurityHandler()</h4>
+  <div class="markdown level1 summary"><p>Initializes document&apos;s SecurityHandler. This version of InitSecurityHandler()
+works with Standard and Custom PDF security and can be used in situations where
+the password is obtained dynamically via user feedback. See EncTest sample for
+example code.</p>
+<p>This function should be called immediately after an encrypted
+document is opened. The function does not have any side effects on
+documents that are not encrypted.</p>
+<p>If the security handler was successfully initialized it can be later obtained
+using GetSecurityHandler() method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InitSecurityHandler()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the SecurityHandler was successfully initialized (this
+may include authentication data collection, verification etc.),
+false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_InitStdSecurityHandler_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.InitStdSecurityHandler(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L641">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_InitStdSecurityHandler_" data-uid="pdftron.SDF.SDFDoc.InitStdSecurityHandler*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_InitStdSecurityHandler_System_String_System_Int32_" data-uid="pdftron.SDF.SDFDoc.InitStdSecurityHandler(System.String,System.Int32)">InitStdSecurityHandler(String, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InitStdSecurityHandler(string password, int password_sz)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">password</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">password_sz</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_IsEncrypted.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.IsEncrypted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L654">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_IsEncrypted_" data-uid="pdftron.SDF.SDFDoc.IsEncrypted*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_IsEncrypted" data-uid="pdftron.SDF.SDFDoc.IsEncrypted">IsEncrypted()</h4>
+  <div class="markdown level1 summary"><p>Checks if is encrypted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEncrypted()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the document is/was originally encrypted false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_IsFullSaveRequired.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.IsFullSaveRequired%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L667">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_IsFullSaveRequired_" data-uid="pdftron.SDF.SDFDoc.IsFullSaveRequired*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_IsFullSaveRequired" data-uid="pdftron.SDF.SDFDoc.IsFullSaveRequired">IsFullSaveRequired()</h4>
+  <div class="markdown level1 summary"><p>Checks if is full save required.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFullSaveRequired()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><ul>
+<li>true if the document requires full save.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_IsLinearized.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.IsLinearized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L694">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_IsLinearized_" data-uid="pdftron.SDF.SDFDoc.IsLinearized*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_IsLinearized" data-uid="pdftron.SDF.SDFDoc.IsLinearized">IsLinearized()</h4>
+  <div class="markdown level1 summary"><p>Call this function to determine whether the document is represented in
+linearized (fast web view) format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLinearized()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><ul>
+<li>true if document is stored in fast web view format, false otherwise.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_SDF_SDFDoc_IsLinearized_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>any changes to the document can invalidate linearization. The function will 
+return &apos;true&apos; only if the original document is linearized and if it is not
+modified.</p>
+<p>In order to provide good performance over relatively slow communication links,
+PDFNet can generate PDF documents with linearized objects and hint tables that
+can allow a PDF viewer application to download and view one page of a PDF file
+at a time, rather than requiring the entire file (including fonts and images) to
+be downloaded before any of it can be viewed.</p>
+<p>To save a document in linearized (fast web view) format you only need to pass
+&apos;SDFDoc.e_linearized&apos; flag in the Save method.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_IsModified.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.IsModified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L707">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_IsModified_" data-uid="pdftron.SDF.SDFDoc.IsModified*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_IsModified" data-uid="pdftron.SDF.SDFDoc.IsModified">IsModified()</h4>
+  <div class="markdown level1 summary"><p>Checks if is modified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsModified()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><ul>
+<li>true if document was modified, false otherwise</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Lock.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Lock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L736">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Lock_" data-uid="pdftron.SDF.SDFDoc.Lock*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Lock" data-uid="pdftron.SDF.SDFDoc.Lock">Lock()</h4>
+  <div class="markdown level1 summary"><p>Locks the document to prevent competing threads from accessiong the document
+at the same time. Threads attempting to access the document will wait in
+suspended state until the thread that owns the lock calls doc.Unlock().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Lock()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_LockRead.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.LockRead%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L751">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_LockRead_" data-uid="pdftron.SDF.SDFDoc.LockRead*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_LockRead" data-uid="pdftron.SDF.SDFDoc.LockRead">LockRead()</h4>
+  <div class="markdown level1 summary"><p>Locks the document to prevent competing write threads (using Lock()) from accessing the document 
+at the same time. Other reader threads however, will be allowed to access the document.
+Threads attempting to obtain write access to the document will wait in 
+suspended state until the thread that owns the lock calls doc.UnlockRead().
+Note: To avoid deadlocks obtaining a write lock while holding
+a read lock is not permitted and will throw an exception. If this situation is encountered
+please either unlock the read lock before the write lock is obtained
+or acquire a write lock (rather than read lock) in the first place.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LockRead()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_ReleaseFileHandles.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.ReleaseFileHandles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L103">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_ReleaseFileHandles_" data-uid="pdftron.SDF.SDFDoc.ReleaseFileHandles*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_ReleaseFileHandles" data-uid="pdftron.SDF.SDFDoc.ReleaseFileHandles">ReleaseFileHandles()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReleaseFileHandles()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_RemoveSecurity.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.RemoveSecurity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L883">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_RemoveSecurity_" data-uid="pdftron.SDF.SDFDoc.RemoveSecurity*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_RemoveSecurity" data-uid="pdftron.SDF.SDFDoc.RemoveSecurity">RemoveSecurity()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveSecurity()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Save_pdftron_Filters_Filter_pdftron_SDF_SDFDoc_SaveOptions_System_String_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Save(pdftron.Filters.Filter%2Cpdftron.SDF.SDFDoc.SaveOptions%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L862">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Save_" data-uid="pdftron.SDF.SDFDoc.Save*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Save_pdftron_Filters_Filter_pdftron_SDF_SDFDoc_SaveOptions_System_String_" data-uid="pdftron.SDF.SDFDoc.Save(pdftron.Filters.Filter,pdftron.SDF.SDFDoc.SaveOptions,System.String)">Save(Filter, SDFDoc.SaveOptions, String)</h4>
+  <div class="markdown level1 summary"><p>Saves the document to the given filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Save(Filter stm, SDFDoc.SaveOptions flags, string header)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><span class="parametername">stm</span></td>
+        <td><p>A filter where to serialize the document.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.SaveOptions.html">SDFDoc.SaveOptions</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>A bit field composed of an OR of <code>SDF.SDFDoc.SaveOptions</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">header</span></td>
+        <td><p>File header. A new file header is set only during full save.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_SDF_SDFDoc_Save_pdftron_Filters_Filter_pdftron_SDF_SDFDoc_SaveOptions_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>this method ignores e_incremental flag</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Save_pdftron_SDF_SDFDoc_SaveOptions_System_String_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Save(pdftron.SDF.SDFDoc.SaveOptions%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L765">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Save_" data-uid="pdftron.SDF.SDFDoc.Save*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Save_pdftron_SDF_SDFDoc_SaveOptions_System_String_" data-uid="pdftron.SDF.SDFDoc.Save(pdftron.SDF.SDFDoc.SaveOptions,System.String)">Save(SDFDoc.SaveOptions, String)</h4>
+  <div class="markdown level1 summary"><p>Saves the document to a memory buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Save(SDFDoc.SaveOptions flags, string header)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.SaveOptions.html">SDFDoc.SaveOptions</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>A bit field composed of an OR of <code>SDF.SDFDoc.SaveOptions</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">header</span></td>
+        <td><p>File header. A new file header is set only during full save.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>buffer containing the serialized version of the document</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_SDF_SDFDoc_Save_pdftron_SDF_SDFDoc_SaveOptions_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>this method ignores e_incremental flag</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Save_System_IO_Stream_pdftron_SDF_SDFDoc_SaveOptions_System_String_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Save(System.IO.Stream%2Cpdftron.SDF.SDFDoc.SaveOptions%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L785">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Save_" data-uid="pdftron.SDF.SDFDoc.Save*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Save_System_IO_Stream_pdftron_SDF_SDFDoc_SaveOptions_System_String_" data-uid="pdftron.SDF.SDFDoc.Save(System.IO.Stream,pdftron.SDF.SDFDoc.SaveOptions,System.String)">Save(System.IO.Stream, SDFDoc.SaveOptions, String)</h4>
+  <div class="markdown level1 summary"><p>Saves the document to the given stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Save(System.IO.Stream stm, SDFDoc.SaveOptions flags, string header)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">stm</span></td>
+        <td><p>A stream where to serialize the document.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.SaveOptions.html">SDFDoc.SaveOptions</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>A bit field composed of an OR of <code>SDF.SDFDoc.SaveOptions</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">header</span></td>
+        <td><p>File header. A new file header is set only during full save.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_SDF_SDFDoc_Save_System_IO_Stream_pdftron_SDF_SDFDoc_SaveOptions_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>this method ignores e_incremental flag</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Save_System_String_pdftron_SDF_SDFDoc_SaveOptions_pdftron_Common_ProgressMonitor_System_String_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Save(System.String%2Cpdftron.SDF.SDFDoc.SaveOptions%2Cpdftron.Common.ProgressMonitor%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L846">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Save_" data-uid="pdftron.SDF.SDFDoc.Save*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Save_System_String_pdftron_SDF_SDFDoc_SaveOptions_pdftron_Common_ProgressMonitor_System_String_" data-uid="pdftron.SDF.SDFDoc.Save(System.String,pdftron.SDF.SDFDoc.SaveOptions,pdftron.Common.ProgressMonitor,System.String)">Save(String, SDFDoc.SaveOptions, ProgressMonitor, String)</h4>
+  <div class="markdown level1 summary"><p>Saves the document to a file.</p>
+<p>If a full save is requested to the original path, the file is saved to a file
+system-determined temporary file, the old file is deleted, and the temporary file
+is renamed to path.</p>
+<p>A full save with remove unused or linearization option may re-arrange object in
+the cross reference table. Therefore all pointers and references to document objects
+and resources should be re acquired in order to continue document editing.</p>
+<p>In order to use incremental save the specified path must match original path and
+e_incremental flag bit should be set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Save(string path, SDFDoc.SaveOptions flags, ProgressMonitor progress, string header)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><ul>
+<li>The full path name to which the file is saved.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.SaveOptions.html">SDFDoc.SaveOptions</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><ul>
+<li>A bit field composed of an OR of <code>SDF.SDFDoc.SaveOptions</code>.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.ProgressMonitor.html">ProgressMonitor</a></td>
+        <td><span class="parametername">progress</span></td>
+        <td><ul>
+<li>A pointer to the progress interface. NULL if progress tracking is not required.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">header</span></td>
+        <td><ul>
+<li>File header. A new file header is set only during full save.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_SDF_SDFDoc_Save_System_String_pdftron_SDF_SDFDoc_SaveOptions_pdftron_Common_ProgressMonitor_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Saving modifies the SDFDoc&apos;s internal representation.  As such, the user should
+acquire a write lock before calling save.
+If the original pdf has a corrupt xref table (see HasRepairedXref or
+<a href="http://www.pdftron.com/kb_corrupt_xref">http://www.pdftron.com/kb_corrupt_xref</a>), then it can not be saved using the e_incremental flag.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Save_System_String_pdftron_SDF_SDFDoc_SaveOptions_System_String_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Save(System.String%2Cpdftron.SDF.SDFDoc.SaveOptions%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L817">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Save_" data-uid="pdftron.SDF.SDFDoc.Save*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Save_System_String_pdftron_SDF_SDFDoc_SaveOptions_System_String_" data-uid="pdftron.SDF.SDFDoc.Save(System.String,pdftron.SDF.SDFDoc.SaveOptions,System.String)">Save(String, SDFDoc.SaveOptions, String)</h4>
+  <div class="markdown level1 summary"><p>Saves the document to file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Save(string path, SDFDoc.SaveOptions flags, string header)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>path to save</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.SaveOptions.html">SDFDoc.SaveOptions</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><ul>
+<li>A bit field composed of an OR of <code>SDF.SDFDoc.SaveOptions</code>.
+Note that this method ignores e_incremental flag.</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">header</span></td>
+        <td><ul>
+<li>File header. A new file header is set only during full save.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_SDF_SDFDoc_Save_System_String_pdftron_SDF_SDFDoc_SaveOptions_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Saving modifies the SDFDoc&apos;s internal representation.  As such, the user should
+acquire a write lock before calling save.
+If the original pdf has a corrupt xref table (see HasRepairedXref or
+<a href="http://www.pdftron.com/kb_corrupt_xref">http://www.pdftron.com/kb_corrupt_xref</a>), then it can not be saved using the e_incremental flag.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_SetSecurityHandler_pdftron_SDF_SecurityHandler_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.SetSecurityHandler(pdftron.SDF.SecurityHandler)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L878">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_SetSecurityHandler_" data-uid="pdftron.SDF.SDFDoc.SetSecurityHandler*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_SetSecurityHandler_pdftron_SDF_SecurityHandler_" data-uid="pdftron.SDF.SDFDoc.SetSecurityHandler(pdftron.SDF.SecurityHandler)">SetSecurityHandler(SecurityHandler)</h4>
+  <div class="markdown level1 summary"><p>The function sets a new SecurityHandler as the current security handler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSecurityHandler(SecurityHandler handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SecurityHandler.html">SecurityHandler</a></td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>the new security handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_SDF_SDFDoc_SetSecurityHandler_pdftron_SDF_SecurityHandler__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Setting a new security handler will not invalidate the access to 
+the original file and will take effect during document Save().</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Swap_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Swap(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L902">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Swap_" data-uid="pdftron.SDF.SDFDoc.Swap*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Swap_System_Int32_System_Int32_" data-uid="pdftron.SDF.SDFDoc.Swap(System.Int32,System.Int32)">Swap(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Sometimes it is desirable to modify all indirect references to a given
+indirect object. It would be inefficient to manually search for all
+indirect references to a given indirect object.</p>
+<p>A more efficient and less error prone method is to replace the indirect
+object in the cross reference table with a new object. This way the object
+that is referred to is modified (or replaced) and indirect references do
+not have to be changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Swap(int obj_num1, int obj_num2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">obj_num1</span></td>
+        <td><p>the obj_num1</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">obj_num2</span></td>
+        <td><p>the obj_num2</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_TimedLock_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.TimedLock(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L917">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_TimedLock_" data-uid="pdftron.SDF.SDFDoc.TimedLock*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_TimedLock_System_Int32_" data-uid="pdftron.SDF.SDFDoc.TimedLock(System.Int32)">TimedLock(Int32)</h4>
+  <div class="markdown level1 summary"><p>Try locking the document, waiting no longer than specified number of milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TimedLock(int milliseconds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">milliseconds</span></td>
+        <td><p>the milliseconds</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the document is locked for multi-threaded access, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_TimedLockRead_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.TimedLockRead(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L932">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_TimedLockRead_" data-uid="pdftron.SDF.SDFDoc.TimedLockRead*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_TimedLockRead_System_Int32_" data-uid="pdftron.SDF.SDFDoc.TimedLockRead(System.Int32)">TimedLockRead(Int32)</h4>
+  <div class="markdown level1 summary"><p>Tries to obtain a read lock on the document, waiting no longer than specified number of milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TimedLockRead(int milliseconds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">milliseconds</span></td>
+        <td><p>maxiumum number of milliseconds to wait for the lock</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the document is locked for multi-threaded access, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_TryLock.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.TryLock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L943">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_TryLock_" data-uid="pdftron.SDF.SDFDoc.TryLock*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_TryLock" data-uid="pdftron.SDF.SDFDoc.TryLock">TryLock()</h4>
+  <div class="markdown level1 summary"><p>Try locking the document</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryLock()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the document is locked for multi-threaded access, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_TryLockRead.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.TryLockRead%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L957">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_TryLockRead_" data-uid="pdftron.SDF.SDFDoc.TryLockRead*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_TryLockRead" data-uid="pdftron.SDF.SDFDoc.TryLockRead">TryLockRead()</h4>
+  <div class="markdown level1 summary"><p>Tries to obtain a read lock in a non-blocking manner.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryLockRead()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true if the document is locked for multi-threaded access, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_Unlock.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.Unlock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L968">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_Unlock_" data-uid="pdftron.SDF.SDFDoc.Unlock*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_Unlock" data-uid="pdftron.SDF.SDFDoc.Unlock">Unlock()</h4>
+  <div class="markdown level1 summary"><p>Removes the lock from the document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Unlock()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_UnlockRead.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.UnlockRead%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L976">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_UnlockRead_" data-uid="pdftron.SDF.SDFDoc.UnlockRead*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_UnlockRead" data-uid="pdftron.SDF.SDFDoc.UnlockRead">UnlockRead()</h4>
+  <div class="markdown level1 summary"><p>Removes the read lock from the document. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnlockRead()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_XRefSize.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.XRefSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L987">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_XRefSize_" data-uid="pdftron.SDF.SDFDoc.XRefSize*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_XRefSize" data-uid="pdftron.SDF.SDFDoc.XRefSize">XRefSize()</h4>
+  <div class="markdown level1 summary"><p>X ref size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int XRefSize()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><ul>
+<li>The size of cross reference table</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc_op_Implicit_pdftron_PDF_PDFDoc__pdftron_SDF_SDFDoc.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc.op_Implicit(pdftron.PDF.PDFDoc)~pdftron.SDF.SDFDoc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L275">View Source</a>
+  </span>
+  <a id="pdftron_SDF_SDFDoc_op_Implicit_" data-uid="pdftron.SDF.SDFDoc.op_Implicit*"></a>
+  <h4 id="pdftron_SDF_SDFDoc_op_Implicit_pdftron_PDF_PDFDoc__pdftron_SDF_SDFDoc" data-uid="pdftron.SDF.SDFDoc.op_Implicit(pdftron.PDF.PDFDoc)~pdftron.SDF.SDFDoc">Implicit(PDFDoc to SDFDoc)</h4>
+  <div class="markdown level1 summary"><p>Explicit and implicit conversion operator from <code>PDFDoc</code> to <code>SDF::Doc</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator SDFDoc(PDFDoc pdfdoc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">pdfdoc</span></td>
+        <td><p><code>PDFDoc</code> to convert to <code>SDFDoc</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><p>document’s SDF/Cos document </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_SDF_SDFDoc.md&amp;value=---%0Auid%3A%20pdftron.SDF.SDFDoc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/SDF/SDFDoc.cs/#L61" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

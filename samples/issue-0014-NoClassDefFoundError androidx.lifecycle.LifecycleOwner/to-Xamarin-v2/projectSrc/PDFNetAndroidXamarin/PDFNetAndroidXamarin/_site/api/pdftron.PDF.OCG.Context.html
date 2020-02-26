@@ -1,0 +1,698 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Context
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Context
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.OCG.Context">
+  
+  
+  <h1 id="pdftron_PDF_OCG_Context" data-uid="pdftron.PDF.OCG.Context" class="text-break">Class Context
+  </h1>
+  <div class="markdown level0 summary"><p>
+   The OCG::Context object represents an optional-content context in a document, within which 
+   document objects such as words or annotations are visible or hidden. The context keeps track 
+   of the ON-OFF states of all of the optional-content groups (OCGs) in a document. Content is 
+   or is not visible with respect to the OCG states stored in a specific context. Unlike other 
+   objects in OCG namespace, the OCG::Context does not correspond to any explicit PDF structure.
+</p><p>
+Each PDFView has a default context (PDF::GetOCGContext()) that it uses for on-screen drawing 
+and that determines the default state for any drawing. The context has flags that control 
+whether to draw content that is marked as optional, and whether to draw content that is not 
+marked as optional.
+</p><p>
+When enumerating page content, OCG::Context can be passed as a parameter in ElementReader.Begin() 
+method. When using PDFDraw, PDFRasterizer, or PDFViewCtrl class to render PDF pages use 
+SetOCGContext() method to select an OC context.
+</p><p>
+There can be more than one Context object, representing different combinations of OCG states. 
+You can change the states of OCGs within any context. You can build contexts with your own 
+combination of OCG states, and issue drawing or enumeration commands using that context.
+For example, you can pass an optional-content context to ElementReader.Begin(). You can save 
+the resulting state information as part of the configuration (e.g. using Config::SetInit methods), 
+but the context itself has no corresponding PDF representation, and is not saved. 
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Context</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.OCG.html">pdftron.PDF.OCG</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_OCG_Context_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Context : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context__ctor_pdftron_PDF_OCG_Config_.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.%23ctor(pdftron.PDF.OCG.Config)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L70">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context__ctor_" data-uid="pdftron.PDF.OCG.Context.#ctor*"></a>
+  <h4 id="pdftron_PDF_OCG_Context__ctor_pdftron_PDF_OCG_Config_" data-uid="pdftron.PDF.OCG.Context.#ctor(pdftron.PDF.OCG.Config)">Context(Config)</h4>
+  <div class="markdown level1 summary"><p>Create a context object that represents an optional-content state of the
+document from a given configuration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Context(Config config)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.Config.html">Config</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>A configuration from which to take initial OCG states.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context__ctor_pdftron_PDF_OCG_Context_.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.%23ctor(pdftron.PDF.OCG.Context)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L57">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context__ctor_" data-uid="pdftron.PDF.OCG.Context.#ctor*"></a>
+  <h4 id="pdftron_PDF_OCG_Context__ctor_pdftron_PDF_OCG_Context_" data-uid="pdftron.PDF.OCG.Context.#ctor(pdftron.PDF.OCG.Context)">Context(Context)</h4>
+  <div class="markdown level1 summary"><p>Copy constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Context(Context context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.Context.html">Context</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>Another context from which to take initial OCG states.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L192">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context_Destroy_" data-uid="pdftron.PDF.OCG.Context.Destroy*"></a>
+  <h4 id="pdftron_PDF_OCG_Context_Destroy" data-uid="pdftron.PDF.OCG.Context.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L173">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context_Dispose_" data-uid="pdftron.PDF.OCG.Context.Dispose*"></a>
+  <h4 id="pdftron_PDF_OCG_Context_Dispose" data-uid="pdftron.PDF.OCG.Context.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L178">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context_Dispose_" data-uid="pdftron.PDF.OCG.Context.Dispose*"></a>
+  <h4 id="pdftron_PDF_OCG_Context_Dispose_System_Boolean_" data-uid="pdftron.PDF.OCG.Context.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L168">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context_Finalize_" data-uid="pdftron.PDF.OCG.Context.Finalize*"></a>
+  <h4 id="pdftron_PDF_OCG_Context_Finalize" data-uid="pdftron.PDF.OCG.Context.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the Context </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context_GetNonOCDrawing.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.GetNonOCDrawing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L137">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context_GetNonOCDrawing_" data-uid="pdftron.PDF.OCG.Context.GetNonOCDrawing*"></a>
+  <h4 id="pdftron_PDF_OCG_Context_GetNonOCDrawing" data-uid="pdftron.PDF.OCG.Context.GetNonOCDrawing">GetNonOCDrawing()</h4>
+  <div class="markdown level1 summary"><p>Gets the non oc drawing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetNonOCDrawing()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>the non-OC status for this context. The flag indicates whether the
+content that is not marked as optional should be treated as visible.
+For more information, please see SetNonOCDrawing().</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context_GetOCMode.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.GetOCMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L161">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context_GetOCMode_" data-uid="pdftron.PDF.OCG.Context.GetOCMode*"></a>
+  <h4 id="pdftron_PDF_OCG_Context_GetOCMode" data-uid="pdftron.PDF.OCG.Context.GetOCMode">GetOCMode()</h4>
+  <div class="markdown level1 summary"><p>Gets OC drawing mode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Context.OCDrawMode GetOCMode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.Context.OCDrawMode.html">Context.OCDrawMode</a></td>
+        <td><p>OC drawing mode</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context_GetState_pdftron_PDF_OCG_Group_.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.GetState(pdftron.PDF.OCG.Group)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L87">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context_GetState_" data-uid="pdftron.PDF.OCG.Context.GetState*"></a>
+  <h4 id="pdftron_PDF_OCG_Context_GetState_pdftron_PDF_OCG_Group_" data-uid="pdftron.PDF.OCG.Context.GetState(pdftron.PDF.OCG.Group)">GetState(Group)</h4>
+  <div class="markdown level1 summary"><p>Gets the state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetState(Group group)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.Group.html">Group</a></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The optional-content group (OCG) that is queried.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>the ON-OFF states (true or false) for the given optional-content
+group (OCG) in this OC context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context_ResetStates_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.ResetStates(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L113">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context_ResetStates_" data-uid="pdftron.PDF.OCG.Context.ResetStates*"></a>
+  <h4 id="pdftron_PDF_OCG_Context_ResetStates_System_Boolean_" data-uid="pdftron.PDF.OCG.Context.ResetStates(System.Boolean)">ResetStates(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the sates of all OCGs in the context to ON or OFF.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetStates(bool all_on)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">all_on</span></td>
+        <td><p>A flag used to specify whether the OCG states should be set
+to ON (if true), or OFF (if false).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context_SetNonOCDrawing_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.SetNonOCDrawing(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L125">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context_SetNonOCDrawing_" data-uid="pdftron.PDF.OCG.Context.SetNonOCDrawing*"></a>
+  <h4 id="pdftron_PDF_OCG_Context_SetNonOCDrawing_System_Boolean_" data-uid="pdftron.PDF.OCG.Context.SetNonOCDrawing(System.Boolean)">SetNonOCDrawing(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the non-OC status for this context. Content that is not marked 
+as optional content is drawn (or element.IsOCVisible()) when &apos;draw_non_OC&apos; 
+is true, and not drawn/visible otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetNonOCDrawing(bool draw_non_OC)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">draw_non_OC</span></td>
+        <td><p>draw_non_OC A flag specifying whether the content that is not 
+marked as optional should be treated as visible.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context_SetOCDrawMode_pdftron_PDF_OCG_Context_OCDrawMode_.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.SetOCDrawMode(pdftron.PDF.OCG.Context.OCDrawMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L152">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context_SetOCDrawMode_" data-uid="pdftron.PDF.OCG.Context.SetOCDrawMode*"></a>
+  <h4 id="pdftron_PDF_OCG_Context_SetOCDrawMode_pdftron_PDF_OCG_Context_OCDrawMode_" data-uid="pdftron.PDF.OCG.Context.SetOCDrawMode(pdftron.PDF.OCG.Context.OCDrawMode)">SetOCDrawMode(Context.OCDrawMode)</h4>
+  <div class="markdown level1 summary"><p>Sets the drawing and enumeration type for this context. This type, together
+with the visibility determined by the OCG and OCMD states, controls whether
+content that is marked as optional content is drawn or enumerated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOCDrawMode(Context.OCDrawMode oc_draw_mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.Context.OCDrawMode.html">Context.OCDrawMode</a></td>
+        <td><span class="parametername">oc_draw_mode</span></td>
+        <td><p>A flag specifying the visibility of optional content.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context_SetState_pdftron_PDF_OCG_Group_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context.SetState(pdftron.PDF.OCG.Group%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L102">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_Context_SetState_" data-uid="pdftron.PDF.OCG.Context.SetState*"></a>
+  <h4 id="pdftron_PDF_OCG_Context_SetState_pdftron_PDF_OCG_Group_System_Boolean_" data-uid="pdftron.PDF.OCG.Context.SetState(pdftron.PDF.OCG.Group,System.Boolean)">SetState(Group, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the ON-OFF states for the given optional-content group (OCG) in this
+context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetState(Group group, bool state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.Group.html">Group</a></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The optional-content group (OCG) that is queried.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>true for &apos;ON&apos; and false for &apos;OFF&apos;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_Context.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.Context%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/Context.cs/#L34" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace pdftron.PDF.PDFA
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace pdftron.PDF.PDFA
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.PDFA">
+  
+  <h1 id="pdftron_PDF_PDFA" data-uid="pdftron.PDF.PDFA" class="text-break">Namespace pdftron.PDF.PDFA
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="pdftron.PDF.PDFA.PDFACompliance.html">PDFACompliance</a></h4>
+      <section><p>PDFACompliance class is used to validate PDF documents for PDF/A (ISO 19005:1/2/3)
+compliance or to convert existing PDF files to PDF/A compliant documents.
+<p>
+The conversion option analyses the content of existing PDF files and performs 
+a sequence of modifications in order to produce a PDF/A compliant document. 
+Features that are not suitable for long-term archiving (such as encryption, 
+obsolete compression schemes, missing fonts, or device-dependent color) are 
+replaced with their PDF/A compliant equivalents. Because the conversion process 
+applies only necessary changes to the source file, the information loss is 
+minimal. Also, because the converter provides a detailed report for each change,
+it is simple to inspect changes and to determine whether the conversion loss 
+is acceptable. </p>
+<p>
+The validation option in PDF/A Manager can be used to quickly determine whether 
+a PDF file fully complies with the PDF/A specification according to the 
+international standard ISO 19005:1/2/3. For files that are not compliant, the 
+validation option can be used to produce a detailed report of compliance 
+violations as well as a list of relevant error objects.</p></p>
+<p>Key Functions:
+<ul><li>Checks if a PDF file is compliant with PDF/A (ISO 19005-1) specification.</li><li>Converts any PDF to a PDF/A compliant document.</li><li>Supports PDF/A-1a, PDF/A-1b, PDF/A-2b.</li><li>Produces a detailed report of compliance violations and associated PDF objects.</li><li>Keeps the required changes a minimum, preserving the consistency of the original.</li><li>Tracks all changes to allow for automatic assessment of data loss.</li><li>Allows user to customize compliance checks or omit specific changes.</li><li>Preserves tags, logical structure, and color information in existing PDF documents.</li><li>Offers automatic font substitution, embedding, and subsetting options.</li><li>Supports automation and batch operation. PDF/A Converter is designed to be used 
+in unattended mode in high throughput server or batch environments</li></ul></p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="pdftron.PDF.PDFA.PDFACompliance.Conformance.html">PDFACompliance.Conformance</a></h4>
+      <section><p>PDF/A Conformance Level (19005:1/2/3).</p>
+<p>Level A conforming files must adhere to all of the requirements of ISO 19005. A file meeting this conformance level is said to be a &apos;conforming PDF/A -1a file.&apos;
+Level B conforming files shall adhere to all of the requirements of ISO 19005 except those of 6.3.8 and 6.8. A file meeting this conformance level is said to be 
+a &apos;conforming PDF/A-1b file&apos;. The Level B conformance requirements are intended to be those minimally necessary to ensure that the rendered visual appearance of 
+a conforming file is preservable over the long term. </p>
+</section>
+      <h4><a class="xref" href="pdftron.PDF.PDFA.PDFACompliance.ErrorCode.html">PDFACompliance.ErrorCode</a></h4>
+      <section><p>PDF/A Level A and B Validation Errors</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

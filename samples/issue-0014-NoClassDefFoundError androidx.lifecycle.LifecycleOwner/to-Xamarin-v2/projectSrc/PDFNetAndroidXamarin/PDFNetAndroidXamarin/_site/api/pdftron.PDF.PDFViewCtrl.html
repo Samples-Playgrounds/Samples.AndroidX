@@ -1,0 +1,2055 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PDFViewCtrl
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PDFViewCtrl
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.PDFViewCtrl">
+  
+  
+  <h1 id="pdftron_PDF_PDFViewCtrl" data-uid="pdftron.PDF.PDFViewCtrl" class="text-break">Class PDFViewCtrl
+  </h1>
+  <div class="markdown level0 summary"><p>PDFViewCtrl is derived from android.view.ViewGroup and encapsulates a rich set
+of functionalities for interactive viewing of PDF documents. See parent class
+documentation here: <a href="https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/PDFViewCtrl.html">https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/PDFViewCtrl.html</a>.
+<p>PDFViewCtrl makes use of PDFTron&apos;s PDFNet library that is compiled as a
+native library to ensure real-time viewing experience. It provides a
+comprehensive set of functionalities, including multi-threaded rendering, PDF
+rendering settings, scrolling, zooming, page navigation, different page
+viewing modes, coordinates conversion, text selection, text search, etc.
+In addition, PDFViewCtrl also allows for extension to accommodate a user&apos;s
+specific needs, which can be achieved in one of the following two ways:</p></p>
+<ul><li>Derive from PDFViewCtrl and override its functions such as
+<see cref="!:OnMeasure"></see>, <see cref="!:OnDraw"></see>, <see cref="!:OnScroll"></see>, etc. However, note
+that since PDFViewCtrl implements these functions, it is necessary to call
+PDFViewCtrl&apos;s implementations first.</li><li>The recommended way is to use PDFViewCtrl&apos;s <see cref="!:PDFViewCtrl.ITool"></see>
+interface. The interface provides a way for users to interact with PDFViewCtrl, 
+including customizing responses to gestures and drawing extra contents on top of
+the PDF content. In fact, PDFNet SDK also ships with a separate library, Tools.dll,
+that is programmed via the interface. 
+This library utilizes functions offered by PDFNet and implements
+several ready-to-use UI modules such as annotation editing, text selection,
+text search, page navigation, etc. PDFNet customers can have access to the
+source code of Tools.jar for full customization.</li></ul>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PDFViewCtrl</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_PDFViewCtrl_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PDFViewCtrl : PDF.PDFViewCtrl</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl__ctor_Context_IAttributeSet_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.%23ctor(Context%2CIAttributeSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L176">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl__ctor_" data-uid="pdftron.PDF.PDFViewCtrl.#ctor*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl__ctor_Context_IAttributeSet_" data-uid="pdftron.PDF.PDFViewCtrl.#ctor(Context,IAttributeSet)">PDFViewCtrl(Context, IAttributeSet)</h4>
+  <div class="markdown level1 summary"><p>Constructor that is called when inflating a view from XML. This is called
+when a view is being constructed from an XML file, supplying attributes
+that were specified in the XML file. This version uses a default style of
+0, so the only attribute values applied are those in the Context&apos;s Theme
+and the given AttributeSet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PDFViewCtrl(Context context, IAttributeSet attrs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Context</span></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The Context the view is running in, through which it can
+access the current theme, resources, etc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IAttributeSet</span></td>
+        <td><span class="parametername">attrs</span></td>
+        <td><p>The attributes of the XML tag that is inflating the view.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl__ctor_Context_IAttributeSet_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.%23ctor(Context%2CIAttributeSet%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L195">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl__ctor_" data-uid="pdftron.PDF.PDFViewCtrl.#ctor*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl__ctor_Context_IAttributeSet_System_Int32_" data-uid="pdftron.PDF.PDFViewCtrl.#ctor(Context,IAttributeSet,System.Int32)">PDFViewCtrl(Context, IAttributeSet, Int32)</h4>
+  <div class="markdown level1 summary"><p>Perform inflation from XML and apply a class-specific base style. This
+constructor of View allows subclasses to use their own base style when
+they are inflating. For example, a Button class&apos;s constructor would call
+this version of the super class constructor and supply R.attr.buttonStyle
+for defStyle; this allows the theme&apos;s button style to modify all of the
+base view attributes (in particular its background) as well as the Button
+class&apos;s attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PDFViewCtrl(Context context, IAttributeSet attrs, int defStyle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Context</span></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The Context the view is running in, through which it can
+access the current theme, resources, etc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IAttributeSet</span></td>
+        <td><span class="parametername">attrs</span></td>
+        <td><p>The attributes of the XML tag that is inflating the view.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">defStyle</span></td>
+        <td><p>The default style to apply to this view. If 0, no style will
+be applied (beyond what is included in the theme). This may
+either be an attribute resource, whose value will be retrieved
+from the current theme, or an explicit style resource.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_CurrentPage.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.CurrentPage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L68">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_CurrentPage_" data-uid="pdftron.PDF.PDFViewCtrl.CurrentPage*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_CurrentPage" data-uid="pdftron.PDF.PDFViewCtrl.CurrentPage">CurrentPage</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the current page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int CurrentPage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The page number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_Doc.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.Doc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L52">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_Doc_" data-uid="pdftron.PDF.PDFViewCtrl.Doc*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_Doc" data-uid="pdftron.PDF.PDFViewCtrl.Doc">Doc</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the PDF document to be displayed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PDFDoc Doc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><p>The document.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_CloseDoc.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.CloseDoc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L99">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_CloseDoc_" data-uid="pdftron.PDF.PDFViewCtrl.CloseDoc*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_CloseDoc" data-uid="pdftron.PDF.PDFViewCtrl.CloseDoc">CloseDoc()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void CloseDoc()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ConvCanvasPtToPagePt_pdftron_PDF_Point_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ConvCanvasPtToPagePt(pdftron.PDF.Point)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L208">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ConvCanvasPtToPagePt_" data-uid="pdftron.PDF.PDFViewCtrl.ConvCanvasPtToPagePt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ConvCanvasPtToPagePt_pdftron_PDF_Point_" data-uid="pdftron.PDF.PDFViewCtrl.ConvCanvasPtToPagePt(pdftron.PDF.Point)">ConvCanvasPtToPagePt(Point)</h4>
+  <div class="markdown level1 summary"><p>Converts a point in canvas space to the current page space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Point ConvCanvasPtToPagePt(Point pt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><span class="parametername">pt</span></td>
+        <td><p>The input point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><p>The canvas point to page point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ConvCanvasPtToPagePt_pdftron_PDF_Point_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ConvCanvasPtToPagePt(pdftron.PDF.Point%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L219">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ConvCanvasPtToPagePt_" data-uid="pdftron.PDF.PDFViewCtrl.ConvCanvasPtToPagePt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ConvCanvasPtToPagePt_pdftron_PDF_Point_System_Int32_" data-uid="pdftron.PDF.PDFViewCtrl.ConvCanvasPtToPagePt(pdftron.PDF.Point,System.Int32)">ConvCanvasPtToPagePt(Point, Int32)</h4>
+  <div class="markdown level1 summary"><p>Converts a point in canvas space to the specified page space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Point ConvCanvasPtToPagePt(Point pt, int page_num)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><span class="parametername">pt</span></td>
+        <td><p>The input point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">page_num</span></td>
+        <td><p>page number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><p>The canvas point to page point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ConvCanvasPtToScreenPt_pdftron_PDF_Point_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ConvCanvasPtToScreenPt(pdftron.PDF.Point)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L198">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ConvCanvasPtToScreenPt_" data-uid="pdftron.PDF.PDFViewCtrl.ConvCanvasPtToScreenPt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ConvCanvasPtToScreenPt_pdftron_PDF_Point_" data-uid="pdftron.PDF.PDFViewCtrl.ConvCanvasPtToScreenPt(pdftron.PDF.Point)">ConvCanvasPtToScreenPt(Point)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Point ConvCanvasPtToScreenPt(Point pt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><span class="parametername">pt</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ConvPagePtToCanvasPt_pdftron_PDF_Point_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ConvPagePtToCanvasPt(pdftron.PDF.Point)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L288">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ConvPagePtToCanvasPt_" data-uid="pdftron.PDF.PDFViewCtrl.ConvPagePtToCanvasPt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ConvPagePtToCanvasPt_pdftron_PDF_Point_" data-uid="pdftron.PDF.PDFViewCtrl.ConvPagePtToCanvasPt(pdftron.PDF.Point)">ConvPagePtToCanvasPt(Point)</h4>
+  <div class="markdown level1 summary"><p>Converts a point in the current page space to canvas space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Point ConvPagePtToCanvasPt(Point pt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><span class="parametername">pt</span></td>
+        <td><p>The input point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><p>The page point to canvas point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ConvPagePtToCanvasPt_pdftron_PDF_Point_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ConvPagePtToCanvasPt(pdftron.PDF.Point%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L299">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ConvPagePtToCanvasPt_" data-uid="pdftron.PDF.PDFViewCtrl.ConvPagePtToCanvasPt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ConvPagePtToCanvasPt_pdftron_PDF_Point_System_Int32_" data-uid="pdftron.PDF.PDFViewCtrl.ConvPagePtToCanvasPt(pdftron.PDF.Point,System.Int32)">ConvPagePtToCanvasPt(Point, Int32)</h4>
+  <div class="markdown level1 summary"><p>Converts a point in the specified page space to canvas space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Point ConvPagePtToCanvasPt(Point pt, int page_num)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><span class="parametername">pt</span></td>
+        <td><p>The input point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">page_num</span></td>
+        <td><p>page number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><p>The page point to canvas point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ConvPagePtToHorizontalScrollingPt_pdftron_PDF_Point_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ConvPagePtToHorizontalScrollingPt(pdftron.PDF.Point%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L316">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ConvPagePtToHorizontalScrollingPt_" data-uid="pdftron.PDF.PDFViewCtrl.ConvPagePtToHorizontalScrollingPt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ConvPagePtToHorizontalScrollingPt_pdftron_PDF_Point_System_Int32_" data-uid="pdftron.PDF.PDFViewCtrl.ConvPagePtToHorizontalScrollingPt(pdftron.PDF.Point,System.Int32)">ConvPagePtToHorizontalScrollingPt(Point, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Point ConvPagePtToHorizontalScrollingPt(Point pt, int page_num)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><span class="parametername">pt</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">page_num</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ConvPagePtToScreenPt_pdftron_PDF_Point_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ConvPagePtToScreenPt(pdftron.PDF.Point%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L310">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ConvPagePtToScreenPt_" data-uid="pdftron.PDF.PDFViewCtrl.ConvPagePtToScreenPt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ConvPagePtToScreenPt_pdftron_PDF_Point_System_Int32_" data-uid="pdftron.PDF.PDFViewCtrl.ConvPagePtToScreenPt(pdftron.PDF.Point,System.Int32)">ConvPagePtToScreenPt(Point, Int32)</h4>
+  <div class="markdown level1 summary"><p>Converts a point from a page space to a point in screen space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Point ConvPagePtToScreenPt(Point pt, int page_num)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><span class="parametername">pt</span></td>
+        <td><p>The input point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">page_num</span></td>
+        <td><p>P2.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><p>The page point to client point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ConvScreenPtToCanvasPt_pdftron_PDF_Point_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ConvScreenPtToCanvasPt(pdftron.PDF.Point)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L257">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ConvScreenPtToCanvasPt_" data-uid="pdftron.PDF.PDFViewCtrl.ConvScreenPtToCanvasPt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ConvScreenPtToCanvasPt_pdftron_PDF_Point_" data-uid="pdftron.PDF.PDFViewCtrl.ConvScreenPtToCanvasPt(pdftron.PDF.Point)">ConvScreenPtToCanvasPt(Point)</h4>
+  <div class="markdown level1 summary"><p>Converts a point expressed in screen space to a point in (PDF) canvas space.
+<p>When converting points, PDFViewCtrl may refer to the following spaces:</p>
+<ul><li>Screen Space is the virtual area occupied by PDFViewCtrl on a device,
+originated at its upper-left corner. Note that this space can extend
+beyond the visible region. Screen Space is in the same scale with the
+dimensions of android.view.View;</li><li>Page Space is defined by a PDF page itself, originated at the
+lower-left corner. Unlike Screen Space, it is independent of how the page
+is viewed; namely, it does&apos;t change with the zoom factor, the scroll
+position, and etc.</li><li>(PDF) Canvas Space is defined as the smallest axis-aligned rectangle
+surrounding all the pages in continuous page presentation mode, or the
+current page(s) in non-continuous page presentation mode. For example,
+PAGE_PRESENTATION_FACING_CONT will make a wider but shorter Canvas Space
+than what PAGE_PRESENTATION_SINGLE_CONT will do. Note that PDF Canvas
+Space is in the same scale of Page Space and also independent of zoom
+factor, scroll position, etc. For simplicity, PDF Canvas Space is
+referenced to as Canvas Space.</li><li>Zoomed PDF Canvas Space is similar to PDF Canvas space, but after it
+is scaled by the current zoom factor, and page gaps are added between
+pages.</li><li>View Canvas Space is the virtual region occupied by the
+android.graphics.Canvas object, the one passed in through the
+onDraw(Canvas) method. Note that View Canvas Space is in general
+different from Canvas Space. For example, when PDFViewCtrl is zoomed out
+so that all the pages are visible, View Canvas Space will be
+larger than Canvas Space.</li></ul></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Point ConvScreenPtToCanvasPt(Point pt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><span class="parametername">pt</span></td>
+        <td><p>The input point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><p>The client point to canvas point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ConvScreenPtToPagePt_pdftron_PDF_Point_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ConvScreenPtToPagePt(pdftron.PDF.Point)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L267">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ConvScreenPtToPagePt_" data-uid="pdftron.PDF.PDFViewCtrl.ConvScreenPtToPagePt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ConvScreenPtToPagePt_pdftron_PDF_Point_" data-uid="pdftron.PDF.PDFViewCtrl.ConvScreenPtToPagePt(pdftron.PDF.Point)">ConvScreenPtToPagePt(Point)</h4>
+  <div class="markdown level1 summary"><p>Converts a point expressed in screen space to a point on a page space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Point ConvScreenPtToPagePt(Point pt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><span class="parametername">pt</span></td>
+        <td><p>The input point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><p>The client point to page point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ConvScreenPtToPagePt_pdftron_PDF_Point_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ConvScreenPtToPagePt(pdftron.PDF.Point%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L278">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ConvScreenPtToPagePt_" data-uid="pdftron.PDF.PDFViewCtrl.ConvScreenPtToPagePt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ConvScreenPtToPagePt_pdftron_PDF_Point_System_Int32_" data-uid="pdftron.PDF.PDFViewCtrl.ConvScreenPtToPagePt(pdftron.PDF.Point,System.Int32)">ConvScreenPtToPagePt(Point, Int32)</h4>
+  <div class="markdown level1 summary"><p>Converts a point expressed in screen space to a point on a page space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Point ConvScreenPtToPagePt(Point pt, int page_num)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><span class="parametername">pt</span></td>
+        <td><p>The input point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">page_num</span></td>
+        <td><p>page number.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Point.html">Point</a></td>
+        <td><p>The client point to page point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L110">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_Destroy_" data-uid="pdftron.PDF.PDFViewCtrl.Destroy*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_Destroy" data-uid="pdftron.PDF.PDFViewCtrl.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ExecuteAction_pdftron_PDF_Action_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ExecuteAction(pdftron.PDF.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L349">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ExecuteAction_" data-uid="pdftron.PDF.PDFViewCtrl.ExecuteAction*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ExecuteAction_pdftron_PDF_Action_" data-uid="pdftron.PDF.PDFViewCtrl.ExecuteAction(pdftron.PDF.Action)">ExecuteAction(Action)</h4>
+  <div class="markdown level1 summary"><p>Executes the action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ExecuteAction(Action action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Action.html">Action</a></td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The action.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_GetAnnotationAt_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.GetAnnotationAt(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L360">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_GetAnnotationAt_" data-uid="pdftron.PDF.PDFViewCtrl.GetAnnotationAt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_GetAnnotationAt_System_Int32_System_Int32_" data-uid="pdftron.PDF.PDFViewCtrl.GetAnnotationAt(System.Int32,System.Int32)">GetAnnotationAt(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the annotation at x and y.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Annot GetAnnotationAt(int x, int y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The x coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The y coordinate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annot.html">Annot</a></td>
+        <td><p>The <a class="xref" href="pdftron.PDF.Annot.html">Annot</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_GetAnnotationAt_System_Int32_System_Int32_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.GetAnnotationAt(System.Int32%2CSystem.Int32%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L375">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_GetAnnotationAt_" data-uid="pdftron.PDF.PDFViewCtrl.GetAnnotationAt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_GetAnnotationAt_System_Int32_System_Int32_System_Double_System_Double_" data-uid="pdftron.PDF.PDFViewCtrl.GetAnnotationAt(System.Int32,System.Int32,System.Double,System.Double)">GetAnnotationAt(Int32, Int32, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Gets the annotation at the (x, y) position expressed in screen coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Annot GetAnnotationAt(int x, int y, double distanceThreshold, double minimumLineWeight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>x coordinate of the screen point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>y coordinate of the screen point.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">distanceThreshold</span></td>
+        <td><p>Maximum distance from the point (x, y) to the annotation for the annot to be considered a hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">minimumLineWeight</span></td>
+        <td><p>For very thin lines, it is almost impossible to hit the actual line.
+                                This specifies a minimum line thickness (in screen coordinates) for the purpose of calculating whether
+                                a point is inside the annotation or not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annot.html">Annot</a></td>
+        <td><p>The <a class="xref" href="pdftron.PDF.Annot.html">Annot</a>The annotation closest to the point. If no annotation was found, it returns a null pointer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_GetAnnotationListAt_System_Int32_System_Int32_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.GetAnnotationListAt(System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L380">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_GetAnnotationListAt_" data-uid="pdftron.PDF.PDFViewCtrl.GetAnnotationListAt*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_GetAnnotationListAt_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="pdftron.PDF.PDFViewCtrl.GetAnnotationListAt(System.Int32,System.Int32,System.Int32,System.Int32)">GetAnnotationListAt(Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual List&lt;Annot&gt; GetAnnotationListAt(int x1, int y1, int x2, int y2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">x1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">y1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">x2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">y2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="pdftron.PDF.Annot.html">Annot</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_GetColorPostProcessMode.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.GetColorPostProcessMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L341">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_GetColorPostProcessMode_" data-uid="pdftron.PDF.PDFViewCtrl.GetColorPostProcessMode*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_GetColorPostProcessMode" data-uid="pdftron.PDF.PDFViewCtrl.GetColorPostProcessMode">GetColorPostProcessMode()</h4>
+  <div class="markdown level1 summary"><p>Gets the color post processing transformation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PDFRasterizer.ColorPostProcessMode GetColorPostProcessMode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFRasterizer.ColorPostProcessMode.html">PDFRasterizer.ColorPostProcessMode</a></td>
+        <td><p>the current color post processing mode..</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_GetDoc.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.GetDoc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L84">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_GetDoc_" data-uid="pdftron.PDF.PDFViewCtrl.GetDoc*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_GetDoc" data-uid="pdftron.PDF.PDFViewCtrl.GetDoc">GetDoc()</h4>
+  <div class="markdown level1 summary"><p>Gets the PDF document to be displayed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual PDFDoc GetDoc()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><p>The PDFDoc</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_GetPageBox.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.GetPageBox%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L141">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_GetPageBox_" data-uid="pdftron.PDF.PDFViewCtrl.GetPageBox*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_GetPageBox" data-uid="pdftron.PDF.PDFViewCtrl.GetPageBox">GetPageBox()</h4>
+  <div class="markdown level1 summary"><p>Gets the box used by PDFViewCtrl for rasterizing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Page.Box GetPageBox()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.Box.html">Page.Box</a></td>
+        <td><p>The page box used to rasterize. See {@link #SetPageBox(Page.Box)}</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_GetPageRectForAnnot_pdftron_PDF_Annot_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.GetPageRectForAnnot(pdftron.PDF.Annot%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L443">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_GetPageRectForAnnot_" data-uid="pdftron.PDF.PDFViewCtrl.GetPageRectForAnnot*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_GetPageRectForAnnot_pdftron_PDF_Annot_System_Int32_" data-uid="pdftron.PDF.PDFViewCtrl.GetPageRectForAnnot(pdftron.PDF.Annot,System.Int32)">GetPageRectForAnnot(Annot, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the annotation bounding box in page coordinates</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Rect GetPageRectForAnnot(Annot annot, int page_num)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annot.html">Annot</a></td>
+        <td><span class="parametername">annot</span></td>
+        <td><p>target annotation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">page_num</span></td>
+        <td><p>the page number where the annotation is on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><p>The page rect for annotation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_GetProgressiveRendering.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.GetProgressiveRendering%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L126">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_GetProgressiveRendering_" data-uid="pdftron.PDF.PDFViewCtrl.GetProgressiveRendering*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_GetProgressiveRendering" data-uid="pdftron.PDF.PDFViewCtrl.GetProgressiveRendering">GetProgressiveRendering()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool GetProgressiveRendering()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_GetRotation.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.GetRotation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L492">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_GetRotation_" data-uid="pdftron.PDF.PDFViewCtrl.GetRotation*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_GetRotation" data-uid="pdftron.PDF.PDFViewCtrl.GetRotation">GetRotation()</h4>
+  <div class="markdown level1 summary"><p>Gets the page rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Page.Rotate GetRotation()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.Rotate.html">Page.Rotate</a></td>
+        <td><p>The page rotation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_GetScreenRectForAnnot_pdftron_PDF_Annot_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.GetScreenRectForAnnot(pdftron.PDF.Annot%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L432">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_GetScreenRectForAnnot_" data-uid="pdftron.PDF.PDFViewCtrl.GetScreenRectForAnnot*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_GetScreenRectForAnnot_pdftron_PDF_Annot_System_Int32_" data-uid="pdftron.PDF.PDFViewCtrl.GetScreenRectForAnnot(pdftron.PDF.Annot,System.Int32)">GetScreenRectForAnnot(Annot, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the annotation bounding box in screen coordinates</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Rect GetScreenRectForAnnot(Annot annot, int page_num)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annot.html">Annot</a></td>
+        <td><span class="parametername">annot</span></td>
+        <td><p>target annotation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">page_num</span></td>
+        <td><p>the page number where the annotation is on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><p>The screen rect for annotation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_HideAnnotation_pdftron_PDF_Annot_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.HideAnnotation(pdftron.PDF.Annot)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L413">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_HideAnnotation_" data-uid="pdftron.PDF.PDFViewCtrl.HideAnnotation*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_HideAnnotation_pdftron_PDF_Annot_" data-uid="pdftron.PDF.PDFViewCtrl.HideAnnotation(pdftron.PDF.Annot)">HideAnnotation(Annot)</h4>
+  <div class="markdown level1 summary"><p>Disable rendering of a particular annotation. This does not change the
+annotation itself, just how it is displayed in this viewer instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void HideAnnotation(Annot annot)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annot.html">Annot</a></td>
+        <td><span class="parametername">annot</span></td>
+        <td><p>The annotation object to cease drawing for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_OpenNonPDFUri_Android_Net_Uri_pdftronprivate_PDF_WordToPDFOptions_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.OpenNonPDFUri(Android.Net.Uri%2Cpdftronprivate.PDF.WordToPDFOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L131">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_OpenNonPDFUri_" data-uid="pdftron.PDF.PDFViewCtrl.OpenNonPDFUri*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_OpenNonPDFUri_Android_Net_Uri_pdftronprivate_PDF_WordToPDFOptions_" data-uid="pdftron.PDF.PDFViewCtrl.OpenNonPDFUri(Android.Net.Uri,pdftronprivate.PDF.WordToPDFOptions)">OpenNonPDFUri(Android.Net.Uri, PDF.WordToPDFOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DocumentConversion OpenNonPDFUri(Android.Net.Uri uri, PDF.WordToPDFOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Android.Net.Uri</span></td>
+        <td><span class="parametername">uri</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">pdftronprivate.PDF.WordToPDFOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.DocumentConversion.html">DocumentConversion</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_OpenPDFUri_Android_Net_Uri_System_String_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.OpenPDFUri(Android.Net.Uri%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L116">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_OpenPDFUri_" data-uid="pdftron.PDF.PDFViewCtrl.OpenPDFUri*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_OpenPDFUri_Android_Net_Uri_System_String_" data-uid="pdftron.PDF.PDFViewCtrl.OpenPDFUri(Android.Net.Uri,System.String)">OpenPDFUri(Android.Net.Uri, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PDFDoc OpenPDFUri(Android.Net.Uri uri, string password)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Android.Net.Uri</span></td>
+        <td><span class="parametername">uri</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">password</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_RefreshAndUpdate_pdftron_PDF_ViewChangeCollection_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.RefreshAndUpdate(pdftron.PDF.ViewChangeCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L501">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_RefreshAndUpdate_" data-uid="pdftron.PDF.PDFViewCtrl.RefreshAndUpdate*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_RefreshAndUpdate_pdftron_PDF_ViewChangeCollection_" data-uid="pdftron.PDF.PDFViewCtrl.RefreshAndUpdate(pdftron.PDF.ViewChangeCollection)">RefreshAndUpdate(ViewChangeCollection)</h4>
+  <div class="markdown level1 summary"><p>Helper function that will refresh annotation and/or field appearances if needed, and then
+render modified page areas, all based on the contents of the view_change parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RefreshAndUpdate(ViewChangeCollection viewChange)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ViewChangeCollection.html">ViewChangeCollection</a></td>
+        <td><span class="parametername">viewChange</span></td>
+        <td><p>contains all the updated fields and rectangles.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_Select_pdftron_PDF_Highlights_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.Select(pdftron.PDF.Highlights)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L404">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_Select_" data-uid="pdftron.PDF.PDFViewCtrl.Select*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_Select_pdftron_PDF_Highlights_" data-uid="pdftron.PDF.PDFViewCtrl.Select(pdftron.PDF.Highlights)">Select(Highlights)</h4>
+  <div class="markdown level1 summary"><p>Selects texts identified by Highlights.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Select(Highlights hlts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Highlights.html">Highlights</a></td>
+        <td><span class="parametername">hlts</span></td>
+        <td><p>The Highlights to be selected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code>, if by highlights was selected, <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_SelectAndJumpWithHighlights_pdftron_PDF_Highlights_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.SelectAndJumpWithHighlights(pdftron.PDF.Highlights)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L395">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_SelectAndJumpWithHighlights_" data-uid="pdftron.PDF.PDFViewCtrl.SelectAndJumpWithHighlights*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_SelectAndJumpWithHighlights_pdftron_PDF_Highlights_" data-uid="pdftron.PDF.PDFViewCtrl.SelectAndJumpWithHighlights(pdftron.PDF.Highlights)">SelectAndJumpWithHighlights(Highlights)</h4>
+  <div class="markdown level1 summary"><p>Selects texts identified by Highlights. Also scroll to the Highlights if selected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SelectAndJumpWithHighlights(Highlights hlts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Highlights.html">Highlights</a></td>
+        <td><span class="parametername">hlts</span></td>
+        <td><p>Highlights the Highlights to be selected.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code>, if some text was selected, <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_SetColorPostProcessMapFile_pdftron_Filters_Filter_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.SetColorPostProcessMapFile(pdftron.Filters.Filter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L333">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_SetColorPostProcessMapFile_" data-uid="pdftron.PDF.PDFViewCtrl.SetColorPostProcessMapFile*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_SetColorPostProcessMapFile_pdftron_Filters_Filter_" data-uid="pdftron.PDF.PDFViewCtrl.SetColorPostProcessMapFile(pdftron.Filters.Filter)">SetColorPostProcessMapFile(Filter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetColorPostProcessMapFile(Filter imageFileContents)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Filters.Filter.html">Filter</a></td>
+        <td><span class="parametername">imageFileContents</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_SetColorPostProcessMode_pdftron_PDF_PDFRasterizer_ColorPostProcessMode_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.SetColorPostProcessMode(pdftron.PDF.PDFRasterizer.ColorPostProcessMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L329">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_SetColorPostProcessMode_" data-uid="pdftron.PDF.PDFViewCtrl.SetColorPostProcessMode*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_SetColorPostProcessMode_pdftron_PDF_PDFRasterizer_ColorPostProcessMode_" data-uid="pdftron.PDF.PDFViewCtrl.SetColorPostProcessMode(pdftron.PDF.PDFRasterizer.ColorPostProcessMode)">SetColorPostProcessMode(PDFRasterizer.ColorPostProcessMode)</h4>
+  <div class="markdown level1 summary"><p>Sets the color post processing transformation.
+This transform is applied to the rasterized bitmap as the final step
+in the rasterization process, and is applied directly to the resulting
+bitmap (disregarding any color space information). Color post
+processing only supported for RGBA output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetColorPostProcessMode(PDFRasterizer.ColorPostProcessMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFRasterizer.ColorPostProcessMode.html">PDFRasterizer.ColorPostProcessMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td><p>the specific transform to be applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_SetDoc_pdftron_PDF_PDFDoc_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.SetDoc(pdftron.PDF.PDFDoc)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L93">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_SetDoc_" data-uid="pdftron.PDF.PDFViewCtrl.SetDoc*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_SetDoc_pdftron_PDF_PDFDoc_" data-uid="pdftron.PDF.PDFViewCtrl.SetDoc(pdftron.PDF.PDFDoc)">SetDoc(PDFDoc)</h4>
+  <div class="markdown level1 summary"><p>Sets the PDF document to be displayed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetDoc(PDFDoc doc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>The PDFDoc</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_SetPageBox_pdftron_PDF_Page_Box_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.SetPageBox(pdftron.PDF.Page.Box)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L160">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_SetPageBox_" data-uid="pdftron.PDF.PDFViewCtrl.SetPageBox*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_SetPageBox_pdftron_PDF_Page_Box_" data-uid="pdftron.PDF.PDFViewCtrl.SetPageBox(pdftron.PDF.Page.Box)">SetPageBox(Page.Box)</h4>
+  <div class="markdown level1 summary"><p>Selects the PageBox to rasterize. PDFViewCtrl will clip pages according to their
+PageBox as selected here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetPageBox(Page.Box box)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.Box.html">Page.Box</a></td>
+        <td><span class="parametername">box</span></td>
+        <td><p>the region to be used for clipping. Possible values are:
+<ul>
+<li>{@link Page#e_media}</li>
+<li>{@link Page#e_crop}</li>
+<li>{@link Page#e_bleed}</li>
+<li>{@link Page#e_trim}</li>
+<li>{@link Page#e_art}</li>
+<li>{@link Page#e_user_crop}</li>
+</ul></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_SetProgressiveRendering_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.SetProgressiveRendering(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L122">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_SetProgressiveRendering_" data-uid="pdftron.PDF.PDFViewCtrl.SetProgressiveRendering*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_SetProgressiveRendering_System_Boolean_" data-uid="pdftron.PDF.PDFViewCtrl.SetProgressiveRendering(System.Boolean)">SetProgressiveRendering(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetProgressiveRendering(bool progressive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">progressive</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_SetViewerCache_pdftron_SDF_SDFDoc_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.SetViewerCache(pdftron.SDF.SDFDoc%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L455">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_SetViewerCache_" data-uid="pdftron.PDF.PDFViewCtrl.SetViewerCache*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_SetViewerCache_pdftron_SDF_SDFDoc_System_Int32_System_Boolean_" data-uid="pdftron.PDF.PDFViewCtrl.SetViewerCache(pdftron.SDF.SDFDoc,System.Int32,System.Boolean)">SetViewerCache(SDFDoc, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the viewer cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetViewerCache(SDFDoc document, int max_cache_size, bool on_disk)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.SDFDoc.html">SDFDoc</a></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>The maximum size, in bytes, of the entire document&apos;s page cache.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">max_cache_size</span></td>
+        <td><p>Max cache size</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">on_disk</span></td>
+        <td><p>Whether or not store the cache on disk.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ShowAnnotation_pdftron_PDF_Annot_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ShowAnnotation(pdftron.PDF.Annot)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L422">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ShowAnnotation_" data-uid="pdftron.PDF.PDFViewCtrl.ShowAnnotation*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ShowAnnotation_pdftron_PDF_Annot_" data-uid="pdftron.PDF.PDFViewCtrl.ShowAnnotation(pdftron.PDF.Annot)">ShowAnnotation(Annot)</h4>
+  <div class="markdown level1 summary"><p>Enable rendering of a particular annotation. Only has an effect if
+HideAnnotation() has prviously been called on the same annot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ShowAnnotation(Annot annot)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annot.html">Annot</a></td>
+        <td><span class="parametername">annot</span></td>
+        <td><p>The annotation object to resume rendering.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_ShowRect_System_Int32_pdftron_PDF_Rect_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.ShowRect(System.Int32%2Cpdftron.PDF.Rect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L467">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_ShowRect_" data-uid="pdftron.PDF.PDFViewCtrl.ShowRect*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_ShowRect_System_Int32_pdftron_PDF_Rect_" data-uid="pdftron.PDF.PDFViewCtrl.ShowRect(System.Int32,pdftron.PDF.Rect)">ShowRect(Int32, Rect)</h4>
+  <div class="markdown level1 summary"><p>Adjusts the viewing area to fit a rectangle on a specified page.
+Rectangle must be specified in page space. This will adjust current page
+and zoom appropriately.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool ShowRect(int page_num, Rect rect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">page_num</span></td>
+        <td><p>The specified page number.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">rect</span></td>
+        <td><p>The rectangle to fit in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code>, if successful, <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_Update_pdftron_PDF_Annot_System_Int32_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.Update(pdftron.PDF.Annot%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L484">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_Update_" data-uid="pdftron.PDF.PDFViewCtrl.Update*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_Update_pdftron_PDF_Annot_System_Int32_" data-uid="pdftron.PDF.PDFViewCtrl.Update(pdftron.PDF.Annot,System.Int32)">Update(Annot, Int32)</h4>
+  <div class="markdown level1 summary"><p>Redraws the area covered with a given annotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Update(Annot annot, int page_num)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Annot.html">Annot</a></td>
+        <td><span class="parametername">annot</span></td>
+        <td><p>the annotation whose occupied region is to be updated.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">page_num</span></td>
+        <td><p>the number of the page that the annotation belongs to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl_Update_pdftron_PDF_Rect_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl.Update(pdftron.PDF.Rect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L475">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFViewCtrl_Update_" data-uid="pdftron.PDF.PDFViewCtrl.Update*"></a>
+  <h4 id="pdftron_PDF_PDFViewCtrl_Update_pdftron_PDF_Rect_" data-uid="pdftron.PDF.PDFViewCtrl.Update(pdftron.PDF.Rect)">Update(Rect)</h4>
+  <div class="markdown level1 summary"><p>Redraws the given area in the client space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Update(Rect rect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">rect</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFViewCtrl.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFViewCtrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin/PDFViewCtrl.cs/#L46" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

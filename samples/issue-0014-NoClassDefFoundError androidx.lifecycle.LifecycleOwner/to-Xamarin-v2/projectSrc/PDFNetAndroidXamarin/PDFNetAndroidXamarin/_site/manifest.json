@@ -1,0 +1,3285 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Samples/AndroidX/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/projectSrc/PDFNetAndroidXamarin/PDFNetAndroidXamarin",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "KC8TZhLC67885cYKJeXk2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "/+wATqxyute6uJdfz6Ofsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "zmgkbgceuIfUgxL7PNQ7BQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Common.Iterator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Common.Iterator-1.html",
+          "hash": "1FvpDdItbJwEZRWwuQLRsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Common.Matrix2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Common.Matrix2D.html",
+          "hash": "JGGClMYG2yQ3ucu4ub8btg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Common.PDFNetException.ErrorCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Common.PDFNetException.ErrorCodes.html",
+          "hash": "YJpyvLkFqdUfrYwViCFedA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Common.PDFNetException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Common.PDFNetException.html",
+          "hash": "5AkjqqQXgC0+YplatwZJqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Common.ProgressMonitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Common.ProgressMonitor.html",
+          "hash": "2KXSbkiydWhIlNQrhGh+fA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Common.html",
+          "hash": "5EplM+c3IFTcqOpBaWU13A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.FDF.FDFDoc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.FDF.FDFDoc.html",
+          "hash": "EnOt3Uv1AYr8CnnGuWjS8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.FDF.FDFField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.FDF.FDFField.html",
+          "hash": "mCTzty4gZB8cCHByzm5Cdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.FDF.FDFFieldIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.FDF.FDFFieldIterator.html",
+          "hash": "GI4gFqKUGAc0oAkumZQBmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.FDF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.FDF.html",
+          "hash": "dsfSC+va0JfWLs2RZR01jw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Filters.Filter.ReferencePos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Filters.Filter.ReferencePos.html",
+          "hash": "AvoeJ5PA/TjWTfFKjtR06A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Filters.Filter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Filters.Filter.html",
+          "hash": "tCRQia8ym5XF39bPYq1MaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Filters.FilterReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Filters.FilterReader.html",
+          "hash": "+gjghQMc5ogNHsHIPzYUeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Filters.FilterWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Filters.FilterWriter.html",
+          "hash": "cWEQeWJ84zdWhRUzj3Ms/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Filters.FlateEncode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Filters.FlateEncode.html",
+          "hash": "EhHr4oVKxpUSeUsbSB92IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Filters.MappedFile.OpenMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Filters.MappedFile.OpenMode.html",
+          "hash": "lBKRTa85kzGbYDRw8BrT2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Filters.MappedFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Filters.MappedFile.html",
+          "hash": "iu9xil+zYitiZGIo7JhqYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Filters.MemoryFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Filters.MemoryFilter.html",
+          "hash": "uLET/D1+vJ/KnOe13RiIaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.Filters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.Filters.html",
+          "hash": "5E5uiwkJAnHM33he33UNAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Action.FormActionFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Action.FormActionFlag.html",
+          "hash": "ypQSejFKx6EuhjoQft5vUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Action.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Action.Type.html",
+          "hash": "llwOlu9pkV/vQtCMdgbJEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Action.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Action.html",
+          "hash": "D/NX4EvAysV+wW05qANTiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.ActionParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.ActionParameter.html",
+          "hash": "XJYt9KRveI96uUvIuzXvNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annot.AnnotationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annot.AnnotationState.html",
+          "hash": "r5nehhav+Gl1CPk2qbRdUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annot.BorderStyle.Style.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annot.BorderStyle.Style.html",
+          "hash": "MAm2rPdZxA+oAT9G7v2wmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annot.BorderStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annot.BorderStyle.html",
+          "hash": "GbLOp/qbLe8KVibXd/JMZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annot.Flag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annot.Flag.html",
+          "hash": "9d9fH7Sp/eCTwHmsEpUeSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annot.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annot.Type.html",
+          "hash": "nDQ8mqJazWGGhDmVD6wkew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annot.html",
+          "hash": "MPnSyFGJqVuP/P291URMlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Caret.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Caret.html",
+          "hash": "Zy51uWEUHr6XLo8r02uBTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.CheckBoxWidget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.CheckBoxWidget.html",
+          "hash": "Lq9DDwYK9Q4Bd2eqVgOMRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Circle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Circle.html",
+          "hash": "+cqRhJS8kbXZKJ6A9qWZ/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.ComboBoxWidget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.ComboBoxWidget.html",
+          "hash": "IJOtou2Dzl5cucUT1Qspvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.FileAttachment.Icon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.FileAttachment.Icon.html",
+          "hash": "hTBmiA2l/LM5V3WTasOY6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.FileAttachment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.FileAttachment.html",
+          "hash": "PSDAK4ktA8qLvtiIc+Qurg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.FreeText.IntentName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.FreeText.IntentName.html",
+          "hash": "KkQdJ+gPp3E+SUINDLO7AA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.FreeText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.FreeText.html",
+          "hash": "hbxB+F6EJruLEwJIt45xrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Highlight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Highlight.html",
+          "hash": "+36RPjErNxiBS37jOELKhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Ink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Ink.html",
+          "hash": "oKm/Mlr+TMr+YD08Fxchhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Line.CapPos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Line.CapPos.html",
+          "hash": "W8OqkP6rTR5+3xa5+w79pQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Line.EndingStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Line.EndingStyle.html",
+          "hash": "BDsr6IZuGtqG6WGFW1WU1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Line.IntentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Line.IntentType.html",
+          "hash": "0ezdIGShhlcZQJHs0xr9wA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Line.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Line.html",
+          "hash": "S+O74NzC6QO5/JBUDXPeOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Link.HighlightingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Link.HighlightingMode.html",
+          "hash": "kcoAt2F5XBxMz0ox5cTz9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Link.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Link.html",
+          "hash": "6S3KzoocKPpXWHbcX2iNyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.ListBoxWidget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.ListBoxWidget.html",
+          "hash": "Ez81a+AN1F/HtUDW6TGhaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Markup.BorderEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Markup.BorderEffect.html",
+          "hash": "Cv+c/oqtuVmXv+hTL7rodg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Markup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Markup.html",
+          "hash": "BHTrn/ymTKl2yU5cT7ci0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Movie.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Movie.html",
+          "hash": "eoPzz9hT7OSEMeOkhj5gAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.PolyLine.IntentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.PolyLine.IntentType.html",
+          "hash": "Nt8/ofvUNQpI+dCrygQ5BQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.PolyLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.PolyLine.html",
+          "hash": "VCWCLEjo2KOAPYnRVgbE6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Polygon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Polygon.html",
+          "hash": "cKACfKoCOix8BnFyNDJxAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Popup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Popup.html",
+          "hash": "N2vmyJb3S+rMGM9n3vjaiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.PushButtonWidget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.PushButtonWidget.html",
+          "hash": "EAR1Ak5lqmbQ3VrGHkp+eQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.RadioButtonGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.RadioButtonGroup.html",
+          "hash": "GWkNwEW6h7INSK8Q+hdfDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.RadioButtonWidget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.RadioButtonWidget.html",
+          "hash": "H8GnkuQoM3SnBLhgC1eFWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Redaction.QuadForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Redaction.QuadForm.html",
+          "hash": "aOvw18++HIDVRx/7npQsmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Redaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Redaction.html",
+          "hash": "bfAjx49LsdXJyU9c9EEL9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.RubberStamp.Icon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.RubberStamp.Icon.html",
+          "hash": "hMuFANrzJjtDHTne6fPLiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.RubberStamp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.RubberStamp.html",
+          "hash": "UK0rI1ZiGoA+ZEA/F+SqdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Screen.IconCaptionRelation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Screen.IconCaptionRelation.html",
+          "hash": "RML9YcGCl0OuoaA0TEu8AA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Screen.ScaleCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Screen.ScaleCondition.html",
+          "hash": "a4TWV2HlDX0QQRrMXn7l/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Screen.ScaleType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Screen.ScaleType.html",
+          "hash": "PikI2FBXukA1kAinTP83iA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Screen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Screen.html",
+          "hash": "QvtvEYIxkmlgOFe86V0yUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.SignatureWidget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.SignatureWidget.html",
+          "hash": "du3OzV0X79Iw0KERGOgODw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Sound.Icon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Sound.Icon.html",
+          "hash": "UGSx9iY/6Ap2LQh7wkqhwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Sound.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Sound.html",
+          "hash": "TEb15rXmNhEaUtVo4RVW0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Square.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Square.html",
+          "hash": "8li6bUpiFz1+hqdsHrj6Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Squiggly.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Squiggly.html",
+          "hash": "kdjdL8n8GoJZ+rTMi7a1wA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.StrikeOut.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.StrikeOut.html",
+          "hash": "A+nYWzWrbA0TnfHTWyPohQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Text.Icon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Text.Icon.html",
+          "hash": "55WVt67N8xj3RHNfEEUq/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Text.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Text.html",
+          "hash": "KBWzcBD8GVQ4SBAmNJftgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.TextMarkup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.TextMarkup.html",
+          "hash": "nwnwX926fBOBqAMItJDiQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.TextWidget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.TextWidget.html",
+          "hash": "+Gsr+wrlWKhjyVYs+krSFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Underline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Underline.html",
+          "hash": "RE1Bx8lbOklaE2a0zCUpPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Watermark.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Watermark.html",
+          "hash": "PzQpvKNCyvoPmxsNkHQoQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Widget.HighlightingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Widget.HighlightingMode.html",
+          "hash": "vm+LNB8vwirjkVv+CMv/Ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Widget.IconCaptionRelation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Widget.IconCaptionRelation.html",
+          "hash": "lwB8GVxcdxms1Wlx4YCO5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Widget.ScaleCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Widget.ScaleCondition.html",
+          "hash": "A3b2txVs54bgtguLy9XIYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Widget.ScaleType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Widget.ScaleType.html",
+          "hash": "6BRmnMvnuXfUT1oswYwIIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.Widget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.Widget.html",
+          "hash": "szX6TSw53b6mfwxVmgVm/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Annots.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Annots.html",
+          "hash": "UlEK0+I2mnaH7T2qSnaEYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.BitmapInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.BitmapInfo.html",
+          "hash": "eLIM9iifDEzlYDTXlIXT+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Bookmark.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Bookmark.html",
+          "hash": "ULGo64bkt5IfNGu6Gd/Npw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.CharData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.CharData.html",
+          "hash": "CixU2wZbayCVxW3ffKzf2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.CharIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.CharIterator.html",
+          "hash": "Z2E95tLQxwvENnkg6yKUMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.ColorPt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.ColorPt.html",
+          "hash": "MsgeRolgM1RHOEE84z+a9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.ColorSpace.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.ColorSpace.Type.html",
+          "hash": "P42NO7kbSi2XN9Qwle6v/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.ColorSpace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.ColorSpace.html",
+          "hash": "gc3d2CFoFpULnWFUsZIwTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.ContentReplacer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.ContentReplacer.html",
+          "hash": "REYsNbBSX6I8ecbGxPvH6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.ConversionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.ConversionOptions.html",
+          "hash": "zJ4Pj273G0VbUWwiB65wVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.EPUBOutputOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.EPUBOutputOptions.html",
+          "hash": "kb4v1/PybFPadcMI4J7m6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.FlattenFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.FlattenFlag.html",
+          "hash": "FrnRIq5e7DW7qrzgLftaRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.FlattenThresholdFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.FlattenThresholdFlag.html",
+          "hash": "g/GfF8CWln7eL/NHSb4JAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.HTMLOutputOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.HTMLOutputOptions.html",
+          "hash": "1cs0/5cCLWM/FJvpXlqhOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.Printer.Mode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.Printer.Mode.html",
+          "hash": "TUxGsO25B/9qdTaGo8Ht9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.Printer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.Printer.html",
+          "hash": "dYGm9RC4xPgaL/0F52MIfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.SVGOutputOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.SVGOutputOptions.html",
+          "hash": "ij+KXSrgyKqKyWtThj1PVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.TiffOutputOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.TiffOutputOptions.html",
+          "hash": "1E1lBUkQ8Hm9xoMNZ81GlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.XODOutputOptions.AnnotationOutputFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.XODOutputOptions.AnnotationOutputFlag.html",
+          "hash": "VZHJbjPn8wj6AfyKgxr0rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.XODOutputOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.XODOutputOptions.html",
+          "hash": "K0kXB8CR8/xpkfDgJbLySA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.XPSOutputCommonOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.XPSOutputCommonOptions.html",
+          "hash": "T7F6AVf4G6szF5qQSRNEKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.XPSOutputOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.XPSOutputOptions.html",
+          "hash": "j2QQnHGOPSDVjGFD9DqeIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Convert.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Convert.html",
+          "hash": "ZKl435sFa9bvwHi2qTm6sQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Date.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Date.html",
+          "hash": "cYw4hhy+zQVEXTRHdKupgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Destination.FitType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Destination.FitType.html",
+          "hash": "NSGWbrebUNedeWPqZS/Tog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Destination.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Destination.html",
+          "hash": "sQa/vN69Ws2TIhqA1T03GA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.DiffOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.DiffOptions.html",
+          "hash": "vUZe5O34H5kNMhjO5d5ZHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.DigitalSignatureField.DocumentPermissions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.DigitalSignatureField.DocumentPermissions.html",
+          "hash": "XA90UVbLpx7FD08tJ4lvGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.DigitalSignatureField.FieldPermissions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.DigitalSignatureField.FieldPermissions.html",
+          "hash": "n0NTi00SRjIX/buJfnyh6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.DigitalSignatureField.SubFilterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.DigitalSignatureField.SubFilterType.html",
+          "hash": "13DCTkkdlJO82o/E7wubOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.DigitalSignatureField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.DigitalSignatureField.html",
+          "hash": "igQskQ2rq0bb0yPlgWgf2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.DigitalSignatureFieldIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.DigitalSignatureFieldIterator.html",
+          "hash": "mJ4fbGpQEYkutNRDIMr7qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.DocumentConversion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.DocumentConversion.html",
+          "hash": "PDa25w09kB62r1ixsmQFCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.DocumentConversionResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.DocumentConversionResult.html",
+          "hash": "plr/XLTi/diRaH41S9Zzrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Element.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Element.Type.html",
+          "hash": "o282wmdxEElEjM/DcgDHIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Element.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Element.html",
+          "hash": "FQJVNQz5g9ualiSS1hjHnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.ElementBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.ElementBuilder.html",
+          "hash": "bMsJ9hKzCXN7junhWuVmHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.ElementReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.ElementReader.html",
+          "hash": "dtFllxeddR77Jae2mD67ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.ElementWriter.WriteMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.ElementWriter.WriteMode.html",
+          "hash": "leOhP5G8ajN3CVYbXCwc/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.ElementWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.ElementWriter.html",
+          "hash": "2rSbyo5f+vp0fGAPqmunkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Field.Flag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Field.Flag.html",
+          "hash": "gleFfg+7epIZr6b/IkOWpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Field.TextJustification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Field.TextJustification.html",
+          "hash": "MHKLhojoYJ8eZPblSEs50Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Field.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Field.Type.html",
+          "hash": "CR4pWXOrrjQvhj9WwhLKiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Field.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Field.html",
+          "hash": "UmwAZI294TMIziN0xie+BQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.FieldIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.FieldIterator.html",
+          "hash": "ZxSztBNXAqnWr8gT6+vEGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.FileSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.FileSpec.html",
+          "hash": "XT/IHbajMzt4k6dAnvtiQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Flattener.FlattenMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Flattener.FlattenMode.html",
+          "hash": "R/7r4Py4+/tWk5Y8zb+1QQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Flattener.Threshold.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Flattener.Threshold.html",
+          "hash": "YgTW3LkrtPPXLGN4VCiMNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Flattener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Flattener.html",
+          "hash": "4E6PeawEK0ARhsTJ4a/eXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Font.Encoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Font.Encoding.html",
+          "hash": "ufitRR3RdSc0ge09LD/ZaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Font.StandardType1Font.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Font.StandardType1Font.html",
+          "hash": "34n57p4gYAexq7bHmFtn1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Font.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Font.Type.html",
+          "hash": "zRV+aFAZgDBxJ4o9P4A2RQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Font.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Font.html",
+          "hash": "2+a0ddUQsFYPc8araAD0ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.FontCharCodeIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.FontCharCodeIterator.html",
+          "hash": "9FgesmkwSrBg9vG1SB+Vug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Function.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Function.Type.html",
+          "hash": "VwRBb2sKG1kbve5P17hH1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Function.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Function.html",
+          "hash": "GoXBI6NUojuH29OHqfMGiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.GSChangesIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.GSChangesIterator.html",
+          "hash": "YkDqEEWDWypW5fZD9Mn68g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.GState.BlendMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.GState.BlendMode.html",
+          "hash": "YwrGjzhL45kKeWWo+4UieQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.GState.GStateAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.GState.GStateAttribute.html",
+          "hash": "/I0jzpKirBw+puuwSbtMqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.GState.LineCap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.GState.LineCap.html",
+          "hash": "dIFp1k6EUxAlE84N2yNMuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.GState.LineJoin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.GState.LineJoin.html",
+          "hash": "39MCeyxv+EFXWPlq6UXZTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.GState.RenderingIntent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.GState.RenderingIntent.html",
+          "hash": "21koaDcXgQxkZdCAB0aa8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.GState.TextRenderingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.GState.TextRenderingMode.html",
+          "hash": "9Fzy5uRvmgrV/JPxRswpGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.GState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.GState.html",
+          "hash": "N6qPF4bzkUKIMCgOmQlx+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.GeometryCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.GeometryCollection.html",
+          "hash": "v63QVRWtOhArZHy3UDUfmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.GeometryCollectionSnappingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.GeometryCollectionSnappingMode.html",
+          "hash": "of33bzVSrS1Zw9fUvI+QJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Highlights.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Highlights.html",
+          "hash": "kIEarcbJwj3E1a8875FPkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Image.InputFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Image.InputFilter.html",
+          "hash": "UCwTSmMZScbkWlD/YZEHKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Image.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Image.html",
+          "hash": "sbHlXw0E6T1j3PNp6X+BCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Image2RGB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Image2RGB.html",
+          "hash": "ph3nMhMGPhJSV9iHCnBnXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Image2RGBA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Image2RGBA.html",
+          "hash": "5ZOByfFTNlBLsXhNKy0vrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.OCG.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.OCG.Config.html",
+          "hash": "FxzHhgo+z/HMa8D4eCWj6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.OCG.Context.OCDrawMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.OCG.Context.OCDrawMode.html",
+          "hash": "d0PP3IR2uuyJ81w1PpMjPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.OCG.Context.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.OCG.Context.html",
+          "hash": "WOdrKtt4lWzLrUnmi2nH5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.OCG.Group.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.OCG.Group.html",
+          "hash": "U+7g1D1VlPONlonLDq5k4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.OCG.OCMD.VisibilityPolicyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.OCG.OCMD.VisibilityPolicyType.html",
+          "hash": "IePWxhg3sLKM6xhSSR43eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.OCG.OCMD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.OCG.OCMD.html",
+          "hash": "b2VhfiO+ilBbUeaB8Dx4NA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.OCG.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.OCG.html",
+          "hash": "0n+0IqSNaMjhz/StaIR/QQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.OfficeToPDFOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.OfficeToPDFOptions.html",
+          "hash": "8Wm3y8tczolecn6eDEMu6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Optimizer.ImageSettings.CompressionMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Optimizer.ImageSettings.CompressionMode.html",
+          "hash": "vOsvduHpI+kA+OqtLCjcTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Optimizer.ImageSettings.DownsampleMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Optimizer.ImageSettings.DownsampleMode.html",
+          "hash": "GNGjuk9xBYwVi0PYDdPiFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Optimizer.ImageSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Optimizer.ImageSettings.html",
+          "hash": "iVJIMdno4jNahco31ZHYZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Optimizer.MonoImageSettings.CompressionMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Optimizer.MonoImageSettings.CompressionMode.html",
+          "hash": "iiAMItJvocI0Q0X2s/TyGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Optimizer.MonoImageSettings.DownsampleMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Optimizer.MonoImageSettings.DownsampleMode.html",
+          "hash": "rTBMeVO4XSvLojf5/G+pGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Optimizer.MonoImageSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Optimizer.MonoImageSettings.html",
+          "hash": "E+r9MZ8nP5iCeqwtIlGcsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Optimizer.OptimizerSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Optimizer.OptimizerSettings.html",
+          "hash": "+4wbc3B6L05ZAPpTkRny/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Optimizer.TextSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Optimizer.TextSettings.html",
+          "hash": "7GrWXjxJOb67CDHCkxRb3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Optimizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Optimizer.html",
+          "hash": "sLtecqfet+oIv8A0QCj1sw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.OptionsBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.OptionsBase.html",
+          "hash": "kZuoABgnnq88K0Y7eZJnPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFA.PDFACompliance.Conformance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFA.PDFACompliance.Conformance.html",
+          "hash": "6vEMOp4aUoUD3QmsuGeMtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFA.PDFACompliance.ErrorCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFA.PDFACompliance.ErrorCode.html",
+          "hash": "2pUQRLBeYkbx0KgTGk0l1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFA.PDFACompliance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFA.PDFACompliance.html",
+          "hash": "sFsLRjQkj6nMGruYeNgw8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFA.html",
+          "hash": "xGIjI3dHnG8pBsBAkL21Cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFDoc.ExtractFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFDoc.ExtractFlag.html",
+          "hash": "qwnNzKJXBp0zuotaZzt6yQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFDoc.FlattenAnnotationFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFDoc.FlattenAnnotationFlag.html",
+          "hash": "n4NzxNdIssfGTD71hKvKbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFDoc.InsertFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFDoc.InsertFlag.html",
+          "hash": "OpqU/gNwVJIpNj5bZVl3pA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFDoc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFDoc.html",
+          "hash": "WKieAiyQdSleV6EYH5jzgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFDocGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFDocGenerator.html",
+          "hash": "H1fZxjhCmwPyE6Zhj/7p9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFDocInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFDocInfo.html",
+          "hash": "XGhTYSRVXXOTkunn+7lX8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFDocViewPrefs.PageLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFDocViewPrefs.PageLayout.html",
+          "hash": "Y5hBPapVoZU/Tvz565zl2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFDocViewPrefs.PageMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFDocViewPrefs.PageMode.html",
+          "hash": "s9LTmdOlpQwBSXJZ4hB/fQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFDocViewPrefs.ViewerPref.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFDocViewPrefs.ViewerPref.html",
+          "hash": "sc8nMQ1ZHs3ew+gwe2qgSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFDocViewPrefs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFDocViewPrefs.html",
+          "hash": "cnvSJPDqwRr2CN5gCz+pnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFDraw.PixelFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFDraw.PixelFormat.html",
+          "hash": "UXQ3OOtTpj78EdlSEbysag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFDraw.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFDraw.html",
+          "hash": "YrG+8OClX7b1maJPskG8bA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFNetInternalTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFNetInternalTools.html",
+          "hash": "gcOouMT+90/pKfxQY+Ui3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFNetInternalToolsLogBackend.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFNetInternalToolsLogBackend.html",
+          "hash": "1/43MJWX9ak9CivwDjkzqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFNetInternalToolsLogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFNetInternalToolsLogLevel.html",
+          "hash": "eAoPgQB/xU7jtMEfmV8sYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFRasterizer.ColorPostProcessMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFRasterizer.ColorPostProcessMode.html",
+          "hash": "ar9ptw7UqwYYzim2oBPR1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFRasterizer.OverprintPreviewMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFRasterizer.OverprintPreviewMode.html",
+          "hash": "/0+FyraoXOxVDs0DhoEWHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFRasterizer.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFRasterizer.Type.html",
+          "hash": "1Gn44qZ2pF5G3K1g0UM/8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFRasterizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFRasterizer.html",
+          "hash": "V+d50bSFE/9QxvPd9Wr37Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PDFViewCtrl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PDFViewCtrl.html",
+          "hash": "hHFMW5Vho9xTCHC1GIWujg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Page.Box.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Page.Box.html",
+          "hash": "zWsYPP3cg61gKxoox+orPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Page.Rotate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Page.Rotate.html",
+          "hash": "BynPhOx7VWruiAxyFMw4lQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Page.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Page.html",
+          "hash": "uSiNL8js+QsV2l59Yqn41Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PageIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PageIterator.html",
+          "hash": "sUhuGdEZ28u4irCo/e21lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PageLabel.Style.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PageLabel.Style.html",
+          "hash": "Jv6nKnKuF+62QefBXCZ8Og=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PageLabel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PageLabel.html",
+          "hash": "kPLae3MRFHFwJRnmF5xEhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PageSet.Filter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PageSet.Filter.html",
+          "hash": "7vNPVg66Ug8jLHyBAKBWug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PageSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PageSet.html",
+          "hash": "nep1icTSNJtvOo+UqC8M2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PathData.PathSegmentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PathData.PathSegmentType.html",
+          "hash": "khkkrhVtsRQblAflkVQ8Ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PathData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PathData.html",
+          "hash": "FcbQLXGlZ4x6pa77/4/B1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PatternColor.TilingType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PatternColor.TilingType.html",
+          "hash": "VYGE3ldEjhEKKlGygB+KIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PatternColor.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PatternColor.Type.html",
+          "hash": "aUQ9ciYd9FNOv7sWb/8ydw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.PatternColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.PatternColor.html",
+          "hash": "IBWsReEcpf13lhLXvE6pYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Point.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Point.html",
+          "hash": "wmAgr1zYS3Idq3ya9n07ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Print.PrintContent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Print.PrintContent.html",
+          "hash": "tZDP762aKydeAVw+f+9ccw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Print.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Print.html",
+          "hash": "6V1ksvebMDgYxfcljaAKKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.QuadPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.QuadPoint.html",
+          "hash": "FFq/M4YeWRQJBUBb6hMpOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Rect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Rect.html",
+          "hash": "yvlP6mjGv9RMq7fQ/oIhNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.RectCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.RectCollection.html",
+          "hash": "vnazasnUp6TKf36AzGBtHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Redactor.Appearance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Redactor.Appearance.html",
+          "hash": "tIfC1bHKFLNX696Z4o4d8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Redactor.Redaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Redactor.Redaction.html",
+          "hash": "MNssgab9RZWBvbpCbJyOmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Redactor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Redactor.html",
+          "hash": "PVSedYOPq/gTfB55YL8nEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Shading.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Shading.Type.html",
+          "hash": "gkp61ScS9QHgp6jF62gMJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Shading.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Shading.html",
+          "hash": "rt/5f5A9TPxtTxLS3tR0lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Stamper.HorizontalAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Stamper.HorizontalAlignment.html",
+          "hash": "qtxv3l9uzBabgPQe015X+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Stamper.SizeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Stamper.SizeType.html",
+          "hash": "ZBidEbgDCLfp1xEPlWSw8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Stamper.TextAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Stamper.TextAlignment.html",
+          "hash": "KZhVLZv1s/U2cvoqJz1QVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Stamper.VerticalAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Stamper.VerticalAlignment.html",
+          "hash": "S55YX+EtfmD+mJj607hFKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Stamper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Stamper.html",
+          "hash": "yH714dtG3JTe9FrMvH0GOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Struct.ContentItem.Type.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Struct.ContentItem.Type.html",
+          "hash": "aIp5YhobJlZl9m10B+NNSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Struct.ContentItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Struct.ContentItem.html",
+          "hash": "qIA12kM9X/CW9RdDDx2NUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Struct.SElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Struct.SElement.html",
+          "hash": "0E5ixtup/oE+Eh+iDXNjbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Struct.STree.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Struct.STree.html",
+          "hash": "dUEMNVHIoNfPsmVqOXAPWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.Struct.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.Struct.html",
+          "hash": "Swwuajgx4OLGb6T0PaAU7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.TextExtractor.Line.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.TextExtractor.Line.html",
+          "hash": "Sm0a3zc+KLMFdaRu9vLOLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.TextExtractor.ProcessingFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.TextExtractor.ProcessingFlags.html",
+          "hash": "KphQGFgkNNivu3MzVSQHDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.TextExtractor.Style.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.TextExtractor.Style.html",
+          "hash": "L39QpZ5tPSmPh2vIIigGdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.TextExtractor.Word.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.TextExtractor.Word.html",
+          "hash": "kZlzkgjZLURU/Hof5uimUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.TextExtractor.XMLOutputFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.TextExtractor.XMLOutputFlags.html",
+          "hash": "snDtsez/qZ3d+y7NwYy+Eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.TextExtractor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.TextExtractor.html",
+          "hash": "rrRfs9z/Ewx2xD/oiv1kaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.TextSearch.ResultCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.TextSearch.ResultCode.html",
+          "hash": "VGDoWViefFdKhc/4vDT+sw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.TextSearch.SearchMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.TextSearch.SearchMode.html",
+          "hash": "6VapRemuFNJMEYOSyFGkCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.TextSearch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.TextSearch.html",
+          "hash": "us5bju2De1LfIXNdRKuM6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.TypeConvertHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.TypeConvertHelper.html",
+          "hash": "4UO8ZwdAPIQ9wASg2FsfGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.ViewChangeCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.ViewChangeCollection.html",
+          "hash": "RAOkbJNkyAFD36VUp690kA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.WebFontDownloader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.WebFontDownloader.html",
+          "hash": "ZgFrwQ6QBHrY2+U8TUou4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.WordToPDFOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.WordToPDFOptions.html",
+          "hash": "eyKGPhHALAmNxSmbiKslgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDF.html",
+          "hash": "LfeoWMo64AOW3nuFbpXi0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDFNet.CMSType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDFNet.CMSType.html",
+          "hash": "2oS0b2U4t0D8ET5LVY46Nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDFNet.CharacterOrdering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDFNet.CharacterOrdering.html",
+          "hash": "amvTLcq7rbPaK26yiUtGZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.PDFNet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.PDFNet.html",
+          "hash": "5INSMIO1ojCkQQPykgCaiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.DictIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.DictIterator.html",
+          "hash": "X6iefuxobfkdoOW80om5dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.DocSnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.DocSnapshot.html",
+          "hash": "c+GLB2SK2BJI3LLLC3zyQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.NameTree.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.NameTree.html",
+          "hash": "g9KTjc1vA6OoMqqlehAlgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.NameTreeIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.NameTreeIterator.html",
+          "hash": "vDCQ3vDg7ojM8YAjwvMWtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.NumberTreeIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.NumberTreeIterator.html",
+          "hash": "l6wAcQLSo7cOt8yFPudq3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.Obj.ObjType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.Obj.ObjType.html",
+          "hash": "vosPX1JVfFU1V7mA0qIcjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.Obj.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.Obj.html",
+          "hash": "tEdT90hA+kn9dBwU1gYpig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.ObjSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.ObjSet.html",
+          "hash": "P1adcyee9C42MXpY3INnZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.ResultSnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.ResultSnapshot.html",
+          "hash": "3k4eFiv2EhJuhV00bcdX3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.SDFDoc.SaveOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.SDFDoc.SaveOptions.html",
+          "hash": "WHEKiaGmxLgGMXyUhr8EjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.SDFDoc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.SDFDoc.html",
+          "hash": "V6exKcxRxdYUKBoPx5tpiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.SecurityHandler.AlgorithmType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.SecurityHandler.AlgorithmType.html",
+          "hash": "fSm7mtDoiYbp396dYVhm2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.SecurityHandler.Permission.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.SecurityHandler.Permission.html",
+          "hash": "YTvy7GvxG1ElbLLJXb1F4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.SecurityHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.SecurityHandler.html",
+          "hash": "z2DGfBEnyGK3db7oQ2gNnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.SignatureHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.SignatureHandler.html",
+          "hash": "/x4feIZRrQZYa2Br3kf1CQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.SignatureHandlerId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.SignatureHandlerId.html",
+          "hash": "g7eQf/8c7tUHqzLD/Gjtjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.UndoManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.UndoManager.html",
+          "hash": "LKbaQwZ4v+gYjK9QEn8hnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.SDF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.SDF.html",
+          "hash": "nIze3LeeKDK7RJiFlIM+Zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/pdftron.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/pdftron.html",
+          "hash": "AyTZafE7Y+5/X4VhP3bFLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "GF9aTWkIImpakYIlup/xFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "24ZPfJLJc5j2MoNyxOJskA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

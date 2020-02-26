@@ -1,0 +1,581 @@
+{
+  "version": 1,
+  "dependencies": {
+    ".NETFramework,Version=v4.5": {},
+    ".NETFramework,Version=v4.5/win10-arm": {},
+    ".NETFramework,Version=v4.5/win10-arm-aot": {},
+    ".NETFramework,Version=v4.5/win10-arm64-aot": {},
+    ".NETFramework,Version=v4.5/win10-x64": {},
+    ".NETFramework,Version=v4.5/win10-x64-aot": {},
+    ".NETFramework,Version=v4.5/win10-x86": {},
+    ".NETFramework,Version=v4.5/win10-x86-aot": {},
+    ".NETStandard,Version=v2.0": {
+      "NETStandard.Library": {
+        "type": "Direct",
+        "requested": "[2.0.3, )",
+        "resolved": "2.0.3",
+        "contentHash": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Microsoft.NETCore.Platforms": {
+        "type": "Transitive",
+        "resolved": "1.1.0",
+        "contentHash": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A=="
+      }
+    },
+    ".NETStandard,Version=v2.0/win10-arm": {},
+    ".NETStandard,Version=v2.0/win10-arm-aot": {},
+    ".NETStandard,Version=v2.0/win10-arm64-aot": {},
+    ".NETStandard,Version=v2.0/win10-x64": {},
+    ".NETStandard,Version=v2.0/win10-x64-aot": {},
+    ".NETStandard,Version=v2.0/win10-x86": {},
+    ".NETStandard,Version=v2.0/win10-x86-aot": {},
+    "MonoAndroid,Version=v9.0": {
+      "Xamarin.AndroidX.Biometric": {
+        "type": "Direct",
+        "requested": "[1.0.0-preview06, )",
+        "resolved": "1.0.0-preview06",
+        "contentHash": "4xF7khoycaUbVqp3uCQuqDwPRzn2hRiV1jKEluWl1PTwOa7sLI4d1KPx2XtM8rv4QfV4wLJFAeCunNUDtPWvHA==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.AppCompat": "1.1.0-preview06",
+          "Xamarin.AndroidX.Core": "1.1.0-preview06",
+          "Xamarin.AndroidX.Fragment": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Activity": {
+        "type": "Transitive",
+        "resolved": "1.0.0-preview06",
+        "contentHash": "ILYdpUOzyH472O0LIlZ6mXq3Pmgfr8hraiOsuvEUWWXD1cS1tugPniNqbrQrDdIJ9haUS6aYq0TElyC2G15/4w==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Core": "1.1.0-preview06",
+          "Xamarin.AndroidX.Lifecycle.Runtime": "2.1.0-preview06",
+          "Xamarin.AndroidX.Lifecycle.ViewModel": "2.1.0-preview06",
+          "Xamarin.AndroidX.SavedState": "1.0.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Annotation": {
+        "type": "Transitive",
+        "resolved": "1.1.0-preview06",
+        "contentHash": "oYgKV1Wq2Tu3zPqbxXpW5SqMYqG7uzZUc/FUpcKjlY67bosvFeSlB4ZTrbGE0vH+W+FQetOSa+K9fLFvZ8T5gg==",
+        "dependencies": {
+          "Xamarin.AndroidX.Migration": "1.0.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.AppCompat": {
+        "type": "Transitive",
+        "resolved": "1.1.0-preview06",
+        "contentHash": "FSwh8xJYXMY1IyUs/8I8eCzH2936EmQnQvBJB1ZCTOJsQr6EfErI8pE6i4RrxXCarsW5Tyq//LS8KDbjrYw9jQ==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.AppCompat.Resources": "1.1.0-preview06",
+          "Xamarin.AndroidX.Collection": "1.1.0-preview06",
+          "Xamarin.AndroidX.Core": "1.1.0-preview06",
+          "Xamarin.AndroidX.CursorAdapter": "1.0.0-preview06",
+          "Xamarin.AndroidX.DrawerLayout": "1.0.0-preview06",
+          "Xamarin.AndroidX.Fragment": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.AppCompat.Resources": {
+        "type": "Transitive",
+        "resolved": "1.1.0-preview06",
+        "contentHash": "mXcnbdHcL5hMpegu/HSQ5uqYxLs5/Kw2x8beWgD2o3iKf39nqMii9SfA678A6vF7D/Wxw9hpW+MkeZ1WkLjYKw==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Collection": "1.1.0-preview06",
+          "Xamarin.AndroidX.Core": "1.1.0-preview06",
+          "Xamarin.AndroidX.VectorDrawable": "1.1.0-preview06",
+          "Xamarin.AndroidX.VectorDrawable.Animated": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Arch.Core.Common": {
+        "type": "Transitive",
+        "resolved": "2.1.0-preview06",
+        "contentHash": "lMQMygoI3hug4lUV0/PE0yRyAM8pVMIfJcwe9Lc4X3G9Bn6D4MkpDhhzyn5/YZfe9alQDXHwBI0RU/uxqiOVcw==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Arch.Core.Runtime": {
+        "type": "Transitive",
+        "resolved": "2.1.0-preview06",
+        "contentHash": "Y30iwc68MJra+8GOXJgv6nEa8cLG8Tr+M4rFcHWxVVqLX0UsmKHpukswnrTDnlwEPoLrs7o4TwY8lb6NKMZ7Kw==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Arch.Core.Common": "2.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Collection": {
+        "type": "Transitive",
+        "resolved": "1.1.0-preview06",
+        "contentHash": "r5YUP1NOhrRnNEWzra9Rz0ZLNQQEovchRkZQT1XXQZZ4NwwjSjb8/eiTSmGSSA2l/2ftAp0g00drtESXji31sw==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Core": {
+        "type": "Transitive",
+        "resolved": "1.1.0-preview06",
+        "contentHash": "7XI3CRA8nLbwPLKRZE3IGKlu0BK2R59qU+7tut0YxFpUDwJiq2XbeA+yrNwMiV79J3SWJ7GIxoOcena1YKnOOQ==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Collection": "1.1.0-preview06",
+          "Xamarin.AndroidX.Lifecycle.Runtime": "2.1.0-preview06",
+          "Xamarin.AndroidX.VersionedParcelable": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.CursorAdapter": {
+        "type": "Transitive",
+        "resolved": "1.0.0-preview06",
+        "contentHash": "vc1BFa/lsNWSzpT7zDft9Hd7HhuYOYr1G25GlJvlOVgK/7UZdQwUqrHEUP41sAc15m8GNtRGsH6ufhAE6J0dDQ==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.CustomView": {
+        "type": "Transitive",
+        "resolved": "1.0.0-preview06",
+        "contentHash": "eRQq/34SiCgSelE2ZODslBBcX58dGNqYpqX4KyQ29XQmNj1LQU8Litf5d0DhFQsqd9STZj4SmvXszX81EY4jIw==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Core": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.DrawerLayout": {
+        "type": "Transitive",
+        "resolved": "1.0.0-preview06",
+        "contentHash": "33ERMjqz8HZEjsVdyBHgn4YseQ/+q7epF9GT+wbx+ycY+Wt2N8y+RW807cQzX0Su3B81vCoEY80Lm0JeZ//lAw==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Core": "1.1.0-preview06",
+          "Xamarin.AndroidX.CustomView": "1.0.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Fragment": {
+        "type": "Transitive",
+        "resolved": "1.1.0-preview06",
+        "contentHash": "seNYBcUeDqAHXaW77ZSk2jMgGlbiL+w7/3KVus5T5QOnF4ZsYktN3j8qPA6FpniFyjw7But4kSUPWXLOwy5QaA==",
+        "dependencies": {
+          "Xamarin.AndroidX.Activity": "1.0.0-preview06",
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Collection": "1.1.0-preview06",
+          "Xamarin.AndroidX.Core": "1.1.0-preview06",
+          "Xamarin.AndroidX.Lifecycle.ViewModel": "2.1.0-preview06",
+          "Xamarin.AndroidX.Loader": "1.1.0-preview06",
+          "Xamarin.AndroidX.ViewPager": "1.0.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Interpolator": {
+        "type": "Transitive",
+        "resolved": "1.0.0-preview06",
+        "contentHash": "4pW6jMob+HW+DjxBr77R4LqBOrnxCv4HnZNqmyF3OWOojTjp5lQ/Mffvm323r8CBIh1dzT5nbIiKcj1D5SJ64Q==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Lifecycle.Common": {
+        "type": "Transitive",
+        "resolved": "2.1.0-preview06",
+        "contentHash": "v2cQir9Hwogb4Fax2Dmo04/D6yxeytN+O+dM7HlvhZ+QhlKgkpepcgEwQ8fdP+6MXnJfDiFW+az/sAVC15lZMw==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Lifecycle.LiveData.Core": {
+        "type": "Transitive",
+        "resolved": "2.1.0-preview06",
+        "contentHash": "4X7kmKAQUM3itVH2N79Z8D3bu1hAcCYV8ssXfHXLuWHQLoUiriGAfElsalkrvr6CZF0TdO6cePNYhCrz1ha8OA==",
+        "dependencies": {
+          "Xamarin.AndroidX.Arch.Core.Common": "2.1.0-preview06",
+          "Xamarin.AndroidX.Arch.Core.Runtime": "2.1.0-preview06",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Lifecycle.Runtime": {
+        "type": "Transitive",
+        "resolved": "2.1.0-preview06",
+        "contentHash": "rT363JdTPMz78pxETgcR4l2CTEYQeU8XYdLgZvUemuMBMtpfRcOGUji8hqkDVGTI3F2GV0o/sG253zi2yjbqeQ==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Arch.Core.Common": "2.1.0-preview06",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Lifecycle.ViewModel": {
+        "type": "Transitive",
+        "resolved": "2.1.0-preview06",
+        "contentHash": "dQgcVqo///Ul0oxTWR7htIgMQvmOgYKmnyf88n8xuA3rfEDqe0GDMNDXqK2Bp86A2VIXU/pjt0pQtEemfx29Xg==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Loader": {
+        "type": "Transitive",
+        "resolved": "1.1.0-preview06",
+        "contentHash": "V+LemE2NcULUTm6nlIyvzUkN0lq4ltos1vybD0FVCxlD08I5u3vQxWw/89GQcTLskDv5TnbZEwWKMeYd+z4mPg==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Collection": "1.1.0-preview06",
+          "Xamarin.AndroidX.Core": "1.1.0-preview06",
+          "Xamarin.AndroidX.Lifecycle.LiveData.Core": "2.1.0-preview06",
+          "Xamarin.AndroidX.Lifecycle.ViewModel": "2.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.Migration": {
+        "type": "Transitive",
+        "resolved": "1.0.0-preview06",
+        "contentHash": "JWEmkvMSzsinGBRCZCXfdcbY9Xv/UaUeLqo2I2W+Xztj+t8VYwzOH64oFmO9VfmjPAhArJNKfyosfyXuTECl2A==",
+        "dependencies": {
+          "Xamarin.AndroidX.MultiDex": "2.0.1-preview03"
+        }
+      },
+      "Xamarin.AndroidX.MultiDex": {
+        "type": "Transitive",
+        "resolved": "2.0.1-preview03",
+        "contentHash": "nA9JWgIqa8KYUMukh77kUyhP6XWMBkaThUhL85r6dP80LlR+S8gocnREfZKrEvwx+R/CMS3XRAFGlJdEcG6+7w=="
+      },
+      "Xamarin.AndroidX.SavedState": {
+        "type": "Transitive",
+        "resolved": "1.0.0-preview06",
+        "contentHash": "KAHAfhZTQuFGS9kmpFgeAy8VinX5dD1OtTFxrVMfG1Ebk6mP2A3PTbaO8YoylkVxyFIfX1zK9coU5w7twwqdmA==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Arch.Core.Common": "2.1.0-preview06",
+          "Xamarin.AndroidX.Lifecycle.Common": "2.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.VectorDrawable": {
+        "type": "Transitive",
+        "resolved": "1.1.0-preview06",
+        "contentHash": "ryZOnqADGmXKoPN1iDDKklwb60PJJtbkgMRlawX3DqhJc66CwCyeYssqxCkM6yJV+ZXGmJlqLnU0pZZ+VJeBgw==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Collection": "1.1.0-preview06",
+          "Xamarin.AndroidX.Core": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.VectorDrawable.Animated": {
+        "type": "Transitive",
+        "resolved": "1.1.0-preview06",
+        "contentHash": "cLwzDW6knYs1Z2CgGGlrgDQnIT1u3bLZuj1Q7Mn8dlGkMACA3Qd8eLeOAPrAz/0AADSgPxrgcBbKrfu4hjSOfA==",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.1.0-preview06",
+          "Xamarin.AndroidX.Interpolator": "1.0.0-preview06",
+          "Xamarin.AndroidX.VectorDrawable": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.VersionedParcelable": {
+        "type": "Transitive",
+        "resolved": "1.1.0-preview06",
+        "contentHash": "LKvbNPTk53Y82WQFX3eeGebudAMhhuPkkDxvtpxJiP8rrNJNNq5FeYvfGxkHtCREcPYjOxhydHZHfgN76XLg7Q==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Collection": "1.1.0-preview06"
+        }
+      },
+      "Xamarin.AndroidX.ViewPager": {
+        "type": "Transitive",
+        "resolved": "1.0.0-preview06",
+        "contentHash": "iQdPpnhSwyN6aFdcHMh9RDw6j6IC+d/QCPMURkqCm1/QGl1wwkZ+hv4s8TxZqJKH+cdyYMGDhZ2/2oQAsCNpWw==",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0-preview06",
+          "Xamarin.AndroidX.Core": "1.1.0-preview06",
+          "Xamarin.AndroidX.CustomView": "1.0.0-preview06"
+        }
+      }
+    },
+    "MonoAndroid,Version=v9.0/win10-arm": {},
+    "MonoAndroid,Version=v9.0/win10-arm-aot": {},
+    "MonoAndroid,Version=v9.0/win10-arm64-aot": {},
+    "MonoAndroid,Version=v9.0/win10-x64": {},
+    "MonoAndroid,Version=v9.0/win10-x64-aot": {},
+    "MonoAndroid,Version=v9.0/win10-x86": {},
+    "MonoAndroid,Version=v9.0/win10-x86-aot": {},
+    "Tizen,Version=v4.0": {
+      "Tizen.NET": {
+        "type": "Direct",
+        "requested": "[5.0.0.14562, )",
+        "resolved": "5.0.0.14562",
+        "contentHash": "DletjjDYCiy9oIr0NSyZ5QMP34sCsC41LgTs+Z8KeJrlFZnDCwOybX+uSs5OpRwQIDZCacpqnwKfYMxUFrnTBw==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Tizen.NET.API4": "4.0.1.14152"
+        }
+      },
+      "Microsoft.NETCore.Platforms": {
+        "type": "Transitive",
+        "resolved": "2.0.0",
+        "contentHash": "CCf4NjmDOoise7FAij2VPuHIgKKsu696vkTwhOkPVQfLsTmB2WLFfQ4yeO5Udtk8FD636UBMx6Y9eovzJKT76A=="
+      },
+      "Tizen.NET.API4": {
+        "type": "Transitive",
+        "resolved": "4.0.1.14152",
+        "contentHash": "2awGXYaZ4W+ibz2qF5RbQCywX4m9eyGONUA0Zr+uuadNcPZrcplF12PG7a+k5iaDFvk4jcCq5AL7wYl3FTnI6Q=="
+      }
+    },
+    "Tizen,Version=v4.0/win10-arm": {},
+    "Tizen,Version=v4.0/win10-arm-aot": {},
+    "Tizen,Version=v4.0/win10-arm64-aot": {},
+    "Tizen,Version=v4.0/win10-x64": {},
+    "Tizen,Version=v4.0/win10-x64-aot": {},
+    "Tizen,Version=v4.0/win10-x86": {},
+    "Tizen,Version=v4.0/win10-x86-aot": {},
+    "UAP,Version=v10.0.16299": {
+      "Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Direct",
+        "requested": "[6.1.9, )",
+        "resolved": "6.1.9",
+        "contentHash": "Z9Delrz1l8zEuhvuMljgiLqKQSsuvW0ijbsP2QCuC4syYuidXxfXBfnlisYPHunNoALLIIpRaFVTJ65K1FvxHg==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.Net.Native.Compiler": "2.1.8",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "NETStandard.Library": "2.0.3"
+        }
+      },
+      "Microsoft.Net.Native.Compiler": {
+        "type": "Transitive",
+        "resolved": "2.1.8",
+        "contentHash": "XhelL0kagNwYtUOQVsdCOO963yiDVgh8W8Dr0W0pKEn3aJCVMkvHUK07sRDpPbzBlbEtMXXvm/epFHKZ4NVt2Q==",
+        "dependencies": {
+          "runtime.win10-arm.Microsoft.Net.Native.Compiler": "2.1.8",
+          "runtime.win10-x64.Microsoft.Net.Native.Compiler": "2.1.8",
+          "runtime.win10-x86.Microsoft.Net.Native.Compiler": "2.1.8"
+        }
+      },
+      "Microsoft.Net.UWPCoreRuntimeSdk": {
+        "type": "Transitive",
+        "resolved": "2.1.2",
+        "contentHash": "AxVKlbHOIQbgHE7bbxo++qrXao3f3APPBXch/E0RYETmhmTlxSSssXcowGk3dch8K6VUpd77by87RysEogT6JQ==",
+        "dependencies": {
+          "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2"
+        }
+      },
+      "Microsoft.NETCore.Platforms": {
+        "type": "Transitive",
+        "resolved": "2.0.0",
+        "contentHash": "CCf4NjmDOoise7FAij2VPuHIgKKsu696vkTwhOkPVQfLsTmB2WLFfQ4yeO5Udtk8FD636UBMx6Y9eovzJKT76A=="
+      },
+      "NETStandard.Library": {
+        "type": "Transitive",
+        "resolved": "2.0.3",
+        "contentHash": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "runtime.win10-arm.Microsoft.Net.Native.Compiler": {
+        "type": "Transitive",
+        "resolved": "2.1.8",
+        "contentHash": "rtnjgxFoFFOmCPTtYYWU4qSKjJmTNFnHwPDgQBAbloXXzos2DSwmPvLulOdZyVEZQAAM5wjeuWbQGPcWA0OkwA==",
+        "dependencies": {
+          "runtime.win10-arm.Microsoft.Net.Native.SharedLibrary": "2.1.8"
+        }
+      },
+      "runtime.win10-arm.Microsoft.Net.Native.SharedLibrary": {
+        "type": "Transitive",
+        "resolved": "2.1.8",
+        "contentHash": "AgZE8ap24GXzm3P8HA0GefOwej4rTGOD94aSnnJZ28jj9hKdZM7UmcS90+/kLKkzkFBZLRK7+UMHn2SPFPoTug=="
+      },
+      "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk": {
+        "type": "Transitive",
+        "resolved": "2.1.2",
+        "contentHash": "IasONRto6AAl6LdG/usV/CsC+gCvl3+oan4PmRiwhbtQnr8SOzN4L7OP3e78OjbcU99bzUoyWkYBD3C3WOOwag=="
+      },
+      "runtime.win10-x64.Microsoft.Net.Native.Compiler": {
+        "type": "Transitive",
+        "resolved": "2.1.8",
+        "contentHash": "qVsevH8UVs8G6wKRoAeXWzwfmllWURi/acPZdK8qHFH4a2/dzNo30UxJdaglTYXjTqqaO8ZL5JvBnK1B1wK9aA==",
+        "dependencies": {
+          "runtime.win10-x64.Microsoft.Net.Native.SharedLibrary": "2.1.8"
+        }
+      },
+      "runtime.win10-x64.Microsoft.Net.Native.SharedLibrary": {
+        "type": "Transitive",
+        "resolved": "2.1.8",
+        "contentHash": "aUTYTKqelLL5dQOTWld3aVFamtazKyf0UgVCFRlb6/WAaIg2e+W6elf66y+uy76CYTQuKJ7zrQqzB6Cokko3fA=="
+      },
+      "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk": {
+        "type": "Transitive",
+        "resolved": "2.1.2",
+        "contentHash": "O3ykUbGKlY3bdapcCEyUCRH/dR2ylrtnLnVOpzv33PPtZvorKWcrB8DNuaBmfAzTCNKMSSbtR0/3yYysUpXbFg=="
+      },
+      "runtime.win10-x86.Microsoft.Net.Native.Compiler": {
+        "type": "Transitive",
+        "resolved": "2.1.8",
+        "contentHash": "ikLCf5erXpW0vwppcZN77EcK6v6CSS0Z9DuFif2FfXuCsWbbcARqoBnM/4a1n6Ug4MXhhr9YSPtM3gUmpJrWrQ==",
+        "dependencies": {
+          "runtime.win10-x86.Microsoft.Net.Native.SharedLibrary": "2.1.8"
+        }
+      },
+      "runtime.win10-x86.Microsoft.Net.Native.SharedLibrary": {
+        "type": "Transitive",
+        "resolved": "2.1.8",
+        "contentHash": "4VD4rfGFJ9SJxVXkbRFuQUSj583VHg6BK7ZyKA+OYjjU7bqxvqk2hD2o/yBALPSPO/30uIkzzrmONOAiwJBbqQ=="
+      },
+      "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk": {
+        "type": "Transitive",
+        "resolved": "2.1.2",
+        "contentHash": "7FFnETsDe+tu8JllHnJ+eGAqGG+8JSneCPKfwilk1gwAngzCw3+5g097LyomIjcHhCYMo3wjHFDP5sI2gvXrQA=="
+      }
+    },
+    "UAP,Version=v10.0.16299/win10-arm": {
+      "Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Direct",
+        "requested": "[6.1.9, )",
+        "resolved": "6.1.9",
+        "contentHash": "Z9Delrz1l8zEuhvuMljgiLqKQSsuvW0ijbsP2QCuC4syYuidXxfXBfnlisYPHunNoALLIIpRaFVTJ65K1FvxHg==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.Net.Native.Compiler": "2.1.8",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "NETStandard.Library": "2.0.3",
+          "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform": "6.1.9"
+        }
+      },
+      "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Transitive",
+        "resolved": "6.1.9",
+        "contentHash": "FLc9FFx67Xd/LglhXaNNrI++XGwDzIoJL7IH4Roo+x6K9daAGh58q7RDI50re+KP97mEpLwx2bkupQz9tOfsWw=="
+      }
+    },
+    "UAP,Version=v10.0.16299/win10-arm-aot": {
+      "Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Direct",
+        "requested": "[6.1.9, )",
+        "resolved": "6.1.9",
+        "contentHash": "Z9Delrz1l8zEuhvuMljgiLqKQSsuvW0ijbsP2QCuC4syYuidXxfXBfnlisYPHunNoALLIIpRaFVTJ65K1FvxHg==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.Net.Native.Compiler": "2.1.8",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "NETStandard.Library": "2.0.3",
+          "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.1.9"
+        }
+      },
+      "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Transitive",
+        "resolved": "6.1.9",
+        "contentHash": "YlEnafP+HovFHMJZYG6pG0TH9buA0HeRVFK7w1G1tcq9+yg6P9fs3atRdaJtrvSDYTfh1MPb7ax52mRYawBiWQ=="
+      }
+    },
+    "UAP,Version=v10.0.16299/win10-arm64-aot": {},
+    "UAP,Version=v10.0.16299/win10-x64": {
+      "Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Direct",
+        "requested": "[6.1.9, )",
+        "resolved": "6.1.9",
+        "contentHash": "Z9Delrz1l8zEuhvuMljgiLqKQSsuvW0ijbsP2QCuC4syYuidXxfXBfnlisYPHunNoALLIIpRaFVTJ65K1FvxHg==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.Net.Native.Compiler": "2.1.8",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "NETStandard.Library": "2.0.3",
+          "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform": "6.1.9"
+        }
+      },
+      "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Transitive",
+        "resolved": "6.1.9",
+        "contentHash": "5oR2QcUdpbw0lxsYP/U2PTNI+w+GDw4BtekDUaNtGkXsHshcychs9D/zWk8T5AYbmUXc5tRMAvDNReWg9cXlWA=="
+      }
+    },
+    "UAP,Version=v10.0.16299/win10-x64-aot": {
+      "Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Direct",
+        "requested": "[6.1.9, )",
+        "resolved": "6.1.9",
+        "contentHash": "Z9Delrz1l8zEuhvuMljgiLqKQSsuvW0ijbsP2QCuC4syYuidXxfXBfnlisYPHunNoALLIIpRaFVTJ65K1FvxHg==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.Net.Native.Compiler": "2.1.8",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "NETStandard.Library": "2.0.3",
+          "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.1.9"
+        }
+      },
+      "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Transitive",
+        "resolved": "6.1.9",
+        "contentHash": "7XCBIjMH5+N0yR6VpKXS9cmR+2dIKiUCGuzGp1uG2V+4e65mmx0YJGMcSWpG/DtShyoA/WhhNJH/ea3uKJxiWw=="
+      }
+    },
+    "UAP,Version=v10.0.16299/win10-x86": {
+      "Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Direct",
+        "requested": "[6.1.9, )",
+        "resolved": "6.1.9",
+        "contentHash": "Z9Delrz1l8zEuhvuMljgiLqKQSsuvW0ijbsP2QCuC4syYuidXxfXBfnlisYPHunNoALLIIpRaFVTJ65K1FvxHg==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.Net.Native.Compiler": "2.1.8",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "NETStandard.Library": "2.0.3",
+          "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform": "6.1.9"
+        }
+      },
+      "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Transitive",
+        "resolved": "6.1.9",
+        "contentHash": "+ax/4FAWVTu0fMUoQ4llJyuqjv7HYgdDv4FgaDeFzjECYTHC+x+pbt8euBhdxNh5jXlTHaZoghqGtmrOJ8x+Rg=="
+      }
+    },
+    "UAP,Version=v10.0.16299/win10-x86-aot": {
+      "Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Direct",
+        "requested": "[6.1.9, )",
+        "resolved": "6.1.9",
+        "contentHash": "Z9Delrz1l8zEuhvuMljgiLqKQSsuvW0ijbsP2QCuC4syYuidXxfXBfnlisYPHunNoALLIIpRaFVTJ65K1FvxHg==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.Net.Native.Compiler": "2.1.8",
+          "Microsoft.Net.UWPCoreRuntimeSdk": "2.1.2",
+          "NETStandard.Library": "2.0.3",
+          "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform": "6.1.9"
+        }
+      },
+      "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform": {
+        "type": "Transitive",
+        "resolved": "6.1.9",
+        "contentHash": "uneYYEx5fq+DxciTAutwUx7wvo/ur9fnqJY08KbOO/alKPwFdDhmIjRtZqVQis4bd6+OOK65RYcwZVL77tOJkg=="
+      }
+    },
+    "Xamarin.Mac,Version=v2.0": {},
+    "Xamarin.Mac,Version=v2.0/win10-arm": {},
+    "Xamarin.Mac,Version=v2.0/win10-arm-aot": {},
+    "Xamarin.Mac,Version=v2.0/win10-arm64-aot": {},
+    "Xamarin.Mac,Version=v2.0/win10-x64": {},
+    "Xamarin.Mac,Version=v2.0/win10-x64-aot": {},
+    "Xamarin.Mac,Version=v2.0/win10-x86": {},
+    "Xamarin.Mac,Version=v2.0/win10-x86-aot": {},
+    "Xamarin.TVOS,Version=v1.0": {},
+    "Xamarin.TVOS,Version=v1.0/win10-arm": {},
+    "Xamarin.TVOS,Version=v1.0/win10-arm-aot": {},
+    "Xamarin.TVOS,Version=v1.0/win10-arm64-aot": {},
+    "Xamarin.TVOS,Version=v1.0/win10-x64": {},
+    "Xamarin.TVOS,Version=v1.0/win10-x64-aot": {},
+    "Xamarin.TVOS,Version=v1.0/win10-x86": {},
+    "Xamarin.TVOS,Version=v1.0/win10-x86-aot": {},
+    "Xamarin.WatchOS,Version=v1.0": {},
+    "Xamarin.WatchOS,Version=v1.0/win10-arm": {},
+    "Xamarin.WatchOS,Version=v1.0/win10-arm-aot": {},
+    "Xamarin.WatchOS,Version=v1.0/win10-arm64-aot": {},
+    "Xamarin.WatchOS,Version=v1.0/win10-x64": {},
+    "Xamarin.WatchOS,Version=v1.0/win10-x64-aot": {},
+    "Xamarin.WatchOS,Version=v1.0/win10-x86": {},
+    "Xamarin.WatchOS,Version=v1.0/win10-x86-aot": {},
+    "Xamarin.iOS,Version=v1.0": {},
+    "Xamarin.iOS,Version=v1.0/win10-arm": {},
+    "Xamarin.iOS,Version=v1.0/win10-arm-aot": {},
+    "Xamarin.iOS,Version=v1.0/win10-arm64-aot": {},
+    "Xamarin.iOS,Version=v1.0/win10-x64": {},
+    "Xamarin.iOS,Version=v1.0/win10-x64-aot": {},
+    "Xamarin.iOS,Version=v1.0/win10-x86": {},
+    "Xamarin.iOS,Version=v1.0/win10-x86-aot": {}
+  }
+}

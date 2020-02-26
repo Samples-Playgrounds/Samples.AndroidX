@@ -1,0 +1,952 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Stamper
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Stamper
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.Stamper">
+  
+  
+  <h1 id="pdftron_PDF_Stamper" data-uid="pdftron.PDF.Stamper" class="text-break">Class Stamper
+  </h1>
+  <div class="markdown level0 summary"><p>Stamper is a utility class that can be used to stamp PDF pages with text, images, 
+or vector art (including another PDF page) in only a few lines of code.</p>
+<p>Although Stamper is very simple to use compared to ElementBuilder/ElementWriter 
+it is not as powerful or flexible. In case you need full control over PDF creation
+use ElementBuilder/ElementWriter to add new content to existing PDF pages as 
+shown in the ElementBuilder sample project.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Stamper</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_Stamper_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Stamper : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper__ctor_pdftron_PDF_Stamper_SizeType_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.%23ctor(pdftron.PDF.Stamper.SizeType%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L69">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper__ctor_" data-uid="pdftron.PDF.Stamper.#ctor*"></a>
+  <h4 id="pdftron_PDF_Stamper__ctor_pdftron_PDF_Stamper_SizeType_System_Double_System_Double_" data-uid="pdftron.PDF.Stamper.#ctor(pdftron.PDF.Stamper.SizeType,System.Double,System.Double)">Stamper(Stamper.SizeType, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Stamper constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Stamper(Stamper.SizeType size_type, double a, double b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Stamper.SizeType.html">Stamper.SizeType</a></td>
+        <td><span class="parametername">size_type</span></td>
+        <td><p>Specifies how the stamp will be sized   </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">a</span></td>
+        <td><p>the a</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">b</span></td>
+        <td><p>the b</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_DeleteStamps_pdftron_PDF_PDFDoc_pdftron_PDF_PageSet_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.DeleteStamps(pdftron.PDF.PDFDoc%2Cpdftron.PDF.PageSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L266">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_DeleteStamps_" data-uid="pdftron.PDF.Stamper.DeleteStamps*"></a>
+  <h4 id="pdftron_PDF_Stamper_DeleteStamps_pdftron_PDF_PDFDoc_pdftron_PDF_PageSet_" data-uid="pdftron.PDF.Stamper.DeleteStamps(pdftron.PDF.PDFDoc,pdftron.PDF.PageSet)">DeleteStamps(PDFDoc, PageSet)</h4>
+  <div class="markdown level1 summary"><p>Deletes PDFTron stamps from document at given page numbers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DeleteStamps(PDFDoc doc, PageSet page_set)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>The document to delete stamps from</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PageSet.html">PageSet</a></td>
+        <td><span class="parametername">page_set</span></td>
+        <td><p>The set of pages to delete stamps from</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L51">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_Destroy_" data-uid="pdftron.PDF.Stamper.Destroy*"></a>
+  <h4 id="pdftron_PDF_Stamper_Destroy" data-uid="pdftron.PDF.Stamper.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L33">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_Dispose_" data-uid="pdftron.PDF.Stamper.Dispose*"></a>
+  <h4 id="pdftron_PDF_Stamper_Dispose" data-uid="pdftron.PDF.Stamper.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L39">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_Dispose_" data-uid="pdftron.PDF.Stamper.Dispose*"></a>
+  <h4 id="pdftron_PDF_Stamper_Dispose_System_Boolean_" data-uid="pdftron.PDF.Stamper.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L29">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_Finalize_" data-uid="pdftron.PDF.Stamper.Finalize*"></a>
+  <h4 id="pdftron_PDF_Stamper_Finalize" data-uid="pdftron.PDF.Stamper.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_HasStamps_pdftron_PDF_PDFDoc_pdftron_PDF_PageSet_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.HasStamps(pdftron.PDF.PDFDoc%2Cpdftron.PDF.PageSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L280">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_HasStamps_" data-uid="pdftron.PDF.Stamper.HasStamps*"></a>
+  <h4 id="pdftron_PDF_Stamper_HasStamps_pdftron_PDF_PDFDoc_pdftron_PDF_PageSet_" data-uid="pdftron.PDF.Stamper.HasStamps(pdftron.PDF.PDFDoc,pdftron.PDF.PageSet)">HasStamps(PDFDoc, PageSet)</h4>
+  <div class="markdown level1 summary"><p>Returns true if the given set of pages has at least one stamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasStamps(PDFDoc doc, PageSet page_set)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>The document that&apos;s being checked</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PageSet.html">PageSet</a></td>
+        <td><span class="parametername">page_set</span></td>
+        <td><p>The set of page that&apos;s being checked</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>true, if successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_SetAlignment_pdftron_PDF_Stamper_HorizontalAlignment_pdftron_PDF_Stamper_VerticalAlignment_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.SetAlignment(pdftron.PDF.Stamper.HorizontalAlignment%2Cpdftron.PDF.Stamper.VerticalAlignment)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L230">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_SetAlignment_" data-uid="pdftron.PDF.Stamper.SetAlignment*"></a>
+  <h4 id="pdftron_PDF_Stamper_SetAlignment_pdftron_PDF_Stamper_HorizontalAlignment_pdftron_PDF_Stamper_VerticalAlignment_" data-uid="pdftron.PDF.Stamper.SetAlignment(pdftron.PDF.Stamper.HorizontalAlignment,pdftron.PDF.Stamper.VerticalAlignment)">SetAlignment(Stamper.HorizontalAlignment, Stamper.VerticalAlignment)</h4>
+  <div class="markdown level1 summary"><p>Sets the alignment for the x and y variables.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAlignment(Stamper.HorizontalAlignment horizontal_alignment, Stamper.VerticalAlignment vertical_alignment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Stamper.HorizontalAlignment.html">Stamper.HorizontalAlignment</a></td>
+        <td><span class="parametername">horizontal_alignment</span></td>
+        <td><p>the horizontal alignment</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Stamper.VerticalAlignment.html">Stamper.VerticalAlignment</a></td>
+        <td><span class="parametername">vertical_alignment</span></td>
+        <td><p>the vertical alignment</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Stamper_SetAlignment_pdftron_PDF_Stamper_HorizontalAlignment_pdftron_PDF_Stamper_VerticalAlignment__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="pdftron.PDF.Stamper.html#pdftron_PDF_Stamper_SetPosition_System_Double_System_Double_System_Boolean_">SetPosition(Double, Double, Boolean)</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_SetAsAnnotation_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.SetAsAnnotation(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L177">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_SetAsAnnotation_" data-uid="pdftron.PDF.Stamper.SetAsAnnotation*"></a>
+  <h4 id="pdftron_PDF_Stamper_SetAsAnnotation_System_Boolean_" data-uid="pdftron.PDF.Stamper.SetAsAnnotation(System.Boolean)">SetAsAnnotation(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Specifies if the stamp is to be stamped as annotation or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAsAnnotation(bool annotation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">annotation</span></td>
+        <td><p>A flag specifying if the stamp should be added 
+as an annotation to the destination page</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Stamper_SetAsAnnotation_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>SetAsBackground, HasStamps and DeleteStamps methods will not
+work on stamps created with this as true. </p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_SetAsBackground_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.SetAsBackground(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L164">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_SetAsBackground_" data-uid="pdftron.PDF.Stamper.SetAsBackground*"></a>
+  <h4 id="pdftron_PDF_Stamper_SetAsBackground_System_Boolean_" data-uid="pdftron.PDF.Stamper.SetAsBackground(System.Boolean)">SetAsBackground(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Specifies if the stamp is to be stamped in the background or the foreground.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAsBackground(bool background)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">background</span></td>
+        <td><p>A flag specifying if the stamp should be added 
+as a background layer to the destination page</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_SetFont_pdftron_PDF_Font_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.SetFont(pdftron.PDF.Font)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L123">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_SetFont_" data-uid="pdftron.PDF.Stamper.SetFont*"></a>
+  <h4 id="pdftron_PDF_Stamper_SetFont_pdftron_PDF_Font_" data-uid="pdftron.PDF.Stamper.SetFont(pdftron.PDF.Font)">SetFont(Font)</h4>
+  <div class="markdown level1 summary"><p>Defines the font of the stamp. (This only applies to text-based stamps)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFont(Font font)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Font.html">Font</a></td>
+        <td><span class="parametername">font</span></td>
+        <td><p>The font of the text stamp</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_SetFontColor_pdftron_PDF_ColorPt_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.SetFontColor(pdftron.PDF.ColorPt)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L133">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_SetFontColor_" data-uid="pdftron.PDF.Stamper.SetFontColor*"></a>
+  <h4 id="pdftron_PDF_Stamper_SetFontColor_pdftron_PDF_ColorPt_" data-uid="pdftron.PDF.Stamper.SetFontColor(pdftron.PDF.ColorPt)">SetFontColor(ColorPt)</h4>
+  <div class="markdown level1 summary"><p>Sets the font color (This only effects text-based stamps).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFontColor(ColorPt color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><span class="parametername">color</span></td>
+        <td><p>the new font color</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_SetOpacity_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.SetOpacity(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L143">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_SetOpacity_" data-uid="pdftron.PDF.Stamper.SetOpacity*"></a>
+  <h4 id="pdftron_PDF_Stamper_SetOpacity_System_Double_" data-uid="pdftron.PDF.Stamper.SetOpacity(System.Double)">SetOpacity(Double)</h4>
+  <div class="markdown level1 summary"><p>Sets the opacity value for the stamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOpacity(double opacity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">opacity</span></td>
+        <td><p>The opacity value of the stamp</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_SetPosition_System_Double_System_Double_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.SetPosition(System.Double%2CSystem.Double%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L216">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_SetPosition_" data-uid="pdftron.PDF.Stamper.SetPosition*"></a>
+  <h4 id="pdftron_PDF_Stamper_SetPosition_System_Double_System_Double_System_Boolean_" data-uid="pdftron.PDF.Stamper.SetPosition(System.Double,System.Double,System.Boolean)">SetPosition(Double, Double, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the horizontal and vertical position of the stamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPosition(double horizontal_distance, double vertical_distance, bool percentage = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">horizontal_distance</span></td>
+        <td><p>Horizontal distance from left, right or center of crop box</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">vertical_distance</span></td>
+        <td><p>the vertical_distance</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">percentage</span></td>
+        <td><p>If true, horizontal_distance is a percentage of the crop
+box width (e.g.: 0.5 is 50% of the width of the crop box) and vertical_distance
+is a percentage of the crop box height. If false, horizontal_distance and
+vertical_distance is measured in points.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Stamper_SetPosition_System_Double_System_Double_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="pdftron.PDF.Stamper.html#pdftron_PDF_Stamper_SetAlignment_pdftron_PDF_Stamper_HorizontalAlignment_pdftron_PDF_Stamper_VerticalAlignment_">SetAlignment(Stamper.HorizontalAlignment, Stamper.VerticalAlignment)</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_SetRotation_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.SetRotation(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L153">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_SetRotation_" data-uid="pdftron.PDF.Stamper.SetRotation*"></a>
+  <h4 id="pdftron_PDF_Stamper_SetRotation_System_Double_" data-uid="pdftron.PDF.Stamper.SetRotation(System.Double)">SetRotation(Double)</h4>
+  <div class="markdown level1 summary"><p>Rotates the stamp by the given number of degrees.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRotation(double rotation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td><p>Rotation in degrees</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_SetSize_pdftron_PDF_Stamper_SizeType_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.SetSize(pdftron.PDF.Stamper.SizeType%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L254">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_SetSize_" data-uid="pdftron.PDF.Stamper.SetSize*"></a>
+  <h4 id="pdftron_PDF_Stamper_SetSize_pdftron_PDF_Stamper_SizeType_System_Double_System_Double_" data-uid="pdftron.PDF.Stamper.SetSize(pdftron.PDF.Stamper.SizeType,System.Double,System.Double)">SetSize(Stamper.SizeType, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Sets the size of the stamp.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSize(Stamper.SizeType size_type, double a, double b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Stamper.SizeType.html">Stamper.SizeType</a></td>
+        <td><span class="parametername">size_type</span></td>
+        <td><p>Specifies how the stamp will be sized       </p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">a</span></td>
+        <td><p>the a</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">b</span></td>
+        <td><p>the b</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_SetTextAlignment_pdftron_PDF_Stamper_TextAlignment_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.SetTextAlignment(pdftron.PDF.Stamper.TextAlignment)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L240">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_SetTextAlignment_" data-uid="pdftron.PDF.Stamper.SetTextAlignment*"></a>
+  <h4 id="pdftron_PDF_Stamper_SetTextAlignment_pdftron_PDF_Stamper_TextAlignment_" data-uid="pdftron.PDF.Stamper.SetTextAlignment(pdftron.PDF.Stamper.TextAlignment)">SetTextAlignment(Stamper.TextAlignment)</h4>
+  <div class="markdown level1 summary"><p>Sets the text alignment (note: this only applies to text watermarks).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTextAlignment(Stamper.TextAlignment text_alignment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Stamper.TextAlignment.html">Stamper.TextAlignment</a></td>
+        <td><span class="parametername">text_alignment</span></td>
+        <td><p>Enumerator for text alignment (e_left, e_center, e_right)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_ShowsOnPrint_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.ShowsOnPrint(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L197">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_ShowsOnPrint_" data-uid="pdftron.PDF.Stamper.ShowsOnPrint*"></a>
+  <h4 id="pdftron_PDF_Stamper_ShowsOnPrint_System_Boolean_" data-uid="pdftron.PDF.Stamper.ShowsOnPrint(System.Boolean)">ShowsOnPrint(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Shows on print.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ShowsOnPrint(bool on_print)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">on_print</span></td>
+        <td><p>Specifies if the watermark will be displayed when printed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_ShowsOnScreen_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.ShowsOnScreen(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L187">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_ShowsOnScreen_" data-uid="pdftron.PDF.Stamper.ShowsOnScreen*"></a>
+  <h4 id="pdftron_PDF_Stamper_ShowsOnScreen_System_Boolean_" data-uid="pdftron.PDF.Stamper.ShowsOnScreen(System.Boolean)">ShowsOnScreen(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Shows on screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ShowsOnScreen(bool on_screen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">on_screen</span></td>
+        <td><p>Specifies if the watermark will be displayed on screen</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_StampImage_pdftron_PDF_PDFDoc_pdftron_PDF_Image_pdftron_PDF_PageSet_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.StampImage(pdftron.PDF.PDFDoc%2Cpdftron.PDF.Image%2Cpdftron.PDF.PageSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L83">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_StampImage_" data-uid="pdftron.PDF.Stamper.StampImage*"></a>
+  <h4 id="pdftron_PDF_Stamper_StampImage_pdftron_PDF_PDFDoc_pdftron_PDF_Image_pdftron_PDF_PageSet_" data-uid="pdftron.PDF.Stamper.StampImage(pdftron.PDF.PDFDoc,pdftron.PDF.Image,pdftron.PDF.PageSet)">StampImage(PDFDoc, Image, PageSet)</h4>
+  <div class="markdown level1 summary"><p>Stamps an image to the given destination document at the set of page numbers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StampImage(PDFDoc dest_doc, Image src_img, PageSet dest_pages)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">dest_doc</span></td>
+        <td><p>The document being stamped</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Image.html">Image</a></td>
+        <td><span class="parametername">src_img</span></td>
+        <td><p>The image that is being stamped to the document</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PageSet.html">PageSet</a></td>
+        <td><span class="parametername">dest_pages</span></td>
+        <td><p>The set of pages in the document being stamped</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_StampPage_pdftron_PDF_PDFDoc_pdftron_PDF_Page_pdftron_PDF_PageSet_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.StampPage(pdftron.PDF.PDFDoc%2Cpdftron.PDF.Page%2Cpdftron.PDF.PageSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L97">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_StampPage_" data-uid="pdftron.PDF.Stamper.StampPage*"></a>
+  <h4 id="pdftron_PDF_Stamper_StampPage_pdftron_PDF_PDFDoc_pdftron_PDF_Page_pdftron_PDF_PageSet_" data-uid="pdftron.PDF.Stamper.StampPage(pdftron.PDF.PDFDoc,pdftron.PDF.Page,pdftron.PDF.PageSet)">StampPage(PDFDoc, Page, PageSet)</h4>
+  <div class="markdown level1 summary"><p>Stamps a PDF page to the given destination document at the set of page numbers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StampPage(PDFDoc dest_doc, Page src_page, PageSet dest_pages)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">dest_doc</span></td>
+        <td><p>The document being stamped</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">src_page</span></td>
+        <td><p>The page that is being stamped to the document</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PageSet.html">PageSet</a></td>
+        <td><span class="parametername">dest_pages</span></td>
+        <td><p>The set of pages in the document being stamped</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper_StampText_pdftron_PDF_PDFDoc_System_String_pdftron_PDF_PageSet_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper.StampText(pdftron.PDF.PDFDoc%2CSystem.String%2Cpdftron.PDF.PageSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L111">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Stamper_StampText_" data-uid="pdftron.PDF.Stamper.StampText*"></a>
+  <h4 id="pdftron_PDF_Stamper_StampText_pdftron_PDF_PDFDoc_System_String_pdftron_PDF_PageSet_" data-uid="pdftron.PDF.Stamper.StampText(pdftron.PDF.PDFDoc,System.String,pdftron.PDF.PageSet)">StampText(PDFDoc, String, PageSet)</h4>
+  <div class="markdown level1 summary"><p>Stamps text to the given destination document at the set of page numbers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StampText(PDFDoc dest_doc, string src_txt, PageSet dest_pages)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">dest_doc</span></td>
+        <td><p>The document being stamped</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">src_txt</span></td>
+        <td><p>The image that is being stamped to the document</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PageSet.html">PageSet</a></td>
+        <td><span class="parametername">dest_pages</span></td>
+        <td><p>The set of pages in the document being stamped</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Stamper.md&amp;value=---%0Auid%3A%20pdftron.PDF.Stamper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Stamper.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

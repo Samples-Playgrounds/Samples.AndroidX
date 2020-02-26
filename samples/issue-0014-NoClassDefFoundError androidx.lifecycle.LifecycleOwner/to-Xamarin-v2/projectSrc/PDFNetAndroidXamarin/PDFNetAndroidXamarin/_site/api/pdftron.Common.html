@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace pdftron.Common
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace pdftron.Common
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.Common">
+  
+  <h1 id="pdftron_Common" data-uid="pdftron.Common" class="text-break">Namespace pdftron.Common
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="pdftron.Common.Iterator-1.html">Iterator&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="pdftron.Common.Matrix2D.html">Matrix2D</a></h4>
+      <section><p>2D Matrix</p>
+<p>A Matrix2D object represents a 3x3 matrix that, in turn, represents an affine transformation. 
+A Matrix2D object stores only six of the nine numbers in a 3x3 matrix because all 3x3 
+matrices that represent affine transformations have the same third column (0, 0, 1).</p>
+<p>Affine transformations include rotating, scaling, reflecting, shearing, and translating. 
+In PDFNet, the Matrix2D class provides the foundation for performing affine transformations 
+on vector drawings, images, and text.</p>
+<p>A transformation matrix specifies the relationship between two coordinate spaces.
+By modifying a transformation matrix, objects can be scaled, rotated, translated,
+or transformed in other ways.</p>
+<p>A transformation matrix in PDF is specified by six numbers, usually in the form
+of an array containing six elements. In its most general form, this array is denoted
+[a b c d h v]; The following table lists the arrays that specify the most common
+transformations:</p>
+<p><ul><li><br>Translations are specified as [1 0 0 1 tx ty], where tx and ty are the distances
+to translate the origin of the coordinate system in the horizontal and vertical
+dimensions, respectively.
+</li><li>
+Scaling is obtained by [sx 0 0 sy 0 0]. This scales the coordinates so that 1
+unit in the horizontal and vertical dimensions of the new coordinate system is
+the same size as sx and sy units, respectively, in the previous coordinate system.
+</li><li>
+Rotations are produced by [cos(A) sin(A) -sin(A) cos(A) 0 0], which has the effect
+of rotating the coordinate system axes by an angle &apos;A&apos; counterclockwise.
+</li><li>
+Skew is specified by [1 tan(A) tan(B) 1 0 0], which skews the x axis by an angle
+A and the y axis by an angle B.
+</li></ul>
+ Matrix2D elements are positioned as follows :</p>
+<p> | m_a m_b 0 |
+ | m_c m_d 0 |
+ | m_h m_v 1 |</p>
+<p> A single Matrix2D object can store a single transformation or a sequence of transformations. 
+ The latter is called a composite transformation. The matrix of a composite transformation is 
+ obtained by multiplying (concatenating) the matrices of the individual transformations. 
+ Because matrix multiplication is not commutative-the order in which matrices are multiplied
+ is significant. For example, if you first rotate, then scale, then translate, you get a 
+ different result than if you first translate, then rotate, then scale.</p>
+<p> For more information on properties of PDF matrices please refer to PDF Reference Manual 
+ (Sections 4.2 &apos;Coordinate Systems&apos; and 4.2.3 &apos;Transformation Matrices&apos;)</p>
+<example>
+The following sample illustrates how to use Matrix2D in order to position
+an image on the page. Note that PDFNet uses the same convention of matrix 
+multiplication used in PostScript and OpenGL.
+<pre><code> 
+Element element = eb.CreateImage(Image(...));
+double deg2rad = 3.1415926535 / 180.0;
+
+Matrix2D mtx = Matrix2D(1, 0, 0, 1, 0, 200); // Translate
+mtx.multiply(Matrix2D(300, 0, 0, 200, 0, 0));    // Scale
+mtx.multiply(Matrix2D.RotationMatrix( 90 * deg2rad )); // Rotate
+element.GetGState().SetTransform(mtx);
+writer.WritePlacedElement(element); </code></pre>
+
+The following sample sample illustrates how to use Matrix2D in order to calculate 
+absolute positioning for the text on the page.
+<pre><code>...
+Matrix2D text_mtx = text_element.GetTextMatrix();
+double x, y;
+for (CharIterator itr = text_element.getCharIterator(); itr.HasNext(); itr.Next()) {
+x = itr.current().x; // character positioning information
+y = itr.current().y;</code></pre>
+
+
+Get current transformation matrix (CTM)
+<pre><code>Matrix2D ctm = text_element.getCTM();</code></pre>
+
+To get the absolute character positioning information concatenate current 
+text matrix with CTM and then multiply relative postitioning coordinates with 
+the resulting matrix.
+<pre><code>Matrix2D mtx = ctm.multiply(text_mtx);
+mtx.multPoint(x, y);    </code></pre><br></example>
+</section>
+      <h4><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></h4>
+      <section><p>PDFNetException is derived from the standard exception class and it is a superclass 
+for all PDFNet library exceptions.</p>
+</section>
+      <h4><a class="xref" href="pdftron.Common.ProgressMonitor.html">ProgressMonitor</a></h4>
+      <section><p>ProgressMonitor is an interface that an application can use to indicate the
+progress of a lengthy operation (such as PDFDoc.Save()).</p>
+<p>ProgressMonitor has a range and a current position. The range represents the
+entire duration of the operation, and the current position represents the
+progress the application has made toward completing the operation.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="pdftron.Common.PDFNetException.ErrorCodes.html">PDFNetException.ErrorCodes</a></h4>
+      <section></section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

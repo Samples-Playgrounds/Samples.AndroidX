@@ -1,0 +1,629 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class OCMD
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class OCMD
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.OCG.OCMD">
+  
+  
+  <h1 id="pdftron_PDF_OCG_OCMD" data-uid="pdftron.PDF.OCG.OCMD" class="text-break">Class OCMD
+  </h1>
+  <div class="markdown level0 summary"><p> The OCMD object represents an Optional Content Membership Dictionary (OCMD) 
+    that allows the visibility of optional content to depend on the states in a 
+    set of optional-content groups (OCG::Group). The object directly corresponds 
+    to the OCMD dictionary (Section 4.10.1 &apos;Optional Content Groups&apos; in PDF 
+    Reference).</p>
+<p>
+An OCMD collects a set of OCGs. It sets a visibility policy, so that 
+content in the member groups is visible only when all groups are ON 
+or OFF, or when any of the groups is ON or OFF. This makes it possible 
+to set up complex dependencies among groups. For example, an object can be 
+visible only if some other conditions are met (such as if another layer is 
+visible).
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">OCMD</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.OCG.html">pdftron.PDF.OCG</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_OCG_OCMD_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class OCMD : object</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_OCMD__ctor_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.OCMD.%23ctor(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/OCMD.cs/#L62">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_OCMD__ctor_" data-uid="pdftron.PDF.OCG.OCMD.#ctor*"></a>
+  <h4 id="pdftron_PDF_OCG_OCMD__ctor_pdftron_SDF_Obj_" data-uid="pdftron.PDF.OCG.OCMD.#ctor(pdftron.SDF.Obj)">OCMD(Obj)</h4>
+  <div class="markdown level1 summary"><p>Creates a new optional-content group (OCG) object from an existing
+SDF/Cos object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OCMD(Obj ocmd)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">ocmd</span></td>
+        <td><p>the ocmd</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_OCMD_Create_pdftron_PDF_PDFDoc_pdftron_SDF_Obj_pdftron_PDF_OCG_OCMD_VisibilityPolicyType_.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.OCMD.Create(pdftron.PDF.PDFDoc%2Cpdftron.SDF.Obj%2Cpdftron.PDF.OCG.OCMD.VisibilityPolicyType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/OCMD.cs/#L49">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_OCMD_Create_" data-uid="pdftron.PDF.OCG.OCMD.Create*"></a>
+  <h4 id="pdftron_PDF_OCG_OCMD_Create_pdftron_PDF_PDFDoc_pdftron_SDF_Obj_pdftron_PDF_OCG_OCMD_VisibilityPolicyType_" data-uid="pdftron.PDF.OCG.OCMD.Create(pdftron.PDF.PDFDoc,pdftron.SDF.Obj,pdftron.PDF.OCG.OCMD.VisibilityPolicyType)">Create(PDFDoc, Obj, OCMD.VisibilityPolicyType)</h4>
+  <div class="markdown level1 summary"><p>Creates a new optional-content membership dictionary (OCMD) object in the
+given document for the given groups and visibility policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static OCMD Create(PDFDoc doc, Obj ocgs, OCMD.VisibilityPolicyType vis_policy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFDoc.html">PDFDoc</a></td>
+        <td><span class="parametername">doc</span></td>
+        <td><p>The document in which the new OCMD will be created.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">ocgs</span></td>
+        <td><p>An array of optional-content groups (OCGs) to be members of the dictionary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.OCMD.VisibilityPolicyType.html">OCMD.VisibilityPolicyType</a></td>
+        <td><span class="parametername">vis_policy</span></td>
+        <td><p>the vis_policy</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.OCMD.html">OCMD</a></td>
+        <td><p>The newly created OCG::OCMD object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_OCMD_GetOCGs.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.OCMD.GetOCGs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/OCMD.cs/#L87">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_OCMD_GetOCGs_" data-uid="pdftron.PDF.OCG.OCMD.GetOCGs*"></a>
+  <h4 id="pdftron_PDF_OCG_OCMD_GetOCGs" data-uid="pdftron.PDF.OCG.OCMD.GetOCGs">GetOCGs()</h4>
+  <div class="markdown level1 summary"><p>Gets the optional-content groups listed under &apos;OCGs&apos; entry in the object
+dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetOCGs()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>An SDF::Obj array or OCG::Group objects or NULL is the array
+is not present.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_OCMD_GetSDFObj.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.OCMD.GetSDFObj%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/OCMD.cs/#L158">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_OCMD_GetSDFObj_" data-uid="pdftron.PDF.OCG.OCMD.GetSDFObj*"></a>
+  <h4 id="pdftron_PDF_OCG_OCMD_GetSDFObj" data-uid="pdftron.PDF.OCG.OCMD.GetSDFObj">GetSDFObj()</h4>
+  <div class="markdown level1 summary"><p>Gets the SDFObj.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetSDFObj()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>Pointer to the underlying SDF/Cos object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_OCMD_GetVisibilityExpression.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.OCMD.GetVisibilityExpression%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/OCMD.cs/#L126">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_OCMD_GetVisibilityExpression_" data-uid="pdftron.PDF.OCG.OCMD.GetVisibilityExpression*"></a>
+  <h4 id="pdftron_PDF_OCG_OCMD_GetVisibilityExpression" data-uid="pdftron.PDF.OCG.OCMD.GetVisibilityExpression">GetVisibilityExpression()</h4>
+  <div class="markdown level1 summary"><p>Gets the visibility expression.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetVisibilityExpression()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>If the PDOCMD has a visibility expression entry, return the
+SDF::Obj array object representing the expression, otherwise returns NULL.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_OCMD_GetVisibilityPolicy.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.OCMD.GetVisibilityPolicy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/OCMD.cs/#L101">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_OCMD_GetVisibilityPolicy_" data-uid="pdftron.PDF.OCG.OCMD.GetVisibilityPolicy*"></a>
+  <h4 id="pdftron_PDF_OCG_OCMD_GetVisibilityPolicy" data-uid="pdftron.PDF.OCG.OCMD.GetVisibilityPolicy">GetVisibilityPolicy()</h4>
+  <div class="markdown level1 summary"><p>Gets the optional-content membership dictionary&apos;s visibility policy, which
+determines the visibility of content with respect to the ON-OFF state of
+OCGs listed in the dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OCMD.VisibilityPolicyType GetVisibilityPolicy()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.OCMD.VisibilityPolicyType.html">OCMD.VisibilityPolicyType</a></td>
+        <td><p>The visibility policy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_OCMD_IsCurrentlyVisible_pdftron_PDF_OCG_Context_.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.OCMD.IsCurrentlyVisible(pdftron.PDF.OCG.Context)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/OCMD.cs/#L146">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_OCMD_IsCurrentlyVisible_" data-uid="pdftron.PDF.OCG.OCMD.IsCurrentlyVisible*"></a>
+  <h4 id="pdftron_PDF_OCG_OCMD_IsCurrentlyVisible_pdftron_PDF_OCG_Context_" data-uid="pdftron.PDF.OCG.OCMD.IsCurrentlyVisible(pdftron.PDF.OCG.Context)">IsCurrentlyVisible(Context)</h4>
+  <div class="markdown level1 summary"><p>Checks if is currently visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsCurrentlyVisible(Context context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.Context.html">Context</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context in which the visibility of content is tested.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if content tagged with this OCMD is visible in the given
+context, false if it is hidden.</p>
+<p>Based on the optional-content groups listed in the dictionary, the current
+ON-OFF state of those groups within the specified context, and the
+dictionary&apos;s visibility policy, test whether the content tagged with
+this dictionary would be visible.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_OCMD_IsValid.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.OCMD.IsValid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/OCMD.cs/#L73">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_OCMD_IsValid_" data-uid="pdftron.PDF.OCG.OCMD.IsValid*"></a>
+  <h4 id="pdftron_PDF_OCG_OCMD_IsValid" data-uid="pdftron.PDF.OCG.OCMD.IsValid">IsValid()</h4>
+  <div class="markdown level1 summary"><p>Checks if is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean IsValid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>True if this is a valid (non-null) OCG, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_OCMD_SetVisibilityPolicy_pdftron_PDF_OCG_OCMD_VisibilityPolicyType_.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.OCMD.SetVisibilityPolicy(pdftron.PDF.OCG.OCMD.VisibilityPolicyType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/OCMD.cs/#L115">View Source</a>
+  </span>
+  <a id="pdftron_PDF_OCG_OCMD_SetVisibilityPolicy_" data-uid="pdftron.PDF.OCG.OCMD.SetVisibilityPolicy*"></a>
+  <h4 id="pdftron_PDF_OCG_OCMD_SetVisibilityPolicy_pdftron_PDF_OCG_OCMD_VisibilityPolicyType_" data-uid="pdftron.PDF.OCG.OCMD.SetVisibilityPolicy(pdftron.PDF.OCG.OCMD.VisibilityPolicyType)">SetVisibilityPolicy(OCMD.VisibilityPolicyType)</h4>
+  <div class="markdown level1 summary"><p>Sets the optional-content membership dictionary&apos;s visibility policy, which
+determines the visibility of content with respect to the ON-OFF state of
+OCGs listed in the dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVisibilityPolicy(OCMD.VisibilityPolicyType vis_policy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.OCMD.VisibilityPolicyType.html">OCMD.VisibilityPolicyType</a></td>
+        <td><span class="parametername">vis_policy</span></td>
+        <td><p>New visibility policy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_OCG_OCMD.md&amp;value=---%0Auid%3A%20pdftron.PDF.OCG.OCMD%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/OCG/OCMD.cs/#L27" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

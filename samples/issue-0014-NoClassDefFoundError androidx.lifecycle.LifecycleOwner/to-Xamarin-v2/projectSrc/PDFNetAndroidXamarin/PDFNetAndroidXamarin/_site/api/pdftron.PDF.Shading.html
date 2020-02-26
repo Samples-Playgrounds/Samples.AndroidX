@@ -1,0 +1,1420 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Shading
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Shading
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.Shading">
+  
+  
+  <h1 id="pdftron_PDF_Shading" data-uid="pdftron.PDF.Shading" class="text-break">Class Shading
+  </h1>
+  <div class="markdown level0 summary"><p>Shading is a class that represents a flat interface around all PDF shading types: 
+<ul><li>
+In Function-based (type 1) shadings, the color at every point in 
+the domain is defined by a specified mathematical function. The function need 
+not be smooth or continuous. This is the most general of the available shading 
+types, and is useful for shadings that cannot be adequately described with any 
+of the other types.
+</li><li>
+Axial shadings (type 2) define a color blend along a line between two points,
+optionally extended beyond the boundary points by continuing the boundary
+colors.
+</li><li>
+Radial shadings (type 3) define a color blend that varies between two circles.
+Shadings of this type are commonly used to depict three-dimensional spheres
+and cones.
+</li><li>
+Free-form Gouraud-shaded triangle mesh shadings (type 4) and lattice gouraud 
+shadings (type 5) are commonly used to represent complex colored and shaded 
+three-dimensional shapes. The area to be shaded is defined by a path composed entirely 
+of triangles. The color at each vertex of the triangles is specified, and a technique 
+known as Gouraud interpolation is used to color the interiors. The interpolation 
+functions defining the shading may be linear or nonlinear.
+</li></ul>
+Coons patch mesh shadings (type 6) are constructed from one or more color
+patches, each bounded by four cubic Bézier curves.</p>
+<p>A Coons patch generally has two independent aspects:
+<ul><li>
+Colors are specified for each corner of the unit square, and bilinear 
+interpolation is used to fill in colors over the entire unit square
+</li><li>
+Coordinates are mapped from the unit square into a four-sided patch whose
+sides are not necessarily linear. The mapping is continuous: the corners 
+of the unit square map to corners of the patch and the sides of the unit 
+square map to sides of the patch.
+</li><li>
+Tensor-product patch mesh shadings (type 7) are identical to type 6 
+(Coons mesh), except that they are based on a bicubic tensor-product 
+patch defined by 16 control points, instead of the 12 control points 
+that define a Coons patch. The shading Patterns dictionaries representing 
+the two patch types differ only in the value of the Type entry and 
+in the number of control points specified for each patch in the data stream. 
+Although the Coons patch is more concise and easier to use, the tensor-
+product patch affords greater control over color mapping. 
+</li></ul></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Shading</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_Shading_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Shading : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading__ctor_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.%23ctor(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L113">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading__ctor_" data-uid="pdftron.PDF.Shading.#ctor*"></a>
+  <h4 id="pdftron_PDF_Shading__ctor_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Shading.#ctor(pdftron.SDF.Obj)">Shading(Obj)</h4>
+  <div class="markdown level1 summary"><p>Create a Shading from the given SDF/Cos object listed under /Shading entry
+in the page Resource dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Shading(Obj shading_dict)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">shading_dict</span></td>
+        <td><p>shading dictionary</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_Create_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.Create(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L127">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_Create_" data-uid="pdftron.PDF.Shading.Create*"></a>
+  <h4 id="pdftron_PDF_Shading_Create_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Shading.Create(pdftron.SDF.Obj)">Create(Obj)</h4>
+  <div class="markdown level1 summary"><p>Create a Shading from the given SDF/Cos object listed under /Shading entry
+in the page Resource dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Shading Create(Obj shading_dict)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">shading_dict</span></td>
+        <td><p>shading dictionary</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Shading.html">Shading</a></td>
+        <td><p>newly created <code>Shading</code> object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L99">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_Destroy_" data-uid="pdftron.PDF.Shading.Destroy*"></a>
+  <h4 id="pdftron_PDF_Shading_Destroy" data-uid="pdftron.PDF.Shading.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L83">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_Dispose_" data-uid="pdftron.PDF.Shading.Dispose*"></a>
+  <h4 id="pdftron_PDF_Shading_Dispose" data-uid="pdftron.PDF.Shading.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L88">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_Dispose_" data-uid="pdftron.PDF.Shading.Dispose*"></a>
+  <h4 id="pdftron_PDF_Shading_Dispose_System_Boolean_" data-uid="pdftron.PDF.Shading.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L79">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_Finalize_" data-uid="pdftron.PDF.Shading.Finalize*"></a>
+  <h4 id="pdftron_PDF_Shading_Finalize" data-uid="pdftron.PDF.Shading.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the Shading </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetAntialias.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetAntialias%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L243">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetAntialias_" data-uid="pdftron.PDF.Shading.GetAntialias*"></a>
+  <h4 id="pdftron_PDF_Shading_GetAntialias" data-uid="pdftron.PDF.Shading.GetAntialias">GetAntialias()</h4>
+  <div class="markdown level1 summary"><p>Gets the antialias.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean GetAntialias()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>A flag indicating whether to filter the shading function to prevent
+aliasing artifacts. See Table 4.25</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetBackground.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetBackground%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L230">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetBackground_" data-uid="pdftron.PDF.Shading.GetBackground*"></a>
+  <h4 id="pdftron_PDF_Shading_GetBackground" data-uid="pdftron.PDF.Shading.GetBackground">GetBackground()</h4>
+  <div class="markdown level1 summary"><p>An color point represented in base color space specifying a single
+background color value. If present, this color is used before
+any painting operation involving the shading, to fill those portions of the
+area to be painted that lie outside the bounds of the shading object itself.
+In the opaque imaging model, the effect is as if the painting operation were
+performed twice: first with the background color and then again with the
+shading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ColorPt GetBackground()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><p>the background color point</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Shading_GetBackground_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The background color is applied only when the shading is used as part
+of a shading pattern, not when it is painted directly with the sh operator.<br>Use <code>HasBackground()</code> method to determine whether the shading has a 
+background color.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetBaseColorSpace.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetBaseColorSpace%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L165">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetBaseColorSpace_" data-uid="pdftron.PDF.Shading.GetBaseColorSpace*"></a>
+  <h4 id="pdftron_PDF_Shading_GetBaseColorSpace" data-uid="pdftron.PDF.Shading.GetBaseColorSpace">GetBaseColorSpace()</h4>
+  <div class="markdown level1 summary"><p>Gets the base color space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ColorSpace GetBaseColorSpace()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorSpace.html">ColorSpace</a></td>
+        <td><p>The color space in which color values are expressed.
+This may be any device, CIE-based, or special color space
+except a Pattern space.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetBBox.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetBBox%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L195">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetBBox_" data-uid="pdftron.PDF.Shading.GetBBox*"></a>
+  <h4 id="pdftron_PDF_Shading_GetBBox" data-uid="pdftron.PDF.Shading.GetBBox">GetBBox()</h4>
+  <div class="markdown level1 summary"><p>Gets the bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rect GetBBox()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><p>a rectangle giving the left, bottom, right, and top
+coordinates, respectively, of the shading’s bounding box. The coordinates
+are interpreted in the shading’s target coordinate space. If present, this
+bounding box is applied as a temporary clipping boundary when the shading
+is painted, in addition to the current clipping path and any other clipping
+boundaries in effect at that time.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Shading_GetBBox_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use HasBBox() method to determine whether the shading has a 
+ background color.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetColor_Double_Double_pdftron_PDF_ColorPt_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetColor(Double%2CDouble%2Cpdftron.PDF.ColorPt)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L443">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetColor_" data-uid="pdftron.PDF.Shading.GetColor*"></a>
+  <h4 id="pdftron_PDF_Shading_GetColor_Double_Double_pdftron_PDF_ColorPt_" data-uid="pdftron.PDF.Shading.GetColor(Double,Double,pdftron.PDF.ColorPt)">GetColor(Double, Double, ColorPt)</h4>
+  <div class="markdown level1 summary"><p>Gets the color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void GetColor(Double t1, Double t2, ColorPt out_color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><span class="parametername">t1</span></td>
+        <td><p>t1</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><span class="parametername">t2</span></td>
+        <td><p>t2</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><span class="parametername">out_color</span></td>
+        <td><p>a color point for the given value of parametric variable (t1, t2).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>for shadings other than Function this method throws an exception.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetColor_Double_pdftron_PDF_ColorPt_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetColor(Double%2Cpdftron.PDF.ColorPt)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L343">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetColor_" data-uid="pdftron.PDF.Shading.GetColor*"></a>
+  <h4 id="pdftron_PDF_Shading_GetColor_Double_pdftron_PDF_ColorPt_" data-uid="pdftron.PDF.Shading.GetColor(Double,pdftron.PDF.ColorPt)">GetColor(Double, ColorPt)</h4>
+  <div class="markdown level1 summary"><p>Gets the color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void GetColor(Double t, ColorPt out_color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><span class="parametername">t</span></td>
+        <td><p>color point</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.ColorPt.html">ColorPt</a></td>
+        <td><span class="parametername">out_color</span></td>
+        <td><p>a color point for the given value of t.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>for shadings other than Axial or Radial this method throws an exception. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetCoords_System_Double__System_Double__System_Double__System_Double__.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetCoords(System.Double%40%2CSystem.Double%40%2CSystem.Double%40%2CSystem.Double%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L366">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetCoords_" data-uid="pdftron.PDF.Shading.GetCoords*"></a>
+  <h4 id="pdftron_PDF_Shading_GetCoords_System_Double__System_Double__System_Double__System_Double__" data-uid="pdftron.PDF.Shading.GetCoords(System.Double@,System.Double@,System.Double@,System.Double@)">GetCoords(ref Double, ref Double, ref Double, ref Double)</h4>
+  <div class="markdown level1 summary"><p>Gets the coords radial.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void GetCoords(ref double out_x0, ref double out_y0, ref double out_x1, ref double out_y1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_x0</span></td>
+        <td><p>x0</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_y0</span></td>
+        <td><p>y0</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_x1</span></td>
+        <td><p>x1</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_y1</span></td>
+        <td><p>y1</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Shading_GetCoords_System_Double__System_Double__System_Double__System_Double___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for Radial shading returns six numbers (x0 y0 r0 x1 y1 r1) specifying
+the centers and radii of the starting and ending circles, expressed in the
+shading’s target coordinate space. The radii r0 and r1 must both be greater
+than or equal to 0. If one radius is 0, the corresponding circle is treated
+as a point; if both are 0, nothing is painted.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>for shadings other than Radial this method throws an exception.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetCoords_System_Double__System_Double__System_Double__System_Double__System_Double__System_Double__.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetCoords(System.Double%40%2CSystem.Double%40%2CSystem.Double%40%2CSystem.Double%40%2CSystem.Double%40%2CSystem.Double%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L393">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetCoords_" data-uid="pdftron.PDF.Shading.GetCoords*"></a>
+  <h4 id="pdftron_PDF_Shading_GetCoords_System_Double__System_Double__System_Double__System_Double__System_Double__System_Double__" data-uid="pdftron.PDF.Shading.GetCoords(System.Double@,System.Double@,System.Double@,System.Double@,System.Double@,System.Double@)">GetCoords(ref Double, ref Double, ref Double, ref Double, ref Double, ref Double)</h4>
+  <div class="markdown level1 summary"><p>Gets the coords radial.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void GetCoords(ref double out_x0, ref double out_y0, ref double out_r0, ref double out_x1, ref double out_y1, ref double out_r1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_x0</span></td>
+        <td><p>x0</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_y0</span></td>
+        <td><p>y0</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_r0</span></td>
+        <td><p>r0</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_x1</span></td>
+        <td><p>x1</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_y1</span></td>
+        <td><p>y1</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_r1</span></td>
+        <td><p>r1</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Shading_GetCoords_System_Double__System_Double__System_Double__System_Double__System_Double__System_Double___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for Radial shading returns six numbers (x0 y0 r0 x1 y1 r1) specifying
+the centers and radii of the starting and ending circles, expressed in the
+shading’s target coordinate space. The radii r0 and r1 must both be greater
+than or equal to 0. If one radius is 0, the corresponding circle is treated
+as a point; if both are 0, nothing is painted.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>for shadings other than Radial this method throws an exception.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetDomain_System_Double__System_Double__System_Double__System_Double__.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetDomain(System.Double%40%2CSystem.Double%40%2CSystem.Double%40%2CSystem.Double%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L416">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetDomain_" data-uid="pdftron.PDF.Shading.GetDomain*"></a>
+  <h4 id="pdftron_PDF_Shading_GetDomain_System_Double__System_Double__System_Double__System_Double__" data-uid="pdftron.PDF.Shading.GetDomain(System.Double@,System.Double@,System.Double@,System.Double@)">GetDomain(ref Double, ref Double, ref Double, ref Double)</h4>
+  <div class="markdown level1 summary"><p>Gets the domain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void GetDomain(ref double out_minx, ref double out_maxx, ref double out_miny, ref double out_maxy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_minx</span></td>
+        <td><p>minimum x</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_maxx</span></td>
+        <td><p>maximum x</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_miny</span></td>
+        <td><p>minimum y</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">out_maxy</span></td>
+        <td><p>maximum y</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Shading_GetDomain_System_Double__System_Double__System_Double__System_Double___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for shadings other than Function this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetMatrix.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetMatrix%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L428">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetMatrix_" data-uid="pdftron.PDF.Shading.GetMatrix*"></a>
+  <h4 id="pdftron_PDF_Shading_GetMatrix" data-uid="pdftron.PDF.Shading.GetMatrix">GetMatrix()</h4>
+  <div class="markdown level1 summary"><p>Gets the matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Matrix2D GetMatrix()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.Matrix2D.html">Matrix2D</a></td>
+        <td><p>a matrix specifying a mapping from the coordinate space specified
+by the Domain entry into the shading’s target coordinate space.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Shading_GetMatrix_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for shadings other than Function this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetParamEnd.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetParamEnd%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L301">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetParamEnd_" data-uid="pdftron.PDF.Shading.GetParamEnd*"></a>
+  <h4 id="pdftron_PDF_Shading_GetParamEnd" data-uid="pdftron.PDF.Shading.GetParamEnd">GetParamEnd()</h4>
+  <div class="markdown level1 summary"><p>Gets the param end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Double GetParamEnd()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><p>a number specifying the limiting value of a parametric variable t.
+The variable is considered to vary linearly between GetParamStart() and
+GetParamEnd() as the color gradient varies between the starting and ending points
+of the axis for Axial shading or circles for Radial shading.
+The variable t becomes the input argument to the color function(s).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Shading_GetParamEnd_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>the returned value corresponds to the second value in Domain array. 
+for shadings other than Axial or Radial this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetParamStart.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetParamStart%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L283">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetParamStart_" data-uid="pdftron.PDF.Shading.GetParamStart*"></a>
+  <h4 id="pdftron_PDF_Shading_GetParamStart" data-uid="pdftron.PDF.Shading.GetParamStart">GetParamStart()</h4>
+  <div class="markdown level1 summary"><p>Gets the param start.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Double GetParamStart()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Double</span></td>
+        <td><p>a number specifying the limiting value of a parametric variable t.
+The variable is considered to vary linearly between GetParamStart() and
+GetParamEnd() as the color gradient varies between the starting and ending points
+of the axis for Axial shading or circles for Radial shading.
+The variable t becomes the input argument to the color function(s).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Shading_GetParamStart_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>the returned value corresponds to the first value in Domain array.
+for shadings other than Axial or Radial this method throws an exception.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetSDFObj.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetSDFObj%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L151">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetSDFObj_" data-uid="pdftron.PDF.Shading.GetSDFObj*"></a>
+  <h4 id="pdftron_PDF_Shading_GetSDFObj" data-uid="pdftron.PDF.Shading.GetSDFObj">GetSDFObj()</h4>
+  <div class="markdown level1 summary"><p>Gets the SDFObj.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Obj GetSDFObj()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><p>the underlying SDF/Cos object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetType.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L140">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetType_" data-uid="pdftron.PDF.Shading.GetType*"></a>
+  <h4 id="pdftron_PDF_Shading_GetType" data-uid="pdftron.PDF.Shading.GetType">GetType()</h4>
+  <div class="markdown level1 summary"><p>Gets the shading type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Shading.Type GetType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Shading.Type.html">Shading.Type</a></td>
+        <td><p>The Type of a given SDF/Cos shading dictionary, or e_null for if
+SDF object is not a valid shading object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_GetType_pdftron_SDF_Obj_.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.GetType(pdftron.SDF.Obj)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L260">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_GetType_" data-uid="pdftron.PDF.Shading.GetType*"></a>
+  <h4 id="pdftron_PDF_Shading_GetType_pdftron_SDF_Obj_" data-uid="pdftron.PDF.Shading.GetType(pdftron.SDF.Obj)">GetType(Obj)</h4>
+  <div class="markdown level1 summary"><p>Gets shading type from shading dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Shading.Type GetType(Obj shading_dict)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.SDF.Obj.html">Obj</a></td>
+        <td><span class="parametername">shading_dict</span></td>
+        <td><p>the shading dictionary</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Shading.Type.html">Shading.Type</a></td>
+        <td><p>The Type of a given SDF/Cos shading dictionary, or e_null for if
+SDF object is not a valid shading object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_HasBackground.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.HasBackground%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L207">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_HasBackground_" data-uid="pdftron.PDF.Shading.HasBackground*"></a>
+  <h4 id="pdftron_PDF_Shading_HasBackground" data-uid="pdftron.PDF.Shading.HasBackground">HasBackground()</h4>
+  <div class="markdown level1 summary"><p>Checks for background.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean HasBackground()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if the shading has a background color or false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_HasBBox.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.HasBBox%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L176">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_HasBBox_" data-uid="pdftron.PDF.Shading.HasBBox*"></a>
+  <h4 id="pdftron_PDF_Shading_HasBBox" data-uid="pdftron.PDF.Shading.HasBBox">HasBBox()</h4>
+  <div class="markdown level1 summary"><p>Checks for bounding box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Boolean HasBBox()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>true if shading has a bounding box, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_IsExtendEnd.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.IsExtendEnd%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L329">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_IsExtendEnd_" data-uid="pdftron.PDF.Shading.IsExtendEnd*"></a>
+  <h4 id="pdftron_PDF_Shading_IsExtendEnd" data-uid="pdftron.PDF.Shading.IsExtendEnd">IsExtendEnd()</h4>
+  <div class="markdown level1 summary"><p>Checks if is extend end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Boolean IsExtendEnd()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>a flag specifying whether to extend the shading beyond the ending
+point of the axis for Axial shading or ending circle for Radial shading.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Shading_IsExtendEnd_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for shadings other than Axial or Radial this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading_IsExtendStart.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading.IsExtendStart%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L315">View Source</a>
+  </span>
+  <a id="pdftron_PDF_Shading_IsExtendStart_" data-uid="pdftron.PDF.Shading.IsExtendStart*"></a>
+  <h4 id="pdftron_PDF_Shading_IsExtendStart" data-uid="pdftron.PDF.Shading.IsExtendStart">IsExtendStart()</h4>
+  <div class="markdown level1 summary"><p>Checks if is extend start.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Boolean IsExtendStart()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Boolean</span></td>
+        <td><p>a flag specifying whether to extend the shading beyond the starting
+point of the axis for Axial shading or starting circle for Radial shading.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_Shading_IsExtendStart_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>for shadings other than Axial or Radial this method throws an exception. </p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_Shading.md&amp;value=---%0Auid%3A%20pdftron.PDF.Shading%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/Shading.cs/#L69" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,983 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PDFRasterizer
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PDFRasterizer
+   ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="pdftron.PDF.PDFRasterizer">
+  
+  
+  <h1 id="pdftron_PDF_PDFRasterizer" data-uid="pdftron.PDF.PDFRasterizer" class="text-break">Class PDFRasterizer
+  </h1>
+  <div class="markdown level0 summary"><p>PDFRasterizer is a low-level PDF rasterizer.
+The main purpose of this class is to convert PDF pages to raster images (or bitmaps).
+PDFRasterizer is a relatively low-level class. If you need to convert PDF page to an image format or a Bitmap, 
+consider using PDF.PDFDraw. Similarly, if you are building an interactive PDF viewing application 
+use PDF.PDFViewCtrl instead.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PDFRasterizer</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pdftron.PDF.html">pdftron.PDF</a></h6>
+  <h6><strong>Assembly</strong>: PDFNetAndroid.dll</h6>
+  <h5 id="pdftron_PDF_PDFRasterizer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PDFRasterizer : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer__ctor.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L33">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer__ctor_" data-uid="pdftron.PDF.PDFRasterizer.#ctor*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer__ctor" data-uid="pdftron.PDF.PDFRasterizer.#ctor">PDFRasterizer()</h4>
+  <div class="markdown level1 summary"><p>empty <code>PDFRasterizer</code> constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PDFRasterizer()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer__ctor_pdftron_PDF_PDFRasterizer_Type_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.%23ctor(pdftron.PDF.PDFRasterizer.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L44">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer__ctor_" data-uid="pdftron.PDF.PDFRasterizer.#ctor*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer__ctor_pdftron_PDF_PDFRasterizer_Type_" data-uid="pdftron.PDF.PDFRasterizer.#ctor(pdftron.PDF.PDFRasterizer.Type)">PDFRasterizer(PDFRasterizer.Type)</h4>
+  <div class="markdown level1 summary"><p>instantiates <code>PDFRasterizer</code> with specified type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PDFRasterizer(PDFRasterizer.Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFRasterizer.Type.html">PDFRasterizer.Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>PDFRasterizer type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_CancelRendering.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.CancelRendering%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L115">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_CancelRendering_" data-uid="pdftron.PDF.PDFRasterizer.CancelRendering*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_CancelRendering" data-uid="pdftron.PDF.PDFRasterizer.CancelRendering">CancelRendering()</h4>
+  <div class="markdown level1 summary"><p>Cancel the rendering in progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CancelRendering()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_Destroy.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L359">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_Destroy_" data-uid="pdftron.PDF.PDFRasterizer.Destroy*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_Destroy" data-uid="pdftron.PDF.PDFRasterizer.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_Dispose.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L340">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_Dispose_" data-uid="pdftron.PDF.PDFRasterizer.Dispose*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_Dispose" data-uid="pdftron.PDF.PDFRasterizer.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L345">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_Dispose_" data-uid="pdftron.PDF.PDFRasterizer.Dispose*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_Dispose_System_Boolean_" data-uid="pdftron.PDF.PDFRasterizer.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_Finalize.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L335">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_Finalize_" data-uid="pdftron.PDF.PDFRasterizer.Finalize*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_Finalize" data-uid="pdftron.PDF.PDFRasterizer.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the PDFRasterizer </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_GetRasterizerType.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.GetRasterizerType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L65">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_GetRasterizerType_" data-uid="pdftron.PDF.PDFRasterizer.GetRasterizerType*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_GetRasterizerType" data-uid="pdftron.PDF.PDFRasterizer.GetRasterizerType">GetRasterizerType()</h4>
+  <div class="markdown level1 summary"><p>Gets the type of current rasterizer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PDFRasterizer.Type GetRasterizerType()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFRasterizer.Type.html">PDFRasterizer.Type</a></td>
+        <td><p>the type of current rasterizer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_Rasterize_pdftron_PDF_Page_System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_pdftron_Common_Matrix2D_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.Rasterize(pdftron.PDF.Page%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2Cpdftron.Common.Matrix2D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L305">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_Rasterize_" data-uid="pdftron.PDF.PDFRasterizer.Rasterize*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_Rasterize_pdftron_PDF_Page_System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_pdftron_Common_Matrix2D_" data-uid="pdftron.PDF.PDFRasterizer.Rasterize(pdftron.PDF.Page,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,pdftron.Common.Matrix2D)">Rasterize(Page, Int32, Int32, Int32, Int32, Boolean, Matrix2D)</h4>
+  <div class="markdown level1 summary"><p>Draws the page into a given memory buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Rasterize(Page page, int width, int height, int stride, int num_comps, bool demult, Matrix2D device_mtx)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>The page to rasterize.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the target image in pixels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the target image in pixels (the number of rows).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">stride</span></td>
+        <td><p>Stride determines the physical width (in bytes) of one row in memory. If this value is negative the direction of the Y axis is inverted. The absolute value of stride is of importance, because it allows rendering in buffers where rows are padded in memory (e.g. in Windows bitmaps are padded on 4 byte boundaries). Besides allowing rendering on the whole buffer stride parameter can be used for rendering in a rectangular subset of a buffer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">num_comps</span></td>
+        <td><p>The number (4 or 5) representing the number of color components in the device color space. For BGR+Alpha set this parameter to 4, and for CMYK+Alpha use 5. If other values are set, exceptions will be thrown.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">demult</span></td>
+        <td><p>Specifies if the alpha is de-multiplied from the resulting color components.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.Matrix2D.html">Matrix2D</a></td>
+        <td><span class="parametername">device_mtx</span></td>
+        <td><p>Device transformation matrix that maps PDF page from PDF user space into device coordinate space (e.g. pixel space). PDF user space is represented in page units, where one unit corresponds to 1/72 of an inch.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_Rasterize_pdftron_PDF_Page_System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_pdftron_Common_Matrix2D_pdftron_PDF_Rect_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.Rasterize(pdftron.PDF.Page%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2Cpdftron.Common.Matrix2D%2Cpdftron.PDF.Rect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L257">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_Rasterize_" data-uid="pdftron.PDF.PDFRasterizer.Rasterize*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_Rasterize_pdftron_PDF_Page_System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_pdftron_Common_Matrix2D_pdftron_PDF_Rect_" data-uid="pdftron.PDF.PDFRasterizer.Rasterize(pdftron.PDF.Page,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,pdftron.Common.Matrix2D,pdftron.PDF.Rect)">Rasterize(Page, Int32, Int32, Int32, Int32, Boolean, Matrix2D, Rect)</h4>
+  <div class="markdown level1 summary"><p>Draws the page into a given memory buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Rasterize(Page page, int width, int height, int stride, int num_comps, bool demult, Matrix2D device_mtx, Rect clip)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Page.html">Page</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>The page to rasterize.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the target image in pixels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the target image in pixels (the number of rows).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">stride</span></td>
+        <td><p>Stride determines the physical width (in bytes) of one row in memory. If this value is negative the direction of the Y axis is inverted. The absolute value of stride is of importance, because it allows rendering in buffers where rows are padded in memory (e.g. in Windows bitmaps are padded on 4 byte boundaries). Besides allowing rendering on the whole buffer stride parameter can be used for rendering in a rectangular subset of a buffer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">num_comps</span></td>
+        <td><p>The number (4 or 5) representing the number of color components in the device color space. For BGR+Alpha set this parameter to 4, and for CMYK+Alpha use 5. If other values are set, exceptions will be thrown.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">demult</span></td>
+        <td><p>Specifies if the alpha is de-multiplied from the resulting color components.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.Matrix2D.html">Matrix2D</a></td>
+        <td><span class="parametername">device_mtx</span></td>
+        <td><p>Device transformation matrix that maps PDF page from PDF user space into device coordinate space (e.g. pixel space). PDF user space is represented in page units, where one unit corresponds to 1/72 of an inch.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.Rect.html">Rect</a></td>
+        <td><span class="parametername">clip</span></td>
+        <td><p>Optional parameter defining the clip region for the page. If the parameter is null or is not specified, PDFRasterizer uses page&apos;s crop box as a default clip region.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PDFRasterizer_Rasterize_pdftron_PDF_Page_System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_pdftron_Common_Matrix2D_pdftron_PDF_Rect__examples">Examples</h5>
+  <pre><code>float drawing_scale = 2: 
+Common.Matrix2D mtx(drawing_scale, 0, 0, drawing_scale, 0, 0);
+PDF.Rect bbox(page.GetMediaBox());
+bbox.Normalize();
+int width = int(bbox.Width() * drawing_scale); 
+int height = int(bbox.Height() * drawing_scale);
+
+// Stride is represented in bytes and is aligned on 4 byte 
+// boundary so that you can render directly to GDI bitmap.
+// A negative value for stride can be used to flip the image 
+// upside down.
+int comps = 4;  // for BGRA
+int stride = ((width * comps + 3) / 4) * 4;
+// buf is a memory buffer containing at least (stride*height) bytes.
+     memset(ptr, 0xFF, height*stride);  // Clear the background to opaque white paper color.
+PDFRasterizer rast;
+   rast.Rasterize(page, buf, width, height, stride, 4, false, mtx);</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_SetAntiAliasing_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.SetAntiAliasing(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L136">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_SetAntiAliasing_" data-uid="pdftron.PDF.PDFRasterizer.SetAntiAliasing*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_SetAntiAliasing_System_Boolean_" data-uid="pdftron.PDF.PDFRasterizer.SetAntiAliasing(System.Boolean)">SetAntiAliasing(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable anti-aliasing. Anti-Aliasing is a technique used to improve the visual quality of images 
+when displaying them on low resolution devices (for example, low DPI computer monitors). Anti-aliasing is 
+enabled by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAntiAliasing(bool enable_aa)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable_aa</span></td>
+        <td><p>true to enable anti-aliasing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_SetCaching_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.SetCaching(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L192">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_SetCaching_" data-uid="pdftron.PDF.PDFRasterizer.SetCaching*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_SetCaching_System_Boolean_" data-uid="pdftron.PDF.PDFRasterizer.SetCaching(System.Boolean)">SetCaching(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the caching.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCaching(bool enabled)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enabled</span></td>
+        <td><p>the new caching</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_SetDrawAnnotations_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.SetDrawAnnotations(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L77">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_SetDrawAnnotations_" data-uid="pdftron.PDF.PDFRasterizer.SetDrawAnnotations*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_SetDrawAnnotations_System_Boolean_" data-uid="pdftron.PDF.PDFRasterizer.SetDrawAnnotations(System.Boolean)">SetDrawAnnotations(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable annotation and forms rendering. By default, annotations and forms are rendered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDrawAnnotations(bool render_annots)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">render_annots</span></td>
+        <td><p>True to draw annotations, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_SetGamma_System_Double_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.SetGamma(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L99">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_SetGamma_" data-uid="pdftron.PDF.PDFRasterizer.SetGamma*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_SetGamma_System_Double_" data-uid="pdftron.PDF.PDFRasterizer.SetGamma(System.Double)">SetGamma(Double)</h4>
+  <div class="markdown level1 summary"><p>Sets the gamma factor used for anti-aliased rendering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGamma(double exp)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">exp</span></td>
+        <td><p>exponent value of gamma function. Typical values are in the range from 0.1 to 3.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PDFRasterizer_SetGamma_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Gamma correction can be used to improve the quality of anti-aliased image output and 
+can (to some extent) decrease the appearance common anti-aliasing artifacts (such as pixel width lines between polygons).
+Gamma correction is used only in the built-in rasterizer.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_SetHighlightFields_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.SetHighlightFields(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L86">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_SetHighlightFields_" data-uid="pdftron.PDF.PDFRasterizer.SetHighlightFields*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_SetHighlightFields_System_Boolean_" data-uid="pdftron.PDF.PDFRasterizer.SetHighlightFields(System.Boolean)">SetHighlightFields(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable highlighting form fields. Default is disabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetHighlightFields(bool highlight_fields)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">highlight_fields</span></td>
+        <td><p>true to highlight, false otherwise. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_SetImageSmoothing_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.SetImageSmoothing(System.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L174">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_SetImageSmoothing_" data-uid="pdftron.PDF.PDFRasterizer.SetImageSmoothing*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_SetImageSmoothing_System_Boolean_System_Boolean_" data-uid="pdftron.PDF.PDFRasterizer.SetImageSmoothing(System.Boolean,System.Boolean)">SetImageSmoothing(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable image smoothing.<br>The rasterizer allows a tradeoff between rendering quality and rendering speed.
+This function can be used to indicate the preference between rendering speed and quality.image smoothing is enabled by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetImageSmoothing(bool smoothing_enabled, bool hq_image_resampling)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">smoothing_enabled</span></td>
+        <td><p>whether to enable image smoothing</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">hq_image_resampling</span></td>
+        <td><p>whether to use a higher quality (but slower) smoothing algorithm</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="pdftron_PDF_PDFRasterizer_SetImageSmoothing_System_Boolean_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>image smoothing option has effect only if the source image has higher resolution 
+that the output resolution of the image on the rasterized page. PDFNet automatically
+controls at what resolution/zoom factor, &apos;image smoothing&apos; needs to take effect.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.Common.PDFNetException.html">PDFNetException</a></td>
+        <td><p>PDFNetException the PDFNet exception </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_SetOCGContext_pdftron_PDF_OCG_Context_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.SetOCGContext(pdftron.PDF.OCG.Context)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L109">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_SetOCGContext_" data-uid="pdftron.PDF.PDFRasterizer.SetOCGContext*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_SetOCGContext_pdftron_PDF_OCG_Context_" data-uid="pdftron.PDF.PDFRasterizer.SetOCGContext(pdftron.PDF.OCG.Context)">SetOCGContext(Context)</h4>
+  <div class="markdown level1 summary"><p>Sets the Optional Content Group (OCG) context that should be used when rendering the page. 
+This function can be used to selectively render optional content (such as PDF layers) based on the 
+states of optional content groups in the given context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOCGContext(Context ctx)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.OCG.Context.html">Context</a></td>
+        <td><span class="parametername">ctx</span></td>
+        <td><p>Optional Content Group (OCG) context, or NULL if the rasterizer should render all content on the page.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_SetOverprint_pdftron_PDF_PDFRasterizer_OverprintPreviewMode_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.SetOverprint(pdftron.PDF.PDFRasterizer.OverprintPreviewMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L182">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_SetOverprint_" data-uid="pdftron.PDF.PDFRasterizer.SetOverprint*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_SetOverprint_pdftron_PDF_PDFRasterizer_OverprintPreviewMode_" data-uid="pdftron.PDF.PDFRasterizer.SetOverprint(pdftron.PDF.PDFRasterizer.OverprintPreviewMode)">SetOverprint(PDFRasterizer.OverprintPreviewMode)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable support for overprint. Overprint is a device dependent feature and the results will vary depending on the output color space and supported colorants (i.e. CMYK, CMYK+spot, RGB, etc). By default overprint is enabled for only PDF/X files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOverprint(PDFRasterizer.OverprintPreviewMode op)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFRasterizer.OverprintPreviewMode.html">PDFRasterizer.OverprintPreviewMode</a></td>
+        <td><span class="parametername">op</span></td>
+        <td><p>e_op_on: always enabled; e_op_off: always disabled; e_op_pdfx_on: enabled for PDF/X files only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_SetPathHinting_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.SetPathHinting(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L145">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_SetPathHinting_" data-uid="pdftron.PDF.PDFRasterizer.SetPathHinting*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_SetPathHinting_System_Boolean_" data-uid="pdftron.PDF.PDFRasterizer.SetPathHinting(System.Boolean)">SetPathHinting(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Enable or disable path hinting. Path hinting is used to slightly adjust paths in order to avoid or alleviate artifacts of hair line cracks between
+certain graphical elements. This option is turned on by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPathHinting(bool enable_ph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enable_ph</span></td>
+        <td><p>whether to enable path hinting.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_SetPrintMode_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.SetPrintMode(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L126">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_SetPrintMode_" data-uid="pdftron.PDF.PDFRasterizer.SetPrintMode*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_SetPrintMode_System_Boolean_" data-uid="pdftron.PDF.PDFRasterizer.SetPrintMode(System.Boolean)">SetPrintMode(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Tells the rasterizer to render the page &apos;print&apos; mode. 
+Certain page elements (such as annotations or OCG-s) are meant to be visible either on the 
+screen or on the printed paper but not both. A common example, is the &quot;Submit&quot; button on electronic forms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPrintMode(bool is_printing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">is_printing</span></td>
+        <td><p>set to true is the page should be rendered in print mode. By default, print mode flag is set to false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_SetRasterizerType_pdftron_PDF_PDFRasterizer_Type_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.SetRasterizerType(pdftron.PDF.PDFRasterizer.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L56">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_SetRasterizerType_" data-uid="pdftron.PDF.PDFRasterizer.SetRasterizerType*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_SetRasterizerType_pdftron_PDF_PDFRasterizer_Type_" data-uid="pdftron.PDF.PDFRasterizer.SetRasterizerType(pdftron.PDF.PDFRasterizer.Type)">SetRasterizerType(PDFRasterizer.Type)</h4>
+  <div class="markdown level1 summary"><p>Sets rasterizer to the specified type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRasterizerType(PDFRasterizer.Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pdftron.PDF.PDFRasterizer.Type.html">PDFRasterizer.Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>PDFRasterizer type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer_SetThinLineAdjustment_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer.SetThinLineAdjustment(System.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L158">View Source</a>
+  </span>
+  <a id="pdftron_PDF_PDFRasterizer_SetThinLineAdjustment_" data-uid="pdftron.PDF.PDFRasterizer.SetThinLineAdjustment*"></a>
+  <h4 id="pdftron_PDF_PDFRasterizer_SetThinLineAdjustment_System_Boolean_System_Boolean_" data-uid="pdftron.PDF.PDFRasterizer.SetThinLineAdjustment(System.Boolean,System.Boolean)">SetThinLineAdjustment(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Set thin line adjustment parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetThinLineAdjustment(bool pixel_grid_fit, bool stroke_adjust)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">pixel_grid_fit</span></td>
+        <td><p>if true (horizontal/vertical) thin lines will be snapped to 
+integer pixel positions. This helps make thin lines look sharper and clearer. This
+option is turned off by default and it only works if path hinting is enabled.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">stroke_adjust</span></td>
+        <td><p>if true auto stroke adjustment is enabled. Currently, this would 
+make lines with sub-pixel width to be one-pixel wide. This option is turned on by default.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/new/master/apiSpec/new?filename=pdftron_PDF_PDFRasterizer.md&amp;value=---%0Auid%3A%20pdftron.PDF.PDFRasterizer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/moljac/Samples.AndroidX/blob/master/samples/issue-0014-NoClassDefFoundError/to-Xamarin-v2/Common/PDF/PDFRasterizer.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

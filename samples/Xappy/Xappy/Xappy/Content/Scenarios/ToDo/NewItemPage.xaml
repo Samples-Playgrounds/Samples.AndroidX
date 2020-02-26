@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Xappy.Content.Scenarios.ToDo.NewItemPage"
+    BackgroundColor="{DynamicResource backgroundColor}"
+    Title="New Item">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Cancel"
+            Clicked="Cancel_Clicked" />
+        <ToolbarItem
+            Text="Save"
+            Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout
+            Spacing="20"
+            Padding="15">
+            <Label
+                Text="Text"
+                Style="{DynamicResource TextHeadline}" />
+            <Entry
+                Text="{Binding Item.Text}"
+                TextColor="{DynamicResource TextPrimaryColor}"
+                FontSize="Small" />
+            <Label
+                Text="Description"
+                Style="{DynamicResource TextHeadline}"/>
+            <Editor
+                Text="{Binding Item.Description}"
+                TextColor="{DynamicResource TextPrimaryColor}"
+                FontSize="Small"
+                Margin="0" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

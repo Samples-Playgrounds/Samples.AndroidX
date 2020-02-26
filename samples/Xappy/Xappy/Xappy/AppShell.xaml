@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Xappy"
+    xmlns:common="clr-namespace:Xappy.Content.Common"
+    xmlns:scenarios="clr-namespace:Xappy.Scenarios"
+    xmlns:blog="clr-namespace:Xappy.Content.Blog"
+    xmlns:about="clr-namespace:Xappy.About"
+    xmlns:controlGallery="clr-namespace:Xappy.ControlGallery"
+    xmlns:working="clr-namespace:Xappy.Content.Scenarios.ProductDetails"
+    xmlns:settings="clr-namespace:Xappy.Content.Settings"
+    xmlns:resources="clr-namespace:Xappy.Content.Resources"
+    FlyoutHeaderTemplate="{DataTemplate common:FlyoutHeaderTemplate}"
+    ItemTemplate="{DataTemplate common:FlyoutItemTemplate}"
+    x:Class="Xappy.AppShell">
+
+    <Shell.FlyoutIcon>
+        <FontImageSource
+            FontFamily="{StaticResource FontAwesome}"
+            Glyph="{x:Static local:IconFont.Bars}"
+            Color="{StaticResource AccentColor}"
+            Size="24" />
+    </Shell.FlyoutIcon>
+
+    <ShellItem
+        Title="Main"
+        Style="{DynamicResource CurrentTheme}"
+        FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Working File">
+            <ShellContent ContentTemplate="{DataTemplate settings:StyleGuidePage}" />
+        </Tab>
+        <Tab
+            Title="Latest News">
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesome}"
+                                 Glyph="{x:Static local:IconFont.Newspaper}"
+                                 Color="White"
+                                 Size="14" />
+            </Tab.Icon>
+            <ShellContent
+                ContentTemplate="{DataTemplate blog:BlogPage}" />
+        </Tab>
+        <Tab
+            Title="UI Controls">
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesome}"
+                                 Glyph="{x:Static local:IconFont.Toolbox}"
+                                 Color="White"
+                                 Size="14" />
+            </Tab.Icon>
+            <ShellContent
+                ContentTemplate="{DataTemplate controlGallery:IndexPage}" />
+        </Tab>
+        <Tab
+            Title="Scenarios">
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesome}"
+                                 Glyph="{x:Static local:IconFont.Monument}"
+                                 Color="White"
+                                 Size="14" />
+            </Tab.Icon>
+            <ShellContent
+                ContentTemplate="{DataTemplate scenarios:IndexPage}" />
+        </Tab>
+        <Tab
+            Title="Resource">
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesome}"
+                                 Glyph="{x:Static local:IconFont.Boxes}"
+                                 Color="White"
+                                 Size="14" />
+            </Tab.Icon>
+            <ShellContent
+                ContentTemplate="{DataTemplate resources:IndexPage}" />
+        </Tab>
+        <Tab
+            Title="About">
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesome}"
+                                 Glyph="{x:Static local:IconFont.InfoCircle}"
+                                 Color="White"
+                                 Size="14" />
+            </Tab.Icon>
+            <ShellContent Title="General"
+                          ContentTemplate="{DataTemplate about:IndexPage}" />
+            <ShellContent Title="Contributors"
+                          ContentTemplate="{DataTemplate about:GitHubPage}" />
+        </Tab>
+    </ShellItem>
+
+
+</Shell>

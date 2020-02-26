@@ -1,0 +1,63 @@
+﻿@page "/mappings"
+@using Blazored.LocalStorage;
+
+@*
+@inject HttpClient Http
+@inject Blazored.LocalStorage.ILocalStorageService local_store
+*@
+
+<h1>AndroidX Mappings</h1>
+
+
+<button @onclick="UpdateLocalStorageAsync">Save</button>
+<button @onclick="ClearLocalStorageAsync">Clear</button>
+<br />
+<textarea @bind="DataMappings.UrlMappingsGoogle" />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Android.Support Class (Fully Qualified</th>
+                <th>AndroidX Class (Fully Qualified</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (DataMappings.mappings_google == null)
+            {
+                <p><em>Loading...</em></p>
+            }
+            else
+            {
+                @foreach (MappingsGoogle mg in DataMappings.mappings_google)
+                {
+                    <tr>
+                        <td>@mg.ClassAndroidSupport</td>
+                        <td>@mg.ClassAndroidX</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+@code 
+{
+    protected override async Task OnInitializedAsync()
+    {
+
+        return;
+    }
+
+
+    public async Task UpdateLocalStorageAsync()
+    {
+        
+        return;
+    }
+
+    public async Task ClearLocalStorageAsync()
+    {
+        await DataMappings.LocalStorage.ClearAsync(); 
+
+        return;
+    }
+}
