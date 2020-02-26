@@ -26,9 +26,21 @@ https://github.com/moljac/Samples.AndroidX/blob/master/source/bindings/type-vs-m
         AndroidX.RecyclerView.Widget.RecyclerView.ViewHolder
     </attr>
 ```
+
 Errors:
 
 ```
+    generated/androidx.leanback.leanback-preference/obj/Debug/monoandroid90/generated/src/AndroidX.Leanback.Preference.LeanbackListPreferenceDialogFragment.cs(24,24): 
+    Error CS0534: 
+        'LeanbackListPreferenceDialogFragment.AdapterMulti' 
+    does not implement inherited abstract member 
+        'RecyclerView.Adapter.OnBindViewHolder(RecyclerView.ViewHolder, int)'
+    
+    generated/androidx.leanback.leanback-preference/obj/Debug/monoandroid90/generated/src/AndroidX.Leanback.Preference.LeanbackListPreferenceDialogFragment.cs(24,24):
+    Error CS0534: 
+        'LeanbackListPreferenceDialogFragment.AdapterSingle' 
+    does not implement inherited abstract member 
+        'RecyclerView.Adapter.OnBindViewHolder(RecyclerView.ViewHolder, int)' 
 ```
 
 ## References Links
