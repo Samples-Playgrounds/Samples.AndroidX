@@ -1,3 +1,6 @@
 [submodule "externals/submodules/AndroidX"]
 	path = externals/submodules/AndroidX
 	url = https://github.com/xamarin/AndroidX.git
+[submodule "externals/submodules/Xamarin.Forms"]
+	path = externals/submodules/Xamarin.Forms
+	url = https://github.com/xamarin/Xamarin.Forms.git
