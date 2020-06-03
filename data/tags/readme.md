@@ -12,6 +12,16 @@ Steps for issue 0064 Bundle Assemblies and
     20200318-stable-release                         20200603-stable-release-20200318
     ```
 
-2.  bump revision
+2.  rename
 
-3.  bump Migration
+3.  check additional projects in `config.json`
+
+    ```
+		"source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj",
+		"source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.cspro
+    ```
+
+4.  bump revision on all AndroidX packages
+
+5.  bump `Xamarin.AndroidX.Migration`
+
