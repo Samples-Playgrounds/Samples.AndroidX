@@ -3,10 +3,8 @@
 	"slnFile" : "generated/AndroidX.sln",
 	"additionalProjects": 
 	[
-		"source/buildtasks/annotation/Annotation-BuildTasks.csproj",
-		"source/buildtasks/annotation-tests/Annotation-BuildTasks-Tests.csproj",
-		"source/buildtasks/vectordrawable/VectorDrawable-BuildTasks.csproj",
-		"source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj"
+		"source/migration/Dummy/Xamarin.AndroidX.Migration.Dummy.csproj",
+		"source/androidx.appcompat/typeforwarders/androidx.appcompat.appcompat-resources-typeforwarders.csproj"
 	],
 	"templates" : [
 		{
@@ -658,9 +656,9 @@
 		,{
 			"groupId" : "androidx.tvprovider",
 			"artifactId" : "tvprovider",
-			"version" : "1.0.0.1",
+			"version" : "1.0.0",
 			"nugetId" : "Xamarin.AndroidX.TvProvider",
-			"nugetVersion" : "1.0.0",
+			"nugetVersion" : "1.0.0.1",
 			"dependencyOnly" : false
 		}
 		,{
@@ -765,7 +763,7 @@
 			"artifactId" : "migration",
 			"version" : "1.0",
 			"nugetId" : "Xamarin.AndroidX.Migration",
-			"nugetVersion" : "1.0.0",
+			"nugetVersion" : "1.0.0.1",
 			"dependencyOnly" : true
 		}
 	]
