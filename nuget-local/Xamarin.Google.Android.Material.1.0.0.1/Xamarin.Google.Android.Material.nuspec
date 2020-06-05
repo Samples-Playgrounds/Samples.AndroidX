@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.Google.Android.Material</id>
+    <version>1.0.0.1</version>
+    <title>Xamarin AndroidX - material</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE.md</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <projectUrl>https://go.microsoft.com/fwlink/?linkid=2113238</projectUrl>
+    <iconUrl>https://go.microsoft.com/fwlink/?linkid=2099392</iconUrl>
+    <description>Xamarin.Android bindings for AndroidX - material</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>Xamarin AndroidX Xamarin.AndroidX Support Google material</tags>
+    <repository type="git" url="https://github.com/xamarin/AndroidX.git" />
+    <dependencies>
+      <group targetFramework="MonoAndroid9.0">
+        <dependency id="Xamarin.AndroidX.Annotation" version="1.1.0.1" include="All" />
+        <dependency id="Xamarin.AndroidX.AppCompat" version="1.1.0.1" include="All" />
+        <dependency id="Xamarin.AndroidX.CardView" version="1.0.0.1" include="All" />
+        <dependency id="Xamarin.AndroidX.Core" version="1.1.0.1" include="All" />
+        <dependency id="Xamarin.AndroidX.Fragment" version="1.1.0.1" include="All" />
+        <dependency id="Xamarin.AndroidX.Legacy.Support.Core.UI" version="1.0.0.1" include="All" />
+        <dependency id="Xamarin.AndroidX.Legacy.Support.Core.Utils" version="1.0.0.1" include="All" />
+        <dependency id="Xamarin.AndroidX.RecyclerView" version="1.1.0.1" include="All" />
+        <dependency id="Xamarin.AndroidX.Transition" version="1.2.0.1" include="All" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid9.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
