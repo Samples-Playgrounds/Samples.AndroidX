@@ -1,5 +1,8 @@
 # Readme
 
+
+issue0064-FileNotFoundException when BundleAssemblies=True
+
 ## Issue 0083
 
 *   https://github.com/xamarin/AndroidX/issues/83
