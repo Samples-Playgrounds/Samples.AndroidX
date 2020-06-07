@@ -63,7 +63,7 @@
     <PackageReference Include="Xamarin.AndroidX.AppCompat">
       <Version>1.1.0.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat.Resources">
+    <PackageReference Include="Xamarin.AndroidX.AppCompat.AppCompatResources">
       <Version>1.1.0.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Browser">
