@@ -1,0 +1,135 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+  <!--
+  Font family: Roboto
+  Line height: 20sp
+  (identical to box height)
+  translationY 2.97sp compensates for the line height adjustment of text
+-->
+  <style name="lesson_num_style">
+    <item name="android:textSize">
+      12sp
+    </item>
+    <item name="android:letterSpacing">
+      0.02
+    </item>
+    <item name="android:textColor">
+      #FFFFFF
+    </item>
+  </style>
+
+  <!--
+  Font family: Roboto
+  Line height: 24sp
+  (identical to box height)
+  translationY 2.62sp compensates for the line height adjustment of text
+-->
+  <style name="lesson_name_style">
+    <item name="android:textSize">
+      16sp
+    </item>
+    <item name="android:letterSpacing">
+      0.01
+    </item>
+    <item name="android:textColor">
+      #DE000000
+    </item>
+    <item name="android:textStyle">
+      bold
+    </item>
+  </style>
+
+  <!--
+  Font family: Roboto
+  Line height: 20sp
+  (identical to box height)
+  translationY 1.8sp compensates for the line height adjustment of text
+-->
+  <style name="lesson_time_style">
+    <item name="android:textSize">
+      14sp
+    </item>
+    <item name="android:letterSpacing">
+      0.02
+    </item>
+    <item name="android:textColor">
+      #2196F3
+    </item>
+  </style>
+
+  <style name="lesson_time_style2">
+    <item name="android:textSize">
+      14sp
+    </item>
+    <item name="android:letterSpacing">
+      0.02
+    </item>
+    <item name="android:textColor">
+      #99000000
+    </item>
+  </style>
+
+  <!--
+  Font family: Roboto
+  Line height: 16sp
+-->
+  <style name="lesson_mark_style">
+    <item name="android:textSize">
+      32sp
+    </item>
+    <item name="android:letterSpacing">
+      0.01
+    </item>
+    <item name="android:textColor">
+      #333333
+    </item>
+  </style>
+
+  <!--
+  Font family: Roboto
+  Line height: 20sp
+  (identical to box height)
+  translationY 2.97sp compensates for the line height adjustment of text
+-->
+  <style name="lesson_teacher_cab_style">
+    <item name="android:textSize">
+      12sp
+    </item>
+    <item name="android:letterSpacing">
+      0.02
+    </item>
+    <item name="android:textColor">
+      #99000000
+    </item>
+  </style>
+
+  <style name="lesson_homework_style">
+    <item name="android:textSize">
+      13sp
+    </item>
+    <item name="android:letterSpacing">
+      0.02
+    </item>
+    <item name="android:textColor">
+      #99000000
+    </item>
+  </style>
+
+</resources>

@@ -1,0 +1,94 @@
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cv"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="2dp">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="83dp"
+        android:background="@android:color/white">
+        <RelativeLayout
+            android:id="@+id/rl_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <View
+                android:id="@+id/rectangle_with_colorView"
+                android:background="@drawable/rectangle_with_color"
+                android:layout_height="83dp"
+                android:layout_width="24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lesson_num"
+                android:text="1"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:lineSpacingExtra="6sp"
+                android:translationY="-2.97sp"
+                style="@style/lesson_num_style" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/attach_icon"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:alpha="0.8"
+                    android:src="@drawable/ic_group"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lesson_name"
+            android:text="Leo Tolstoy"
+            android:singleLine="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/lesson_marks"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="5sp"
+            android:translationY="-2.62sp"
+            android:gravity="top"
+            style="@style/lesson_name_style"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lesson_time"
+            android:text="8:00 - 8:45"
+            android:layout_below="@id/lesson_name"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="3dp"
+            android:lineSpacingExtra="4sp"
+            android:translationY="-1.8sp"
+            style="@style/lesson_time_style"/>
+        <TextView
+            android:id="@+id/lesson_teacher_cab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lesson_time"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="3dp"
+            android:text="writer • room 307"
+            android:textAppearance="@style/lesson_teacher_cab_style"
+            android:lineSpacingExtra="6sp"
+            android:translationY="-2.97sp"
+            android:gravity="top"
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
