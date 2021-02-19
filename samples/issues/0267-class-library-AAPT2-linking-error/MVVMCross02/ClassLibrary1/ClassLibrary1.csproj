@@ -1,0 +1,14 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras">
+
+  <PropertyGroup>
+    <TargetFramework>monoandroid9.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('monoandroid')) ">
+    <AndroidResource Include="Resources\**\*.xml" SubType="Designer" Generator="MSBuild:UpdateAndroidResources" />
+
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.6" />
+    <PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.1.0.6" />
+  </ItemGroup>
+
+</Project>

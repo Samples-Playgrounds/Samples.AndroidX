@@ -1,0 +1,20 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;monoandroid10.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('monoandroid')) ">
+    <AndroidResource Include="Resources\**\*.xml" SubType="Designer" Generator="MSBuild:UpdateAndroidResources" />
+
+    <!--
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" />
+    <PackageReference Include="Xamarin.AndroidX.Fragment" />
+    <PackageReference Include="Xamarin.AndroidX.Preference" />
+    <PackageReference Include="Xamarin.AndroidX.ViewPager" />
+    <PackageReference Include="Xamarin.Google.Android.Material" />
+    -->
+
+  </ItemGroup>
+
+</Project>
