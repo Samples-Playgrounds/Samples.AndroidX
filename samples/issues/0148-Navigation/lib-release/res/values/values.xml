@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="reference" name="SmoothBottomBarStyle"/>
+    <string name="app_name">lib</string>
+    <string name="ellipsis">…</string>
+    <declare-styleable name="SmoothBottomBar">
+        <attr format="reference" name="menu"/>
+        <attr format="color" name="backgroundColor"/>
+        <attr format="color" name="indicatorColor"/>
+        <attr format="dimension" name="indicatorRadius"/>
+        <attr format="dimension" name="sideMargins"/>
+        <attr format="dimension" name="itemPadding"/>
+        <attr format="color" name="textColor"/>
+        <attr format="reference" name="itemFontFamily"/>
+        <attr format="dimension" name="textSize"/>
+        <attr format="dimension" name="iconSize"/>
+        <attr format="dimension" name="iconMargin"/>
+        <attr format="color" name="iconTint"/>
+        <attr format="color" name="iconTintActive"/>
+        <attr format="dimension" name="cornerRadius"/>
+        <attr format="integer" name="activeItem"/>
+        <attr format="integer" name="duration"/>
+    </declare-styleable>
+</resources>
