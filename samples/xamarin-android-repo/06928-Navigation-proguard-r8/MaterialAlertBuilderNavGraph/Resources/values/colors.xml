@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--BMW Red Colors-->
+	<color name="red_700">#d32f2f</color>
+	<color name="red_700_dark">#9a0007</color>
+	<color name="red_700_light">#ff6659</color>
+
+	<color name="redish">#b00020</color>
+	<color name="redish_dark">#cf6679</color>
+
+	<color name="transparent_black">#121212</color>
+	<color name="black">#000000</color>
+	<color name="white">#FFFFFF</color>
+
+	<!--Dark theme colors-->
+	<!--<color name="red_200">#ef9a9a</color>
+	<color name="red_200_dark">#ba6b6c</color>
+	<color name="red_200_light">#ffcccb</color>-->
+
+	<color name="black_600">#757575</color>
+
+	<!--Audi Blue Colors-->
+	<color name="blue_700">#0070d0</color>
+	<color name="blue_700_dark">#00469e</color>
+	<color name="blue_700_light">#5d9eff</color>
+
+	<!--These are not blue-->
+	<color name="blueish">#b00020</color>
+	<color name="blueish_dark">#cf6679</color>
+
+	<!--Dark theme colors-->
+	<!--<color name="blue_200">#90caf9</color>
+	<color name="blue_200_dark">#5d99c6</color>
+	<color name="blue_200_light">#c3fdff</color>-->
+
+	<color name="green_700">#00b058</color>
+	<color name="green_700_dark">#007f2c</color>
+	<color name="green_700_light">#57e386</color>
+</resources>

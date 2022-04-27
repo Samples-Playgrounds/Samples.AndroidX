@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.companyname.MaterialAlertBuilderNavGraph.Fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.companyname.MaterialAlertBuilderNavGraph.Fragments.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.companyname.MaterialAlertBuilderNavGraph.Fragments.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+	<!--not a top destination-->
+	<fragment
+		android:id="@+id/settingsFragment"
+		android:name="com.companyname.MaterialAlertBuilderNavGraph.Fragments.SettingsFragment"
+		android:label="Settings"/>
+
+	<!--not a top destination - just to test to see if it can be opened twice Navigation.UI 2.4.1 included a new material 1.5.0 which prevented these being opened more than one time, without closing the SlideshowFragment -->
+	<fragment
+		android:id="@+id/leaderboard"
+		android:name="com.companyname.MaterialAlertBuilderNavGraph.Fragments.LeaderboardFragment"
+		android:label="Leader Board"
+        tools:layout="@layout/fragment_leaderboard"/>
+
+	<!--not a top destination - just to test to see if it can be opened twice Navigation.UI 2.4.1 included a new material 1.5.0 which prevented these being opened more than one time, without closing the SlideshowFragment  -->
+	<fragment
+		android:id="@+id/register"
+		android:name="com.companyname.MaterialAlertBuilderNavGraph.Fragments.RegisterFragment"
+		android:label="Register"
+        tools:layout="@layout/fragment_register"/>
+
+</navigation>

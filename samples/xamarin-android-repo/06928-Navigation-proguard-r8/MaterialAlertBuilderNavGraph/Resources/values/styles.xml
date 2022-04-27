@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+	
+	<!--<style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+		--><!--was.DarkActionBar--><!--
+		--><!-- Primary brand color. --><!--
+		<item name="colorPrimary">@color/red_500</item>
+		<item name="colorPrimaryVariant">@color/red_700</item>
+		<item name="colorOnPrimary">@color/white</item>
+		
+		--><!-- Secondary brand color. --><!--
+		<item name="colorSecondary">@color/red_200</item>
+		<item name="colorSecondaryVariant">@color/teal_700</item>
+		<item name="colorOnSecondary">@color/black</item>
+		
+		--><!-- Status bar color. --><!--
+		<item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+		
+
+		--><!-- Customize your theme here. --><!--
+		--><!--Turned on both navbar items 02/01/2022--><!-- 
+		<item name="android:windowLightNavigationBar">true</item>
+		<item name="android:navigationBarColor">#80FFFFFF</item>
+		
+		--><!--This gives the standard MateriAlalertDialog style--><!--
+		--><!--<item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog</item>--><!--
+
+
+		--><!--if we want to modify it--><!--
+		--><!--<item name="materialAlertDialogTheme">@style/AlertDialogTheme</item>--><!--
+		<item name="materialAlertDialogTheme">@style/AlertDialogRoundedCornersTheme</item>
+		
+	</style>
+
+	<style name="AppTheme.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+
+	<style name="AlertDialogRoundedCornersTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+		<item name="materialAlertDialogTitlePanelStyle">@style/TitlePanelCenter</item>
+		<item name="materialAlertDialogTitleTextStyle">@style/TitleTextStyle</item>
+		<item name="shapeAppearanceMediumComponent">@style/RoundShapeAppearance</item>
+	</style>
+
+	<style name="TitlePanelCenter" parent="MaterialAlertDialog.MaterialComponents.Title.Panel">
+		<item name="android:gravity">center_horizontal</item>
+	</style>
+
+	<style name="TitleTextStyle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+		<!-- Just bold the Title.Text-->
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="RoundShapeAppearance" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+		<item name="cornerFamily">rounded</item>
+		<item name="cornerSize">16dp</item>
+	</style>
+	
+</resources>
