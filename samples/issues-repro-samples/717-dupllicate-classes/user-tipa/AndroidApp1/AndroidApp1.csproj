@@ -10,7 +10,7 @@
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.Camera.Camera2" Version="1.2.2" />
-    <PackageReference Include="Xamarin.AndroidX.Preference" Version="1.2.0.4" />
+    <PackageReference Include="Xamarin.AndroidX.Camera.Camera2" Version="1.2.2.1" />
+    <PackageReference Include="Xamarin.AndroidX.Preference" Version="1.2.0.5" />
   </ItemGroup>
 </Project>
