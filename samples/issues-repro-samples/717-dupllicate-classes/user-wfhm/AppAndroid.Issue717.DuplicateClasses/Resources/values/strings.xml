@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AppAndroid.Issue717.DuplicateClasses</string>
+    <string name="app_text">Hello, Android!</string>
+</resources>
