@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="33"/>
+	<uses-feature android:name="android.hardware.type.watch"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	<uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+	<uses-permission android:name="android.permission.BIND_WALLPAPER"/>
+	<uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND"/>
+	<uses-permission android:name="com.google.android.wearable.permission.RECEIVE_COMPLICATION_DATA"/>
+	<uses-permission android:name="com.google.android.wearable.permission.RECEIVE_COMPLICATION_DATA_PRIVILEGED"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:label="@string/app_name" android:supportsRtl="true" android:launchMode="singleInstance"
+				 android:theme="@android:style/Theme.DeviceDefault">
+		<meta-data
+				android:name="com.google.android.wearable.standalone"
+				android:value="true"/>
+
+		<service
+				android:name="sample.wearos.MyWatchFaceService"
+				android:label="Xamarin Sample watchface"
+				android:directBootAware="true"
+				android:exported="true"
+				android:permission="android.permission.BIND_WALLPAPER">
+
+			<meta-data
+					android:name="android.service.wallpaper"
+					android:resource="@xml/watch_face"/>
+			<meta-data
+					android:name="com.google.android.wearable.watchface.preview"
+					android:resource="@drawable/preview_analog"/>
+			<meta-data
+					android:name="com.google.android.wearable.watchface.preview_circular"
+					android:resource="@drawable/preview_analog"/>
+
+			<intent-filter>
+				<action android:name="android.service.wallpaper.WallpaperService"/>
+				<category android:name="com.google.android.wearable.watchface.category.WATCH_FACE"/>
+			</intent-filter>
+		</service>
+	</application>
+</manifest>
