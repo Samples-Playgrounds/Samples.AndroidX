@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profiler_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="com.example.android.navigationadvancedsample.listscreen.UserProfile"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/avatar_6_raster"
+        app:srcCompat="@drawable/purple_frame"
+        tools:background="@tools:sample/avatars[6]"
+        tools:src="@drawable/purple_frame" />
+
+    <View
+            android:id="@+id/user_data_card"
+            android:layout_width="0dp"
+            android:layout_height="141dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/rounded_rect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_pic"
+            app:layout_constraintVertical_bias="1.0"/>
+
+    <TextView
+        android:id="@+id/profile_user_name"
+        android:gravity="center_horizontal"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/profile_name_1"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/user_data_card" />
+
+    <include
+        layout="@layout/user_card"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_user_name"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

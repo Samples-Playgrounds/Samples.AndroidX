@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/home">
+
+	<!--app:startDestination="@+id/home" Replace titleScreen with this line if not using <include.. />-->
+	
+	<include app:graph="@navigation/home"/>
+	<include app:graph="@navigation/form"/>
+	<!--<include app:graph="@navigation/list"/>-->
+
+	<!--<fragment
+        android:id="@+id/titleScreen"
+		android:name="com.companyname.NavigationAdvancedSample.Fragments.Home.Title"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_title">
+		<action
+            android:id="@+id/action_title_to_about"
+            app:destination="@id/aboutScreen"/>
+	</fragment>
+
+	<fragment
+        android:id="@+id/aboutScreen"
+        android:name="com.companyname.NavigationAdvancedSample.Fragments.Home.About"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about"/>
+
+	<fragment
+            android:id="@+id/register"
+            android:name="com.companyname.NavigationAdvancedSample.Fragments.Form.Register"
+            android:label="@string/title_register"
+            tools:layout="@layout/fragment_register">
+		<action
+            android:id="@+id/action_register_to_registered"
+            app:destination="@id/registered"/>
+	</fragment>
+	
+	<fragment
+        android:id="@+id/registered"
+        android:name="com.companyname.NavigationAdvancedSample.Fragments.Form.Registered"
+        android:label="Registered"
+        tools:layout="@layout/fragment_registered"/>-->
+	
+</navigation>
+
+
